@@ -21,10 +21,9 @@ export function Navbar() {
 
   const navItems = [
     { name: "Startseite", href: "/" },
-    { name: "Gründung", href: "#gruendung" },
-    { name: "Investment", href: "#investment" },
-    { name: "Auswanderung", href: "#auswanderung" },
-    { name: "Über Mich", href: "#ueber-mich" },
+    { name: "Leistungen", href: "/services" },
+    { name: "Gründung", href: "/services" }, // Führt zur Übersicht
+    { name: "Über Mich", href: "/#ueber-mich" },
   ];
 
   return (
@@ -44,7 +43,7 @@ export function Navbar() {
         <div className="hidden md:flex md:items-center md:space-x-8">
           {navItems.map((item) => (
             <Link
-              key={item.href}
+              key={item.name}
               href={item.href}
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
@@ -52,7 +51,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild className="bg-white text-black hover:bg-neutral-200">
-            <Link href="#kontakt">Gespräch buchen</Link>
+            <Link href="/#kontakt">Gespräch buchen</Link>
           </Button>
         </div>
 
@@ -69,7 +68,7 @@ export function Navbar() {
               <div className="flex flex-col space-y-6 mt-8">
                 {navItems.map((item) => (
                   <Link
-                    key={item.href}
+                    key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="text-lg font-medium text-neutral-400 hover:text-white transition-colors"
@@ -78,7 +77,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <Button asChild className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
-                  <Link href="#kontakt" onClick={() => setIsOpen(false)}>
+                  <Link href="/#kontakt" onClick={() => setIsOpen(false)}>
                     Gespräch buchen
                   </Link>
                 </Button>
