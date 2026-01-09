@@ -11,7 +11,7 @@ export default function VisionPage() {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/vision-bg.jpg"
+          src="/vision-bg.png"
           alt="Saudi Vision Background"
           fill
           className="object-cover object-center"
