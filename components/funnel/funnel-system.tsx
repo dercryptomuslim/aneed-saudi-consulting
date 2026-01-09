@@ -121,22 +121,22 @@ export function ConsultingFunnel() {
               <div className="grid gap-4">
                 <Button 
                   onClick={() => goTo("AUSLAND_FIRMA_CHECK")}
-                  className="h-auto p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
+                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
                 >
                   <Globe className="h-6 w-6 text-emerald-500 mt-1 shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-base md:text-lg mb-1">Ich möchte gründen</div>
+                    <div className="font-semibold text-base md:text-lg mb-1 leading-tight">Ich möchte gründen</div>
                     <div className="text-neutral-400 font-normal text-sm leading-snug">Ich komme aus dem Ausland und habe noch keine Firma in KSA.</div>
                   </div>
                 </Button>
 
                 <Button 
                   onClick={() => goTo("EXISTING_KSA_CHECK")}
-                  className="h-auto p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
+                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
                 >
                   <ShieldCheck className="h-6 w-6 text-emerald-500 mt-1 shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-base md:text-lg mb-1">Ich bin bereits in KSA</div>
+                    <div className="font-semibold text-base md:text-lg mb-1 leading-tight">Ich bin bereits in KSA</div>
                     <div className="text-neutral-400 font-normal text-sm leading-snug">Ich habe bereits eine Firma oder Premium Residency.</div>
                   </div>
                 </Button>
@@ -223,7 +223,7 @@ export function ConsultingFunnel() {
                 Aktuell scheinen die Voraussetzungen für eine Zusammenarbeit noch nicht erfüllt zu sein. 
                 Wir wünschen Dir viel Erfolg auf Deinem Weg.
               </p>
-              <Button asChild variant="outline" className="border-neutral-700 text-white hover:bg-neutral-800 w-full md:w-auto">
+              <Button asChild variant="outline" className="border-neutral-700 text-white hover:bg-neutral-800 w-full md:w-auto h-auto py-3">
                 <a href="/">Zurück zur Startseite</a>
               </Button>
             </Card>
@@ -241,10 +241,10 @@ export function ConsultingFunnel() {
                onBack={() => goBack("START")}
              >
                <div className="grid gap-4">
-                 <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-emerald-600 hover:bg-emerald-700 h-auto py-4 text-base md:text-lg whitespace-normal">
+                 <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-emerald-600 hover:bg-emerald-700 h-auto py-4 text-base md:text-lg whitespace-normal leading-tight">
                    Ja, ich bin mir dessen bewusst
                  </Button>
-                 <Button onClick={() => goBack("START")} variant="ghost" className="text-neutral-400">
+                 <Button onClick={() => goBack("START")} variant="ghost" className="text-neutral-400 h-auto py-3">
                    Nein, das ist zu teuer
                  </Button>
                </div>
@@ -259,18 +259,18 @@ export function ConsultingFunnel() {
           {step === "BOOKING_FORM" && (
             <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
               <h2 className="text-xl md:text-2xl font-bold text-white mb-2">Beratungsgespräch buchen</h2>
-              <p className="text-emerald-500 mb-6">Deine Angaben wurden vorqualifiziert.</p>
+              <p className="text-emerald-500 mb-6 text-sm md:text-base">Deine Angaben wurden vorqualifiziert.</p>
               
               <div className="space-y-4">
-                 <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400 text-sm mb-4">
+                 <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400 text-sm mb-4 leading-relaxed">
                     Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.
                  </div>
                  
-                 <Button className="w-full bg-white text-black hover:bg-neutral-200 h-12 text-lg font-semibold">
+                 <Button className="w-full bg-white text-black hover:bg-neutral-200 h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight">
                    Jetzt Termin auswählen & bezahlen
                  </Button>
                  
-                 <Button onClick={() => goBack("START")} variant="link" className="text-neutral-500 w-full">
+                 <Button onClick={() => goBack("START")} variant="link" className="text-neutral-500 w-full py-3 h-auto">
                    Zurück
                  </Button>
               </div>
@@ -295,20 +295,20 @@ export function ConsultingFunnel() {
                      setFormData({...formData, entityType: "COMPANY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto p-4 md:p-6 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
+                   className="h-auto min-h-[72px] p-4 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
                  >
                    <Building2 className="mr-3 h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-                   <span className="flex-1">Ich habe bereits ein Unternehmen</span>
+                   <span className="flex-1 text-base md:text-lg">Ich habe bereits ein Unternehmen</span>
                  </Button>
                  <Button 
                    onClick={() => {
                      setFormData({...formData, entityType: "RESIDENCY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto p-4 md:p-6 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
+                   className="h-auto min-h-[72px] p-4 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
                  >
                    <ShieldCheck className="mr-3 h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-                   <span className="flex-1">Ich habe eine Premium Residency</span>
+                   <span className="flex-1 text-base md:text-lg">Ich habe eine Premium Residency</span>
                  </Button>
                </div>
              </StepCard>
@@ -325,7 +325,7 @@ export function ConsultingFunnel() {
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     placeholder="Dein Name" 
-                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.name && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12 text-base", errors.name && "border-red-500")}
                   />
                   {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
                 </div>
@@ -337,7 +337,7 @@ export function ConsultingFunnel() {
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     placeholder="+966..." 
                     type="tel"
-                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.phone && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12 text-base", errors.phone && "border-red-500")}
                   />
                   {errors.phone && <p className="text-xs text-red-500">{errors.phone}</p>}
                 </div>
@@ -349,7 +349,7 @@ export function ConsultingFunnel() {
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     placeholder="name@firma.com" 
                     type="email"
-                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.email && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12 text-base", errors.email && "border-red-500")}
                   />
                   {errors.email && <p className="text-xs text-red-500">{errors.email}</p>}
                 </div>
@@ -361,7 +361,7 @@ export function ConsultingFunnel() {
                       value={formData.unn}
                       onChange={(e) => setFormData({...formData, unn: e.target.value})}
                       placeholder="Beginnt mit 7 (10 Ziffern)" 
-                      className={cn("bg-neutral-950 border-neutral-800 h-12", errors.unn && "border-red-500")}
+                      className={cn("bg-neutral-950 border-neutral-800 h-12 text-base", errors.unn && "border-red-500")}
                     />
                     {errors.unn && <p className="text-xs text-red-500">{errors.unn}</p>}
                     <p className="text-xs text-neutral-500">Muss mit 7 beginnen und 10 Zeichen lang sein.</p>
@@ -375,7 +375,7 @@ export function ConsultingFunnel() {
                       value={formData.iqama}
                       onChange={(e) => setFormData({...formData, iqama: e.target.value})}
                       placeholder="Beginnt mit 2 (10 Ziffern)" 
-                      className={cn("bg-neutral-950 border-neutral-800 h-12", errors.iqama && "border-red-500")}
+                      className={cn("bg-neutral-950 border-neutral-800 h-12 text-base", errors.iqama && "border-red-500")}
                     />
                     {errors.iqama && <p className="text-xs text-red-500">{errors.iqama}</p>}
                     <p className="text-xs text-neutral-500">Muss mit 2 beginnen und 10 Zeichen lang sein.</p>
@@ -388,7 +388,7 @@ export function ConsultingFunnel() {
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     placeholder="Wie können wir helfen?" 
-                    className="bg-neutral-950 border-neutral-800 min-h-[100px]"
+                    className="bg-neutral-950 border-neutral-800 min-h-[100px] text-base"
                   />
                 </div>
 
@@ -415,14 +415,14 @@ function StepCard({ question, subtext, children, icon, onBack }: { question: str
   return (
     <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md shadow-2xl w-full">
       {onBack && (
-        <button onClick={onBack} className="flex items-center text-sm text-neutral-500 hover:text-white mb-6 transition-colors">
+        <button onClick={onBack} className="flex items-center text-sm text-neutral-500 hover:text-white mb-4 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
         </button>
       )}
-      <div className="text-center mb-6 md:mb-8">
+      <div className="text-center mb-6">
         {icon}
-        <h2 className="text-xl md:text-2xl font-bold text-white mb-3">{question}</h2>
-        {subtext && <p className="text-neutral-400 text-base md:text-lg leading-relaxed">{subtext}</p>}
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-2">{question}</h2>
+        {subtext && <p className="text-neutral-400 text-sm md:text-base leading-relaxed">{subtext}</p>}
       </div>
       {children}
     </Card>
@@ -433,7 +433,7 @@ function OptionButton({ children, onClick }: { children: React.ReactNode, onClic
   return (
     <Button 
       onClick={onClick} 
-      className="h-auto min-h-[64px] py-4 text-base md:text-lg font-medium bg-neutral-800 hover:bg-emerald-600/20 hover:text-emerald-500 hover:border-emerald-500 border border-transparent transition-all w-full whitespace-normal leading-tight"
+      className="h-auto min-h-[64px] py-4 px-4 text-base md:text-lg font-medium bg-neutral-800 hover:bg-emerald-600/20 hover:text-emerald-500 hover:border-emerald-500 border border-transparent transition-all w-full whitespace-normal leading-tight"
     >
       {children}
     </Button>
