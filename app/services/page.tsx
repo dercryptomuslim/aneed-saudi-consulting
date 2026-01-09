@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    id: "gruendung",
     title: "Unternehmensgründung in Saudi-Arabien",
     subtitle: "Rechtssicherer Markteintritt für saudische & internationale Firmen",
     description: "Die Gründung im Königreich bietet enorme Chancen, erfordert jedoch präzises Wissen um MISA-Lizenzen und lokale Regularien. Wir führen Sie strukturiert von der Idee zur operativen Firma.",
@@ -28,6 +29,7 @@ const services = [
     ]
   },
   {
+    id: "beratung",
     title: "Unternehmensberatung & Strategie",
     subtitle: "Wachstumsimpulse für bestehende Firmen",
     description: "Für Unternehmen, die bereits vor Ort sind oder expandieren wollen: Wir analysieren Geschäftsmodelle und optimieren Prozesse für den saudischen Markt.",
@@ -41,6 +43,7 @@ const services = [
     ]
   },
   {
+    id: "investment",
     title: "Investment in Geschäftskonzepte",
     subtitle: "Turnkey-Investments in geprüfte Modelle",
     description: "Wir entwickeln marktreife, kalkulierte Business-Konzepte in Wachstumsbranchen. Investieren Sie direkt in fertig strukturierte Projekte mit transparentem ROI.",
@@ -54,6 +57,7 @@ const services = [
     ]
   },
   {
+    id: "franchise",
     title: "Franchise-Systeme",
     subtitle: "Expansion & Systemaufbau im Königreich",
     description: "Saudi-Arabien liebt starke Marken. Wir adaptieren Ihr Franchise-Konzept rechtlich und operativ für den lokalen Markt und begleiten den Rollout.",
@@ -95,33 +99,35 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2">
             {services.map((service, index) => (
-              <MagicCard key={index} className="h-full border-neutral-800 bg-neutral-900/20 backdrop-blur-sm p-8">
-                <div className="flex flex-col h-full">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="h-14 w-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
-                      <service.icon className="h-7 w-7 text-emerald-500" />
-                    </div>
-                    <span className="text-xs font-mono text-neutral-600 border border-neutral-800 px-2 py-1 rounded">
-                      0{index + 1}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-emerald-500 text-sm font-medium mb-4">{service.subtitle}</p>
-                  <p className="text-neutral-400 mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="mt-auto space-y-3">
-                    {service.details.map((detail, i) => (
-                      <div key={i} className="flex items-start gap-3 text-sm text-neutral-300">
-                        <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
-                        <span>{detail}</span>
+              <div key={index} id={service.id} className="scroll-mt-24">
+                <MagicCard className="h-full border-neutral-800 bg-neutral-900/20 backdrop-blur-sm p-8">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="h-14 w-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+                        <service.icon className="h-7 w-7 text-emerald-500" />
                       </div>
-                    ))}
+                      <span className="text-xs font-mono text-neutral-600 border border-neutral-800 px-2 py-1 rounded">
+                        0{index + 1}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                    <p className="text-emerald-500 text-sm font-medium mb-4">{service.subtitle}</p>
+                    <p className="text-neutral-400 mb-8 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <div className="mt-auto space-y-3">
+                      {service.details.map((detail, i) => (
+                        <div key={i} className="flex items-start gap-3 text-sm text-neutral-300">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
+                          <span>{detail}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </MagicCard>
+                </MagicCard>
+              </div>
             ))}
           </div>
 
@@ -147,4 +153,3 @@ export default function ServicesPage() {
     </main>
   );
 }
-
