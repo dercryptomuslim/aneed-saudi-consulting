@@ -2,7 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Briefcase, TrendingUp, Store, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Building2, Briefcase, TrendingUp, Store, CheckCircle2, ArrowDown } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Contact } from "@/components/contact";
@@ -12,13 +12,20 @@ export const metadata: Metadata = {
   description: "Detaillierte Übersicht unserer Leistungen: Unternehmensgründung, Beratung, Investment und Franchise in Saudi-Arabien.",
 };
 
+const quickLinks = [
+  { id: "gruendung", title: "Gründung", icon: Building2 },
+  { id: "beratung", title: "Beratung", icon: Briefcase },
+  { id: "investment", title: "Investment", icon: TrendingUp },
+  { id: "franchise", title: "Franchise", icon: Store },
+];
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-black text-foreground flex flex-col scroll-smooth">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-12 overflow-hidden">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="inline-block rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1 text-sm text-emerald-500 backdrop-blur-md mb-6">
@@ -30,11 +37,28 @@ export default function ServicesPage() {
           <p className="text-lg text-neutral-400 max-w-3xl mx-auto mb-10">
             Transparenz, Expertise und klare Strukturen. Hier erfahren Sie genau, wie wir Ihren Erfolg in Saudi-Arabien sicherstellen.
           </p>
+
+          {/* Quick Links / Inhaltsverzeichnis */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
+            {quickLinks.map((link) => (
+              <Link 
+                key={link.id} 
+                href={`#${link.id}`}
+                className="group flex flex-col items-center justify-center p-6 rounded-xl bg-neutral-900/30 border border-neutral-800 hover:border-emerald-500/50 hover:bg-neutral-900/60 transition-all duration-300"
+              >
+                <div className="h-10 w-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500 mb-3 group-hover:scale-110 transition-transform">
+                  <link.icon className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-medium text-neutral-300 group-hover:text-white">{link.title}</span>
+                <ArrowDown className="h-3 w-3 text-neutral-600 mt-2 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 1. Unternehmensgründung */}
-      <section id="gruendung" className="py-20 border-t border-neutral-900 bg-neutral-950/30">
+      <section id="gruendung" className="py-24 border-t border-neutral-900 bg-neutral-950/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -91,7 +115,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. Unternehmensberatung */}
-      <section id="beratung" className="py-20 border-t border-neutral-900">
+      <section id="beratung" className="py-24 border-t border-neutral-900 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -141,7 +165,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Investment */}
-      <section id="investment" className="py-20 border-t border-neutral-900 bg-neutral-950/30">
+      <section id="investment" className="py-24 border-t border-neutral-900 bg-neutral-950/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -197,7 +221,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. Franchise */}
-      <section id="franchise" className="py-20 border-t border-neutral-900">
+      <section id="franchise" className="py-24 border-t border-neutral-900 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
