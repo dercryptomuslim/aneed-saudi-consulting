@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -11,22 +12,31 @@ export function About() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Image / Stats Side */}
-          <div className="lg:w-1/2 relative">
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 shadow-2xl">
-              {/* Hier kommt das echte Bild rein */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-neutral-800 to-neutral-950">
-                <span className="text-neutral-600 text-lg font-medium">Aneed Ashraf</span>
-                <span className="text-neutral-700 text-sm">Portrait</span>
-              </div>
+          <div className="lg:w-1/2 relative group">
+            <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+              {/* ECHTES BILD HIER */}
+              <Image 
+                src="/aneed-portrait.jpg" 
+                alt="Aneed Ashraf Portrait" 
+                fill
+                className="object-cover object-top opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+                priority
+              />
               
+              {/* Overlay Gradient for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
+
               {/* Stats Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-end gap-2">
-                  <span className="text-6xl font-bold text-white">9+</span>
-                  <span className="text-lg font-medium text-emerald-500 mb-2">Jahre Erfahrung<br/>im Kingdom</span>
+                  <span className="text-6xl font-bold text-white tracking-tighter">9+</span>
+                  <span className="text-lg font-medium text-emerald-400 mb-2 leading-tight">Jahre Erfahrung<br/>in Saudi-Arabien</span>
                 </div>
               </div>
             </div>
+
+            {/* Decorative Elements behind image */}
+            <div className="absolute -z-10 top-6 right-6 w-full h-full border border-neutral-800 rounded-2xl hidden md:block" />
           </div>
           
           {/* Content Side */}
