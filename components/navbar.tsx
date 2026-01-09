@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, ChevronDown, Building2, TrendingUp, Briefcase, Store } from "lucide-react";
+import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,6 +14,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -21,25 +27,25 @@ const services = [
   {
     title: "Unternehmensgründung",
     href: "/services#gruendung",
-    description: "Rechtssicherer Markteintritt & MISA-Lizenzierung für Firmen.",
+    description: "Rechtssicherer Markteintritt & MISA-Lizenzierung.",
     icon: Building2
   },
   {
     title: "Unternehmensberatung",
     href: "/services#beratung",
-    description: "Strategische Planung & Prozessoptimierung vor Ort.",
+    description: "Strategische Planung & Prozessoptimierung.",
     icon: Briefcase
   },
   {
     title: "Investment",
     href: "/services#investment",
-    description: "Investition in ausgearbeitete, skalierbare Geschäftskonzepte.",
+    description: "Investition in ausgearbeitete Konzepte.",
     icon: TrendingUp
   },
   {
     title: "Franchise",
     href: "/services#franchise",
-    description: "Aufbau & Expansion von Franchise-Systemen in Saudi-Arabien.",
+    description: "Aufbau & Expansion von Franchise-Systemen.",
     icon: Store
   },
 ];
@@ -102,7 +108,7 @@ export function Navbar() {
                         href="/services" 
                         className="flex items-center justify-center w-full p-2 text-sm font-medium text-emerald-500 hover:text-emerald-400 transition-colors"
                       >
-                        Alle Leistungen ansehen
+                        Alle Leistungen ansehen <ArrowRight className="ml-1 h-3 w-3" />
                       </Link>
                     </li>
                   </ul>
@@ -119,7 +125,7 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Button asChild className="ml-6 bg-white text-black hover:bg-neutral-200 rounded-full px-6">
+          <Button asChild className="ml-6 bg-white text-black hover:bg-neutral-200 rounded-full px-6 font-medium">
             <Link href="/check">Gespräch buchen</Link>
           </Button>
         </div>
@@ -133,43 +139,77 @@ export function Navbar() {
                 <span className="sr-only">Menü öffnen</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-black border-l border-white/10 text-white w-[300px]">
-              <div className="flex flex-col space-y-6 mt-8">
-                <Link
-                  href="/"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-neutral-400 hover:text-white transition-colors"
-                >
-                  Startseite
-                </Link>
-                
-                <div className="space-y-3">
-                  <div className="text-lg font-medium text-white mb-2">Leistungen</div>
-                  {services.map((service) => (
-                    <Link
-                      key={service.title}
-                      href={service.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block pl-4 py-1 text-sm text-neutral-400 hover:text-emerald-500 transition-colors border-l border-neutral-800 hover:border-emerald-500"
-                    >
-                      {service.title}
-                    </Link>
-                  ))}
+            
+            {/* Vollbild Mobile Menu */}
+            <SheetContent side="right" className="w-full sm:w-[400px] bg-black border-l border-neutral-800 p-0 flex flex-col">
+              <div className="p-6 border-b border-neutral-800 flex items-center justify-between">
+                <span className="text-xl font-bold text-white">Menü</span>
+                <SheetClose asChild>
+                  {/* Close button is handled by Sheet automatically, but we can style header here */}
+                </SheetClose>
+              </div>
+
+              <div className="flex-1 overflow-y-auto py-6 px-6">
+                <div className="flex flex-col space-y-2">
+                  <Link
+                    href="/"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between text-2xl font-bold text-white py-4 border-b border-neutral-900 active:text-emerald-500"
+                  >
+                    Startseite
+                    <ChevronRight className="h-5 w-5 text-neutral-600" />
+                  </Link>
+
+                  <Accordion type="single" collapsible className="w-full border-b border-neutral-900">
+                    <AccordionItem value="services" className="border-none">
+                      <AccordionTrigger className="text-2xl font-bold text-white hover:no-underline py-4">
+                        Leistungen
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col space-y-4 pl-2 pb-4">
+                          {services.map((service) => (
+                            <Link
+                              key={service.title}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className="flex items-center gap-3 text-neutral-400 hover:text-emerald-500 transition-colors p-2 rounded-lg hover:bg-neutral-900"
+                            >
+                              <service.icon className="h-5 w-5 text-emerald-500" />
+                              <span className="text-base font-medium">{service.title}</span>
+                            </Link>
+                          ))}
+                          <Link 
+                            href="/services" 
+                            onClick={() => setIsOpen(false)}
+                            className="text-sm font-medium text-emerald-500 mt-2 pl-2"
+                          >
+                            Alle Leistungen ansehen →
+                          </Link>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+
+                  <Link
+                    href="/#ueber-mich"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between text-2xl font-bold text-white py-4 border-b border-neutral-900 active:text-emerald-500"
+                  >
+                    Über Mich
+                    <ChevronRight className="h-5 w-5 text-neutral-600" />
+                  </Link>
                 </div>
+              </div>
 
-                <Link
-                  href="/#ueber-mich"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-neutral-400 hover:text-white transition-colors"
-                >
-                  Über Mich
-                </Link>
-
-                <Button asChild className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
+              <div className="p-6 border-t border-neutral-800 bg-neutral-900/30 mt-auto">
+                 <Button asChild className="w-full h-14 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-xl">
                   <Link href="/check" onClick={() => setIsOpen(false)}>
                     Gespräch buchen
                   </Link>
                 </Button>
+                <div className="mt-6 text-center text-sm text-neutral-500">
+                  © {new Date().getFullYear()} Aneed Ashraf
+                </div>
               </div>
             </SheetContent>
           </Sheet>
