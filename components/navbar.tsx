@@ -120,7 +120,7 @@ export function Navbar() {
           </NavigationMenu>
 
           <Button asChild className="ml-6 bg-white text-black hover:bg-neutral-200 rounded-full px-6">
-            <Link href="/#kontakt">Gespräch buchen</Link>
+            <Link href="/check">Gespräch buchen</Link>
           </Button>
         </div>
 
@@ -166,7 +166,7 @@ export function Navbar() {
                 </Link>
 
                 <Button asChild className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
-                  <Link href="/#kontakt" onClick={() => setIsOpen(false)}>
+                  <Link href="/check" onClick={() => setIsOpen(false)}>
                     Gespräch buchen
                   </Link>
                 </Button>
