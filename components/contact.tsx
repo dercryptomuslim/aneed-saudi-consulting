@@ -9,52 +9,56 @@ import { Label } from "@/components/ui/label";
 export function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: Implement form submission logic
     alert("Vielen Dank für Ihre Anfrage! Wir melden uns in Kürze.");
   }
 
   return (
-    <section id="kontakt" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Starten Sie jetzt Ihre Reise
+    <section id="kontakt" className="py-24 bg-black relative">
+       {/* Gradient Glow Background */}
+       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-[800px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] opacity-40" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-2xl mx-auto text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+            Bereit für den nächsten Schritt?
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Lassen Sie uns über Ihre Pläne sprechen. Vereinbaren Sie ein unverbindliches Erstgespräch.
+          <p className="text-lg text-neutral-400">
+            Lassen Sie uns Ihre Vision besprechen. Diskret, direkt und zielorientiert.
           </p>
         </div>
 
-        <Card className="max-w-xl mx-auto">
+        <Card className="max-w-xl mx-auto border-neutral-800 bg-neutral-900/50 backdrop-blur-xl shadow-2xl">
           <CardHeader>
-            <CardTitle>Kontaktformular</CardTitle>
-            <CardDescription>
-              Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.
+            <CardTitle className="text-white">Kontakt aufnehmen</CardTitle>
+            <CardDescription className="text-neutral-400">
+              Füllen Sie das Formular aus. Wir melden uns innerhalb von 24h.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">Vorname</Label>
-                  <Input id="firstName" placeholder="Max" required />
+                  <Label htmlFor="firstName" className="text-neutral-300">Vorname</Label>
+                  <Input id="firstName" placeholder="Max" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Nachname</Label>
-                  <Input id="lastName" placeholder="Mustermann" required />
+                  <Label htmlFor="lastName" className="text-neutral-300">Nachname</Label>
+                  <Input id="lastName" placeholder="Mustermann" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email">E-Mail</Label>
-                <Input id="email" type="email" placeholder="max@beispiel.de" required />
+                <Label htmlFor="email" className="text-neutral-300">E-Mail</Label>
+                <Input id="email" type="email" placeholder="max@firma.de" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="topic">Thema</Label>
+                <Label htmlFor="topic" className="text-neutral-300">Interesse an</Label>
                 <select 
                   id="topic" 
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full rounded-md border border-neutral-800 bg-neutral-950 px-3 py-2 text-sm text-white ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/20 focus-visible:border-emerald-500/50 disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 >
                   <option value="">Bitte wählen...</option>
@@ -66,17 +70,17 @@ export function Contact() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Nachricht</Label>
+                <Label htmlFor="message" className="text-neutral-300">Nachricht</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Erzählen Sie uns kurz von Ihrem Vorhaben..." 
-                  className="min-h-[120px]"
+                  placeholder="Wie können wir Sie unterstützen?" 
+                  className="min-h-[120px] bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
                   required 
                 />
               </div>
 
-              <Button type="submit" className="w-full">
-                Anfrage senden
+              <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-11 text-base font-medium">
+                Kostenloses Erstgespräch anfragen
               </Button>
             </form>
           </CardContent>
@@ -85,4 +89,3 @@ export function Contact() {
     </section>
   );
 }
-

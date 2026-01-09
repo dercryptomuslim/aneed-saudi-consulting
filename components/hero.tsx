@@ -1,46 +1,60 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Spotlight } from "@/components/ui/spotlight";
+import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-32 lg:py-40">
-      <div className="container relative z-10 mx-auto px-4 text-center">
-        <div className="mx-auto max-w-3xl space-y-8">
-          <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            Ihr Tor zum Erfolg in <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-              Saudi-Arabien
-            </span>
+    <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+      {/* Spotlight Effect */}
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      
+      <div className="relative z-10 w-full max-w-7xl px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          <div className="mb-6 inline-block rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1 text-sm text-neutral-400 backdrop-blur-md">
+            <span className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Die Zukunft beginnt in Riad
+          </div>
+          
+          <h1 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl lg:text-8xl">
+            Ihr Tor zum Erfolg in <br />
+            <span className="text-emerald-500/90 glow-text">Saudi-Arabien</span>
           </h1>
           
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Profitieren Sie von 9 Jahren Erfahrung vor Ort. Wir begleiten Sie professionell bei Firmengründung, Investment und Ihrer Auswanderung in das Königreich.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-400 md:text-xl">
+            9 Jahre Expertise vor Ort. Wir navigieren Sie sicher durch Gründung, Investment und Auswanderung. Werden Sie Teil der Vision 2030.
           </p>
-          
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 w-full px-8 text-lg sm:w-auto">
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button asChild size="lg" className="h-14 rounded-full bg-emerald-600 px-8 text-lg font-semibold text-white hover:bg-emerald-700 hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all duration-300">
               <Link href="#kontakt">
                 Kostenlose Beratung
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 w-full px-8 text-lg sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-neutral-800 bg-black/50 px-8 text-lg text-neutral-300 hover:bg-neutral-900 hover:text-white backdrop-blur-sm">
               <Link href="#leistungen">
                 Unsere Leistungen
               </Link>
             </Button>
           </div>
-
-          <div className="pt-8 text-sm text-muted-foreground">
-            <p>Vertrauen Sie dem Experten mit nachweisbarer Erfahrung.</p>
-          </div>
-        </div>
+        </motion.div>
       </div>
-      
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-[100px]" />
+
+      {/* Grid Background */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
     </section>
   );
 }
-

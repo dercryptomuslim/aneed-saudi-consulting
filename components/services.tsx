@@ -1,91 +1,78 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Building2, TrendingUp, Plane } from "lucide-react";
+import { MagicCard } from "@/components/ui/magic-card";
+import { Building2, TrendingUp, Plane, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     title: "Firmengründung",
-    description: "Starten Sie Ihr Business in Saudi-Arabien. Wir übernehmen den kompletten Prozess für Sie.",
+    description: "Starten Sie Ihr Business in Saudi-Arabien. 100% Eigentum, Lizenzen und Bankkonten aus einer Hand.",
     icon: Building2,
-    features: [
-      "100% Eigentum (wo möglich)",
-      "Lizenzierung & Behördengänge",
-      "Bankkontoeröffnung",
-      "Steuerberatung & Compliance"
-    ],
-    id: "gruendung"
+    features: ["Lizenzierung", "Bankkonto", "Steuern"],
+    id: "gruendung",
+    href: "#kontakt"
   },
   {
     title: "Investment",
-    description: "Nutzen Sie das Wachstum der Vision 2030. Wir identifizieren lukrative Möglichkeiten.",
+    description: "Profitieren Sie vom Boom der Vision 2030. Exklusive Zugänge zu Immobilien und Unternehmensbeteiligungen.",
     icon: TrendingUp,
-    features: [
-      "Immobilien-Investments",
-      "Unternehmensbeteiligungen",
-      "Marktanalyse & Strategie",
-      "Netzwerk zu lokalen Partnern"
-    ],
-    id: "investment"
+    features: ["Real Estate", "Private Equity", "Marktanalyse"],
+    id: "investment",
+    href: "#kontakt"
   },
   {
     title: "Auswanderung",
-    description: "Ihr nahtloser Start in ein neues Leben. Wir kümmern uns um alle Formalitäten.",
+    description: "Ihr neues Leben im Königreich. Wir kümmern uns um Iqama, Wohnungssuche und das kulturelle Onboarding.",
     icon: Plane,
-    features: [
-      "Visa-Service (Iqama)",
-      "Wohnungssuche & Schulen",
-      "Führerschein & ID",
-      "Kulturelles Onboarding"
-    ],
-    id: "auswanderung"
+    features: ["Visa & Iqama", "Relocation", "Lifestyle"],
+    id: "auswanderung",
+    href: "#kontakt"
   },
 ];
 
 export function Services() {
   return (
-    <section id="leistungen" className="py-20 bg-muted/50">
+    <section id="leistungen" className="py-24 bg-black relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Unsere Expertise für Ihre Ziele
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-gradient-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+            Unsere Expertise. Ihr Vorteil.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Wir bieten Ihnen ein Rundum-Sorglos-Paket für Ihren erfolgreichen Start im Königreich Saudi-Arabien.
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+            Wir bieten High-End Consulting für Ihre Ambitionen im Königreich.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col h-full border-none shadow-lg" id={service.id}>
-              <CardHeader>
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <MagicCard key={service.title} className="rounded-2xl h-full border-neutral-800">
+              <div className="flex flex-col h-full">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                   <service.icon className="h-6 w-6" />
                 </div>
-                <CardTitle className="text-2xl">{service.title}</CardTitle>
-                <CardDescription className="text-base mt-2">
+                
+                <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-neutral-400 mb-8 flex-grow leading-relaxed">
                   {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <ul className="space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-muted-foreground">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-primary" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature) => (
+                      <span key={feature} className="px-3 py-1 text-xs font-medium rounded-full bg-neutral-900 text-neutral-300 border border-neutral-800">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link href={service.href} className="flex items-center text-sm font-semibold text-emerald-500 hover:text-emerald-400 transition-colors group">
+                    Mehr erfahren <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </div>
+              </div>
+            </MagicCard>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
