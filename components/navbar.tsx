@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import {
@@ -25,27 +25,39 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    title: "Unternehmensgründung",
+    title: "Gründung",
     href: "/services#gruendung",
-    description: "Rechtssicherer Markteintritt & MISA-Lizenzierung.",
+    description: "Rechtssicherer Start & Lizenzen.",
     icon: Building2
   },
   {
-    title: "Unternehmensberatung",
+    title: "Aufbau",
+    href: "/services#aufbau",
+    description: "Standort, Personal & Prozesse.",
+    icon: Users
+  },
+  {
+    title: "Führung",
+    href: "/services#fuehrung",
+    description: "Betrieb, Finanzen & Controlling.",
+    icon: BarChart3
+  },
+  {
+    title: "Beratung",
     href: "/services#beratung",
-    description: "Strategische Planung & Prozessoptimierung.",
+    description: "Strategie für bestehende Firmen.",
     icon: Briefcase
   },
   {
     title: "Investment",
     href: "/services#investment",
-    description: "Investition in ausgearbeitete Konzepte.",
+    description: "Investition in fertige Konzepte.",
     icon: TrendingUp
   },
   {
     title: "Franchise",
     href: "/services#franchise",
-    description: "Aufbau & Expansion von Franchise-Systemen.",
+    description: "Expansion von Systemen.",
     icon: Store
   },
 ];
@@ -92,7 +104,7 @@ export function Navbar() {
                   Leistungen
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-black border border-neutral-800 rounded-xl">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-black border border-neutral-800 rounded-xl">
                     {services.map((service) => (
                       <ListItem
                         key={service.title}
@@ -140,12 +152,10 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             
-            {/* Vollbild Mobile Menu */}
             <SheetContent side="right" className="w-full sm:w-[400px] bg-black border-l border-neutral-800 p-0 flex flex-col">
               <div className="p-6 border-b border-neutral-800 flex items-center justify-between">
                 <span className="text-xl font-bold text-white">Menü</span>
                 <SheetClose asChild>
-                  {/* Close button is handled by Sheet automatically, but we can style header here */}
                 </SheetClose>
               </div>
 
