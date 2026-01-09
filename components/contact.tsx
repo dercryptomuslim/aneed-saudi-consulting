@@ -80,7 +80,7 @@ export function Contact() {
               </div>
 
               <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-11 text-base font-medium">
-                Kostenloses Erstgespräch anfragen
+                Strategie-Gespräch anfragen
               </Button>
             </form>
           </CardContent>

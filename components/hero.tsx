@@ -39,8 +39,8 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="h-14 rounded-full bg-emerald-600 px-8 text-lg font-semibold text-white hover:bg-emerald-700 hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all duration-300">
-              <Link href="#kontakt">
-                Kostenlose Beratung
+              <Link href="/check">
+                Expertengespräch anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
