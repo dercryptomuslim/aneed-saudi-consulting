@@ -85,7 +85,7 @@ export function ConsultingFunnel() {
   // Animations-Varianten
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 50 : -50,
+      x: direction > 0 ? 20 : -20, // Reduzierter Weg für subtilere Mobile-Animation
       opacity: 0
     }),
     center: {
@@ -93,13 +93,13 @@ export function ConsultingFunnel() {
       opacity: 1
     },
     exit: (direction: number) => ({
-      x: direction < 0 ? 50 : -50,
+      x: direction < 0 ? 20 : -20,
       opacity: 0
     })
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto px-4 md:px-0">
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div
           key={step}
@@ -116,28 +116,28 @@ export function ConsultingFunnel() {
             ------------------------------------------------
           */}
           {step === "START" && (
-            <Card className="p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Wo stehst du aktuell?</h2>
+            <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">Wo stehst du aktuell?</h2>
               <div className="grid gap-4">
                 <Button 
                   onClick={() => goTo("AUSLAND_FIRMA_CHECK")}
-                  className="h-auto p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all"
+                  className="h-auto p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
                 >
                   <Globe className="h-6 w-6 text-emerald-500 mt-1 shrink-0" />
-                  <div>
-                    <div className="font-semibold text-lg">Ich möchte gründen</div>
-                    <div className="text-neutral-400 font-normal text-sm">Ich komme aus dem Ausland und habe noch keine Firma in KSA.</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-base md:text-lg mb-1">Ich möchte gründen</div>
+                    <div className="text-neutral-400 font-normal text-sm leading-snug">Ich komme aus dem Ausland und habe noch keine Firma in KSA.</div>
                   </div>
                 </Button>
 
                 <Button 
                   onClick={() => goTo("EXISTING_KSA_CHECK")}
-                  className="h-auto p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all"
+                  className="h-auto p-4 md:p-6 text-left flex items-start gap-4 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 border border-transparent transition-all whitespace-normal"
                 >
                   <ShieldCheck className="h-6 w-6 text-emerald-500 mt-1 shrink-0" />
-                  <div>
-                    <div className="font-semibold text-lg">Ich bin bereits in KSA</div>
-                    <div className="text-neutral-400 font-normal text-sm">Ich habe bereits eine Firma oder Premium Residency.</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-base md:text-lg mb-1">Ich bin bereits in KSA</div>
+                    <div className="text-neutral-400 font-normal text-sm leading-snug">Ich habe bereits eine Firma oder Premium Residency.</div>
                   </div>
                 </Button>
               </div>
@@ -155,7 +155,7 @@ export function ConsultingFunnel() {
               subtext="Die Firma muss im Handelsregister eingetragen und seit mindestens 1 Jahr aktiv sein."
               onBack={() => goBack("START")}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <OptionButton onClick={() => goTo("BILANZ_CHECK")}>Ja</OptionButton>
                 <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>Nein</OptionButton>
               </div>
@@ -168,7 +168,7 @@ export function ConsultingFunnel() {
               subtext="Liegt der Wert zwischen 75.000 € und 100.000 €?"
               onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_DIRECT")}>Ja</OptionButton>
                 <OptionButton onClick={() => goTo("RISIKO_WARNUNG")}>Nein</OptionButton>
               </div>
@@ -182,7 +182,7 @@ export function ConsultingFunnel() {
               icon={<AlertCircle className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />}
               onBack={() => goBack("BILANZ_CHECK")}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_RISK")}>Ja, versuchen</OptionButton>
                 <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>Nein, abbrechen</OptionButton>
               </div>
@@ -195,7 +195,7 @@ export function ConsultingFunnel() {
               subtext="Es gibt die Möglichkeit, ein bestehendes Unternehmen zu kaufen. Die Kosten liegen hierbei bei ca. 15.000 € für den Kauf. Ist das eine Option für dich?"
               onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_KAUF")}>Ja</OptionButton>
                 <OptionButton onClick={() => goTo("BERATUNG_TROTZDEM")}>Nein</OptionButton>
               </div>
@@ -209,7 +209,7 @@ export function ConsultingFunnel() {
               icon={<AlertCircle className="h-12 w-12 text-red-500 mb-4 mx-auto" />}
               onBack={() => goBack("FIRMENKAUF_OPTION")}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <OptionButton onClick={() => goTo("BOOKING_FORM")}>Ja, Gespräch buchen</OptionButton>
                 <OptionButton onClick={() => goTo("REJECTED")}>Nein, beenden</OptionButton>
               </div>
@@ -217,19 +217,19 @@ export function ConsultingFunnel() {
           )}
 
           {step === "REJECTED" && (
-            <Card className="p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md text-center">
+            <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md text-center">
               <h2 className="text-xl font-bold text-white mb-4">Vielen Dank für Dein Interesse.</h2>
               <p className="text-neutral-400 mb-6">
                 Aktuell scheinen die Voraussetzungen für eine Zusammenarbeit noch nicht erfüllt zu sein. 
                 Wir wünschen Dir viel Erfolg auf Deinem Weg.
               </p>
-              <Button asChild variant="outline" className="border-neutral-700 text-white hover:bg-neutral-800">
+              <Button asChild variant="outline" className="border-neutral-700 text-white hover:bg-neutral-800 w-full md:w-auto">
                 <a href="/">Zurück zur Startseite</a>
               </Button>
             </Card>
           )}
 
-          {/* Kosten Awareness Steps (alle führen zum Booking Form) */}
+          {/* Kosten Awareness Steps */}
           {(step === "KOSTEN_AWARENESS_DIRECT" || step === "KOSTEN_AWARENESS_RISK" || step === "KOSTEN_AWARENESS_KAUF") && (
              <StepCard 
                question="Kostentransparenz"
@@ -238,10 +238,10 @@ export function ConsultingFunnel() {
                  ? "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet (zzgl. zum Kaufpreis von 15.000 €)?"
                  : "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet?"
                }
-               onBack={() => goBack("START")} // Vereinfacht
+               onBack={() => goBack("START")}
              >
                <div className="grid gap-4">
-                 <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-emerald-600 hover:bg-emerald-700 h-12 text-lg">
+                 <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-emerald-600 hover:bg-emerald-700 h-auto py-4 text-base md:text-lg whitespace-normal">
                    Ja, ich bin mir dessen bewusst
                  </Button>
                  <Button onClick={() => goBack("START")} variant="ghost" className="text-neutral-400">
@@ -257,12 +257,11 @@ export function ConsultingFunnel() {
             ------------------------------------------------
           */}
           {step === "BOOKING_FORM" && (
-            <Card className="p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-white mb-2">Beratungsgespräch buchen</h2>
+            <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-2">Beratungsgespräch buchen</h2>
               <p className="text-emerald-500 mb-6">Deine Angaben wurden vorqualifiziert.</p>
               
               <div className="space-y-4">
-                 {/* Hier würde man Kalender-Integration (Calendly) oder Formular einbauen */}
                  <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400 text-sm mb-4">
                     Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.
                  </div>
@@ -296,28 +295,28 @@ export function ConsultingFunnel() {
                      setFormData({...formData, entityType: "COMPANY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto p-4 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500"
+                   className="h-auto p-4 md:p-6 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
                  >
-                   <Building2 className="mr-3 h-5 w-5 text-emerald-500" />
-                   Ich habe bereits ein Unternehmen
+                   <Building2 className="mr-3 h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                   <span className="flex-1">Ich habe bereits ein Unternehmen</span>
                  </Button>
                  <Button 
                    onClick={() => {
                      setFormData({...formData, entityType: "RESIDENCY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto p-4 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500"
+                   className="h-auto p-4 md:p-6 text-left border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 hover:border-emerald-500 whitespace-normal flex items-start"
                  >
-                   <ShieldCheck className="mr-3 h-5 w-5 text-emerald-500" />
-                   Ich habe eine Premium Residency
+                   <ShieldCheck className="mr-3 h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
+                   <span className="flex-1">Ich habe eine Premium Residency</span>
                  </Button>
                </div>
              </StepCard>
           )}
 
           {step === "VALIDATION_FORM" && (
-            <Card className="p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-white mb-6">Verifizierung erforderlich</h2>
+            <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Verifizierung erforderlich</h2>
               
               <div className="space-y-4">
                 <div className="space-y-2">
@@ -326,7 +325,7 @@ export function ConsultingFunnel() {
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     placeholder="Dein Name" 
-                    className={cn("bg-neutral-950 border-neutral-800", errors.name && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.name && "border-red-500")}
                   />
                   {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
                 </div>
@@ -338,7 +337,7 @@ export function ConsultingFunnel() {
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     placeholder="+966..." 
                     type="tel"
-                    className={cn("bg-neutral-950 border-neutral-800", errors.phone && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.phone && "border-red-500")}
                   />
                   {errors.phone && <p className="text-xs text-red-500">{errors.phone}</p>}
                 </div>
@@ -350,7 +349,7 @@ export function ConsultingFunnel() {
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     placeholder="name@firma.com" 
                     type="email"
-                    className={cn("bg-neutral-950 border-neutral-800", errors.email && "border-red-500")}
+                    className={cn("bg-neutral-950 border-neutral-800 h-12", errors.email && "border-red-500")}
                   />
                   {errors.email && <p className="text-xs text-red-500">{errors.email}</p>}
                 </div>
@@ -362,7 +361,7 @@ export function ConsultingFunnel() {
                       value={formData.unn}
                       onChange={(e) => setFormData({...formData, unn: e.target.value})}
                       placeholder="Beginnt mit 7 (10 Ziffern)" 
-                      className={cn("bg-neutral-950 border-neutral-800", errors.unn && "border-red-500")}
+                      className={cn("bg-neutral-950 border-neutral-800 h-12", errors.unn && "border-red-500")}
                     />
                     {errors.unn && <p className="text-xs text-red-500">{errors.unn}</p>}
                     <p className="text-xs text-neutral-500">Muss mit 7 beginnen und 10 Zeichen lang sein.</p>
@@ -376,7 +375,7 @@ export function ConsultingFunnel() {
                       value={formData.iqama}
                       onChange={(e) => setFormData({...formData, iqama: e.target.value})}
                       placeholder="Beginnt mit 2 (10 Ziffern)" 
-                      className={cn("bg-neutral-950 border-neutral-800", errors.iqama && "border-red-500")}
+                      className={cn("bg-neutral-950 border-neutral-800 h-12", errors.iqama && "border-red-500")}
                     />
                     {errors.iqama && <p className="text-xs text-red-500">{errors.iqama}</p>}
                     <p className="text-xs text-neutral-500">Muss mit 2 beginnen und 10 Zeichen lang sein.</p>
@@ -394,10 +393,10 @@ export function ConsultingFunnel() {
                 </div>
 
                 <div className="pt-4 flex gap-3">
-                  <Button variant="outline" onClick={() => goBack("EXISTING_KSA_CHECK")} className="w-1/3 border-neutral-700">
+                  <Button variant="outline" onClick={() => goBack("EXISTING_KSA_CHECK")} className="w-1/3 border-neutral-700 h-12">
                     Zurück
                   </Button>
-                  <Button onClick={handleValidationSubmit} className="w-2/3 bg-emerald-600 hover:bg-emerald-700">
+                  <Button onClick={handleValidationSubmit} className="w-2/3 bg-emerald-600 hover:bg-emerald-700 h-12 font-semibold">
                     Anfrage senden
                   </Button>
                 </div>
@@ -414,16 +413,16 @@ export function ConsultingFunnel() {
 // Hilfs-Komponente für einheitliches Design der Frage-Karten
 function StepCard({ question, subtext, children, icon, onBack }: { question: string, subtext?: string, children: React.ReactNode, icon?: React.ReactNode, onBack?: () => void }) {
   return (
-    <Card className="p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md shadow-2xl">
+    <Card className="p-6 md:p-8 border-neutral-800 bg-neutral-900/50 backdrop-blur-md shadow-2xl w-full">
       {onBack && (
         <button onClick={onBack} className="flex items-center text-sm text-neutral-500 hover:text-white mb-6 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
         </button>
       )}
-      <div className="text-center mb-8">
+      <div className="text-center mb-6 md:mb-8">
         {icon}
-        <h2 className="text-2xl font-bold text-white mb-3">{question}</h2>
-        {subtext && <p className="text-neutral-400 text-lg leading-relaxed">{subtext}</p>}
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-3">{question}</h2>
+        {subtext && <p className="text-neutral-400 text-base md:text-lg leading-relaxed">{subtext}</p>}
       </div>
       {children}
     </Card>
@@ -434,10 +433,9 @@ function OptionButton({ children, onClick }: { children: React.ReactNode, onClic
   return (
     <Button 
       onClick={onClick} 
-      className="h-16 text-lg font-medium bg-neutral-800 hover:bg-emerald-600/20 hover:text-emerald-500 hover:border-emerald-500 border border-transparent transition-all"
+      className="h-auto min-h-[64px] py-4 text-base md:text-lg font-medium bg-neutral-800 hover:bg-emerald-600/20 hover:text-emerald-500 hover:border-emerald-500 border border-transparent transition-all w-full whitespace-normal leading-tight"
     >
       {children}
     </Button>
   );
 }
-
