@@ -36,24 +36,24 @@ export function Contact() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-slate-700 font-medium">Vorname</Label>
-                  <Input id="firstName" placeholder="Max" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
+                  <Input id="firstName" placeholder="Max" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName" className="text-slate-700 font-medium">Nachname</Label>
-                  <Input id="lastName" placeholder="Mustermann" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
+                  <Input id="lastName" placeholder="Mustermann" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-700 font-medium">E-Mail</Label>
-                <Input id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
+                <Input id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="topic" className="text-slate-700 font-medium">Interesse an</Label>
                 <select 
                   id="topic" 
-                  className="flex h-11 w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-11 w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 >
                   <option value="">Bitte wählen...</option>
@@ -69,7 +69,7 @@ export function Contact() {
                 <Textarea 
                   id="message" 
                   placeholder="Wie können wir Sie unterstützen?" 
-                  className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600"
+                  className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600"
                   required 
                 />
               </div>

@@ -32,7 +32,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
   
-  --primary: oklch(0.21 0.034 264.665); /* Deep Serious Blue (Slate 950) */
+  /* Primary Green (Saudi Emerald) - oklch(0.5 0.15 150) approx */
+  --primary: oklch(0.55 0.16 150.5); 
   --primary-foreground: oklch(0.985 0 0);
   
   --secondary: oklch(0.967 0.001 286.375); /* Slate 100 */
@@ -49,16 +50,9 @@
   
   --border: oklch(0.92 0.004 286.32); /* Slate 200 */
   --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.21 0.034 264.665);
+  --ring: oklch(0.55 0.16 150.5); /* Matching Primary Green */
   
   --radius: 0.5rem;
-}
-
-.dark {
-  /* Fallback Dark Mode (falls system-setting aktiv) */
-  --background: oklch(0.13 0.028 261.692);
-  --foreground: oklch(0.985 0 0);
-  /* ... rest of dark mode (optional if we enforce light) */
 }
 
 body {

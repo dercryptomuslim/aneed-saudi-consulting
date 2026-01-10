@@ -65,10 +65,10 @@ export function Services() {
             <Link key={service.title} href={service.href} className="group block h-full">
               <Card className="h-full border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-900 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-900 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
+                  <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
@@ -87,7 +87,7 @@ export function Services() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center text-sm font-semibold text-blue-700 mt-auto pt-4 border-t border-slate-100">
+                  <div className="flex items-center text-sm font-semibold text-emerald-700 mt-auto pt-4 border-t border-slate-100">
                     Details ansehen <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </div>
                 </CardContent>

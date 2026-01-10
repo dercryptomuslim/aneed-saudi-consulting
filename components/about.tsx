@@ -35,7 +35,7 @@ export function About() {
           {/* Content Side */}
           <div className="lg:w-1/2 space-y-8">
             <div>
-              <h2 className="text-sm font-bold text-blue-700 tracking-wide uppercase mb-3">Über Aneed Ashraf</h2>
+              <h2 className="text-sm font-bold text-emerald-700 tracking-wide uppercase mb-3">Über Aneed Ashraf</h2>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
                 Brückenbauer zwischen <br/>
                 <span className="text-slate-500">Deutschland & Saudi-Arabien</span>
@@ -59,8 +59,8 @@ export function About() {
                 "Strategische Weitsicht"
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center">
-                    <CheckCircle2 className="h-4 w-4 text-blue-700" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-700" />
                   </div>
                   <span className="text-slate-800 font-medium">{item}</span>
                 </div>

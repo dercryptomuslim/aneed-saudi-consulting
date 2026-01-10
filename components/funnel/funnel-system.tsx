@@ -94,9 +94,9 @@ export function ConsultingFunnel() {
               <div className="grid gap-4">
                 <Button 
                   onClick={() => goTo("AUSLAND_FIRMA_CHECK")}
-                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-blue-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
+                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
                 >
-                  <Globe className="h-6 w-6 text-blue-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
+                  <Globe className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">Ich möchte gründen</div>
                     <div className="text-slate-500 font-normal text-sm leading-snug">Ich komme aus dem Ausland und habe noch keine Firma in KSA.</div>
@@ -105,9 +105,9 @@ export function ConsultingFunnel() {
 
                 <Button 
                   onClick={() => goTo("EXISTING_KSA_CHECK")}
-                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-blue-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
+                  className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
                 >
-                  <ShieldCheck className="h-6 w-6 text-blue-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
+                  <ShieldCheck className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">Ich bin bereits in KSA</div>
                     <div className="text-slate-500 font-normal text-sm leading-snug">Ich habe bereits eine Firma oder Premium Residency.</div>
@@ -391,7 +391,7 @@ function OptionButton({ children, onClick }: { children: React.ReactNode, onClic
   return (
     <Button 
       onClick={onClick} 
-      className="h-auto min-h-[64px] py-4 px-4 text-base md:text-lg font-medium bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-blue-500 text-slate-900 transition-all w-full whitespace-normal leading-tight shadow-sm group"
+      className="h-auto min-h-[64px] py-4 px-4 text-base md:text-lg font-medium bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-emerald-500 text-slate-900 transition-all w-full whitespace-normal leading-tight shadow-sm group"
     >
       {children}
     </Button>

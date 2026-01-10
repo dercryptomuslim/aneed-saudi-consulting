@@ -118,7 +118,7 @@ export function Navbar() {
                     <li className="col-span-2 pt-2 border-t border-slate-100">
                       <Link 
                         href="/services" 
-                        className="flex items-center justify-center w-full p-2 text-sm font-medium text-slate-900 hover:text-blue-700 transition-colors"
+                        className="flex items-center justify-center w-full p-2 text-sm font-medium text-slate-900 hover:text-emerald-700 transition-colors"
                       >
                         Alle Leistungen ansehen <ArrowRight className="ml-1 h-3 w-3" />
                       </Link>
@@ -182,16 +182,16 @@ export function Navbar() {
                               key={service.title}
                               href={service.href}
                               onClick={() => setIsOpen(false)}
-                              className="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-lg hover:bg-white"
+                              className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
                             >
-                              <service.icon className="h-4 w-4 text-blue-600" />
+                              <service.icon className="h-4 w-4 text-emerald-600" />
                               <span className="text-sm font-medium">{service.title}</span>
                             </Link>
                           ))}
                           <Link 
                             href="/services" 
                             onClick={() => setIsOpen(false)}
-                            className="text-sm font-medium text-blue-700 mt-2 pl-2 block hover:underline"
+                            className="text-sm font-medium text-emerald-700 mt-2 pl-2 block hover:underline"
                           >
                             Alle Leistungen ansehen →
                           </Link>
@@ -245,7 +245,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="flex items-center gap-2 mb-1">
-            <Icon className="h-4 w-4 text-slate-500 group-hover:text-blue-600 transition-colors" />
+            <Icon className="h-4 w-4 text-slate-500 group-hover:text-emerald-600 transition-colors" />
             <div className="text-sm font-semibold leading-none text-slate-900">{title}</div>
           </div>
           <p className="line-clamp-2 text-sm leading-snug text-slate-500 pl-6">
