@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
@@ -37,6 +38,17 @@ export function Footer() {
                       <li className="flex items-center gap-2">Medina, Saudi Arabia 🇸🇦</li>
                       <li className="hover:text-white transition-colors cursor-pointer">info@aneedashraf.de</li>
                     </ul>
+                    
+                    <div className="flex gap-4 mt-6">
+                      <a href="https://www.instagram.com/ashrafbusiness/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                        <Instagram className="h-5 w-5" />
+                        <span className="sr-only">Instagram</span>
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCMqDVsIAsY2E9z35FACnBMg" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                        <Youtube className="h-5 w-5" />
+                        <span className="sr-only">YouTube</span>
+                      </a>
+                    </div>
           </div>
         </div>
         

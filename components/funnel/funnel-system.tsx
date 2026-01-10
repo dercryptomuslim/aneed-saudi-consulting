@@ -89,7 +89,7 @@ export function ConsultingFunnel() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {step === "START" && (
-            <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
+            <Card className="p-5 md:p-8 border border-slate-200 bg-white shadow-xl">
               <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">Wo stehst du aktuell?</h2>
               <div className="grid gap-4">
                 <Button 
@@ -231,8 +231,10 @@ export function ConsultingFunnel() {
                     Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.
                  </div>
                  
-                 <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
-                   Jetzt Termin auswählen & bezahlen
+                 <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
+                   <a href="https://tidycal.com/mnl68yx/60-minute-meeting" target="_blank" rel="noopener noreferrer">
+                     Jetzt Termin auswählen & bezahlen
+                   </a>
                  </Button>
                  
                  <Button onClick={() => goBack("START")} variant="link" className="text-slate-500 w-full py-3 h-auto">
@@ -371,7 +373,7 @@ export function ConsultingFunnel() {
 
 function StepCard({ question, subtext, children, icon, onBack }: { question: string, subtext?: string, children: React.ReactNode, icon?: React.ReactNode, onBack?: () => void }) {
   return (
-    <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl w-full">
+    <Card className="p-5 md:p-8 border border-slate-200 bg-white shadow-xl w-full">
       {onBack && (
         <button onClick={onBack} className="flex items-center text-sm text-slate-500 hover:text-slate-900 mb-4 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
