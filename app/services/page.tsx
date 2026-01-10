@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 };
 
 const quickLinks = [
-  { id: "gruendung", title: "Gründung", icon: Building2 },
-  { id: "aufbau", title: "Aufbau", icon: Users },
-  { id: "fuehrung", title: "Führung", icon: BarChart3 },
-  { id: "beratung", title: "Beratung", icon: Briefcase },
+  { id: "gruendung", title: "Unternehmensgründung", icon: Building2 },
+  { id: "aufbau", title: "Unternehmensaufbau", icon: Users },
+  { id: "fuehrung", title: "Unternehmensführung", icon: BarChart3 },
+  { id: "beratung", title: "Unternehmensberatung", icon: Briefcase },
   { id: "investment", title: "Investment", icon: TrendingUp },
   { id: "franchise", title: "Franchise", icon: Store },
 ];

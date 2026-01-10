@@ -25,25 +25,25 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    title: "Gründung",
+    title: "Unternehmensgründung",
     href: "/services#gruendung",
     description: "Rechtssicherer Start & Lizenzen.",
     icon: Building2
   },
   {
-    title: "Aufbau",
+    title: "Unternehmensaufbau",
     href: "/services#aufbau",
     description: "Standort, Personal & Prozesse.",
     icon: Users
   },
   {
-    title: "Führung",
+    title: "Unternehmensführung",
     href: "/services#fuehrung",
     description: "Betrieb, Finanzen & Controlling.",
     icon: BarChart3
   },
   {
-    title: "Beratung",
+    title: "Unternehmensberatung",
     href: "/services#beratung",
     description: "Strategie für bestehende Firmen.",
     icon: Briefcase
