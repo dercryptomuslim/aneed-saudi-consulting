@@ -13,7 +13,7 @@ export function Contact() {
   }
 
   return (
-    <section id="kontakt" className="py-24 bg-slate-50 relative">
+    <section id="kontakt" className="py-16 md:py-24 bg-slate-50 relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">

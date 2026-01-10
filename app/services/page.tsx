@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 overflow-hidden bg-slate-50">
+      <section className="relative pt-24 pb-12 md:pt-32 overflow-hidden bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
             Ganzheitliche Betreuung
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 1. Unternehmensgründung */}
-      <section id="gruendung" className="py-24 border-t border-slate-100 scroll-mt-20">
+      <section id="gruendung" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. Unternehmensaufbau */}
-      <section id="aufbau" className="py-24 border-t border-slate-100 scroll-mt-20 bg-slate-50/50">
+      <section id="aufbau" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20 bg-slate-50/50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -140,7 +140,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Unternehmensführung */}
-      <section id="fuehrung" className="py-24 border-t border-slate-100 scroll-mt-20">
+      <section id="fuehrung" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. Unternehmensberatung */}
-      <section id="beratung" className="py-24 border-t border-slate-100 scroll-mt-20 bg-slate-50/50">
+      <section id="beratung" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20 bg-slate-50/50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -212,7 +212,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 5. Investment */}
-      <section id="investment" className="py-24 border-t border-slate-100 bg-slate-50/50 scroll-mt-20">
+      <section id="investment" className="py-16 md:py-24 border-t border-slate-100 bg-slate-50/50 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
@@ -248,7 +248,7 @@ export default function ServicesPage() {
       </section>
 
       {/* 6. Franchise */}
-      <section id="franchise" className="py-24 border-t border-slate-100 scroll-mt-20">
+      <section id="franchise" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">

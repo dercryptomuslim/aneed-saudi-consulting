@@ -252,7 +252,7 @@ export default function SuccessStoriesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-slate-50">
+      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
             Case Studies
@@ -267,7 +267,7 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* Case Studies List */}
-      <div className="container mx-auto px-4 lg:px-8 py-16 space-y-24">
+      <div className="container mx-auto px-4 lg:px-8 py-12 md:py-16 space-y-16 md:space-y-24">
         {caseStudies.map((study) => (
           <section key={study.id} id={study.id} className="scroll-mt-32">
             <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -321,7 +321,7 @@ export default function SuccessStoriesPage() {
               {/* Right Column: Content */}
               <div className="lg:col-span-8">
                 <Card className="border border-slate-200 shadow-sm bg-white overflow-hidden">
-                  <div className="p-8 md:p-10 space-y-10">
+                  <div className="p-6 md:p-10 space-y-8 md:space-y-10">
                     
                     {/* Challenge Section */}
                     <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">

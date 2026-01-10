@@ -34,7 +34,7 @@ export default function AboutPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2 space-y-8">
@@ -76,7 +76,7 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content & Skills */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-16">
             
