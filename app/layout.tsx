@@ -21,6 +21,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Aneed Ashraf | Consulting Saudi-Arabien",
   description: "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+  metadataBase: new URL("https://www.aneedashraf.de"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "https://www.aneedashraf.de",
+    siteName: "Aneed Ashraf",
+    title: "Aneed Ashraf | Consulting Saudi-Arabien",
+    description:
+      "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aneed Ashraf | Consulting Saudi-Arabien",
+    description:
+      "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+  },
 };
 
 export default function RootLayout({
