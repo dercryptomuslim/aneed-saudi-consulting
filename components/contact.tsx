@@ -5,11 +5,42 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    alert("Danke für deine Anfrage! Wir melden uns in Kürze.");
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: `${formData.get("firstName")} ${formData.get("lastName")}`,
+      email: formData.get("email"),
+      type: `Kontaktformular - ${formData.get("topic")}`,
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert("Danke für deine Anfrage! Wir melden uns in Kürze.");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        alert("Fehler beim Senden. Bitte versuche es später erneut.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Ein unerwarteter Fehler ist aufgetreten.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -36,22 +67,23 @@ export function Contact() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-slate-700 font-medium">Vorname</Label>
-                  <Input id="firstName" placeholder="Max" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
+                  <Input name="firstName" id="firstName" placeholder="Max" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName" className="text-slate-700 font-medium">Nachname</Label>
-                  <Input id="lastName" placeholder="Mustermann" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
+                  <Input name="lastName" id="lastName" placeholder="Mustermann" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-700 font-medium">E-Mail</Label>
-                <Input id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
+                <Input name="email" id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="topic" className="text-slate-700 font-medium">Interesse an</Label>
                 <select 
+                  name="topic"
                   id="topic" 
                   className="flex h-11 w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   required
@@ -67,15 +99,16 @@ export function Contact() {
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-slate-700 font-medium">Nachricht</Label>
                 <Textarea 
+                  name="message"
                   id="message" 
-                          placeholder="Wie können wir dich unterstützen?" 
+                  placeholder="Wie können wir dich unterstützen?" 
                   className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600"
                   required 
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-slate-900 hover:bg-slate-800 text-white h-12 text-base font-semibold shadow-md">
-                Strategie-Gespräch anfragen
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-slate-900 hover:bg-slate-800 text-white h-12 text-base font-semibold shadow-md">
+                {isSubmitting ? "Sende..." : "Strategie-Gespräch anfragen"}
               </Button>
             </form>
           </CardContent>
