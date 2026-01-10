@@ -232,7 +232,7 @@ export function ConsultingFunnel() {
                  </div>
                  
                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
-                   <a href="https://tidycal.com/mnl68yx/60-minute-meeting" target="_blank" rel="noopener noreferrer">
+                   <a href="https://tidycal.com/medinabusiness/60-minute-meeting" target="_blank" rel="noopener noreferrer">
                      Jetzt Termin auswählen & bezahlen
                    </a>
                  </Button>
