@@ -56,7 +56,7 @@ export function Services() {
             Unsere Expertise. Dein Vorteil.
           </h2>
           <p className="text-lg text-slate-600">
-            Wir bieten High-End Consulting aus Medina für deine Ambitionen im gesamten Königreich – von der Gründung bis zur Marktführerschaft.
+            Wir übernehmen die komplette Unternehmensgründung in Medina – von A bis Z. Dazu gehören MISA-Lizenz, Behördenabstimmungen, rechtliche und steuerliche Grundlagen sowie die Vorbereitung & Durchführung für den operativen Geschäftsbetrieb.
           </p>
         </div>
 
