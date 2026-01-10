@@ -96,13 +96,17 @@ export async function POST(req: NextRequest) {
           </div>
         `;
 
-        await resend.emails.send({
+        // Resend-Typen unterscheiden sich je Version (replyTo vs reply_to).
+        // Wir setzen Reply-To bewusst über ein "any"-Objekt, damit der Build in Vercel stabil bleibt.
+        const emailPayload: any = {
           from: resendFrom,
           to: [resendTo],
           subject,
           html,
-          reply_to: email || undefined,
-        });
+        };
+        if (email) emailPayload.replyTo = email;
+
+        await resend.emails.send(emailPayload);
       } catch (mailError) {
         console.error("Resend Error:", mailError);
       }
