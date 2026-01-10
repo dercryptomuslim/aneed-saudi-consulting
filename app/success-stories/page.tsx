@@ -149,9 +149,18 @@ const caseStudies = [
     title: "Expansion Yanbu nach Riyadh",
     category: "Expansion Strategy",
     icon: MapPin,
+    image: "/thecoffeefactory.jpg",
     summary: "Feasibility Study für die Expansion eines erfolgreichen Unternehmens in die Hauptstadt.",
     stats: ["Marktanalyse Riyadh", "Feasibility Study", "Risiko-Minimierung"],
-    challenge: "Ein in Yanbu erfolgreicher Kunde plante die Expansion nach Riyadh. Um Risiken zu minimieren, wurde eine umfassende Feasibility Study beauftragt, statt 'aus dem Bauch heraus' zu entscheiden.",
+    challenge: (
+      <>
+        Der Kunde war in der Stadt Yanbu bereits sehr erfolgreich und plante die Expansion seines Geschäfts nach Riyadh. Trotz des bestehenden Erfolgs wollte er diese Entscheidung nicht aus dem Bauch heraus treffen, sondern auf einer belastbaren Grundlage aufbauen.
+        <br /><br />
+        Sein klarer Auftrag an mich war die Erstellung einer umfassenden Feasibility Study, um realistisch einschätzen zu können, was ihn am neuen Standort in Riyadh erwartet – finanziell, operativ und strategisch.
+        <br /><br />
+        <strong>Location:</strong> <a href="https://maps.app.goo.gl/qzMxwQZHUAtGzeCx8" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Yanbu</a>
+      </>
+    ),
     phases: [
       {
         title: "1. Analyse- & Researchphase – Fakten statt Annahmen",
