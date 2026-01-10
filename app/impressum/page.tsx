@@ -34,7 +34,7 @@ export default function ImpressumPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Kontakt</h2>
             <p className="text-slate-600 mb-8">
               Telefon: <a href="tel:+966507390833" className="text-emerald-700 hover:underline">+966 50 739 0833</a><br />
-              E-Mail: <a href="mailto:start@aneedashraf.de" className="text-emerald-700 hover:underline">start@aneedashraf.de</a>
+              E-Mail: <a href="mailto:info@oasisgate.de" className="text-emerald-700 hover:underline">info@oasisgate.de</a>
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 mb-4">EU-Streitschlichtung</h2>

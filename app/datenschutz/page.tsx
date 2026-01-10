@@ -103,7 +103,7 @@ export default function PrivacyPage() {
             </p>
             <p className="text-slate-600 mb-4">
               Telefon: +966507390833<br />
-              E-Mail: start@aneedashraf.de
+              E-Mail: info@oasisgate.de
             </p>
             <p className="text-slate-600 mb-4">
               Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
