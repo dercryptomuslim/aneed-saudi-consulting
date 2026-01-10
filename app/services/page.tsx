@@ -72,14 +72,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <Building2 className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">1. Unternehmensgründung</h2>
-                <p className="text-emerald-600 font-medium mb-6">Rechtlich, regulatorisch & steuerlich sicher</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Jetzt Gründung anfragen</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <Building2 className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">1. Unternehmensgründung</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Rechtlich, regulatorisch & steuerlich sicher</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Jetzt Gründung anfragen</Link>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -109,14 +109,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <Users className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">2. Unternehmensaufbau</h2>
-                <p className="text-emerald-600 font-medium mb-6">Standort, Personal, Prozesse & Marketing</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Aufbau besprechen</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <Users className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">2. Unternehmensaufbau</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Standort, Personal, Prozesse & Marketing</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Aufbau besprechen</Link>
+                        </Button>>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -145,14 +145,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <BarChart3 className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">3. Unternehmensführung</h2>
-                <p className="text-emerald-600 font-medium mb-6">Betrieb, Finanzen & Controlling</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Management anfragen</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <BarChart3 className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">3. Unternehmensführung</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Betrieb, Finanzen & Controlling</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Management anfragen</Link>
+                        </Button>>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -181,14 +181,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <Briefcase className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">4. Unternehmensberatung</h2>
-                <p className="text-emerald-600 font-medium mb-6">Strategie & Optimierung</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Strategiegespräch buchen</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <Briefcase className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">4. Unternehmensberatung</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Strategie & Optimierung</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Strategiegespräch buchen</Link>
+                        </Button>>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -217,14 +217,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <TrendingUp className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">5. Investment</h2>
-                <p className="text-emerald-600 font-medium mb-6">Ausgearbeitete Geschäftskonzepte</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Investitionsmöglichkeiten</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <TrendingUp className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">5. Investment</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Ausgearbeitete Geschäftskonzepte</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Investitionsmöglichkeiten</Link>
+                        </Button>>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -253,14 +253,14 @@ export default function ServicesPage() {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="h-16 w-16 rounded-2xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <Store className="h-8 w-8 text-emerald-600" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">6. Franchise in Saudi-Arabien</h2>
-                <p className="text-emerald-600 font-medium mb-6">Expansion & Systemaufbau</p>
-                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md">
-                  <Link href="/check">Franchise besprechen</Link>
-                </Button>
+                        <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                          <Store className="h-7 w-7 text-emerald-600" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">6. Franchise in Saudi-Arabien</h2>
+                        <p className="text-emerald-700 font-medium mb-8 text-lg">Expansion & Systemaufbau</p>
+                        <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                          <Link href="/check">Franchise besprechen</Link>
+                        </Button>>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
