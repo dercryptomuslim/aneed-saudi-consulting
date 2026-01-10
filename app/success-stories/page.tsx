@@ -200,13 +200,22 @@ const caseStudies = [
     title: "Museumserweiterung Prophet-Moschee",
     category: "Kultur & Strategie",
     icon: Landmark,
+    image: "/masjidnabway.jpg",
     summary: "Entwicklung nachhaltiger Einnahmemodelle für den dauerhaften Betrieb ohne staatliche Finanzierung.",
     stats: ["Nachhaltige Modelle", "Kulturelles Projekt", "Einnahmensteigerung"],
-    challenge: "Das Museum plante eine Erweiterung und benötigte tragfähige Einkommensmodelle, um die wirtschaftliche Nachhaltigkeit unabhängig von staatlicher Finanzierung zu sichern.",
+    challenge: (
+      <>
+        Das Museum der Prophet-Moschee, war sich unsicher, wie der Betrieb ohne staatliche Finanzierung dauerhaft gesichert werden kann.
+        <br /><br />
+        Der Kunde kam auf mich zu mit dem Ziel, tragfähige Einkommensmodelle zu entwickeln und die wirtschaftliche Nachhaltigkeit des Museums zu gewährleisten.
+        <br /><br />
+        <strong>Location:</strong> <a href="https://maps.app.goo.gl/15hSrUpj2mNgUVzm9" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Medina</a>
+      </>
+    ),
     phases: [
       {
         title: "1. Analysephase – Einnahmenpotenziale identifizieren",
-        description: "In der ersten Phase lag der Fokus auf realistischen Einnahmequellen und operativer Umsetzbarkeit.",
+        description: "In der ersten Phase lag der Fokus auf realistischen Einnahmequellen und operativer Umsetzbarkeit. Mein Team und ich führten durch:",
         list: [
           "Analyse bestehender und potenzieller Einnahmequellen",
           "Bewertung der Besucherzahlen und Eintrittsstrukturen",
@@ -227,13 +236,13 @@ const caseStudies = [
         goal: "Die Konzepte wurden nicht nur theoretisch erstellt, sondern auf Umsetzbarkeit geprüft und teilweise direkt implementiert."
       },
       {
-        title: "3. Ergebnisphase – Nachhaltige Grundlage",
+        title: "3. Ergebnisphase – nachhaltige Grundlage für den Betrieb",
         description: "Durch unsere Arbeit konnte das Museum nun teilweise neue Einkommensquellen nutzen und die Grundlage für einen langfristig tragfähigen Betrieb ohne staatliche Finanzierung legen.",
         list: [],
         goal: "Dieses Projekt zeigt: Selbst bei kulturellen und religiösen Institutionen zählt Struktur, Analyse und operatives Handeln. Nur so lassen sich Konzepte entwickeln, die tatsächlich funktionieren – und nicht nur auf dem Papier bestehen."
       }
     ],
-    result: "Selbst bei kulturellen Institutionen zählt Struktur. Nur so lassen sich Konzepte entwickeln, die tatsächlich funktionieren.",
+    result: "Selbst bei kulturellen und religiösen Institutionen zählt Struktur, Analyse und operatives Handeln. Nur so lassen sich Konzepte entwickeln, die tatsächlich funktionieren – und nicht nur auf dem Papier bestehen.",
   }
 ];
 
