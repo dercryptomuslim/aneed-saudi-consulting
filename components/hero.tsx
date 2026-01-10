@@ -25,7 +25,7 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Die Zukunft beginnt in Riad
+            Die Zukunft beginnt in Medina
           </div>
           
           <h1 className="text-5xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl mb-8">
@@ -36,7 +36,7 @@ export function Hero() {
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 md:text-xl leading-relaxed">
-            9 Jahre Expertise vor Ort. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung. Werde Teil der Vision 2030.
+            9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

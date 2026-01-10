@@ -56,7 +56,7 @@ export function Services() {
             Unsere Expertise. Dein Vorteil.
           </h2>
           <p className="text-lg text-slate-600">
-            Wir bieten High-End Consulting für deine Ambitionen im Königreich – von der Gründung bis zur Marktführerschaft.
+            Wir bieten High-End Consulting aus Medina für deine Ambitionen im gesamten Königreich – von der Gründung bis zur Marktführerschaft.
           </p>
         </div>
 
