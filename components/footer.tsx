@@ -17,9 +17,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-6">Leistungen</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><Link href="/services#gruendung" className="hover:text-white transition-colors">Firmengründung</Link></li>
+              <li><Link href="/services#gruendung" className="hover:text-white transition-colors">Unternehmensgründung</Link></li>
+              <li><Link href="/services#aufbau" className="hover:text-white transition-colors">Unternehmensaufbau</Link></li>
+              <li><Link href="/services#fuehrung" className="hover:text-white transition-colors">Unternehmensführung</Link></li>
+              <li><Link href="/services#beratung" className="hover:text-white transition-colors">Unternehmensberatung</Link></li>
               <li><Link href="/services#investment" className="hover:text-white transition-colors">Investment</Link></li>
-              <li><Link href="/services#auswanderung" className="hover:text-white transition-colors">Auswanderung</Link></li>
+              <li><Link href="/services#franchise" className="hover:text-white transition-colors">Franchise</Link></li>
             </ul>
           </div>
 
