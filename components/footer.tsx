@@ -32,11 +32,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-white mb-6">Kontakt</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-center gap-2">Riyadh, Saudi Arabia 🇸🇦</li>
-              <li className="hover:text-white transition-colors cursor-pointer">info@aneedashraf.com</li>
-            </ul>
+                    <h4 className="font-semibold text-white mb-6">Kontakt</h4>
+                    <ul className="space-y-3 text-sm text-slate-400">
+                      <li className="flex items-center gap-2">Medina, Saudi Arabia 🇸🇦</li>
+                      <li className="hover:text-white transition-colors cursor-pointer">info@aneedashraf.de</li>
+                    </ul>
           </div>
         </div>
         

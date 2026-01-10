@@ -34,7 +34,7 @@ export default function AboutPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-12 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2 space-y-8">

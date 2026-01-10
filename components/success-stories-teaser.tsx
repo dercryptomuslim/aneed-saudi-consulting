@@ -33,7 +33,7 @@ const stories = [
 
 export function SuccessStoriesTeaser() {
   return (
-    <section className="py-16 md:py-24 bg-white relative">
+    <section className="py-16 md:py-24 bg-white relative pb-8 md:pb-24">
       <div className="container mx-auto px-4 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
