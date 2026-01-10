@@ -286,14 +286,14 @@ export default function SuccessStoriesPage() {
                 {/* Logo / Image for Case Study (if available) */}
                 {/* @ts-ignore - Dynamic property check */}
                 {study.image && (
-                  <div className={`relative w-full ${study.id === 'gewinnoptimierung-medina' || study.id === 'expansion-riyadh' ? 'aspect-square max-w-[250px] mx-auto' : 'h-48'} rounded-xl overflow-hidden border border-slate-100 shadow-sm mb-6`}>
+                  <div className={`relative w-full ${study.id === 'gewinnoptimierung-medina' || study.id === 'expansion-riyadh' || study.id === 'museum-prophet-moschee' ? 'aspect-square max-w-[250px] mx-auto' : 'h-48'} rounded-xl overflow-hidden border border-slate-100 shadow-sm mb-6`}>
                     <Image
                       /* @ts-ignore */
                       src={study.image}
                       /* @ts-ignore */
                       alt={`${study.title} Logo`}
                       fill
-                      className={`${study.id === 'gewinnoptimierung-medina' || study.id === 'expansion-riyadh' ? 'object-contain p-2' : 'object-cover'}`}
+                      className={`${study.id === 'gewinnoptimierung-medina' || study.id === 'expansion-riyadh' || study.id === 'museum-prophet-moschee' ? 'object-contain p-2' : 'object-cover'}`}
                     />
                   </div>
                 )}
