@@ -62,14 +62,52 @@ export async function POST(req: NextRequest) {
     // Spalten: Datum | Name | Email | Telefon | Typ/Topic | Nachricht | Extra
     const row = [date, fullName, email, phone, type, message, extra];
 
-    const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: sheetId,
-      range: `${sheetTabName}!A:G`,
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [row],
-      },
-    });
+    const appendToTab = async (tabName: string) => {
+      return await sheets.spreadsheets.values.append({
+        spreadsheetId: sheetId,
+        range: `${tabName}!A:G`,
+        valueInputOption: "USER_ENTERED",
+        requestBody: {
+          values: [row],
+        },
+      });
+    };
+
+    const getGoogleErrorMessage = (err: any) => {
+      return (
+        err?.response?.data?.error?.message ||
+        err?.errors?.[0]?.message ||
+        err?.message ||
+        "Unknown Google Sheets error"
+      );
+    };
+
+    let response;
+    let usedTabName = sheetTabName;
+    try {
+      response = await appendToTab(sheetTabName);
+    } catch (err: any) {
+      const msg = getGoogleErrorMessage(err);
+      const shouldFallback =
+        msg.includes("Unable to parse range") ||
+        msg.includes("Requested entity was not found") ||
+        msg.includes("No grid with id") ||
+        msg.includes("not found");
+
+      if (!shouldFallback) throw err;
+
+      // Fallback: Tab automatisch ermitteln (häufig heißt er "Tabelle1" statt "Sheet1")
+      const meta = await sheets.spreadsheets.get({ spreadsheetId: sheetId });
+      const firstTab =
+        meta.data.sheets?.[0]?.properties?.title ||
+        meta.data.properties?.title ||
+        "";
+
+      if (!firstTab || firstTab === sheetTabName) throw err;
+
+      usedTabName = firstTab;
+      response = await appendToTab(firstTab);
+    }
 
     // E-Mail Benachrichtigung (Resend) – darf Lead-Erfassung nicht blockieren
     if (resendApiKey) {
@@ -112,7 +150,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({ success: true, data: response.data });
+    return NextResponse.json({ success: true, data: response.data, usedTabName });
   } catch (error: any) {
     console.error("Google Sheets Error:", error);
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

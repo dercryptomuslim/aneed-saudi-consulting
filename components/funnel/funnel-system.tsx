@@ -80,7 +80,14 @@ export function ConsultingFunnel() {
         // Erfolgreich gespeichert -> Weiter zum Buchen
         goTo("BOOKING_FORM");
       } else {
-        alert("Fehler beim Senden. Bitte versuche es später erneut.");
+        let details = "";
+        try {
+          const json = await response.json();
+          details = json?.error ? ` (${json.error})` : "";
+        } catch {
+          // ignore
+        }
+        alert(`Fehler beim Senden. Bitte versuche es später erneut.${details}`);
       }
     } catch (error) {
       console.error("Submission error:", error);
