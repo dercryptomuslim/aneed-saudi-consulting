@@ -35,8 +35,9 @@ export function Hero() {
             </span>
           </h1>
           
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 md:text-xl leading-relaxed">
-            9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 md:text-xl leading-relaxed">
+            9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien. <br className="hidden md:block" />
+            <span className="font-medium text-slate-800">Keine Theorie, kein Testen an Kunden – echte Erfahrung aus Saudi-Arabien.</span>
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
