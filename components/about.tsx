@@ -47,7 +47,7 @@ export function About() {
                 Saudi-Arabien ist mehr als nur ein Markt – es ist eine Kultur des Vertrauens. Wer hier erfolgreich sein will, braucht mehr als nur Kapital: Er braucht Zugang und Verständnis.
               </p>
               <p>
-                Seit über 9 Jahren lebe und arbeite ich vor Ort. Ich habe den Wandel der Vision 2030 hautnah miterlebt und ein belastbares Netzwerk zu Entscheidungsträgern aufgebaut.
+                Keine Theorie, kein Fake – ich bin Unternehmer und Unternehmensberater mit über 15 Jahren internationaler Erfahrung und seit 10 Jahren operativ in Saudi-Arabien tätig und davon alleine 8 Jahre in Medina.
               </p>
             </div>
 
