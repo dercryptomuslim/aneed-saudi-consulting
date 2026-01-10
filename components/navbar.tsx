@@ -128,7 +128,7 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/success-stories" legacyBehavior passHref>
+                <Link href="/erfolgsgeschichten" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Erfolgsgeschichten
                   </NavigationMenuLink>
@@ -136,7 +136,7 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/ueber-mich" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Über Mich
                   </NavigationMenuLink>
@@ -146,7 +146,7 @@ export function Navbar() {
           </NavigationMenu>
 
           <Button asChild className="ml-6 bg-slate-900 text-white hover:bg-slate-800 rounded-full px-6 font-medium shadow-md hover:shadow-lg transition-all">
-            <Link href="/check">Gespräch buchen</Link>
+            <Link href="/saudi-check">Gespräch buchen</Link>
           </Button>
         </div>
 
@@ -209,7 +209,7 @@ export function Navbar() {
                           </Accordion>
 
                           <Link
-                            href="/success-stories"
+                            href="/erfolgsgeschichten"
                             onClick={() => setIsOpen(false)}
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
@@ -218,7 +218,7 @@ export function Navbar() {
                           </Link>
 
                           <Link
-                            href="/about"
+                            href="/ueber-mich"
                             onClick={() => setIsOpen(false)}
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
@@ -230,7 +230,7 @@ export function Navbar() {
 
               <div className="p-6 border-t border-slate-100 bg-slate-50 mt-auto">
                  <Button asChild className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white text-base font-semibold rounded-lg shadow-sm">
-                  <Link href="/check" onClick={() => setIsOpen(false)}>
+                  <Link href="/saudi-check" onClick={() => setIsOpen(false)}>
                     Gespräch buchen
                   </Link>
                 </Button>

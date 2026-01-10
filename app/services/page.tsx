@@ -78,7 +78,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">1. Unternehmensgründung</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Rechtlich, regulatorisch & steuerlich sicher</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Jetzt Gründung anfragen</Link>
+                          <Link href="/saudi-check">Jetzt Gründung anfragen</Link>
                         </Button>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">2. Unternehmensaufbau</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Standort, Personal, Prozesse & Marketing</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Aufbau besprechen</Link>
+                          <Link href="/saudi-check">Aufbau besprechen</Link>
                         </Button>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">3. Unternehmensführung</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Betrieb, Finanzen & Controlling</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Management anfragen</Link>
+                          <Link href="/saudi-check">Management anfragen</Link>
                         </Button>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">4. Unternehmensberatung</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Strategie & Optimierung</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Strategiegespräch buchen</Link>
+                          <Link href="/saudi-check">Strategiegespräch buchen</Link>
                         </Button>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">5. Investment</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Ausgearbeitete Geschäftskonzepte</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Investitionsmöglichkeiten</Link>
+                          <Link href="/saudi-check">Investitionsmöglichkeiten</Link>
                         </Button>
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function ServicesPage() {
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">6. Franchise in Saudi-Arabien</h2>
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Expansion & Systemaufbau</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
-                          <Link href="/check">Franchise besprechen</Link>
+                          <Link href="/saudi-check">Franchise besprechen</Link>
                         </Button>
               </div>
             </div>

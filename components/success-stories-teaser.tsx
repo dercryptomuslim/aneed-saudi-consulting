@@ -10,7 +10,7 @@ const stories = [
     category: "Operative Umsetzung",
     image: "/laveu-logo.jpg",
     description: "Schlüsselfertige Umsetzung eines Café-Konzepts in Medina unter festem Budget.",
-    href: "/success-stories#gastronomie-projekt",
+    href: "/erfolgsgeschichten#gastronomie-projekt",
     icon: Building2
   },
   {
@@ -18,7 +18,7 @@ const stories = [
     category: "Restrukturierung",
     image: "/bakran.jpg",
     description: "7-stellige Einsparung und Prozessoptimierung für eine Restaurantkette mit 3 Filialen.",
-    href: "/success-stories#gewinnoptimierung-medina",
+    href: "/erfolgsgeschichten#gewinnoptimierung-medina",
     icon: TrendingUp
   },
   {
@@ -26,7 +26,7 @@ const stories = [
     category: "Kultur & Strategie",
     image: "/masjidnabway.jpg",
     description: "Entwicklung nachhaltiger Einnahmemodelle für den dauerhaften Betrieb.",
-    href: "/success-stories#museum-prophet-moschee",
+    href: "/erfolgsgeschichten#museum-prophet-moschee",
     icon: Landmark
   }
 ];
@@ -47,7 +47,7 @@ export function SuccessStoriesTeaser() {
           </div>
           
           <Button asChild variant="outline" className="hidden md:flex border-slate-200 hover:bg-slate-50 hover:text-emerald-700 hover:border-emerald-200">
-            <Link href="/success-stories">
+            <Link href="/erfolgsgeschichten">
               Alle Case Studies ansehen <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
@@ -95,7 +95,7 @@ export function SuccessStoriesTeaser() {
 
         <div className="mt-8 md:hidden">
           <Button asChild variant="outline" className="w-full border-slate-200 hover:bg-slate-50 hover:text-emerald-700">
-            <Link href="/success-stories">
+            <Link href="/erfolgsgeschichten">
               Alle Case Studies ansehen <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

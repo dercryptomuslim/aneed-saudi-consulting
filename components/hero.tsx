@@ -41,7 +41,7 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Link href="/check">
+              <Link href="/saudi-check">
                 Expertengespräch anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
