@@ -50,7 +50,7 @@ export default function AboutPage() {
                 Brückenbauer zwischen den Welten. Strategischer Partner für deinen Erfolg in Saudi-Arabien.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 pt-4 text-left">
+              <div className="grid grid-cols-2 gap-6 pt-4 text-center md:text-left">
                 {stats.map((stat) => (
                   <div key={stat.label}>
                     <div className="text-3xl font-bold text-slate-900">{stat.value}</div>
