@@ -76,35 +76,35 @@ export function Navbar() {
 
   return (
     <nav className={cn(
-      "fixed top-0 z-50 w-full transition-all duration-300 border-b border-transparent",
-      scrolled ? "bg-black/80 backdrop-blur-xl border-white/5" : "bg-transparent"
+      "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+      scrolled ? "bg-white/90 backdrop-blur-md border-slate-200 shadow-sm" : "bg-white border-transparent"
     )}>
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 group relative z-50">
-          <span className="text-xl font-bold tracking-tight text-white group-hover:text-emerald-500 transition-colors">
+          <span className="text-2xl font-serif font-bold tracking-tight text-slate-900">
             Aneed Ashraf
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:space-x-1">
+        <div className="hidden lg:flex md:items-center md:space-x-2">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-neutral-400 hover:text-white hover:bg-white/5 focus:bg-white/5")}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Startseite
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-neutral-400 hover:text-white hover:bg-white/5 focus:bg-white/5 data-[state=open]:bg-white/5">
+                <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
                   Leistungen
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-black border border-neutral-800 rounded-xl">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-white border border-slate-100 rounded-xl shadow-xl">
                     {services.map((service) => (
                       <ListItem
                         key={service.title}
@@ -115,10 +115,10 @@ export function Navbar() {
                         {service.description}
                       </ListItem>
                     ))}
-                    <li className="col-span-2 pt-2 border-t border-neutral-800">
+                    <li className="col-span-2 pt-2 border-t border-slate-100">
                       <Link 
                         href="/services" 
-                        className="flex items-center justify-center w-full p-2 text-sm font-medium text-emerald-500 hover:text-emerald-400 transition-colors"
+                        className="flex items-center justify-center w-full p-2 text-sm font-medium text-slate-900 hover:text-blue-700 transition-colors"
                       >
                         Alle Leistungen ansehen <ArrowRight className="ml-1 h-3 w-3" />
                       </Link>
@@ -129,7 +129,7 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <Link href="/#ueber-mich" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-neutral-400 hover:text-white hover:bg-white/5 focus:bg-white/5")}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Über Mich
                   </NavigationMenuLink>
                 </Link>
@@ -137,24 +137,24 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Button asChild className="ml-6 bg-white text-black hover:bg-neutral-200 rounded-full px-6 font-medium">
+          <Button asChild className="ml-6 bg-slate-900 text-white hover:bg-slate-800 rounded-full px-6 font-medium shadow-md hover:shadow-lg transition-all">
             <Link href="/check">Gespräch buchen</Link>
           </Button>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-slate-900 hover:bg-slate-50">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Menü öffnen</span>
               </Button>
             </SheetTrigger>
             
-            <SheetContent side="right" className="w-full sm:w-[400px] bg-black border-l border-neutral-800 p-0 flex flex-col">
-              <div className="p-6 border-b border-neutral-800 flex items-center justify-between">
-                <span className="text-xl font-bold text-white">Menü</span>
+            <SheetContent side="right" className="w-full sm:w-[400px] bg-white border-l border-slate-200 p-0 flex flex-col">
+              <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <span className="text-xl font-serif font-bold text-slate-900">Menü</span>
                 <SheetClose asChild>
                 </SheetClose>
               </div>
@@ -164,34 +164,34 @@ export function Navbar() {
                   <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-between text-2xl font-bold text-white py-4 border-b border-neutral-900 active:text-emerald-500"
+                    className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                   >
                     Startseite
-                    <ChevronRight className="h-5 w-5 text-neutral-600" />
+                    <ChevronRight className="h-5 w-5 text-slate-400" />
                   </Link>
 
-                  <Accordion type="single" collapsible className="w-full border-b border-neutral-900">
+                  <Accordion type="single" collapsible className="w-full border-b border-slate-100">
                     <AccordionItem value="services" className="border-none">
-                      <AccordionTrigger className="text-2xl font-bold text-white hover:no-underline py-4">
+                      <AccordionTrigger className="text-lg font-medium text-slate-900 hover:no-underline py-4">
                         Leistungen
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="flex flex-col space-y-4 pl-2 pb-4">
+                        <div className="flex flex-col space-y-3 pl-2 pb-4 pt-2 bg-slate-50/50 rounded-lg mb-2">
                           {services.map((service) => (
                             <Link
                               key={service.title}
                               href={service.href}
                               onClick={() => setIsOpen(false)}
-                              className="flex items-center gap-3 text-neutral-400 hover:text-emerald-500 transition-colors p-2 rounded-lg hover:bg-neutral-900"
+                              className="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-lg hover:bg-white"
                             >
-                              <service.icon className="h-5 w-5 text-emerald-500" />
-                              <span className="text-base font-medium">{service.title}</span>
+                              <service.icon className="h-4 w-4 text-blue-600" />
+                              <span className="text-sm font-medium">{service.title}</span>
                             </Link>
                           ))}
                           <Link 
                             href="/services" 
                             onClick={() => setIsOpen(false)}
-                            className="text-sm font-medium text-emerald-500 mt-2 pl-2"
+                            className="text-sm font-medium text-blue-700 mt-2 pl-2 block hover:underline"
                           >
                             Alle Leistungen ansehen →
                           </Link>
@@ -203,21 +203,21 @@ export function Navbar() {
                   <Link
                     href="/#ueber-mich"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-between text-2xl font-bold text-white py-4 border-b border-neutral-900 active:text-emerald-500"
+                    className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                   >
                     Über Mich
-                    <ChevronRight className="h-5 w-5 text-neutral-600" />
+                    <ChevronRight className="h-5 w-5 text-slate-400" />
                   </Link>
                 </div>
               </div>
 
-              <div className="p-6 border-t border-neutral-800 bg-neutral-900/30 mt-auto">
-                 <Button asChild className="w-full h-14 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-xl">
+              <div className="p-6 border-t border-slate-100 bg-slate-50 mt-auto">
+                 <Button asChild className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white text-base font-semibold rounded-lg shadow-sm">
                   <Link href="/check" onClick={() => setIsOpen(false)}>
                     Gespräch buchen
                   </Link>
                 </Button>
-                <div className="mt-6 text-center text-sm text-neutral-500">
+                <div className="mt-6 text-center text-sm text-slate-400">
                   © {new Date().getFullYear()} Aneed Ashraf
                 </div>
               </div>
@@ -239,16 +239,16 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-900 hover:text-accent-foreground focus:bg-neutral-900 focus:text-accent-foreground group",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 focus:bg-slate-50 focus:text-slate-900 group",
             className
           )}
           {...props}
         >
           <div className="flex items-center gap-2 mb-1">
-            <Icon className="h-4 w-4 text-emerald-500 group-hover:text-emerald-400" />
-            <div className="text-sm font-medium leading-none text-white">{title}</div>
+            <Icon className="h-4 w-4 text-slate-500 group-hover:text-blue-600 transition-colors" />
+            <div className="text-sm font-semibold leading-none text-slate-900">{title}</div>
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground pl-6">
+          <p className="line-clamp-2 text-sm leading-snug text-slate-500 pl-6">
             {children}
           </p>
         </a>

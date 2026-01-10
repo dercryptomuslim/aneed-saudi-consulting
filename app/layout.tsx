@@ -1,26 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000",
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
-  title: "Aneed Ashraf | Ihr Experte für Saudi-Arabien",
-  description: "9 Jahre Erfahrung in Saudi-Arabien. Wir unterstützen Sie bei Firmengründung, Investment und Auswanderung. Starten Sie jetzt Ihre Zukunft im Königreich.",
+  title: "Aneed Ashraf | Consulting Saudi-Arabien",
+  description: "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
 };
 
 export default function RootLayout({
@@ -29,9 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="scroll-smooth dark">
+    <html lang="de" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white text-slate-900`}
       >
         {children}
       </body>

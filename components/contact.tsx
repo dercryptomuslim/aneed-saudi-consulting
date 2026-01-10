@@ -13,26 +13,21 @@ export function Contact() {
   }
 
   return (
-    <section id="kontakt" className="py-24 bg-black relative">
-       {/* Gradient Glow Background */}
-       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[800px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] opacity-40" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="kontakt" className="py-24 bg-slate-50 relative">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+          <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
             Bereit für den nächsten Schritt?
           </h2>
-          <p className="text-lg text-neutral-400">
+          <p className="text-lg text-slate-600">
             Lassen Sie uns Ihre Vision besprechen. Diskret, direkt und zielorientiert.
           </p>
         </div>
 
-        <Card className="max-w-xl mx-auto border-neutral-800 bg-neutral-900/50 backdrop-blur-xl shadow-2xl">
-          <CardHeader>
-            <CardTitle className="text-white">Kontakt aufnehmen</CardTitle>
-            <CardDescription className="text-neutral-400">
+        <Card className="max-w-xl mx-auto border border-slate-200 bg-white shadow-xl">
+          <CardHeader className="space-y-1">
+            <CardTitle className="text-2xl font-bold text-slate-900">Kontakt aufnehmen</CardTitle>
+            <CardDescription className="text-slate-500 text-base">
               Füllen Sie das Formular aus. Wir melden uns innerhalb von 24h.
             </CardDescription>
           </CardHeader>
@@ -40,25 +35,25 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-neutral-300">Vorname</Label>
-                  <Input id="firstName" placeholder="Max" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
+                  <Label htmlFor="firstName" className="text-slate-700 font-medium">Vorname</Label>
+                  <Input id="firstName" placeholder="Max" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-neutral-300">Nachname</Label>
-                  <Input id="lastName" placeholder="Mustermann" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
+                  <Label htmlFor="lastName" className="text-slate-700 font-medium">Nachname</Label>
+                  <Input id="lastName" placeholder="Mustermann" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-neutral-300">E-Mail</Label>
-                <Input id="email" type="email" placeholder="max@firma.de" className="bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20" required />
+                <Label htmlFor="email" className="text-slate-700 font-medium">E-Mail</Label>
+                <Input id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600 h-11" required />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="topic" className="text-neutral-300">Interesse an</Label>
+                <Label htmlFor="topic" className="text-slate-700 font-medium">Interesse an</Label>
                 <select 
                   id="topic" 
-                  className="flex h-10 w-full rounded-md border border-neutral-800 bg-neutral-950 px-3 py-2 text-sm text-white ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/20 focus-visible:border-emerald-500/50 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-11 w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   required
                 >
                   <option value="">Bitte wählen...</option>
@@ -70,16 +65,16 @@ export function Contact() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-neutral-300">Nachricht</Label>
+                <Label htmlFor="message" className="text-slate-700 font-medium">Nachricht</Label>
                 <Textarea 
                   id="message" 
                   placeholder="Wie können wir Sie unterstützen?" 
-                  className="min-h-[120px] bg-neutral-950 border-neutral-800 text-white placeholder:text-neutral-600 focus:border-emerald-500/50 focus:ring-emerald-500/20"
+                  className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 focus:ring-blue-600"
                   required 
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-11 text-base font-medium">
+              <Button type="submit" className="w-full bg-slate-900 hover:bg-slate-800 text-white h-12 text-base font-semibold shadow-md">
                 Strategie-Gespräch anfragen
               </Button>
             </form>

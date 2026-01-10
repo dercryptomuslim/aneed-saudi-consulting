@@ -4,47 +4,49 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Spotlight } from "@/components/ui/spotlight";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-black/[0.96] antialiased bg-grid-white/[0.02]">
-      {/* Spotlight Effect */}
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
+    <section className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-white pt-20">
+      
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="mb-6 inline-block rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1 text-sm text-neutral-400 backdrop-blur-md">
-            <span className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <div className="mb-8 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-medium text-slate-600 shadow-sm">
+            <span className="mr-2 flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
             Die Zukunft beginnt in Riad
           </div>
           
-          <h1 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl lg:text-8xl">
+          <h1 className="text-5xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl mb-8">
             Ihr Tor zum Erfolg in <br />
-            <span className="text-emerald-500/90 glow-text">Saudi-Arabien</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900">
+              Saudi-Arabien
+            </span>
           </h1>
           
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-400 md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 md:text-xl leading-relaxed">
             9 Jahre Expertise vor Ort. Wir navigieren Sie sicher durch Gründung, Investment und Auswanderung. Werden Sie Teil der Vision 2030.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-14 rounded-full bg-emerald-600 px-8 text-lg font-semibold text-white hover:bg-emerald-700 hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all duration-300">
+            <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
               <Link href="/check">
                 Expertengespräch anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-neutral-800 bg-black/50 px-8 text-lg text-neutral-300 hover:bg-neutral-900 hover:text-white backdrop-blur-sm">
+            <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-slate-200 bg-white px-8 text-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm">
               <Link href="#leistungen">
                 Unsere Leistungen
               </Link>
@@ -52,9 +54,6 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
     </section>
   );
 }

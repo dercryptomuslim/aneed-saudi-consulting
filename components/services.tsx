@@ -1,4 +1,4 @@
-import { MagicCard } from "@/components/ui/magic-card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, TrendingUp, Briefcase, Store, ArrowUpRight, Users, BarChart3 } from "lucide-react";
 import Link from "next/link";
 
@@ -49,45 +49,50 @@ const services = [
 
 export function Services() {
   return (
-    <section id="leistungen" className="py-24 bg-black relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-gradient-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+    <section id="leistungen" className="py-24 bg-slate-50 relative">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="text-center mb-20 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-6">
             Unsere Expertise. Ihr Vorteil.
           </h2>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600">
             Wir bieten High-End Consulting für Ihre Ambitionen im Königreich – von der Gründung bis zur Marktführerschaft.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <MagicCard key={service.title} className="rounded-2xl h-full border-neutral-800 flex flex-col">
-              <div className="flex flex-col h-full">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-neutral-400 mb-6 flex-grow leading-relaxed text-sm">
-                  {service.description}
-                </p>
+            <Link key={service.title} href={service.href} className="group block h-full">
+              <Card className="h-full border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-900 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col h-full justify-between">
+                  <div>
+                    <CardDescription className="text-slate-600 mb-6 text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
 
-                <div className="space-y-4 mt-auto">
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature) => (
-                      <span key={feature} className="px-2 py-1 text-[10px] font-medium rounded-full bg-neutral-900 text-neutral-300 border border-neutral-800">
-                        {feature}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {service.features.map((feature) => (
+                        <span key={feature} className="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-600 border border-slate-200">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   
-                  <Link href={service.href} className="flex items-center text-sm font-semibold text-emerald-500 hover:text-emerald-400 transition-colors group pt-2">
+                  <div className="flex items-center text-sm font-semibold text-blue-700 mt-auto pt-4 border-t border-slate-100">
                     Details ansehen <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </Link>
-                </div>
-              </div>
-            </MagicCard>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
