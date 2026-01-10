@@ -33,7 +33,17 @@ const caseStudies = [
     icon: Building2,
     summary: "Vollständige operative Umsetzung eines Gastronomie-Konzepts mit festem Budget und vorgegebener Location.",
     stats: ["150k-200k € Budget", "4 Monate Bauzeit", "Schlüsselfertige Übergabe"],
-    challenge: "Der Kunde trat mit einem klar definierten Budget von ca. 150.000–200.000 Euro an uns heran. Location und Baufirma waren bereits festgelegt. Unser Auftrag bestand nicht in der Theorie, sondern in der vollständigen operativen Umsetzung unter realen Bedingungen.",
+    challenge: (
+      <>
+        Der Kunde trat mit einem klar definierten Budget von ca. 150.000–200.000 Euro an mich heran, um ein Gastronomieprojekt in Saudi-Arabien umzusetzen.
+        <br /><br />
+        Die Vorgaben waren eindeutig: Location und Baufirma waren bereits festgelegt und konnten nicht von uns ausgewählt werden. Unser Auftrag bestand nicht in der Theorie – sondern in der vollständigen operativen Umsetzung unter realen Bedingungen.
+        <br /><br />
+        Nach erfolgreichen Verhandlungen über Rahmenbedingungen und Zuständigkeiten übernahmen mein Team und ich die komplette Strukturierung, Koordination und Umsetzung des Projekts.
+        <br /><br />
+        <strong>Location:</strong> <a href="https://maps.app.goo.gl/9W1HmihW438mBe1s5" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Khalidiyah Medina</a>
+      </>
+    ),
     phases: [
       {
         title: "1. Einführungsphase – Analyse & Fundament",
@@ -74,7 +84,7 @@ const caseStudies = [
         goal: "Das Projekt wurde innerhalb von 4 Monaten vollständig umgesetzt – von der ersten Konzeptidee bis zur betriebsbereiten Übergabe."
       }
     ],
-    result: "Keine Experimente, keine Theorie – sondern strukturierte, reale Umsetzung unter echten Marktbedingungen.",
+    result: "Dieses Projekt steht exemplarisch für meine Arbeitsweise: Keine Experimente, keine Theorie – sondern strukturierte, reale Umsetzung unter echten Marktbedingungen in Saudi-Arabien.",
   },
   {
     id: "gewinnoptimierung-medina",
@@ -273,9 +283,9 @@ export default function SuccessStoriesPage() {
                         <Target className="h-5 w-5 text-emerald-600" />
                         Ausgangslage & Herausforderung
                       </h3>
-                      <p className="text-slate-700 leading-relaxed">
+                      <div className="text-slate-700 leading-relaxed">
                         {study.challenge}
-                      </p>
+                      </div>
                     </div>
 
                     {/* Phases Accordion */}
