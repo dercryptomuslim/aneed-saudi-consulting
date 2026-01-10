@@ -119,7 +119,7 @@ export function ConsultingFunnel() {
 
           {step === "AUSLAND_FIRMA_CHECK" && (
             <StepCard 
-              question="Hast Du eine Firma außerhalb von Saudi-Arabien?"
+              question="Hast du eine Firma außerhalb von Saudi-Arabien?"
               subtext="Die Firma muss im Handelsregister eingetragen und seit mindestens 1 Jahr aktiv sein."
               onBack={() => goBack("START")}
             >
@@ -189,10 +189,10 @@ export function ConsultingFunnel() {
 
           {step === "REJECTED" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl text-center">
-              <h2 className="text-xl font-bold text-slate-900 mb-4">Vielen Dank für Dein Interesse.</h2>
+              <h2 className="text-xl font-bold text-slate-900 mb-4">Vielen Dank für dein Interesse.</h2>
               <p className="text-slate-500 mb-6">
                 Aktuell scheinen die Voraussetzungen für eine Zusammenarbeit noch nicht erfüllt zu sein. 
-                Wir wünschen Dir viel Erfolg auf Deinem Weg.
+                Wir wünschen dir viel Erfolg auf deinem Weg.
               </p>
               <Button asChild variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50 w-full md:w-auto h-auto py-3">
                 <a href="/">Zurück zur Startseite</a>
@@ -224,10 +224,10 @@ export function ConsultingFunnel() {
           {step === "BOOKING_FORM" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
               <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">Beratungsgespräch buchen</h2>
-              <p className="text-blue-600 mb-6 text-sm md:text-base font-medium">Deine Angaben wurden vorqualifiziert.</p>
+              <p className="text-emerald-700 mb-6 text-sm md:text-base font-medium">Deine Angaben wurden vorqualifiziert.</p>
               
               <div className="space-y-4">
-                 <div className="p-4 bg-blue-50 border border-blue-100 rounded-lg text-blue-700 text-sm mb-4 leading-relaxed">
+                 <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-lg text-emerald-800 text-sm mb-4 leading-relaxed">
                     Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.
                  </div>
                  
@@ -244,7 +244,7 @@ export function ConsultingFunnel() {
 
           {step === "EXISTING_KSA_CHECK" && (
              <StepCard 
-               question="Welchen Status hast Du?"
+                question="Welchen Status hast du?"
                subtext="Bitte wähle aus, was auf dich zutrifft."
                onBack={() => goBack("START")}
              >
@@ -254,9 +254,9 @@ export function ConsultingFunnel() {
                      setFormData({...formData, entityType: "COMPANY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-blue-500 whitespace-normal flex items-start text-slate-900"
+                   className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 whitespace-normal flex items-start text-slate-900"
                  >
-                   <Building2 className="mr-3 h-5 w-5 text-blue-600 mt-0.5 shrink-0" />
+                   <Building2 className="mr-3 h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
                    <span className="flex-1 text-base md:text-lg">Ich habe bereits ein Unternehmen</span>
                  </Button>
                  <Button 
@@ -264,9 +264,9 @@ export function ConsultingFunnel() {
                      setFormData({...formData, entityType: "RESIDENCY"});
                      goTo("VALIDATION_FORM");
                    }}
-                   className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-blue-500 whitespace-normal flex items-start text-slate-900"
+                   className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 whitespace-normal flex items-start text-slate-900"
                  >
-                   <ShieldCheck className="mr-3 h-5 w-5 text-blue-600 mt-0.5 shrink-0" />
+                   <ShieldCheck className="mr-3 h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
                    <span className="flex-1 text-base md:text-lg">Ich habe eine Premium Residency</span>
                  </Button>
                </div>

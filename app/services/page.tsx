@@ -44,7 +44,7 @@ export default function ServicesPage() {
             Unsere Services im Detail
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Von der Gründung über den Aufbau bis zur operativen Führung. Wir decken den gesamten Lebenszyklus Ihres Unternehmens in Saudi-Arabien ab.
+            Von der Gründung über den Aufbau bis zur operativen Führung. Wir decken den gesamten Lebenszyklus deines Unternehmens in Saudi-Arabien ab.
           </p>
 
           {/* Quick Links Grid (2x3) */}
@@ -121,7 +121,7 @@ export default function ServicesPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                Mit der Gründung ist es nicht getan – ein Business muss physisch und operativ aufgebaut werden. Mein Team und ich übernehmen die komplette Umsetzung des Unternehmensaufbaus, sodass Ihr Geschäft startklar wird.
+                        Mit der Gründung ist es nicht getan – ein Business muss physisch und operativ aufgebaut werden. Mein Team und ich übernehmen die komplette Umsetzung des Unternehmensaufbaus, damit dein Geschäft startklar wird.
               </p>
               
               <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -157,7 +157,7 @@ export default function ServicesPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                Nach Gründung und Aufbau kommt die operative Führung – oft die größte Herausforderung für Unternehmer im Ausland. Mein Team und ich übernehmen das Management und Controlling Ihres Geschäfts, damit Sie sich auf strategische Entscheidungen konzentrieren können.
+                        Nach Gründung und Aufbau kommt die operative Führung – oft die größte Herausforderung für Unternehmer im Ausland. Mein Team und ich übernehmen das Management und Controlling deines Geschäfts, damit du dich auf strategische Entscheidungen konzentrieren kannst.
               </p>
               
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -233,7 +233,7 @@ export default function ServicesPage() {
               </p>
               
               <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
-                <h3 className="text-slate-900 font-bold mb-6 text-xl">Ihre Vorteile:</h3>
+                        <h3 className="text-slate-900 font-bold mb-6 text-xl">Deine Vorteile:</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>Ausgearbeitete Business- & Finanzpläne</span></li>
                   <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>Transparente Kosten- & Ertragsmodelle</span></li>

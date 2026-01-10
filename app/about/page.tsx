@@ -11,7 +11,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Über Mich | Aneed Ashraf - Consulting Saudi-Arabien",
-  description: "Erfahren Sie mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
+  description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
 };
 
 const skills = [
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 Aneed Ashraf
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed font-light">
-                Brückenbauer zwischen den Welten. Strategischer Partner für Ihren Erfolg in Saudi-Arabien.
+                Brückenbauer zwischen den Welten. Strategischer Partner für deinen Erfolg in Saudi-Arabien.
               </p>
               
               <div className="grid grid-cols-2 gap-6 pt-4">
@@ -147,7 +147,7 @@ export default function AboutPage() {
               {/* CTA */}
               <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center space-y-4">
                 <h3 className="text-xl font-bold text-slate-900">Bereit für den Markteintritt?</h3>
-                <p className="text-slate-600 mb-4">Lassen Sie uns Ihre Vision besprechen.</p>
+                <p className="text-slate-600 mb-4">Lass uns deine Vision besprechen.</p>
                 <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md">
                   <Link href="/check">
                     Termin vereinbaren <ArrowRight className="ml-2 h-4 w-4" />

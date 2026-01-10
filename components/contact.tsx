@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 export function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    alert("Vielen Dank für Ihre Anfrage! Wir melden uns in Kürze.");
+    alert("Danke für deine Anfrage! Wir melden uns in Kürze.");
   }
 
   return (
@@ -20,7 +20,7 @@ export function Contact() {
             Bereit für den nächsten Schritt?
           </h2>
           <p className="text-lg text-slate-600">
-            Lassen Sie uns Ihre Vision besprechen. Diskret, direkt und zielorientiert.
+            Lass uns deine Vision besprechen. Diskret, direkt und zielorientiert.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function Contact() {
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl font-bold text-slate-900">Kontakt aufnehmen</CardTitle>
             <CardDescription className="text-slate-500 text-base">
-              Füllen Sie das Formular aus. Wir melden uns innerhalb von 24h.
+              Füll das Formular aus. Wir melden uns innerhalb von 24h.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -68,7 +68,7 @@ export function Contact() {
                 <Label htmlFor="message" className="text-slate-700 font-medium">Nachricht</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Wie können wir Sie unterstützen?" 
+                          placeholder="Wie können wir dich unterstützen?" 
                   className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600"
                   required 
                 />

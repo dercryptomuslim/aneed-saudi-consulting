@@ -29,14 +29,14 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl mb-8">
-            Ihr Tor zum Erfolg in <br />
+            Dein Tor zum Erfolg in <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-emerald-800 to-slate-900">
               Saudi-Arabien
             </span>
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 md:text-xl leading-relaxed">
-            9 Jahre Expertise vor Ort. Wir navigieren Sie sicher durch Gründung, Investment und Auswanderung. Werden Sie Teil der Vision 2030.
+            9 Jahre Expertise vor Ort. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung. Werde Teil der Vision 2030.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

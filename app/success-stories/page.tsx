@@ -261,7 +261,7 @@ export default function SuccessStoriesPage() {
             Erfolgsgeschichten
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Theorie ist gut, Praxis ist besser. Hier sehen Sie, wie wir Herausforderungen in Saudi-Arabien real gelöst haben.
+            Theorie ist gut, Praxis ist besser. Hier siehst du, wie wir Herausforderungen in Saudi-Arabien real gelöst haben.
           </p>
         </div>
       </section>
@@ -393,10 +393,10 @@ export default function SuccessStoriesPage() {
       <section className="bg-slate-50 py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">
-            Schreiben wir Ihre Erfolgsgeschichte?
+            Schreiben wir deine Erfolgsgeschichte?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Jedes Projekt ist einzigartig. Lassen Sie uns herausfinden, wie wir Ihre Vision in Saudi-Arabien realisieren können.
+            Jedes Projekt ist einzigartig. Lass uns herausfinden, wie wir deine Vision in Saudi-Arabien realisieren können.
           </p>
           <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
             <Link href="/check">

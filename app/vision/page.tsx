@@ -61,12 +61,12 @@ export default function VisionPage() {
             </div>
             
             <h1 className="bg-gradient-to-b from-white to-blue-200 bg-clip-text text-5xl font-bold text-transparent md:text-7xl lg:text-8xl drop-shadow-xl">
-              Ihr Tor zum Erfolg in <br />
+              Dein Tor zum Erfolg in <br />
               <span className="text-white drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Saudi-Arabien</span>
             </h1>
             
             <p className="mx-auto mt-8 max-w-2xl text-lg text-blue-100/90 md:text-xl leading-relaxed drop-shadow-md">
-              9 Jahre Expertise vor Ort. Wir navigieren Sie sicher durch Gründung, Investment und Auswanderung. Werden Sie Teil der Vision 2030.
+              9 Jahre Expertise vor Ort. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung. Werde Teil der Vision 2030.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

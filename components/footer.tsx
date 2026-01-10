@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-serif font-bold text-white">Aneed Ashraf</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Ihr strategischer Partner für Saudi-Arabien. <br/>
+              Dein strategischer Partner für Saudi-Arabien. <br/>
               Investment. Gründung. Zukunft.
             </p>
           </div>
