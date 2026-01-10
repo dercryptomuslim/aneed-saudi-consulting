@@ -116,7 +116,7 @@ export default function ServicesPage() {
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Standort, Personal, Prozesse & Marketing</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
                           <Link href="/check">Aufbau besprechen</Link>
-                        </Button>>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -152,7 +152,7 @@ export default function ServicesPage() {
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Betrieb, Finanzen & Controlling</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
                           <Link href="/check">Management anfragen</Link>
-                        </Button>>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -188,7 +188,7 @@ export default function ServicesPage() {
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Strategie & Optimierung</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
                           <Link href="/check">Strategiegespräch buchen</Link>
-                        </Button>>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -224,7 +224,7 @@ export default function ServicesPage() {
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Ausgearbeitete Geschäftskonzepte</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
                           <Link href="/check">Investitionsmöglichkeiten</Link>
-                        </Button>>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
@@ -260,7 +260,7 @@ export default function ServicesPage() {
                         <p className="text-emerald-700 font-medium mb-8 text-lg">Expansion & Systemaufbau</p>
                         <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
                           <Link href="/check">Franchise besprechen</Link>
-                        </Button>>
+                        </Button>
               </div>
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
