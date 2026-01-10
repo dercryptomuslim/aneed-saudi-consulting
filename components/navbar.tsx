@@ -128,6 +128,14 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link href="/success-stories" legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
+                    Erfolgsgeschichten
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link href="/#ueber-mich" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Über Mich
@@ -193,15 +201,24 @@ export function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="text-sm font-medium text-emerald-700 mt-2 pl-2 block hover:underline"
                           >
-                            Alle Leistungen ansehen →
-                          </Link>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+                                    Alle Leistungen ansehen →
+                                  </Link>
+                                </div>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
 
-                  <Link
-                    href="/#ueber-mich"
+                          <Link
+                            href="/success-stories"
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
+                          >
+                            Erfolgsgeschichten
+                            <ChevronRight className="h-5 w-5 text-slate-400" />
+                          </Link>
+
+                          <Link
+                            href="/#ueber-mich"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                   >
