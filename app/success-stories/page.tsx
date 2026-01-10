@@ -12,6 +12,7 @@ import {
   Target 
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import {
   Accordion,
@@ -31,6 +32,7 @@ const caseStudies = [
     title: "Gastronomieprojekt in Saudi-Arabien",
     category: "Operative Umsetzung",
     icon: Building2,
+    image: "/laveu-logo.jpg",
     summary: "Vollständige operative Umsetzung eines Gastronomie-Konzepts mit festem Budget und vorgegebener Location.",
     stats: ["150k-200k € Budget", "4 Monate Bauzeit", "Schlüsselfertige Übergabe"],
     challenge: (
@@ -251,6 +253,21 @@ export default function SuccessStoriesPage() {
                 <h2 className="text-3xl font-serif font-bold text-slate-900 leading-tight">
                   {study.title}
                 </h2>
+                
+                {/* Logo / Image for Case Study (if available) */}
+                {/* @ts-ignore - Dynamic property check */}
+                {study.image && (
+                  <div className="relative w-full h-48 rounded-xl overflow-hidden border border-slate-100 shadow-sm">
+                    <Image
+                      /* @ts-ignore */
+                      src={study.image}
+                      /* @ts-ignore */
+                      alt={`${study.title} Logo`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 
                 <p className="text-slate-600 text-lg leading-relaxed">
                   {study.summary}
