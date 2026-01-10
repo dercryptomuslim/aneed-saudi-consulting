@@ -93,9 +93,20 @@ const caseStudies = [
     title: "Gewinnoptimierung Gastronomie (Medina)",
     category: "Restrukturierung",
     icon: TrendingUp,
+    image: "/bakran.jpg",
     summary: "Turnaround-Management für eine Kette mit 3 Filialen: Umsatz vorhanden, Profitabilität gesteigert.",
     stats: ["3 Filialen", "7-stellige Einsparung", "Kein Qualitätsverlust"],
-    challenge: "Trotz mittlerem sechsstelligen Jahresumsatz war der Gewinn nicht zufriedenstellend. Der Auftrag war klar: Ursachen identifizieren, Strukturen korrigieren und messbare Ergebnisse liefern.",
+    challenge: (
+      <>
+        Der Kunde kam auf mich zu, weil er trotz eines mittleren sechsstelligen Jahresumsatzes mit seinem Gewinn nicht zufrieden war.
+        <br />
+        Das Unternehmen betrieb drei Filialen in Medina. Umsatz war vorhanden – Profitabilität jedoch nicht im gewünschten Maß.
+        <br /><br />
+        Der Auftrag war klar: Ursachen identifizieren, Strukturen korrigieren und messbare Ergebnisse liefern.
+        <br /><br />
+        <strong>Location:</strong> <a href="https://www.google.com/maps/search/Bakran/@24.4541429,39.6157317,14z?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Bakran Medina</a>
+      </>
+    ),
     phases: [
       {
         title: "1. Analysephase – Transparenz statt Vermutungen",
