@@ -47,7 +47,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-slate-200 bg-white px-8 text-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm">
-              <Link href="#leistungen">
+              <Link href="/services">
                 Unsere Leistungen
               </Link>
             </Button>
