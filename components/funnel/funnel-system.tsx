@@ -39,6 +39,7 @@ export function ConsultingFunnel() {
     entityType: "" as "COMPANY" | "RESIDENCY" | "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const goTo = (nextStep: Step) => {
     setDirection(1);
@@ -64,9 +65,28 @@ export function ConsultingFunnel() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleValidationSubmit = () => {
-    if (validateKsaId()) {
-      alert("Validierung erfolgreich! Anfrage wird gesendet...");
+  const handleValidationSubmit = async () => {
+    if (!validateKsaId()) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Erfolgreich gespeichert -> Weiter zum Buchen
+        goTo("BOOKING_FORM");
+      } else {
+        alert("Fehler beim Senden. Bitte versuche es später erneut.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Ein unerwarteter Fehler ist aufgetreten.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -130,9 +150,6 @@ export function ConsultingFunnel() {
             </StepCard>
           )}
 
-          {/* ... Weitere Steps analog ... (Ich kürze hier ab, da das Prinzip klar ist: slate-colors statt neutral-colors) */}
-          {/* Da ich den ganzen Code überschreibe, muss ich alle Steps anpassen */}
-          
           {step === "BILANZ_CHECK" && (
             <StepCard 
               question="Wie hoch ist der Bilanzwert?"
@@ -357,8 +374,8 @@ export function ConsultingFunnel() {
                   <Button variant="outline" onClick={() => goBack("EXISTING_KSA_CHECK")} className="w-1/3 border-slate-300 h-12 text-slate-700">
                     Zurück
                   </Button>
-                  <Button onClick={handleValidationSubmit} className="w-2/3 bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md">
-                    Anfrage senden
+                  <Button onClick={handleValidationSubmit} disabled={isSubmitting} className="w-2/3 bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md">
+                    {isSubmitting ? "Sende..." : "Anfrage senden"}
                   </Button>
                 </div>
               </div>
