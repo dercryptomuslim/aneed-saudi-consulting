@@ -1,8 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import { 
   Building2, 
   TrendingUp, 
@@ -10,13 +9,16 @@ import {
   Landmark, 
   ArrowRight, 
   CheckCircle2, 
-  BarChart3, 
-  Users, 
-  Clock, 
   Target 
 } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "Erfolgsgeschichten | Aneed Ashraf - Consulting Saudi-Arabien",
@@ -35,15 +37,41 @@ const caseStudies = [
     phases: [
       {
         title: "1. Einführungsphase – Analyse & Fundament",
-        description: "Analyse und Prüfung auf Umsetzbarkeit. Entwicklung eines tragfähigen Gastronomiekonzepts, Corporate Identity, Design- und Raumkonzepte sowie Abstimmung mit Bauunternehmen.",
+        description: "In der Einführungsphase lag der Fokus auf Klarheit, Struktur und realistischen Entscheidungen. Mein Team und ich haben das Projekt vollständig analysiert und auf Umsetzbarkeit geprüft – unter Berücksichtigung der vorgegebenen Location und der bestehenden Baufirma.",
+        list: [
+          "Entwicklung eines tragfähigen Gastronomiekonzepts",
+          "Anpassung des Konzepts an Standort, Zielgruppe und Budget",
+          "Aufbau der Corporate Identity (Markenauftritt, Positionierung)",
+          "Erste Design- und Raumkonzepte",
+          "Abstimmung mit Bauunternehmen und lokalen Partnern"
+        ],
+        goal: "Ziel dieser Phase war es, Fehlentscheidungen frühzeitig zu vermeiden und eine belastbare Grundlage für die Umsetzung zu schaffen."
       },
       {
         title: "2. Startphase – Umsetzung & Aufbau",
-        description: "Operative Umsetzung vor Ort: Detaildesign, Koordination der Bauphase, Beschaffung aller Geräte, Rekrutierung des Teams und Aufbau der internen Prozesse.",
+        description: "In der Startphase ging es in die operative Umsetzung. Hier wurde nicht geplant, sondern gebaut, organisiert und entschieden.",
+        list: [
+          "Detaildesign und finale Gestaltungsumsetzung",
+          "Koordination und Überwachung der Bau- und Umbaumaßnahmen",
+          "Steuerung der Construction-Phase vor Ort",
+          "Auswahl, Beschaffung und Installation aller Geräte (u. a. Kaffeemaschine, Küchentechnik, Ausstattung)",
+          "Aufbau der operativen Infrastruktur",
+          "Rekrutierung und Einstellung der Mitarbeiter",
+          "Vorbereitung der internen Abläufe und Prozesse"
+        ],
+        goal: "Diese Phase erforderte tägliche Abstimmung, klare Entscheidungen und permanentes Controlling – insbesondere, da Location und Baufirma vorgegeben waren."
       },
       {
         title: "3. Endphase – Übergabe & Betriebsbereitschaft",
-        description: "Finalisierung, Personalschulung, Testläufe und Qualitätskontrolle. Das Projekt wurde innerhalb von 4 Monaten von der Idee bis zur betriebsbereiten Übergabe realisiert.",
+        description: "In der Endphase lag der Fokus auf Qualität, Funktionalität und Betriebsfähigkeit. Ziel war es, kein „fertiges Objekt“, sondern ein startklar funktionierendes Geschäft zu übergeben.",
+        list: [
+          "Finalisierung aller Bau- und Designarbeiten",
+          "Schulung und finale Einstellung des Personals",
+          "Testläufe der Abläufe und technischen Systeme",
+          "Qualitätskontrolle aller Gewerke",
+          "Schlüsselübergabe an den Kunden"
+        ],
+        goal: "Das Projekt wurde innerhalb von 4 Monaten vollständig umgesetzt – von der ersten Konzeptidee bis zur betriebsbereiten Übergabe."
       }
     ],
     result: "Keine Experimente, keine Theorie – sondern strukturierte, reale Umsetzung unter echten Marktbedingungen.",
@@ -59,15 +87,36 @@ const caseStudies = [
     phases: [
       {
         title: "1. Analysephase – Transparenz statt Vermutungen",
-        description: "Detaillierte Prozess-, Wastage- und Personalanalyse. Identifikation der 'Gewinnfresser' und versteckten Kosten durch strukturierte Audits.",
+        description: "In der ersten Phase ging es nicht um Meinungen, sondern um Fakten. Mein Team und ich haben das gesamte Unternehmen operativ durchleuchtet.",
+        list: [
+          "Detaillierte Prozessanalysen in allen Filialen",
+          "Wastage-Analyse (Wareneinsatz, Verluste, Fehlmengen)",
+          "Personalanalyse (Einsatzpläne, Produktivität, Überbesetzung)",
+          "Kostenanalyse (Fixkosten, variable Kosten, versteckte Kosten)",
+          "Rezept- und Kalkulationsanalyse",
+          "Strukturierte Interviews mit Mitarbeitern und Management"
+        ],
+        goal: "Ziel dieser Phase war es, die realen Gewinnfresser sichtbar zu machen – nicht nur Symptome, sondern Ursachen."
       },
       {
         title: "2. Umsetzungsphase – Struktur statt Aktionismus",
-        description: "Optimierung operativer Prozesse, Reduktion von Wareneinsatz, Anpassung von Rezepturen, effizientere Personalstrukturen und Implementierung von Kontrollmechanismen.",
+        description: "Auf Basis der Analyse entwickelten mein Team und ich konkrete, umsetzbare Konzepte, die direkt in den laufenden Betrieb integriert wurden.",
+        list: [
+          "Optimierung der operativen Prozesse",
+          "Reduktion von Wareneinsatz und Wastage",
+          "Anpassung von Rezepturen und Kalkulationen",
+          "Effizientere Personalstrukturen und Einsatzpläne",
+          "Klare Verantwortlichkeiten und Kontrollmechanismen"
+        ],
+        goal: "Wichtig: Die Maßnahmen wurden nicht theoretisch empfohlen, sondern operativ umgesetzt und begleitet."
       },
       {
         title: "3. Ergebnisphase – Messbarer finanzieller Effekt",
-        description: "Jährliche Einsparungen im siebenstelligen Bereich ohne Qualitätsverlust. Beweis dafür, dass erst klare Prozesse und saubere Kalkulation ein Unternehmen profitabel machen.",
+        description: "Das Ergebnis war eindeutig und messbar:",
+        list: [
+          "Der Kunde konnte jährliche Einsparungen im siebenstelligen Bereich realisieren – ohne Qualitätsverlust und ohne Umsatzrückgang."
+        ],
+        goal: "Dieses Projekt zeigt deutlich: Hoher Umsatz bedeutet nichts, wenn die Struktur nicht stimmt. Erst klare Prozesse, saubere Kalkulation und operative Kontrolle machen ein Unternehmen wirklich profitabel."
       }
     ],
     result: "Hoher Umsatz bedeutet nichts, wenn die Struktur nicht stimmt. Wir haben Profitabilität durch operative Exzellenz geschaffen.",
@@ -83,15 +132,33 @@ const caseStudies = [
     phases: [
       {
         title: "1. Analyse- & Researchphase – Fakten statt Annahmen",
-        description: "Vollständige Markt-, Wettbewerbs- und Standortanalyse für Riyadh. Bewertung lokaler Kostenstrukturen und Skalierbarkeit des Geschäftsmodells.",
+        description: "In der ersten Phase haben mein Team und ich eine vollständige Markt- und Standortanalyse durchgeführt. Ziel war es, nicht nur Chancen aufzuzeigen, sondern auch Risiken transparent zu machen.",
+        list: [
+          "Markt- und Wettbewerbsanalyse für Riyadh",
+          "Zielgruppen- und Standortbewertung",
+          "Analyse lokaler Rahmenbedingungen und Kostenstrukturen",
+          "Operative Anforderungen für den neuen Standort",
+          "Bewertung der Skalierbarkeit des bestehenden Geschäftsmodells"
+        ],
+        goal: "Diese Phase bildete die Grundlage für alle weiteren Entscheidungen."
       },
       {
         title: "2. Planungsphase – Strukturierte Entscheidungsgrundlage",
-        description: "Erstellung einer detaillierten Feasibility Study inklusive operativem Konzept, Finanzplan (Investition, Kosten, Ertrag), Break-even-Analyse und Szenarienrechnung.",
+        description: "Auf Basis der Analyse erstellten mein Team und ich eine vollständige Feasibility Study mit allen relevanten Kapiteln.",
+        list: [
+          "Detaillierte Geschäfts- und Standortbeschreibung",
+          "Operatives Konzept für den Standort in Riyadh",
+          "Vollständiger Finanzplan (Investitions-, Kosten- und Ertragsstruktur)",
+          "Break-even-Analyse und Szenarienrechnung",
+          "Klare Handlungsempfehlungen für die Standortwahl in Riyadh"
+        ],
+        goal: "Der Fokus lag darauf, dem Kunden keine Versprechen, sondern klare Zahlen und realistische Szenarien zu liefern."
       },
       {
         title: "3. Ergebnisphase – Sicherheit für die Entscheidung",
-        description: "Der Kunde erhielt eine fundierte Grundlage für seine strategische Planung. Erfolg an einem Standort garantiert keinen Erfolg an einem anderen – Analyse schafft Sicherheit.",
+        description: "Der Kunde verfügt nun über eine fundierte Entscheidungsgrundlage, auf der er seine Expansion nach Riyadh sachlich, nachvollziehbar und strategisch begründet planen kann.",
+        list: [],
+        goal: "Dieses Projekt zeigt: Erfolg in einer Stadt garantiert keinen Erfolg in einer anderen. Eine saubere Feasibility Study schafft Klarheit – bevor Kapital, Zeit und Energie investiert werden."
       }
     ],
     result: "Eine saubere Feasibility Study schafft Klarheit – bevor Kapital, Zeit und Energie investiert werden.",
@@ -107,15 +174,31 @@ const caseStudies = [
     phases: [
       {
         title: "1. Analysephase – Einnahmenpotenziale identifizieren",
-        description: "Prüfung von Eintrittsstrukturen, Merchandising, Events und Sponsoring-Optionen. Benchmarking mit ähnlichen internationalen Einrichtungen.",
+        description: "In der ersten Phase lag der Fokus auf realistischen Einnahmequellen und operativer Umsetzbarkeit.",
+        list: [
+          "Analyse bestehender und potenzieller Einnahmequellen",
+          "Bewertung der Besucherzahlen und Eintrittsstrukturen",
+          "Prüfung von Merchandising, Events, Sponsoring- und Kooperationsmöglichkeiten",
+          "Benchmarking ähnlicher Einrichtungen"
+        ],
+        goal: "Ziel war es, alle realistischen Optionen transparent zu machen, um eine fundierte Grundlage für Entscheidungen zu schaffen."
       },
       {
         title: "2. Konzeptionsphase – Strategien entwickeln",
-        description: "Entwicklung konkreter Einnahmepläne, Shop-Konzepte, Veranstaltungsformate und Partnerschaftsmodelle. Direkte Prüfung auf Umsetzbarkeit.",
+        description: "Auf Basis der Analyse entwickelten mein Team und ich konkrete Konzepte, die den Betrieb des Museums nachhaltig sichern können:",
+        list: [
+          "Entwicklung von Einnahmeplänen aus Eintrittsgeldern und Ticketmodellen",
+          "Merchandising- und Shop-Konzepte",
+          "Planung von Sonderausstellungen, Veranstaltungen und Kooperationen",
+          "Empfehlung von Partnerschaften und Sponsorenmodellen"
+        ],
+        goal: "Die Konzepte wurden nicht nur theoretisch erstellt, sondern auf Umsetzbarkeit geprüft und teilweise direkt implementiert."
       },
       {
         title: "3. Ergebnisphase – Nachhaltige Grundlage",
-        description: "Implementierung neuer Einkommensquellen für einen langfristig tragfähigen Betrieb. Beweis, dass auch kulturelle Institutionen operatives Management benötigen.",
+        description: "Durch unsere Arbeit konnte das Museum nun teilweise neue Einkommensquellen nutzen und die Grundlage für einen langfristig tragfähigen Betrieb ohne staatliche Finanzierung legen.",
+        list: [],
+        goal: "Dieses Projekt zeigt: Selbst bei kulturellen und religiösen Institutionen zählt Struktur, Analyse und operatives Handeln. Nur so lassen sich Konzepte entwickeln, die tatsächlich funktionieren – und nicht nur auf dem Papier bestehen."
       }
     ],
     result: "Selbst bei kulturellen Institutionen zählt Struktur. Nur so lassen sich Konzepte entwickeln, die tatsächlich funktionieren.",
@@ -144,7 +227,7 @@ export default function SuccessStoriesPage() {
 
       {/* Case Studies List */}
       <div className="container mx-auto px-4 lg:px-8 py-16 space-y-24">
-        {caseStudies.map((study, index) => (
+        {caseStudies.map((study) => (
           <section key={study.id} id={study.id} className="scroll-mt-32">
             <div className="grid lg:grid-cols-12 gap-12 items-start">
               
@@ -195,23 +278,43 @@ export default function SuccessStoriesPage() {
                       </p>
                     </div>
 
-                    {/* Phases Timeline */}
-                    <div className="space-y-8 relative">
-                      <div className="absolute left-[15px] top-4 bottom-4 w-0.5 bg-slate-100" />
-                      
-                      {study.phases.map((phase, i) => (
-                        <div key={i} className="relative flex gap-6">
-                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center z-10 shadow-sm">
-                            <span className="text-xs font-bold text-emerald-700">{i + 1}</span>
-                          </div>
-                          <div className="space-y-2 pt-1">
-                            <h4 className="text-lg font-bold text-slate-900">{phase.title}</h4>
-                            <p className="text-slate-600 leading-relaxed">
-                              {phase.description}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
+                    {/* Phases Accordion */}
+                    <div>
+                      <h3 className="text-xl font-serif font-bold text-slate-900 mb-6">Projektverlauf</h3>
+                      <Accordion type="single" collapsible className="w-full border border-slate-200 rounded-lg overflow-hidden bg-slate-50/50">
+                        {study.phases.map((phase, i) => (
+                          <AccordionItem key={i} value={`item-${i}`} className="border-b border-slate-200 last:border-0 px-4 bg-white">
+                            <AccordionTrigger className="hover:no-underline py-5 text-left">
+                              <span className="text-base font-bold text-slate-900">{phase.title}</span>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <div className="pb-6 pt-2 space-y-4 text-slate-600 leading-relaxed">
+                                <p>{phase.description}</p>
+                                
+                                {phase.list.length > 0 && (
+                                  <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                    <p className="font-semibold text-slate-900 mb-2 text-sm">Unsere Aufgaben:</p>
+                                    <ul className="space-y-2">
+                                      {phase.list.map((item, j) => (
+                                        <li key={j} className="flex items-start gap-2 text-sm">
+                                          <span className="block w-1.5 h-1.5 mt-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
+                                          <span>{item}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                                
+                                {phase.goal && (
+                                  <div className="pt-2 text-emerald-700 font-medium italic border-t border-slate-100 mt-4">
+                                    {phase.goal}
+                                  </div>
+                                )}
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
                     </div>
 
                     {/* Result / Fazit */}
@@ -252,4 +355,3 @@ export default function SuccessStoriesPage() {
     </main>
   );
 }
-
