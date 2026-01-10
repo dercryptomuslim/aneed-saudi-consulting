@@ -1,5 +1,7 @@
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function About() {
   return (
@@ -65,6 +67,14 @@ export function About() {
                   <span className="text-slate-800 font-medium">{item}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="pt-6">
+              <Button asChild variant="outline" className="border-slate-200 hover:bg-slate-50 hover:text-emerald-700">
+                <Link href="/ueber-mich">
+                  Mehr über Aneed erfahren <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
