@@ -103,18 +103,28 @@ export default function AboutPage() {
                 Mein Team und ich agieren nicht nur als Berater, sondern als strategische Partner, die Unternehmen, Investoren und Unternehmer sicher, effizient und nachhaltig durch den saudi-arabischen Markt führen.
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Unternehmerischer Hintergrund</h3>
-              
-              {/* Image 1: Portrait moved here */}
-              <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-lg bg-slate-200 mb-8 float-right ml-6">
-                <Image
-                  src="/aneed-10.jpg"
-                  alt="Aneed Ashraf Portrait"
-                  fill
-                  className="object-cover object-top"
-                />
+              {/* Skills Card (Mobile Only) */}
+              <div className="lg:hidden mt-8 mb-8">
+                <Card className="border-slate-200 shadow-lg bg-slate-900 text-white">
+                  <CardContent className="p-6 space-y-6">
+                    <h3 className="text-xl font-bold font-serif mb-4">Kernkompetenzen</h3>
+                    <div className="space-y-4">
+                      {skills.map((skill) => (
+                        <div key={skill.name} className="space-y-2">
+                          <div className="flex justify-between text-sm font-medium text-slate-300">
+                            <span>{skill.name}</span>
+                            <span>{skill.value}%</span>
+                          </div>
+                          <Progress value={skill.value} className="h-2 bg-slate-700" indicatorClassName="bg-emerald-500" />
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
 
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Unternehmerischer Hintergrund</h3>
+              
               <p>
                 Seit 2006 bin ich als Unternehmer aktiv und seit 2011 als Unternehmensberater tätig. In dieser Zeit habe ich über 100 Projekte und KMU in Deutschland, Österreich, der Schweiz, Großbritannien, Malaysia und Singapur begleitet und erfolgreich abgeschlossen.
               </p>
@@ -126,8 +136,8 @@ export default function AboutPage() {
             {/* Right Column: Skills & Image 2 */}
             <div className="lg:col-span-5 space-y-12">
               
-              {/* Skills Card */}
-              <Card className="border-slate-200 shadow-lg bg-slate-900 text-white">
+              {/* Skills Card (Desktop Only) */}
+              <Card className="hidden lg:block border-slate-200 shadow-lg bg-slate-900 text-white">
                 <CardContent className="p-8 space-y-8">
                   <h3 className="text-xl font-bold font-serif mb-6">Kernkompetenzen</h3>
                   <div className="space-y-6">
