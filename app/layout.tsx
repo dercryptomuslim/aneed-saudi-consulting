@@ -19,26 +19,36 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Aneed Ashraf | Consulting Saudi-Arabien",
-  description: "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+  title: "Unternehmensgründung Saudi-Arabien | Aneed Ashraf (Medina)",
+  description:
+    "Unternehmensgründung in Saudi-Arabien (MISA) aus Medina: Setup, Franchise & Auswanderung. Operative Erfahrung vor Ort. Expertengespräch anfragen.",
   metadataBase: new URL("https://www.aneedashraf.de"),
   alternates: {
     canonical: "/",
   },
+  keywords: [
+    "Unternehmensgründung Saudi-Arabien",
+    "Firma gründen Saudi-Arabien",
+    "MISA Lizenz",
+    "Franchise Saudi-Arabien",
+    "Auswandern Saudi-Arabien",
+    "Unternehmensberatung Saudi-Arabien",
+    "Medina",
+  ],
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "https://www.aneedashraf.de",
     siteName: "Aneed Ashraf",
-    title: "Aneed Ashraf | Consulting Saudi-Arabien",
+    title: "Unternehmensgründung Saudi-Arabien | Aneed Ashraf (Medina)",
     description:
-      "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+      "Unternehmensgründung in Saudi-Arabien (MISA) aus Medina: Setup, Franchise & Auswanderung. Operative Erfahrung vor Ort. Expertengespräch anfragen.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aneed Ashraf | Consulting Saudi-Arabien",
+    title: "Unternehmensgründung Saudi-Arabien | Aneed Ashraf (Medina)",
     description:
-      "Exzellenz in Gründung, Investment und Strategie für den saudi-arabischen Markt.",
+      "Unternehmensgründung in Saudi-Arabien (MISA) aus Medina: Setup, Franchise & Auswanderung. Operative Erfahrung vor Ort. Expertengespräch anfragen.",
   },
 };
 
