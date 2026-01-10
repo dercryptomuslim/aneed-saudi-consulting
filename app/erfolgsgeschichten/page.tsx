@@ -313,7 +313,7 @@ export default function SuccessStoriesPage() {
 
                 <div className="pt-6">
                    <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white shadow-md">
-                    <Link href="/saudi-check">Ähnliches Projekt anfragen</Link>
+                    <Link href="/anfrage">Ähnliches Projekt anfragen</Link>
                   </Button>
                 </div>
               </div>
@@ -399,7 +399,7 @@ export default function SuccessStoriesPage() {
             Jedes Projekt ist einzigartig. Lass uns herausfinden, wie wir deine Vision in Saudi-Arabien realisieren können.
           </p>
           <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-            <Link href="/saudi-check">
+            <Link href="/anfrage">
               Jetzt Beratung starten
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

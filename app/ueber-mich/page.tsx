@@ -159,7 +159,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-slate-900">Bereit für den Markteintritt?</h3>
                 <p className="text-slate-600 mb-4">Lass uns deine Vision besprechen.</p>
                 <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md">
-                  <Link href="/saudi-check">
+                  <Link href="/anfrage">
                     Termin vereinbaren <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

@@ -4,7 +4,7 @@ import { ConsultingFunnel } from "@/components/funnel/funnel-system";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Saudi-Check | Aneed Ashraf",
+  title: "Anfrage | Aneed Ashraf",
   description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
 };
 
