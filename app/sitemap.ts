@@ -12,6 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/anfrage",
     "/impressum",
     "/datenschutz",
+    "/agb",
+    "/en",
+    "/en/services",
+    "/en/erfolgsgeschichten",
+    "/en/ueber-mich",
+    "/en/anfrage",
+    "/en/impressum",
+    "/en/datenschutz",
+    "/en/agb",
   ];
 
   return routes.map((path) => ({

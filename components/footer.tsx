@@ -35,7 +35,7 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
             <ul className="space-y-3 text-sm text-slate-400">
               <li><Link href={href("/impressum")} className="hover:text-emerald-500 transition-colors">{t("Impressum", "Imprint")}</Link></li>
               <li><Link href={href("/datenschutz")} className="hover:text-emerald-500 transition-colors">{t("Datenschutz", "Privacy")}</Link></li>
-              <li><Link href="#" className="hover:text-emerald-500 transition-colors">{t("AGB", "Terms")}</Link></li>
+              <li><Link href={href("/agb")} className="hover:text-emerald-500 transition-colors">{t("AGB", "Terms")}</Link></li>
             </ul>
           </div>
 
