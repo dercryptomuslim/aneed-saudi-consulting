@@ -11,7 +11,7 @@ export function About() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Image / Stats Side */}
-          <div className="lg:w-1/2 relative group">
+          <div className="w-full lg:w-1/2 relative group">
             <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-2xl bg-slate-100 shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
               <Image 
                 src="/aneed-portrait.jpg" 
