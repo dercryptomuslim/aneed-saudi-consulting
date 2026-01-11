@@ -1,36 +1,71 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Imprint | Aneed Ashraf",
-  description: "English imprint page coming soon.",
+  title: "Imprint | Aneed Ashraf - Consulting Saudi Arabia",
+  description: "Legal information and imprint of Aneed Ashraf Consulting.",
 };
 
-export default function ImprintEnPlaceholder() {
+export default function ImprintEnPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 flex flex-col">
+    <main className="min-h-screen bg-white text-slate-900 flex flex-col scroll-smooth">
       <Navbar />
 
-      <section className="flex-1 pt-28 pb-20 bg-slate-50">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
-              Imprint (EN) — coming soon
-            </h1>
+      <section className="relative pt-32 pb-16 bg-slate-50 border-b border-slate-100">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Imprint</h1>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <div className="prose prose-slate lg:prose-lg mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Information pursuant to § 5 TMG</h2>
             <p className="text-slate-600 mb-8">
-              We’re currently preparing the full English version of this page.
+              Oasis Gate LLC
+              <br />
+              Medina
+              <br />
+              Saudi Arabia
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white">
-                <Link href="/impressum">View in German</Link>
-              </Button>
-              <Button asChild variant="outline" className="border-slate-200">
-                <Link href="/en">Back to English home</Link>
-              </Button>
-            </div>
+
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Contact</h2>
+            <p className="text-slate-600 mb-8">
+              Phone:{" "}
+              <a href="tel:+966507390833" className="text-emerald-700 hover:underline">
+                +966 50 739 0833
+              </a>
+              <br />
+              Email:{" "}
+              <a href="mailto:info@oasisgate.de" className="text-emerald-700 hover:underline">
+                info@oasisgate.de
+              </a>
+            </p>
+
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">EU online dispute resolution</h2>
+            <p className="text-slate-600 mb-8">
+              The European Commission provides a platform for online dispute resolution (ODR):{" "}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-700 hover:underline"
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              .
+              <br />
+              You can find our email address above.
+            </p>
+
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Consumer dispute resolution / universal arbitration board
+            </h2>
+            <p className="text-slate-600">
+              We are not willing or obliged to participate in dispute resolution proceedings before a
+              consumer arbitration board.
+            </p>
           </div>
         </div>
       </section>
