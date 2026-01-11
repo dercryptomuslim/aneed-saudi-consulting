@@ -3,6 +3,14 @@ import { Instagram, Youtube, Linkedin } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
 
+function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M19.59 7.29c-1.2-.7-2.16-1.66-2.86-2.86-.34-.58-.58-1.22-.7-1.9h-3.18v13.05c0 1.44-1.17 2.62-2.62 2.62-1.44 0-2.62-1.17-2.62-2.62 0-1.44 1.17-2.62 2.62-2.62.27 0 .54.04.79.12V9.85c-.26-.04-.52-.06-.79-.06-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8 5.8-2.6 5.8-5.8V9.5c1.2.86 2.67 1.37 4.26 1.37V7.74c-.63 0-1.25-.16-1.78-.45z" />
+    </svg>
+  );
+}
+
 export function Footer({ locale = "de" }: { locale?: Locale }) {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
   const href = (raw: string) => localizeHref(raw, locale);
@@ -53,9 +61,13 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
                         <Instagram className="h-5 w-5" />
                         <span className="sr-only">Instagram</span>
                       </a>
-                      <a href="https://www.youtube.com/channel/UCMqDVsIAsY2E9z35FACnBMg" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                      <a href="https://www.youtube.com/@aneedashraf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                         <Youtube className="h-5 w-5" />
                         <span className="sr-only">YouTube</span>
+                      </a>
+                      <a href="https://tiktok.com/@aneedashraf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                        <TikTokIcon className="h-5 w-5" />
+                        <span className="sr-only">TikTok</span>
                       </a>
                       <a href="https://www.linkedin.com/in/aneed-ashraf/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                         <Linkedin className="h-5 w-5" />

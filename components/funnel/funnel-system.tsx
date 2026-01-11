@@ -54,6 +54,10 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
 
   const t = (de: string, en: string) => (locale === "en" ? en : de);
   const href = (raw: string) => localizeHref(raw, locale);
+  const bookingUrl =
+    locale === "en"
+      ? "https://tidycal.com/medinabusiness/60-minute-meeting-en"
+      : "https://tidycal.com/medinabusiness/60-minute-meeting";
 
   const goTo = (nextStep: Step) => {
     setDirection(1);
@@ -312,7 +316,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                  </div>
                  
                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
-                   <a href="https://tidycal.com/medinabusiness/60-minute-meeting" target="_blank" rel="noopener noreferrer">
+                   <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                      {t("Jetzt Termin auswählen & bezahlen", "Select a time & pay")}
                    </a>
                  </Button>
