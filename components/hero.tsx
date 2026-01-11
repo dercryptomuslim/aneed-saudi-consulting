@@ -5,8 +5,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import type { Locale } from "@/lib/i18n";
+import { localizeHref } from "@/lib/i18n";
 
-export function Hero() {
+export function Hero({ locale = "de" }: { locale?: Locale }) {
+  const t = (de: string, en: string) => (locale === "en" ? en : de);
+  const href = (raw: string) => localizeHref(raw, locale);
   return (
     <section className="relative flex min-h-[85dvh] w-full items-center justify-center overflow-hidden bg-white pt-24 md:pt-32 pb-24 md:pb-32">
       
@@ -25,31 +29,40 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Deine Zukunft beginnt in Medina
+            {t("Deine Zukunft beginnt in Medina", "Your future begins in Medina")}
           </div>
           
           <h1 className="text-5xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl mb-8">
-            Dein Tor zum Erfolg in <br />
+            {t("Dein Tor zum Erfolg in", "Your gateway to success in")} <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-emerald-800 to-slate-900">
               Saudi-Arabien
             </span>
           </h1>
           
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 md:text-xl leading-relaxed">
-            9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien. <br className="hidden md:block" />
-            <span className="font-medium text-slate-800">Keine Theorie, kein Testen an Kunden – echte Erfahrung aus Saudi-Arabien.</span>
+            {t(
+              "9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.",
+              "9 years of expertise from Medina. We guide you through company formation, investments, and relocation across Saudi Arabia."
+            )}{" "}
+            <br className="hidden md:block" />
+            <span className="font-medium text-slate-800">
+              {t(
+                "Keine Theorie, kein Testen an Kunden – echte Erfahrung aus Saudi-Arabien.",
+                "No theory, no experimenting on clients — real experience from Saudi Arabia."
+              )}
+            </span>
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Link href="/anfrage">
-                Expertengespräch anfragen
+              <Link href={href("/anfrage")}>
+                {t("Expertengespräch anfragen", "Request an expert call")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-slate-200 bg-white px-8 text-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm">
-              <Link href="/services">
-                Unsere Leistungen
+              <Link href={href("/services")}>
+                {t("Unsere Leistungen", "Our services")}
               </Link>
             </Button>
           </div>

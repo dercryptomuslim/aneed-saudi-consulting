@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { AlertCircle, ArrowLeft, Building2, Globe, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { Locale } from "@/lib/i18n";
+import { localizeHref } from "@/lib/i18n";
 
 // Definition der möglichen Schritte (States)
 type Step = 
@@ -27,6 +29,15 @@ type Step =
   | "REJECTED";
 
 export function ConsultingFunnel() {
+  return <ConsultingFunnelInnerCompat />;
+}
+
+// Backwards-compatible wrapper: existing imports keep working (German default).
+function ConsultingFunnelInnerCompat() {
+  return <ConsultingFunnelLocalized locale="de" />;
+}
+
+export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }) {
   const [step, setStep] = useState<Step>("START");
   const [direction, setDirection] = useState(1);
   const [formData, setFormData] = useState({
@@ -41,6 +52,9 @@ export function ConsultingFunnel() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const t = (de: string, en: string) => (locale === "en" ? en : de);
+  const href = (raw: string) => localizeHref(raw, locale);
+
   const goTo = (nextStep: Step) => {
     setDirection(1);
     setStep(nextStep);
@@ -54,13 +68,13 @@ export function ConsultingFunnel() {
   const validateKsaId = () => {
     const newErrors: Record<string, string> = {};
     if (formData.entityType === "COMPANY" && !/^7\d{9}$/.test(formData.unn)) {
-      newErrors.unn = "Die UNN muss mit 7 beginnen und 10 Ziffern haben.";
+      newErrors.unn = t("Die UNN muss mit 7 beginnen und 10 Ziffern haben.", "UNN must start with 7 and have 10 digits.");
     } else if (formData.entityType === "RESIDENCY" && !/^2\d{9}$/.test(formData.iqama)) {
-      newErrors.iqama = "Die Iqama-Nummer muss mit 2 beginnen und 10 Ziffern haben.";
+      newErrors.iqama = t("Die Iqama-Nummer muss mit 2 beginnen und 10 Ziffern haben.", "Iqama number must start with 2 and have 10 digits.");
     }
-    if (!formData.name) newErrors.name = "Name ist erforderlich";
-    if (!formData.email) newErrors.email = "E-Mail ist erforderlich";
-    if (!formData.phone) newErrors.phone = "Telefonnummer ist erforderlich";
+    if (!formData.name) newErrors.name = t("Name ist erforderlich", "Name is required");
+    if (!formData.email) newErrors.email = t("E-Mail ist erforderlich", "Email is required");
+    if (!formData.phone) newErrors.phone = t("Telefonnummer ist erforderlich", "Phone number is required");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -87,11 +101,11 @@ export function ConsultingFunnel() {
         } catch {
           // ignore
         }
-        alert(`Fehler beim Senden. Bitte versuche es später erneut.${details}`);
+        alert(`${t("Fehler beim Senden. Bitte versuche es später erneut.", "Failed to send. Please try again later.")}${details}`);
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Ein unerwarteter Fehler ist aufgetreten.");
+      alert(t("Ein unerwarteter Fehler ist aufgetreten.", "An unexpected error occurred."));
     } finally {
       setIsSubmitting(false);
     }
@@ -117,7 +131,9 @@ export function ConsultingFunnel() {
         >
           {step === "START" && (
             <Card className="p-5 md:p-8 border border-slate-200 bg-white shadow-xl">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">Wo stehst du aktuell?</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">
+                {t("Wo stehst du aktuell?", "Where are you right now?")}
+              </h2>
               <div className="grid gap-4">
                 <Button 
                   onClick={() => goTo("AUSLAND_FIRMA_CHECK")}
@@ -125,8 +141,12 @@ export function ConsultingFunnel() {
                 >
                   <Globe className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">Ich möchte gründen</div>
-                    <div className="text-slate-500 font-normal text-sm leading-snug">Ich komme aus dem Ausland und habe noch keine Firma in KSA.</div>
+                    <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">
+                      {t("Ich möchte gründen", "I want to start a company")}
+                    </div>
+                    <div className="text-slate-500 font-normal text-sm leading-snug">
+                      {t("Ich komme aus dem Ausland und habe noch keine Firma in KSA.", "I’m abroad and don’t have a company in KSA yet.")}
+                    </div>
                   </div>
                 </Button>
 
@@ -136,8 +156,12 @@ export function ConsultingFunnel() {
                 >
                   <ShieldCheck className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">Ich bin bereits in KSA</div>
-                    <div className="text-slate-500 font-normal text-sm leading-snug">Ich habe bereits eine Firma oder Premium Residency.</div>
+                    <div className="font-semibold text-base md:text-lg mb-1 text-slate-900">
+                      {t("Ich bin bereits in KSA", "I’m already in KSA")}
+                    </div>
+                    <div className="text-slate-500 font-normal text-sm leading-snug">
+                      {t("Ich habe bereits eine Firma oder Premium Residency.", "I already have a company or Premium Residency.")}
+                    </div>
                   </div>
                 </Button>
               </div>
@@ -146,100 +170,125 @@ export function ConsultingFunnel() {
 
           {step === "AUSLAND_FIRMA_CHECK" && (
             <StepCard 
-              question="Hast du eine Firma außerhalb von Saudi-Arabien?"
-              subtext="Die Firma muss im Handelsregister eingetragen und seit mindestens 1 Jahr aktiv sein."
+              question={t("Hast du eine Firma außerhalb von Saudi-Arabien?", "Do you have a company outside Saudi Arabia?")}
+              subtext={t("Die Firma muss im Handelsregister eingetragen und seit mindestens 1 Jahr aktiv sein.", "The company must be registered and active for at least 1 year.")}
               onBack={() => goBack("START")}
+              locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("BILANZ_CHECK")}>Ja</OptionButton>
-                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>Nein</OptionButton>
+                <OptionButton onClick={() => goTo("BILANZ_CHECK")}>{t("Ja", "Yes")}</OptionButton>
+                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>{t("Nein", "No")}</OptionButton>
               </div>
             </StepCard>
           )}
 
           {step === "BILANZ_CHECK" && (
             <StepCard 
-              question="Wie hoch ist der Bilanzwert?"
-              subtext="Liegt der Wert zwischen 75.000 € und 100.000 €?"
+              question={t("Wie hoch ist der Bilanzwert?", "What is your balance sheet value?")}
+              subtext={t("Liegt der Wert zwischen 75.000 € und 100.000 €?", "Is it between €75,000 and €100,000?")}
               onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
+              locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_DIRECT")}>Ja</OptionButton>
-                <OptionButton onClick={() => goTo("RISIKO_WARNUNG")}>Nein</OptionButton>
+                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_DIRECT")}>{t("Ja", "Yes")}</OptionButton>
+                <OptionButton onClick={() => goTo("RISIKO_WARNUNG")}>{t("Nein", "No")}</OptionButton>
               </div>
             </StepCard>
           )}
 
           {step === "RISIKO_WARNUNG" && (
             <StepCard 
-              question="Hinweis zur Gründung"
-              subtext="Ohne entsprechenden Bilanzwert wird eine Gründung schwierig. Wir können es versuchen, aber es gibt keine Garantie. Möchtest Du fortfahren?"
+              question={t("Hinweis zur Gründung", "Important note")}
+              subtext={t(
+                "Ohne entsprechenden Bilanzwert wird eine Gründung schwierig. Wir können es versuchen, aber es gibt keine Garantie. Möchtest Du fortfahren?",
+                "Without sufficient balance sheet value, formation can be difficult. We can try, but there’s no guarantee. Do you want to continue?"
+              )}
               icon={<AlertCircle className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />}
               onBack={() => goBack("BILANZ_CHECK")}
+              locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_RISK")}>Ja, versuchen</OptionButton>
-                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>Nein, abbrechen</OptionButton>
+                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_RISK")}>{t("Ja, versuchen", "Yes, try")}</OptionButton>
+                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>{t("Nein, abbrechen", "No, cancel")}</OptionButton>
               </div>
             </StepCard>
           )}
 
           {step === "FIRMENKAUF_OPTION" && (
             <StepCard 
-              question="Alternative: Firmenkauf"
-              subtext="Es gibt die Möglichkeit, ein bestehendes Unternehmen zu kaufen. Die Kosten liegen hierbei bei ca. 15.000 € für den Kauf. Ist das eine Option für dich?"
+              question={t("Alternative: Firmenkauf", "Alternative: buying a company")}
+              subtext={t(
+                "Es gibt die Möglichkeit, ein bestehendes Unternehmen zu kaufen. Die Kosten liegen hierbei bei ca. 15.000 € für den Kauf. Ist das eine Option für dich?",
+                "There is an option to buy an existing company. The purchase cost is approx. €15,000. Is that an option for you?"
+              )}
               onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
+              locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_KAUF")}>Ja</OptionButton>
-                <OptionButton onClick={() => goTo("BERATUNG_TROTZDEM")}>Nein</OptionButton>
+                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_KAUF")}>{t("Ja", "Yes")}</OptionButton>
+                <OptionButton onClick={() => goTo("BERATUNG_TROTZDEM")}>{t("Nein", "No")}</OptionButton>
               </div>
             </StepCard>
           )}
 
           {step === "BERATUNG_TROTZDEM" && (
             <StepCard 
-              question="Keine direkte Gründungs-Option"
-              subtext="Aktuell sehen wir keine direkte Möglichkeit für eine Standard-Gründung. Möchtest Du dennoch ein kostenpflichtiges Beratungsgespräch, um individuelle Wege zu prüfen?"
+              question={t("Keine direkte Gründungs-Option", "No direct formation option")}
+              subtext={t(
+                "Aktuell sehen wir keine direkte Möglichkeit für eine Standard-Gründung. Möchtest Du dennoch ein kostenpflichtiges Beratungsgespräch, um individuelle Wege zu prüfen?",
+                "At the moment, there’s no direct standard formation path. Do you still want a paid consultation to explore individual options?"
+              )}
               icon={<AlertCircle className="h-12 w-12 text-red-500 mb-4 mx-auto" />}
               onBack={() => goBack("FIRMENKAUF_OPTION")}
+              locale={locale}
             >
               <div className="grid grid-cols-1 gap-4">
-                <OptionButton onClick={() => goTo("BOOKING_FORM")}>Ja, Gespräch buchen</OptionButton>
-                <OptionButton onClick={() => goTo("REJECTED")}>Nein, beenden</OptionButton>
+                <OptionButton onClick={() => goTo("BOOKING_FORM")}>{t("Ja, Gespräch buchen", "Yes, book a call")}</OptionButton>
+                <OptionButton onClick={() => goTo("REJECTED")}>{t("Nein, beenden", "No, finish")}</OptionButton>
               </div>
             </StepCard>
           )}
 
           {step === "REJECTED" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl text-center">
-              <h2 className="text-xl font-bold text-slate-900 mb-4">Vielen Dank für dein Interesse.</h2>
+              <h2 className="text-xl font-bold text-slate-900 mb-4">
+                {t("Vielen Dank für dein Interesse.", "Thank you for your interest.")}
+              </h2>
               <p className="text-slate-500 mb-6">
-                Aktuell scheinen die Voraussetzungen für eine Zusammenarbeit noch nicht erfüllt zu sein. 
-                Wir wünschen dir viel Erfolg auf deinem Weg.
+                {t(
+                  "Aktuell scheinen die Voraussetzungen für eine Zusammenarbeit noch nicht erfüllt zu sein. Wir wünschen dir viel Erfolg auf deinem Weg.",
+                  "At the moment, the prerequisites for working together don’t seem to be met. We wish you success on your journey."
+                )}
               </p>
               <Button asChild variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50 w-full md:w-auto h-auto py-3">
-                <a href="/">Zurück zur Startseite</a>
+                <a href={href("/")}>{t("Zurück zur Startseite", "Back to home")}</a>
               </Button>
             </Card>
           )}
 
           {(step === "KOSTEN_AWARENESS_DIRECT" || step === "KOSTEN_AWARENESS_RISK" || step === "KOSTEN_AWARENESS_KAUF") && (
              <StepCard 
-               question="Kostentransparenz"
+               question={t("Kostentransparenz", "Cost transparency")}
                subtext={
                  step === "KOSTEN_AWARENESS_KAUF" 
-                 ? "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet (zzgl. zum Kaufpreis von 15.000 €)?"
-                 : "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet?"
+                 ? t(
+                    "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet (zzgl. zum Kaufpreis von 15.000 €)?",
+                    "Are you aware that starting a company (e.g., a 40-seat restaurant) in KSA costs between €120,000 and €250,000 (plus €15,000 purchase price)?"
+                  )
+                 : t(
+                    "Ist Dir bewusst, dass eine Unternehmensgründung (z.B. Restaurant mit 40 Plätzen) in KSA zwischen 120.000 € und 250.000 € kostet?",
+                    "Are you aware that starting a company (e.g., a 40-seat restaurant) in KSA costs between €120,000 and €250,000?"
+                  )
                }
                onBack={() => goBack("START")}
+               locale={locale}
              >
                <div className="grid gap-4">
                  <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto py-4 text-base md:text-lg whitespace-normal leading-tight">
-                   Ja, ich bin mir dessen bewusst
+                   {t("Ja, ich bin mir dessen bewusst", "Yes, I understand")}
                  </Button>
                  <Button onClick={() => goBack("START")} variant="ghost" className="text-slate-500 h-auto py-3 hover:text-slate-900">
-                   Nein, das ist zu teuer
+                   {t("Nein, das ist zu teuer", "No, that’s too expensive")}
                  </Button>
                </div>
              </StepCard>
@@ -247,22 +296,29 @@ export function ConsultingFunnel() {
 
           {step === "BOOKING_FORM" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">Beratungsgespräch buchen</h2>
-              <p className="text-emerald-700 mb-6 text-sm md:text-base font-medium">Deine Angaben wurden vorqualifiziert.</p>
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                {t("Beratungsgespräch buchen", "Book a consultation")}
+              </h2>
+              <p className="text-emerald-700 mb-6 text-sm md:text-base font-medium">
+                {t("Deine Angaben wurden vorqualifiziert.", "Your details have been pre-qualified.")}
+              </p>
               
               <div className="space-y-4">
                  <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-lg text-emerald-800 text-sm mb-4 leading-relaxed">
-                    Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.
+                    {t(
+                      "Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.",
+                      "Note: This is a paid expert consultation. The fee will be credited if you proceed with an engagement."
+                    )}
                  </div>
                  
                  <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
                    <a href="https://tidycal.com/medinabusiness/60-minute-meeting" target="_blank" rel="noopener noreferrer">
-                     Jetzt Termin auswählen & bezahlen
+                     {t("Jetzt Termin auswählen & bezahlen", "Select a time & pay")}
                    </a>
                  </Button>
                  
                  <Button onClick={() => goBack("START")} variant="link" className="text-slate-500 w-full py-3 h-auto">
-                   Zurück
+                   {t("Zurück", "Back")}
                  </Button>
               </div>
             </Card>
@@ -270,9 +326,10 @@ export function ConsultingFunnel() {
 
           {step === "EXISTING_KSA_CHECK" && (
              <StepCard 
-                question="Welchen Status hast du?"
-               subtext="Bitte wähle aus, was auf dich zutrifft."
+                question={t("Welchen Status hast du?", "What is your status?")}
+               subtext={t("Bitte wähle aus, was auf dich zutrifft.", "Please choose what applies to you.")}
                onBack={() => goBack("START")}
+               locale={locale}
              >
                <div className="grid gap-4">
                  <Button 
@@ -283,7 +340,9 @@ export function ConsultingFunnel() {
                    className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 whitespace-normal flex items-start text-slate-900"
                  >
                    <Building2 className="mr-3 h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
-                   <span className="flex-1 text-base md:text-lg">Ich habe bereits ein Unternehmen</span>
+                   <span className="flex-1 text-base md:text-lg">
+                     {t("Ich habe bereits ein Unternehmen", "I already have a company")}
+                   </span>
                  </Button>
                  <Button 
                    onClick={() => {
@@ -293,7 +352,9 @@ export function ConsultingFunnel() {
                    className="h-auto min-h-[72px] p-4 text-left border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 whitespace-normal flex items-start text-slate-900"
                  >
                    <ShieldCheck className="mr-3 h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
-                   <span className="flex-1 text-base md:text-lg">Ich habe eine Premium Residency</span>
+                   <span className="flex-1 text-base md:text-lg">
+                     {t("Ich habe eine Premium Residency", "I have Premium Residency")}
+                   </span>
                  </Button>
                </div>
              </StepCard>
@@ -301,22 +362,24 @@ export function ConsultingFunnel() {
 
           {step === "VALIDATION_FORM" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">Verifizierung erforderlich</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
+                {t("Verifizierung erforderlich", "Verification required")}
+              </h2>
               
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label className="text-slate-700">Vollständiger Name</Label>
+                  <Label className="text-slate-700">{t("Vollständiger Name", "Full name")}</Label>
                   <Input 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Dein Name" 
+                    placeholder={t("Dein Name", "Your name")} 
                     className={cn("bg-slate-50 border-slate-200 h-12 text-base text-slate-900", errors.name && "border-red-500")}
                   />
                   {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">Telefonnummer</Label>
+                  <Label className="text-slate-700">{t("Telefonnummer", "Phone number")}</Label>
                   <Input 
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -328,7 +391,7 @@ export function ConsultingFunnel() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">E-Mail Adresse</Label>
+                  <Label className="text-slate-700">{t("E-Mail Adresse", "Email address")}</Label>
                   <Input 
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -345,44 +408,44 @@ export function ConsultingFunnel() {
                     <Input 
                       value={formData.unn}
                       onChange={(e) => setFormData({...formData, unn: e.target.value})}
-                      placeholder="Beginnt mit 7 (10 Ziffern)" 
+                      placeholder={t("Beginnt mit 7 (10 Ziffern)", "Starts with 7 (10 digits)")} 
                       className={cn("bg-slate-50 border-slate-200 h-12 text-base text-slate-900", errors.unn && "border-red-500")}
                     />
                     {errors.unn && <p className="text-xs text-red-500">{errors.unn}</p>}
-                    <p className="text-xs text-slate-500">Muss mit 7 beginnen und 10 Zeichen lang sein.</p>
+                    <p className="text-xs text-slate-500">{t("Muss mit 7 beginnen und 10 Zeichen lang sein.", "Must start with 7 and be 10 characters long.")}</p>
                   </div>
                 )}
 
                 {formData.entityType === "RESIDENCY" && (
                   <div className="space-y-2">
-                    <Label className="text-slate-700">Iqama Nummer</Label>
+                    <Label className="text-slate-700">{t("Iqama Nummer", "Iqama number")}</Label>
                     <Input 
                       value={formData.iqama}
                       onChange={(e) => setFormData({...formData, iqama: e.target.value})}
-                      placeholder="Beginnt mit 2 (10 Ziffern)" 
+                      placeholder={t("Beginnt mit 2 (10 Ziffern)", "Starts with 2 (10 digits)")} 
                       className={cn("bg-slate-50 border-slate-200 h-12 text-base text-slate-900", errors.iqama && "border-red-500")}
                     />
                     {errors.iqama && <p className="text-xs text-red-500">{errors.iqama}</p>}
-                    <p className="text-xs text-slate-500">Muss mit 2 beginnen und 10 Zeichen lang sein.</p>
+                    <p className="text-xs text-slate-500">{t("Muss mit 2 beginnen und 10 Zeichen lang sein.", "Must start with 2 and be 10 characters long.")}</p>
                   </div>
                 )}
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">Deine Frage</Label>
+                  <Label className="text-slate-700">{t("Deine Frage", "Your question")}</Label>
                   <Textarea 
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    placeholder="Wie können wir helfen?" 
+                    placeholder={t("Wie können wir helfen?", "How can we help?")} 
                     className="bg-slate-50 border-slate-200 min-h-[100px] text-base text-slate-900"
                   />
                 </div>
 
                 <div className="pt-4 flex gap-3">
                   <Button variant="outline" onClick={() => goBack("EXISTING_KSA_CHECK")} className="w-1/3 border-slate-300 h-12 text-slate-700">
-                    Zurück
+                    {t("Zurück", "Back")}
                   </Button>
                   <Button onClick={handleValidationSubmit} disabled={isSubmitting} className="w-2/3 bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md">
-                    {isSubmitting ? "Sende..." : "Anfrage senden"}
+                    {isSubmitting ? t("Sende...", "Sending...") : t("Anfrage senden", "Submit request")}
                   </Button>
                 </div>
               </div>
@@ -395,12 +458,27 @@ export function ConsultingFunnel() {
   );
 }
 
-function StepCard({ question, subtext, children, icon, onBack }: { question: string, subtext?: string, children: React.ReactNode, icon?: React.ReactNode, onBack?: () => void }) {
+function StepCard({
+  question,
+  subtext,
+  children,
+  icon,
+  onBack,
+  locale = "de",
+}: {
+  question: string;
+  subtext?: string;
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+  onBack?: () => void;
+  locale?: Locale;
+}) {
+  const t = (de: string, en: string) => (locale === "en" ? en : de);
   return (
     <Card className="p-5 md:p-8 border border-slate-200 bg-white shadow-xl w-full">
       {onBack && (
         <button onClick={onBack} className="flex items-center text-sm text-slate-500 hover:text-slate-900 mb-4 transition-colors">
-          <ArrowLeft className="h-4 w-4 mr-1" /> Zurück
+          <ArrowLeft className="h-4 w-4 mr-1" /> {t("Zurück", "Back")}
         </button>
       )}
       <div className="text-center mb-6 md:mb-8">

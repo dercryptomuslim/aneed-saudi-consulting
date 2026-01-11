@@ -22,8 +22,10 @@ import {
 } from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname, useRouter } from "next/navigation";
+import { getLocaleFromPathname, localizeHref, stripLocaleFromPathname, type Locale } from "@/lib/i18n";
 
-const services = [
+const servicesDe = [
   {
     title: "Unternehmensgründung",
     href: "/services#gruendung",
@@ -62,9 +64,62 @@ const services = [
   },
 ];
 
+const servicesEn = [
+  {
+    title: "Company Formation",
+    href: "/services#gruendung",
+    description: "Licenses, structure & compliance.",
+    icon: Building2,
+  },
+  {
+    title: "Business Setup",
+    href: "/services#aufbau",
+    description: "Location, hiring & processes.",
+    icon: Users,
+  },
+  {
+    title: "Operations & Management",
+    href: "/services#fuehrung",
+    description: "Finance, KPIs & controlling.",
+    icon: BarChart3,
+  },
+  {
+    title: "Business Consulting",
+    href: "/services#beratung",
+    description: "Strategy for existing companies.",
+    icon: Briefcase,
+  },
+  {
+    title: "Investment",
+    href: "/services#investment",
+    description: "Invest in ready concepts.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Franchise",
+    href: "/services#franchise",
+    description: "Scale systems into KSA.",
+    icon: Store,
+  },
+];
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const locale: Locale = getLocaleFromPathname(pathname || "/");
+
+  const t = (de: string, en: string) => (locale === "en" ? en : de);
+
+  const href = (raw: string) => localizeHref(raw, locale);
+  const services = locale === "en" ? servicesEn : servicesDe;
+
+  const switchLocale = (nextLocale: Locale) => {
+    const base = stripLocaleFromPathname(pathname || "/");
+    const nextPath = localizeHref(base, nextLocale);
+    router.push(nextPath);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,7 +136,7 @@ export function Navbar() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 group relative z-50">
+        <Link href={href("/")} className="flex items-center space-x-2 group relative z-50">
           <span className="text-2xl font-serif font-bold tracking-tight text-slate-900">
             Aneed Ashraf
           </span>
@@ -92,16 +147,16 @@ export function Navbar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href={href("/")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    Startseite
+                    {t("Startseite", "Home")}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
-                  Leistungen
+                  {t("Leistungen", "Services")}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-white border border-slate-100 rounded-xl shadow-xl">
@@ -109,7 +164,7 @@ export function Navbar() {
                       <ListItem
                         key={service.title}
                         title={service.title}
-                        href={service.href}
+                        href={href(service.href)}
                         icon={service.icon}
                       >
                         {service.description}
@@ -117,10 +172,10 @@ export function Navbar() {
                     ))}
                     <li className="col-span-2 pt-2 border-t border-slate-100">
                       <Link 
-                        href="/services" 
+                        href={href("/services")} 
                         className="flex items-center justify-center w-full p-2 text-sm font-medium text-slate-900 hover:text-emerald-700 transition-colors"
                       >
-                        Alle Leistungen ansehen <ArrowRight className="ml-1 h-3 w-3" />
+                        {t("Alle Leistungen ansehen", "View all services")} <ArrowRight className="ml-1 h-3 w-3" />
                       </Link>
                     </li>
                   </ul>
@@ -128,25 +183,55 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/erfolgsgeschichten" legacyBehavior passHref>
+                <Link href={href("/erfolgsgeschichten")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    Erfolgsgeschichten
+                    {t("Erfolgsgeschichten", "Case Studies")}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/ueber-mich" legacyBehavior passHref>
+                <Link href={href("/ueber-mich")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    Über Mich
+                    {t("Über Mich", "About")}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Button asChild className="ml-6 bg-slate-900 text-white hover:bg-slate-800 rounded-full px-6 font-medium shadow-md hover:shadow-lg transition-all">
-            <Link href="/anfrage">Gespräch buchen</Link>
+          {/* Language Switcher */}
+          <div className="ml-4 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => switchLocale("de")}
+              className={cn(
+                "rounded-full px-3 py-1 text-xs font-semibold border transition-colors",
+                locale === "de"
+                  ? "bg-slate-900 text-white border-slate-900"
+                  : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+              )}
+              aria-label="Deutsch"
+            >
+              DE
+            </button>
+            <button
+              type="button"
+              onClick={() => switchLocale("en")}
+              className={cn(
+                "rounded-full px-3 py-1 text-xs font-semibold border transition-colors",
+                locale === "en"
+                  ? "bg-slate-900 text-white border-slate-900"
+                  : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+              )}
+              aria-label="English"
+            >
+              EN
+            </button>
+          </div>
+
+          <Button asChild className="ml-4 bg-slate-900 text-white hover:bg-slate-800 rounded-full px-6 font-medium shadow-md hover:shadow-lg transition-all">
+            <Link href={href("/anfrage")}>{t("Gespräch buchen", "Book a call")}</Link>
           </Button>
         </div>
 
@@ -162,33 +247,67 @@ export function Navbar() {
             
             <SheetContent side="right" className="w-full sm:w-[400px] bg-white border-l border-slate-200 p-0 flex flex-col">
               <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
-                <span className="text-xl font-serif font-bold text-slate-900">Menü</span>
+                <span className="text-xl font-serif font-bold text-slate-900">{t("Menü", "Menu")}</span>
                 <SheetClose asChild>
                 </SheetClose>
               </div>
 
               <div className="flex-1 overflow-y-auto py-6 px-6">
+                {/* Language Switcher (Mobile) */}
+                <div className="mb-6 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      switchLocale("de");
+                      setIsOpen(false);
+                    }}
+                    className={cn(
+                      "flex-1 rounded-lg px-3 py-2 text-sm font-semibold border transition-colors",
+                      locale === "de"
+                        ? "bg-slate-900 text-white border-slate-900"
+                        : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
+                    )}
+                  >
+                    Deutsch (DE)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      switchLocale("en");
+                      setIsOpen(false);
+                    }}
+                    className={cn(
+                      "flex-1 rounded-lg px-3 py-2 text-sm font-semibold border transition-colors",
+                      locale === "en"
+                        ? "bg-slate-900 text-white border-slate-900"
+                        : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
+                    )}
+                  >
+                    English (EN)
+                  </button>
+                </div>
+
                 <div className="flex flex-col space-y-2">
                   <Link
-                    href="/"
+                    href={href("/")}
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                   >
-                    Startseite
+                    {t("Startseite", "Home")}
                     <ChevronRight className="h-5 w-5 text-slate-400" />
                   </Link>
 
                   <Accordion type="single" collapsible className="w-full border-b border-slate-100">
                     <AccordionItem value="services" className="border-none">
                       <AccordionTrigger className="text-lg font-medium text-slate-900 hover:no-underline py-4">
-                        Leistungen
+                        {t("Leistungen", "Services")}
                       </AccordionTrigger>
                       <AccordionContent>
                         <div className="flex flex-col space-y-3 pl-2 pb-4 pt-2 bg-slate-50/50 rounded-lg mb-2">
                           {services.map((service) => (
                             <Link
                               key={service.title}
-                              href={service.href}
+                              href={href(service.href)}
                               onClick={() => setIsOpen(false)}
                               className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
                             >
@@ -197,11 +316,11 @@ export function Navbar() {
                             </Link>
                           ))}
                           <Link 
-                            href="/services" 
+                            href={href("/services")} 
                             onClick={() => setIsOpen(false)}
                             className="text-sm font-medium text-emerald-700 mt-2 pl-2 block hover:underline"
                           >
-                                    Alle Leistungen ansehen →
+                                    {t("Alle Leistungen ansehen →", "View all services →")}
                                   </Link>
                                 </div>
                               </AccordionContent>
@@ -209,20 +328,20 @@ export function Navbar() {
                           </Accordion>
 
                           <Link
-                            href="/erfolgsgeschichten"
+                            href={href("/erfolgsgeschichten")}
                             onClick={() => setIsOpen(false)}
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
-                            Erfolgsgeschichten
+                            {t("Erfolgsgeschichten", "Case Studies")}
                             <ChevronRight className="h-5 w-5 text-slate-400" />
                           </Link>
 
                           <Link
-                            href="/ueber-mich"
+                            href={href("/ueber-mich")}
                             onClick={() => setIsOpen(false)}
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
-                            Über Mich
+                            {t("Über Mich", "About")}
                             <ChevronRight className="h-5 w-5 text-slate-400" />
                           </Link>
                 </div>
@@ -230,8 +349,8 @@ export function Navbar() {
 
               <div className="p-6 border-t border-slate-100 bg-slate-50 mt-auto">
                  <Button asChild className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white text-base font-semibold rounded-lg shadow-sm">
-                  <Link href="/anfrage" onClick={() => setIsOpen(false)}>
-                    Gespräch buchen
+                  <Link href={href("/anfrage")} onClick={() => setIsOpen(false)}>
+                    {t("Gespräch buchen", "Book a call")}
                   </Link>
                 </Button>
                 <div className="mt-6 text-center text-sm text-slate-400">
