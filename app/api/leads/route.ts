@@ -2,13 +2,44 @@ import { google } from "googleapis";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const runtime = "nodejs";
+
+function normalizePrivateKey(raw?: string) {
+  if (!raw) return undefined;
+  let key = raw.trim();
+
+  // Remove surrounding quotes if the env var was pasted with quotes
+  if (
+    (key.startsWith('"') && key.endsWith('"')) ||
+    (key.startsWith("'") && key.endsWith("'"))
+  ) {
+    key = key.slice(1, -1);
+  }
+
+  // Vercel often stores newlines as literal \n
+  key = key.replace(/\\n/g, "\n");
+  // Normalize Windows line endings just in case
+  key = key.replace(/\r\n/g, "\n");
+
+  // If someone pasted only the base64 body (without PEM header/footer), try to wrap it.
+  if (!key.includes("BEGIN") && !key.includes("END")) {
+    const compact = key.replace(/\s+/g, "");
+    if (/^[A-Za-z0-9+/=]+$/.test(compact) && compact.length > 0) {
+      const lines = compact.match(/.{1,64}/g)?.join("\n") ?? compact;
+      key = `-----BEGIN PRIVATE KEY-----\n${lines}\n-----END PRIVATE KEY-----\n`;
+    }
+  }
+
+  return key;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
     const sheetId = process.env.GOOGLE_SHEET_ID;
     const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-    const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"); // Fix für Vercel Env Vars
+    const privateKey = normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY);
     const sheetTabName = process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
     const resendApiKey = process.env.RESEND_API_KEY;
     const resendFrom = process.env.RESEND_FROM || "Oasis Gate <onboarding@resend.dev>";
@@ -153,6 +184,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true, data: response.data, usedTabName });
   } catch (error: any) {
     console.error("Google Sheets Error:", error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    const msg = String(error?.message || "Unknown server error");
+    if (
+      msg.includes("DECODER routines::unsupported") ||
+      msg.includes("error:1E08010C") ||
+      msg.toLowerCase().includes("unsupported")
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Server configuration error: GOOGLE_PRIVATE_KEY is invalid/unparseable. Please paste the full private_key (including -----BEGIN PRIVATE KEY-----) and keep line breaks as \\n in Vercel.",
+        },
+        { status: 500 }
+      );
+    }
+    return NextResponse.json({ success: false, error: msg }, { status: 500 });
   }
 }
