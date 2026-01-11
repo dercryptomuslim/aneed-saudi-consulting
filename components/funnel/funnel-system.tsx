@@ -11,6 +11,14 @@ import { AlertCircle, ArrowLeft, Building2, Globe, ShieldCheck } from "lucide-re
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 // Definition der möglichen Schritte (States)
 type Step = 
@@ -51,6 +59,9 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupTitle, setPopupTitle] = useState("");
+  const [popupMessage, setPopupMessage] = useState("");
 
   const t = (de: string, en: string) => (locale === "en" ? en : de);
   const href = (raw: string) => localizeHref(raw, locale);
@@ -105,11 +116,17 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
         } catch {
           // ignore
         }
-        alert(`${t("Fehler beim Senden. Bitte versuche es später erneut.", "Failed to send. Please try again later.")}${details}`);
+        setPopupTitle(t("Fehler beim Senden", "Failed to send"));
+        setPopupMessage(
+          `${t("Bitte versuche es später erneut.", "Please try again later.")}${details}`
+        );
+        setPopupOpen(true);
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert(t("Ein unerwarteter Fehler ist aufgetreten.", "An unexpected error occurred."));
+      setPopupTitle(t("Unerwarteter Fehler", "Unexpected error"));
+      setPopupMessage(t("Bitte versuche es später erneut.", "Please try again later."));
+      setPopupOpen(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -458,6 +475,24 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
 
         </motion.div>
       </AnimatePresence>
+
+      <Dialog open={popupOpen} onOpenChange={setPopupOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="text-red-700">{popupTitle}</DialogTitle>
+            <DialogDescription className="text-slate-600">{popupMessage}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button
+              type="button"
+              onClick={() => setPopupOpen(false)}
+              className="bg-slate-900 hover:bg-slate-800 text-white"
+            >
+              {t("OK", "OK")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

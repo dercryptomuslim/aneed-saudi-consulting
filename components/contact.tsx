@@ -7,10 +7,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import type { Locale } from "@/lib/i18n";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 export function Contact({ locale = "de" }: { locale?: Locale }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const t = (de: string, en: string) => (locale === "en" ? en : de);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupVariant, setPopupVariant] = useState<"success" | "error">("success");
+  const [popupTitle, setPopupTitle] = useState("");
+  const [popupMessage, setPopupMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -52,7 +64,15 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
       });
 
       if (response.ok) {
-        alert(t("Danke für deine Anfrage! Wir melden uns in Kürze.", "Thanks for your request! We’ll get back to you shortly."));
+        setPopupVariant("success");
+        setPopupTitle(t("Gesendet!", "Sent!"));
+        setPopupMessage(
+          t(
+            "Danke für deine Anfrage! Wir melden uns in Kürze.",
+            "Thanks for your request! We’ll get back to you shortly."
+          )
+        );
+        setPopupOpen(true);
         (e.target as HTMLFormElement).reset();
       } else {
         let details = "";
@@ -62,11 +82,19 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
         } catch {
           // ignore
         }
-        alert(`${t("Fehler beim Senden. Bitte versuche es später erneut.", "Failed to send. Please try again later.")}${details}`);
+        setPopupVariant("error");
+        setPopupTitle(t("Fehler beim Senden", "Failed to send"));
+        setPopupMessage(
+          `${t("Bitte versuche es später erneut.", "Please try again later.")}${details}`
+        );
+        setPopupOpen(true);
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert(t("Ein unerwarteter Fehler ist aufgetreten.", "An unexpected error occurred."));
+      setPopupVariant("error");
+      setPopupTitle(t("Unerwarteter Fehler", "Unexpected error"));
+      setPopupMessage(t("Bitte versuche es später erneut.", "Please try again later."));
+      setPopupOpen(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -145,6 +173,28 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
             </form>
           </CardContent>
         </Card>
+
+        <Dialog open={popupOpen} onOpenChange={setPopupOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle
+                className={popupVariant === "success" ? "text-emerald-800" : "text-red-700"}
+              >
+                {popupTitle}
+              </DialogTitle>
+              <DialogDescription className="text-slate-600">{popupMessage}</DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <Button
+                type="button"
+                onClick={() => setPopupOpen(false)}
+                className="bg-slate-900 hover:bg-slate-800 text-white"
+              >
+                {t("OK", "OK")}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
