@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/impressum",
     "/en/datenschutz",
     "/en/agb",
-    "/en/danke",
+    "/en/thankyou",
   ];
 
   return routes.map((path) => ({
