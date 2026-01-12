@@ -40,7 +40,11 @@ export async function POST(req: NextRequest) {
     const sheetId = process.env.GOOGLE_SHEET_ID;
     const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
     const privateKey = normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY);
-    const sheetTabName = process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+    // Backwards-compatible default (single tab)
+    const defaultTabName = process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+    // New: separate tabs per source
+    const contactTabName = process.env.GOOGLE_SHEET_TAB_NAME_CONTACT || defaultTabName;
+    const funnelTabName = process.env.GOOGLE_SHEET_TAB_NAME_FUNNEL || defaultTabName;
     const resendApiKey = process.env.RESEND_API_KEY;
     const resendFrom = process.env.RESEND_FROM || "Oasis Gate <onboarding@resend.dev>";
     const resendTo = process.env.RESEND_TO || "info@oasisgate.de";
@@ -92,6 +96,15 @@ export async function POST(req: NextRequest) {
 
     // Spalten: Datum | Name | Email | Telefon | Typ/Topic | Nachricht | Extra
     const row = [date, fullName, email, phone, type, message, extra];
+
+    // Source detection (contact form vs funnel)
+    const isFunnelLead =
+      Boolean(body?.entityType) ||
+      Boolean(body?.unn) ||
+      Boolean(body?.iqama) ||
+      (typeof body?.type === "string" && body.type.toLowerCase().includes("funnel"));
+
+    const sheetTabName = isFunnelLead ? funnelTabName : contactTabName;
 
     const appendToTab = async (tabName: string) => {
       return await sheets.spreadsheets.values.append({
