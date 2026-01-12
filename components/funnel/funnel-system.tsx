@@ -28,7 +28,7 @@ type Step =
   | "KOSTEN_AWARENESS_DIRECT"
   | "RISIKO_WARNUNG"
   | "KOSTEN_AWARENESS_RISK"
-  | "FIRMENKAUF_OPTION"
+  | "LOW_BUDGET_WARNING"
   | "KOSTEN_AWARENESS_KAUF"
   | "BERATUNG_TROTZDEM"
   | "EXISTING_KSA_CHECK"
@@ -55,7 +55,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     balanceWithinRange: "" as "YES" | "NO" | "",
     proceedDespiteRisk: "" as "YES" | "NO" | "",
     companyPurchaseOption: "" as "YES" | "NO" | "",
-    costAwarenessAccepted: "" as "YES" | "NO" | "",
+    costAwarenessAccepted: "" as "YES" | "NO" | "YES_DESPITE_WARNING" | "",
     wantsPaidConsultationAnyway: "" as "YES" | "NO" | "",
     outcome: "" as "BOOKING" | "REJECTED" | "",
   });
@@ -87,9 +87,15 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     setStepPath((prev) => (prev[prev.length - 1] === nextStep ? prev : [...prev, nextStep]));
   };
 
-  const goBack = (prevStep: Step) => {
+  const goBack = () => {
+    if (stepPath.length <= 1) return;
+    const newPath = [...stepPath];
+    newPath.pop(); // Remove current step
+    const prevStep = newPath[newPath.length - 1];
+    
     setDirection(-1);
     setStep(prevStep);
+    setStepPath(newPath);
   };
 
   const validateKsaId = () => {
@@ -118,7 +124,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
         bookingUrl,
         funnel: {
           ...funnelAnswers,
-          stepPath,
+          stepPath: stepPath.join(" -> "),
           entityType: formData.entityType || "",
           unn: formData.unn || "",
           iqama: formData.iqama || "",
@@ -224,7 +230,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
             <StepCard 
               question={t("Hast du eine Firma außerhalb von Saudi-Arabien?", "Do you have a company outside Saudi Arabia?")}
               subtext={t("Die Firma muss im Handelsregister eingetragen und seit mindestens 1 Jahr aktiv sein.", "The company must be registered and active for at least 1 year.")}
-              onBack={() => goBack("START")}
+              onBack={goBack}
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -239,7 +245,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 <OptionButton
                   onClick={() => {
                     setFunnelAnswers((prev) => ({ ...prev, hasForeignCompany: "NO" }));
-                    goTo("FIRMENKAUF_OPTION");
+                    goTo("BERATUNG_TROTZDEM");
                   }}
                 >
                   {t("Nein", "No")}
@@ -252,7 +258,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
             <StepCard 
               question={t("Wie hoch ist der Bilanzwert?", "What is your balance sheet value?")}
               subtext={t("Liegt der Wert zwischen 75.000 € und 100.000 €?", "Is it between €75,000 and €100,000?")}
-              onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
+              onBack={goBack}
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -284,7 +290,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 "Without sufficient balance sheet value, formation can be difficult. We can try, but there’s no guarantee. Do you want to continue?"
               )}
               icon={<AlertCircle className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />}
-              onBack={() => goBack("BILANZ_CHECK")}
+              onBack={goBack}
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -299,41 +305,10 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 <OptionButton
                   onClick={() => {
                     setFunnelAnswers((prev) => ({ ...prev, proceedDespiteRisk: "NO" }));
-                    goTo("FIRMENKAUF_OPTION");
-                  }}
-                >
-                  {t("Nein, abbrechen", "No, cancel")}
-                </OptionButton>
-              </div>
-            </StepCard>
-          )}
-
-          {step === "FIRMENKAUF_OPTION" && (
-            <StepCard 
-              question={t("Alternative: Firmenkauf", "Alternative: buying a company")}
-              subtext={t(
-                "Es gibt die Möglichkeit, ein bestehendes Unternehmen zu kaufen. Die Kosten liegen hierbei bei ca. 15.000 € für den Kauf. Ist das eine Option für dich?",
-                "There is an option to buy an existing company. The purchase cost is approx. €15,000. Is that an option for you?"
-              )}
-              onBack={() => goBack("AUSLAND_FIRMA_CHECK")}
-              locale={locale}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton
-                  onClick={() => {
-                    setFunnelAnswers((prev) => ({ ...prev, companyPurchaseOption: "YES" }));
-                    goTo("KOSTEN_AWARENESS_KAUF");
-                  }}
-                >
-                  {t("Ja", "Yes")}
-                </OptionButton>
-                <OptionButton
-                  onClick={() => {
-                    setFunnelAnswers((prev) => ({ ...prev, companyPurchaseOption: "NO" }));
                     goTo("BERATUNG_TROTZDEM");
                   }}
                 >
-                  {t("Nein", "No")}
+                  {t("Nein, abbrechen", "No, cancel")}
                 </OptionButton>
               </div>
             </StepCard>
@@ -347,7 +322,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 "At the moment, there’s no direct standard formation path. Do you still want a paid consultation to explore individual options?"
               )}
               icon={<AlertCircle className="h-12 w-12 text-red-500 mb-4 mx-auto" />}
-              onBack={() => goBack("FIRMENKAUF_OPTION")}
+              onBack={goBack}
               locale={locale}
             >
               <div className="grid grid-cols-1 gap-4">
@@ -403,7 +378,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                     "Are you aware that starting a company (e.g., a 40-seat restaurant) in KSA costs between €120,000 and €250,000?"
                   )
                }
-               onBack={() => goBack("START")}
+               onBack={goBack}
                locale={locale}
              >
                <div className="grid gap-4">
@@ -419,8 +394,8 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                  </Button>
                  <Button
                    onClick={() => {
-                     setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "NO", outcome: "REJECTED" }));
-                     goBack("START");
+                     // NEW LOGIC: Show budget warning instead of immediate rejection
+                     goTo("LOW_BUDGET_WARNING");
                    }}
                    variant="ghost"
                    className="text-slate-500 h-auto py-3 hover:text-slate-900"
@@ -429,6 +404,39 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                  </Button>
                </div>
              </StepCard>
+          )}
+
+          {step === "LOW_BUDGET_WARNING" && (
+            <StepCard 
+              question={t("Budget-Warnung", "Budget Warning")}
+              subtext={t(
+                "Eine Gründung einer Firma unterhalb dieser Summe ist schwierig in Saudi Arabien, gerade wenn es um die Gastronomie geht. Es ist sehr Konzept abhängig aber 90% der Konzepte liegen in dieser Range. Möchtest Du trotzdem fortfahren?",
+                "Starting a company below this amount is difficult in Saudi Arabia, especially when it comes to gastronomy. It is very concept-dependent but 90% of concepts lie in this range. Do you still want to proceed?"
+              )}
+              icon={<AlertCircle className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />}
+              onBack={goBack}
+              locale={locale}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES_DESPITE_WARNING", outcome: "BOOKING" }));
+                    // Still send to validation/booking
+                    goTo("VALIDATION_FORM");
+                  }}
+                >
+                  {t("Ja, trotzdem fortfahren", "Yes, proceed anyway")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "NO", outcome: "REJECTED" }));
+                    goTo("REJECTED");
+                  }}
+                >
+                  {t("Nein, abbrechen", "No, cancel")}
+                </OptionButton>
+              </div>
+            </StepCard>
           )}
 
           {step === "BOOKING_FORM" && (
@@ -454,7 +462,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                    </a>
                  </Button>
                  
-                 <Button onClick={() => goBack("START")} variant="link" className="text-slate-500 w-full py-3 h-auto">
+                 <Button onClick={goBack} variant="link" className="text-slate-500 w-full py-3 h-auto">
                    {t("Zurück", "Back")}
                  </Button>
               </div>
@@ -465,7 +473,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
              <StepCard 
                 question={t("Welchen Status hast du?", "What is your status?")}
                subtext={t("Bitte wähle aus, was auf dich zutrifft.", "Please choose what applies to you.")}
-               onBack={() => goBack("START")}
+               onBack={goBack}
                locale={locale}
              >
                <div className="grid gap-4">
@@ -578,7 +586,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </div>
 
                 <div className="pt-4 flex gap-3">
-                  <Button variant="outline" onClick={() => goBack("EXISTING_KSA_CHECK")} className="w-1/3 border-slate-300 h-12 text-slate-700">
+                  <Button variant="outline" onClick={goBack} className="w-1/3 border-slate-300 h-12 text-slate-700">
                     {t("Zurück", "Back")}
                   </Button>
                   <Button onClick={handleValidationSubmit} disabled={isSubmitting} className="w-2/3 bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md">
