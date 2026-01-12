@@ -354,7 +354,8 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 <OptionButton
                   onClick={() => {
                     setFunnelAnswers((prev) => ({ ...prev, wantsPaidConsultationAnyway: "YES", outcome: "BOOKING" }));
-                    goTo("BOOKING_FORM");
+                    // Capture lead details before sending to the calendar
+                    goTo("VALIDATION_FORM");
                   }}
                 >
                   {t("Ja, Gespräch buchen", "Yes, book a call")}
@@ -409,7 +410,8 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                  <Button
                    onClick={() => {
                      setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES", outcome: "BOOKING" }));
-                     goTo("BOOKING_FORM");
+                    // Capture lead details before sending to the calendar
+                    goTo("VALIDATION_FORM");
                    }}
                    className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto py-4 text-base md:text-lg whitespace-normal leading-tight"
                  >
