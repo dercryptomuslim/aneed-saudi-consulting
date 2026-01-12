@@ -48,6 +48,17 @@ function ConsultingFunnelInnerCompat() {
 export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }) {
   const [step, setStep] = useState<Step>("START");
   const [direction, setDirection] = useState(1);
+  const [stepPath, setStepPath] = useState<Step[]>(["START"]);
+  const [funnelAnswers, setFunnelAnswers] = useState({
+    startChoice: "" as "WANT_TO_FOUND" | "ALREADY_IN_KSA" | "",
+    hasForeignCompany: "" as "YES" | "NO" | "",
+    balanceWithinRange: "" as "YES" | "NO" | "",
+    proceedDespiteRisk: "" as "YES" | "NO" | "",
+    companyPurchaseOption: "" as "YES" | "NO" | "",
+    costAwarenessAccepted: "" as "YES" | "NO" | "",
+    wantsPaidConsultationAnyway: "" as "YES" | "NO" | "",
+    outcome: "" as "BOOKING" | "REJECTED" | "",
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,6 +84,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
   const goTo = (nextStep: Step) => {
     setDirection(1);
     setStep(nextStep);
+    setStepPath((prev) => (prev[prev.length - 1] === nextStep ? prev : [...prev, nextStep]));
   };
 
   const goBack = (prevStep: Step) => {
@@ -99,10 +111,23 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
 
     setIsSubmitting(true);
     try {
+      const payload = {
+        ...formData,
+        source: "funnel",
+        locale,
+        bookingUrl,
+        funnel: {
+          ...funnelAnswers,
+          stepPath,
+          entityType: formData.entityType || "",
+          unn: formData.unn || "",
+          iqama: formData.iqama || "",
+        },
+      };
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -157,7 +182,10 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               </h2>
               <div className="grid gap-4">
                 <Button 
-                  onClick={() => goTo("AUSLAND_FIRMA_CHECK")}
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, startChoice: "WANT_TO_FOUND" }));
+                    goTo("AUSLAND_FIRMA_CHECK");
+                  }}
                   className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
                 >
                   <Globe className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
@@ -172,7 +200,10 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </Button>
 
                 <Button 
-                  onClick={() => goTo("EXISTING_KSA_CHECK")}
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, startChoice: "ALREADY_IN_KSA" }));
+                    goTo("EXISTING_KSA_CHECK");
+                  }}
                   className="h-auto min-h-[80px] p-4 md:p-6 text-left flex items-start gap-4 bg-slate-50 hover:bg-slate-100 hover:border-emerald-500 border border-slate-200 transition-all whitespace-normal shadow-sm group"
                 >
                   <ShieldCheck className="h-6 w-6 text-emerald-600 mt-1 shrink-0 group-hover:scale-110 transition-transform" />
@@ -197,8 +228,22 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("BILANZ_CHECK")}>{t("Ja", "Yes")}</OptionButton>
-                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>{t("Nein", "No")}</OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, hasForeignCompany: "YES" }));
+                    goTo("BILANZ_CHECK");
+                  }}
+                >
+                  {t("Ja", "Yes")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, hasForeignCompany: "NO" }));
+                    goTo("FIRMENKAUF_OPTION");
+                  }}
+                >
+                  {t("Nein", "No")}
+                </OptionButton>
               </div>
             </StepCard>
           )}
@@ -211,8 +256,22 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_DIRECT")}>{t("Ja", "Yes")}</OptionButton>
-                <OptionButton onClick={() => goTo("RISIKO_WARNUNG")}>{t("Nein", "No")}</OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, balanceWithinRange: "YES" }));
+                    goTo("KOSTEN_AWARENESS_DIRECT");
+                  }}
+                >
+                  {t("Ja", "Yes")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, balanceWithinRange: "NO" }));
+                    goTo("RISIKO_WARNUNG");
+                  }}
+                >
+                  {t("Nein", "No")}
+                </OptionButton>
               </div>
             </StepCard>
           )}
@@ -229,8 +288,22 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_RISK")}>{t("Ja, versuchen", "Yes, try")}</OptionButton>
-                <OptionButton onClick={() => goTo("FIRMENKAUF_OPTION")}>{t("Nein, abbrechen", "No, cancel")}</OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, proceedDespiteRisk: "YES" }));
+                    goTo("KOSTEN_AWARENESS_RISK");
+                  }}
+                >
+                  {t("Ja, versuchen", "Yes, try")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, proceedDespiteRisk: "NO" }));
+                    goTo("FIRMENKAUF_OPTION");
+                  }}
+                >
+                  {t("Nein, abbrechen", "No, cancel")}
+                </OptionButton>
               </div>
             </StepCard>
           )}
@@ -246,8 +319,22 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               locale={locale}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <OptionButton onClick={() => goTo("KOSTEN_AWARENESS_KAUF")}>{t("Ja", "Yes")}</OptionButton>
-                <OptionButton onClick={() => goTo("BERATUNG_TROTZDEM")}>{t("Nein", "No")}</OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, companyPurchaseOption: "YES" }));
+                    goTo("KOSTEN_AWARENESS_KAUF");
+                  }}
+                >
+                  {t("Ja", "Yes")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, companyPurchaseOption: "NO" }));
+                    goTo("BERATUNG_TROTZDEM");
+                  }}
+                >
+                  {t("Nein", "No")}
+                </OptionButton>
               </div>
             </StepCard>
           )}
@@ -264,8 +351,22 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               locale={locale}
             >
               <div className="grid grid-cols-1 gap-4">
-                <OptionButton onClick={() => goTo("BOOKING_FORM")}>{t("Ja, Gespräch buchen", "Yes, book a call")}</OptionButton>
-                <OptionButton onClick={() => goTo("REJECTED")}>{t("Nein, beenden", "No, finish")}</OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, wantsPaidConsultationAnyway: "YES", outcome: "BOOKING" }));
+                    goTo("BOOKING_FORM");
+                  }}
+                >
+                  {t("Ja, Gespräch buchen", "Yes, book a call")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, wantsPaidConsultationAnyway: "NO", outcome: "REJECTED" }));
+                    goTo("REJECTED");
+                  }}
+                >
+                  {t("Nein, beenden", "No, finish")}
+                </OptionButton>
               </div>
             </StepCard>
           )}
@@ -305,10 +406,23 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                locale={locale}
              >
                <div className="grid gap-4">
-                 <Button onClick={() => goTo("BOOKING_FORM")} className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto py-4 text-base md:text-lg whitespace-normal leading-tight">
+                 <Button
+                   onClick={() => {
+                     setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES", outcome: "BOOKING" }));
+                     goTo("BOOKING_FORM");
+                   }}
+                   className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto py-4 text-base md:text-lg whitespace-normal leading-tight"
+                 >
                    {t("Ja, ich bin mir dessen bewusst", "Yes, I understand")}
                  </Button>
-                 <Button onClick={() => goBack("START")} variant="ghost" className="text-slate-500 h-auto py-3 hover:text-slate-900">
+                 <Button
+                   onClick={() => {
+                     setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "NO", outcome: "REJECTED" }));
+                     goBack("START");
+                   }}
+                   variant="ghost"
+                   className="text-slate-500 h-auto py-3 hover:text-slate-900"
+                 >
                    {t("Nein, das ist zu teuer", "No, that’s too expensive")}
                  </Button>
                </div>

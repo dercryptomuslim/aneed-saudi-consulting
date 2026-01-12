@@ -33,6 +33,18 @@ function normalizePrivateKey(raw?: string) {
   return key;
 }
 
+function columnLetter(colIndex: number) {
+  // 1 -> A, 26 -> Z, 27 -> AA
+  let n = colIndex;
+  let s = "";
+  while (n > 0) {
+    const rem = (n - 1) % 26;
+    s = String.fromCharCode(65 + rem) + s;
+    n = Math.floor((n - 1) / 26);
+  }
+  return s;
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -94,22 +106,52 @@ export async function POST(req: NextRequest) {
     const message = body.message || "";
     const extra = body.unn || body.iqama || body.extra || "";
 
-    // Spalten: Datum | Name | Email | Telefon | Typ/Topic | Nachricht | Extra
-    const row = [date, fullName, email, phone, type, message, extra];
-
     // Source detection (contact form vs funnel)
     const isFunnelLead =
       Boolean(body?.entityType) ||
       Boolean(body?.unn) ||
       Boolean(body?.iqama) ||
+      Boolean(body?.funnel) ||
+      body?.source === "funnel" ||
       (typeof body?.type === "string" && body.type.toLowerCase().includes("funnel"));
 
     const sheetTabName = isFunnelLead ? funnelTabName : contactTabName;
 
+    // Rows:
+    // - Contact: 7 columns (A:G)
+    // - Funnel: extended columns for all answers/branches
+    const contactRow = [date, fullName, email, phone, type, message, extra];
+
+    const funnel = body?.funnel || {};
+    const funnelRow = [
+      date, // A
+      body?.locale || "", // B
+      funnel?.startChoice || "", // C
+      funnel?.hasForeignCompany || "", // D
+      funnel?.balanceWithinRange || "", // E
+      funnel?.proceedDespiteRisk || "", // F
+      funnel?.companyPurchaseOption || "", // G
+      funnel?.costAwarenessAccepted || "", // H
+      funnel?.wantsPaidConsultationAnyway || "", // I
+      funnel?.outcome || "", // J
+      funnel?.entityType || body?.entityType || "", // K
+      funnel?.unn || body?.unn || "", // L
+      funnel?.iqama || body?.iqama || "", // M
+      fullName, // N
+      email, // O
+      phone, // P
+      message, // Q
+      body?.bookingUrl || "", // R
+      Array.isArray(funnel?.stepPath) ? funnel.stepPath.join(" > ") : "", // S
+    ];
+
+    const row = isFunnelLead ? funnelRow : contactRow;
+    const rangeEnd = columnLetter(row.length);
+
     const appendToTab = async (tabName: string) => {
       return await sheets.spreadsheets.values.append({
         spreadsheetId: sheetId,
-        range: `${tabName}!A:G`,
+        range: `${tabName}!A:${rangeEnd}`,
         valueInputOption: "USER_ENTERED",
         requestBody: {
           values: [row],
