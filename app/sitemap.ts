@@ -17,13 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/danke",
     "/en",
     "/en/services",
-    "/en/erfolgsgeschichten",
-    "/en/ueber-mich",
-    "/en/anfrage",
+    "/en/case-studies",
+    "/en/about",
+    "/en/inquiry",
     "/en/booking",
-    "/en/impressum",
-    "/en/datenschutz",
-    "/en/agb",
+    "/en/imprint",
+    "/en/privacy",
+    "/en/terms",
     "/en/thankyou",
   ];
 
@@ -34,5 +34,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.7,
   }));
 }
-
-

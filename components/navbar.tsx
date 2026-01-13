@@ -23,7 +23,7 @@ import {
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { getLocaleFromPathname, localizeHref, stripLocaleFromPathname, type Locale } from "@/lib/i18n";
+import { getLocaleFromPathname, localizeHref, switchLocalePath, type Locale } from "@/lib/i18n";
 
 const servicesDe = [
   {
@@ -116,8 +116,7 @@ export function Navbar() {
   const services = locale === "en" ? servicesEn : servicesDe;
 
   const switchLocale = (nextLocale: Locale) => {
-    const base = stripLocaleFromPathname(pathname || "/");
-    const nextPath = localizeHref(base, nextLocale);
+    const nextPath = switchLocalePath(pathname || "/", nextLocale);
     router.push(nextPath);
   };
 
