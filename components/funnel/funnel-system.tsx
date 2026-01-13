@@ -110,6 +110,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     if (!formData.name) newErrors.name = t("Name ist erforderlich", "Name is required");
     if (!formData.email) newErrors.email = t("E-Mail ist erforderlich", "Email is required");
     if (!formData.phone) newErrors.phone = t("Telefonnummer ist erforderlich", "Phone number is required");
+    if (!formData.message) newErrors.message = t("Bitte gib deine Frage ein.", "Please enter your question.");
     if (!formData.dataConsent) newErrors.dataConsent = t("Bitte stimme der Datenverarbeitung zu.", "Please agree to data processing.");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -627,13 +628,16 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 )}
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">{t("Deine Frage (Optional)", "Your question (Optional)")}</Label>
+                  <Label className="text-slate-700">
+                    {t("Deine Frage", "Your question")} <span className="text-red-500">*</span>
+                  </Label>
                   <Textarea 
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     placeholder={t("Wie können wir helfen?", "How can we help?")} 
-                    className="bg-slate-50 border-slate-200 min-h-[100px] text-base text-slate-900"
+                    className={cn("bg-slate-50 border-slate-200 min-h-[100px] text-base text-slate-900", errors.message && "border-red-500")}
                   />
+                  {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
                 </div>
 
                 <div className="flex items-start space-x-2 pt-2">
