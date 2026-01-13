@@ -590,7 +590,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                     {t("Zurück", "Back")}
                   </Button>
                   <Button onClick={handleValidationSubmit} disabled={isSubmitting} className="w-2/3 bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md">
-                    {isSubmitting ? t("Sende...", "Sending...") : t("Anfrage senden", "Submit request")}
+                    {isSubmitting ? t("Leite weiter...", "Redirecting...") : t("Jetzt zur Terminbuchung", "Proceed to booking")}
                   </Button>
                 </div>
               </div>
