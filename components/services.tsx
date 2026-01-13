@@ -103,12 +103,12 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-6">
-            {t("Unsere Expertise. Dein Vorteil.", "Our expertise. Your advantage.")}
+            {t("Unsere Expertise. Dein Vorteil.", "Our Expertise. Your Advantage.")}
           </h2>
           <p className="text-lg text-slate-600">
             {t(
               "Wir übernehmen die komplette Unternehmensgründung in Medina – von A bis Z. Dazu gehören MISA-Lizenz, Behördenabstimmungen, rechtliche und steuerliche Grundlagen sowie die Vorbereitung & Durchführung für den operativen Geschäftsbetrieb.",
-              "We handle the full company setup in Medina — end to end. This includes the MISA license, authority coordination, legal and tax foundations, and preparing your business for operations."
+              "We manage the entire company formation process in Medina — from start to finish. This includes securing the MISA licence, coordinating with all relevant authorities, establishing the legal and tax framework, and preparing your business for full operational readiness."
             )}
           </p>
         </div>

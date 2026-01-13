@@ -344,11 +344,10 @@ export default function CaseStudiesEnPage() {
             Case Studies
           </div>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 mb-6">
-            Real results
+            Real Results.
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Theory is good — execution is better. Here’s how we solved real challenges in Saudi
-            Arabia.
+            Theory has its place. Practice delivers results. Discover how we have solved real-world challenges in Saudi Arabia.
           </p>
         </div>
       </section>

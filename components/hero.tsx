@@ -33,22 +33,33 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
           </div>
           
           <h1 className="text-5xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl mb-8">
-            {t("Dein Tor zum Erfolg in", "Your gateway to success in")} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-emerald-800 to-slate-900">
-              Saudi-Arabien
-            </span>
+            {locale === "en" ? (
+              <>
+                Your Gateway to Success in <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-emerald-800 to-slate-900">
+                  Saudi Arabia
+                </span>
+              </>
+            ) : (
+              <>
+                Dein Tor zum Erfolg in <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-emerald-800 to-slate-900">
+                  Saudi-Arabien
+                </span>
+              </>
+            )}
           </h1>
           
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 md:text-xl leading-relaxed">
             {t(
               "9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.",
-              "9 years of expertise from Medina. We guide you through company formation, investments, and relocation across Saudi Arabia."
+              "With over nine years of hands-on experience in Medina, we guide you through company formation, investment opportunities, and relocation across Saudi Arabia."
             )}{" "}
             <br className="hidden md:block" />
             <span className="font-medium text-slate-800">
               {t(
                 "Keine Theorie, kein Testen an Kunden – echte Erfahrung aus Saudi-Arabien.",
-                "No theory, no experimenting on clients — real experience from Saudi Arabia."
+                "No theory. No experimentation on clients. Just proven, real-world experience from Saudi Arabia."
               )}
             </span>
           </p>

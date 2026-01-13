@@ -105,12 +105,12 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
-            {t("Bereit für den nächsten Schritt?", "Ready for the next step?")}
+            {t("Bereit für den nächsten Schritt?", "Ready for the Next Step?")}
           </h2>
           <p className="text-lg text-slate-600">
             {t(
               "Lass uns deine Vision besprechen. Diskret, direkt und zielorientiert.",
-              "Let’s talk about your vision. Discreet, direct, and goal-oriented."
+              "Let’s discuss your vision in confidence — discreet, focused, and driven by clear outcomes."
             )}
           </p>
         </div>

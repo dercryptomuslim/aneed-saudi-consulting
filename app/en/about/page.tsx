@@ -12,7 +12,7 @@ import { localizeHref } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "About | Aneed Ashraf - Consulting Saudi Arabia",
   description:
-    "Learn more about Aneed Ashraf: entrepreneur, consultant and bridge-builder between Germany and Saudi Arabia.",
+    "Entrepreneur & Consultant. A bridge between worlds. Trusted partner to elite entrepreneurs and investors shaping success in Saudi Arabia.",
 };
 
 const skills = [
@@ -26,7 +26,7 @@ const stats = [
   { label: "Years int. experience", value: "15+" },
   { label: "Years in Saudi Arabia", value: "9+" },
   { label: "Managed budget", value: "> €1M" },
-  { label: "Realized savings", value: "> €2M" },
+  { label: "Realised savings", value: "> €2M" },
 ];
 
 export default function AboutEnPage() {
@@ -43,13 +43,13 @@ export default function AboutEnPage() {
             {/* Left Column: Intro */}
             <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
               <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm font-medium">
-                Entrepreneur & consultant
+                Entrepreneur & Consultant
               </div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-tight">
                 Aneed Ashraf
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed font-light">
-                Bridge-builder between worlds. Strategic partner for your success in Saudi Arabia.
+                A bridge between worlds. Trusted partner to elite entrepreneurs and investors shaping success in Saudi Arabia.
               </p>
 
               <div className="grid grid-cols-2 gap-6 pt-4 text-center md:text-left">
@@ -83,34 +83,25 @@ export default function AboutEnPage() {
             {/* Left Column: Text Content */}
             <div className="lg:col-span-7 space-y-8 text-lg text-slate-600 leading-relaxed">
               <h2 className="text-3xl font-serif font-bold text-slate-900 mb-6">
-                Expertise from two worlds
+                Expertise from Two Worlds
               </h2>
 
               <p>
-                As an entrepreneur and business consultant, I bring 15+ years of international
-                consulting experience and more than 9 years of successful hands-on work in Saudi
-                Arabia. This expertise is complemented by a Master’s in Project Management and
-                certifications — ensuring structured execution, planning certainty, and professional
-                steering of complex projects.
+                As an entrepreneur and business consultant, I combine over 15 years of international consulting experience with more than nine years of proven, hands-on execution in Saudi Arabia. This is reinforced by a Master’s degree in Project Management and professional certifications — ensuring disciplined execution, planning certainty, and confident leadership of complex, high-stakes projects.
               </p>
 
               <p>
-                Since 2017, I’ve lived and worked in Saudi Arabia. I founded the first German-Saudi
-                consulting firm in Medina. My team and I have led numerous projects with a total
-                budget exceeding €1 million and advised 15+ companies strategically.
+                Since 2017, I have lived and worked in Saudi Arabia. I founded the first German–Saudi consulting firm in Medina and, together with my team, have led numerous projects with a combined budget exceeding €1 million. We have provided strategic advisory services to more than 15 companies across multiple industries.
               </p>
 
               <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-xl my-8">
                 <p className="font-medium text-emerald-900 italic">
-                  "The results speak for themselves: over €2 million in realized cost savings,
-                  significant efficiency gains, and sustainable profit growth for our clients."
+                  "The results speak for themselves: over €2 million in realised cost savings, measurable efficiency gains, and sustainable profit growth for our clients."
                 </p>
               </div>
 
               <p>
-                My team and I don’t act as “classic consultants” — we work as strategic partners who
-                guide companies, investors, and entrepreneurs safely, efficiently, and sustainably
-                through the Saudi market.
+                We do not operate as conventional consultants. My team and I act as long-term strategic partners — guiding companies, investors, and entrepreneurs through the Saudi market with clarity, discretion, and operational control.
               </p>
 
               {/* Skills Card (Mobile Only) */}
@@ -142,18 +133,11 @@ export default function AboutEnPage() {
               </h3>
 
               <p>
-                I’ve been active as an entrepreneur since 2006 and as a business consultant since
-                2011. During this time, I supported and successfully completed 100+ projects and
-                SME engagements across Germany, Austria, Switzerland, the UK, Malaysia, and
-                Singapore.
+                I have been active as an entrepreneur since 2006 and as a business consultant since 2011. Over this period, I have successfully supported and completed more than 100 projects and SME engagements across Germany, Austria, Switzerland, the United Kingdom, Malaysia, and Singapore.
               </p>
 
               <p>
-                A key focus of my work is building practical, executable structures. I designed and
-                led comprehensive incubator and accelerator programs for startups, scale-ups, and
-                SMEs — including multi-month programs with 140+ strategic learning modules and 40+
-                individual implementation tasks, completed successfully by 50+ companies in the
-                German-speaking region.
+                A defining focus of my work is the creation of practical, executable structures. I have designed and led comprehensive incubator and accelerator programmes for startups, scale-ups, and established SMEs — including multi-month initiatives comprising over 140 strategic learning modules and 40+ individual implementation tasks. These programmes have been completed successfully by more than 50 companies across the German-speaking region.
               </p>
             </div>
 

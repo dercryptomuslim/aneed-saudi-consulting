@@ -76,7 +76,7 @@ export function SuccessStoriesTeaser({ locale = "de" }: { locale?: Locale }) {
             <p className="text-lg text-slate-600">
               {t(
                 "Theorie ist gut, Praxis ist besser. Hier siehst du, wie wir Herausforderungen in Saudi-Arabien real gelöst haben.",
-                "Theory is good, practice is better. See how we solved real challenges in Saudi Arabia."
+                "Theory has its place. Practice delivers results. Discover how we have solved real-world challenges in Saudi Arabia."
               )}
             </p>
           </div>

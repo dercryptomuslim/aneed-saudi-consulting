@@ -49,7 +49,7 @@ export function About({ locale = "de" }: { locale?: Locale }) {
                 {t("Über Aneed Ashraf", "About Aneed Ashraf")}
               </h2>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-                {t("Brückenbauer zwischen", "Bridge-builder between")} <br/>
+                {t("Brückenbauer zwischen", "A Bridge Between")} <br/>
                 <span className="text-slate-500">{t("Deutschland & Saudi-Arabien", "Germany & Saudi Arabia")}</span>
               </h3>
             </div>
@@ -58,13 +58,13 @@ export function About({ locale = "de" }: { locale?: Locale }) {
               <p>
                 {t(
                   "Saudi-Arabien ist mehr als nur ein Markt – es ist eine Kultur des Vertrauens. Wer hier erfolgreich sein will, braucht mehr als nur Kapital: Er braucht Zugang und Verständnis.",
-                  "Saudi Arabia is more than a market — it’s a culture of trust. To succeed here, you need more than capital: you need access and understanding."
+                  "Saudi Arabia is more than a market — it is a culture built on trust. Success here requires more than capital; it demands access, cultural understanding, and credibility."
                 )}
               </p>
               <p>
                 {t(
                   "Keine Theorie, kein Fake – ich bin Unternehmer und Unternehmensberater mit über 15 Jahren internationaler Erfahrung und seit 10 Jahren operativ in Saudi-Arabien tätig und davon alleine 8 Jahre in Medina.",
-                  "No theory, no hype — I’m an entrepreneur and business consultant with 15+ years of international experience and 10 years operating in Saudi Arabia, including 8 years in Medina."
+                  "No theory. No hype. I am an entrepreneur and business consultant with over 15 years of international experience and a decade of operational expertise in Saudi Arabia, including eight years based in Medina."
                 )}
               </p>
             </div>

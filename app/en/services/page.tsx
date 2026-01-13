@@ -19,7 +19,7 @@ import { localizeHref } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Services | Aneed Ashraf - Consulting Saudi Arabia",
   description:
-    "Our 6 core capabilities: formation, setup, operations, consulting, investment and franchise in Saudi Arabia.",
+    "Company formation, business setup, operations & management, business consulting, investment and franchise in Saudi Arabia.",
 };
 
 const quickLinks = [
@@ -47,8 +47,7 @@ export default function ServicesEnPage() {
             Our services in detail
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From formation to setup and ongoing operations. We cover the full lifecycle of your
-            business in Saudi Arabia.
+            Company formation is only the beginning. We support you from initial setup to operational execution, ongoing management, and strategic expansion in Saudi Arabia.
           </p>
 
           {/* Quick Links Grid (2x3) */}
@@ -97,9 +96,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                The first step to a successful business in Saudi Arabia is a thorough and compliant
-                setup. My team and I guide entrepreneurs and investors through every step — from
-                the initial idea to official registration.
+                The foundation of a successful business in Saudi Arabia is a thorough, compliant setup. My team and I guide entrepreneurs and investors through every stage — from the initial concept to official registration and operational readiness.
               </p>
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -107,27 +104,27 @@ export default function ServicesEnPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Choosing the right legal structure (based on industry & investor type)</span>
+                    <span>Selecting the appropriate legal structure based on your industry and investor profile</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Applying for all required licenses (MISA, commercial licenses, permits)</span>
+                    <span>Applying for all required licences, including MISA, commercial licences, and sector-specific permits</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Coordination with authorities on local and national level</span>
+                    <span>Coordinating with relevant authorities at both local and national levels</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Commercial registry filings & legal compliance</span>
+                    <span>Managing commercial registry filings and ensuring full legal compliance</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Administrative & tax setup (compliance, Zakat)</span>
+                    <span>Establishing administrative, tax, and Zakat compliance frameworks</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Support with bank account opening & capitalization structure</span>
+                    <span>Supporting bank account opening and structuring capitalisation effectively</span>
                   </li>
                 </ul>
               </div>
@@ -164,9 +161,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                Formation is only the beginning — your business must be built physically and
-                operationally. My team and I handle the full implementation so you can launch
-                smoothly.
+                Formation is only the beginning — your business must be built both physically and operationally. My team and I manage the full implementation, ensuring a smooth and controlled market entry.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -174,23 +169,23 @@ export default function ServicesEnPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Location selection & setup (planning, fit-out, infrastructure)</span>
+                    <span>Location selection and setup, including planning, fit-out, and infrastructure</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Recruiting (from scheduling to hiring)</span>
+                    <span>Recruitment and workforce structuring, from scheduling to hiring</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Product & service design (e.g., pricing, quality standards)</span>
+                    <span>Product and service design, including pricing models and quality standards</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Marketing & launch planning (branding, promotion)</span>
+                    <span>Marketing and launch planning, covering branding and market entry promotion</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Building operational processes for smooth day-to-day execution</span>
+                    <span>Development of operational processes to ensure efficient day-to-day execution</span>
                   </li>
                 </ul>
               </div>
@@ -227,9 +222,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                After formation and setup comes ongoing operations — often the biggest challenge for
-                entrepreneurs abroad. We can manage and control your business, so you can focus on
-                strategic decisions.
+                After formation and setup comes ongoing operations — often the greatest challenge for entrepreneurs operating abroad. We manage and oversee your business, allowing you to focus on strategic direction and growth.
               </p>
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -237,23 +230,23 @@ export default function ServicesEnPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Business operations (organization, process control, quality management)</span>
+                    <span>Day-to-day business operations, including organisation, process control, and quality management</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Financial management (budget, bookkeeping, costs, Zakat/tax)</span>
+                    <span>Financial management, covering budgeting, bookkeeping, cost control, and Zakat/tax compliance</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Team leadership (training, motivation, performance control)</span>
+                    <span>Team leadership, including training, motivation, and performance management</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Profitability optimization (KPI monitoring, performance)</span>
+                    <span>Profitability optimisation through KPI tracking and performance analysis</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Support for expansions or new locations</span>
+                    <span>Strategic support for expansion projects or the launch of new locations</span>
                   </li>
                 </ul>
               </div>
@@ -288,9 +281,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                For Saudi and international companies, we provide strategic and operational
-                consulting. We analyze business models, identify bottlenecks, and develop tailored
-                strategies.
+                For Saudi and international companies, we deliver strategic and operational consulting. We analyse business models, identify bottlenecks, and develop tailored, execution-ready strategies.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -302,19 +293,19 @@ export default function ServicesEnPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Market entry & expansion strategy</span>
+                    <span>Market entry and expansion strategies</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Restructuring & process optimization</span>
+                    <span>Restructuring and process optimisation</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Cost & profitability analysis</span>
+                    <span>Cost control and profitability analysis</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Support for partnerships & joint ventures</span>
+                    <span>Support for partnerships and joint ventures</span>
                   </li>
                 </ul>
               </div>
@@ -349,8 +340,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                We develop our own market-ready concepts in selected industries. They’re thoroughly
-                analyzed, financially modeled, and operationally prepared for investors.
+                We develop our own market-ready concepts in selected industries. Each concept is thoroughly analysed, financially modelled, and operationally prepared for investors.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -358,7 +348,7 @@ export default function ServicesEnPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Detailed business & financial plans</span>
+                    <span>Comprehensive business and financial plans</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
@@ -370,11 +360,11 @@ export default function ServicesEnPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Professional implementation & operational support</span>
+                    <span>Professional implementation and ongoing operational support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Direct access to the Saudi market</span>
+                    <span>Direct, practical access to the Saudi market</span>
                   </li>
                 </ul>
               </div>
@@ -406,8 +396,7 @@ export default function ServicesEnPage() {
             </div>
             <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
               <p>
-                I support entrepreneurs and investors in successfully launching franchise models in
-                Saudi Arabia — from strategic planning to operational expansion.
+                I support entrepreneurs and investors in successfully launching franchise models in Saudi Arabia — from strategic planning through to operational expansion.
               </p>
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
@@ -415,27 +404,27 @@ export default function ServicesEnPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Analysis of existing concepts for the KSA market</span>
+                    <span>Analysis of existing concepts for the Saudi (KSA) market</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Advisory on legal form, licenses & contracts</span>
+                    <span>Advisory on legal structures, licences, and franchise agreements</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Location selection, setup & partner selection</span>
+                    <span>Location selection, setup, and franchise partner selection</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Implementation of operational processes & standards</span>
+                    <span>Implementation of operational processes and brand standards</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Training for franchisees & staff</span>
+                    <span>Training programmes for franchisees and staff</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Ongoing support & monitoring</span>
+                    <span>Ongoing support, performance monitoring, and quality control</span>
                   </li>
                 </ul>
               </div>
