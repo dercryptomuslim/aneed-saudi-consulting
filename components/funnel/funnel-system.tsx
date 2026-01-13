@@ -7,7 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { AlertCircle, ArrowLeft, Building2, Globe, ShieldCheck } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AlertCircle, ArrowLeft, Building2, Globe, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
@@ -67,6 +68,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     unn: "", 
     iqama: "", 
     entityType: "" as "COMPANY" | "RESIDENCY" | "",
+    dataConsent: true,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -98,7 +100,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     setStepPath(newPath);
   };
 
-  const validateKsaId = () => {
+  const validateForm = () => {
     const newErrors: Record<string, string> = {};
     if (formData.entityType === "COMPANY" && !/^7\d{9}$/.test(formData.unn)) {
       newErrors.unn = t("Die UNN muss mit 7 beginnen und 10 Ziffern haben.", "UNN must start with 7 and have 10 digits.");
@@ -108,12 +110,13 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     if (!formData.name) newErrors.name = t("Name ist erforderlich", "Name is required");
     if (!formData.email) newErrors.email = t("E-Mail ist erforderlich", "Email is required");
     if (!formData.phone) newErrors.phone = t("Telefonnummer ist erforderlich", "Phone number is required");
+    if (!formData.dataConsent) newErrors.dataConsent = t("Bitte stimme der Datenverarbeitung zu.", "Please agree to data processing.");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleValidationSubmit = async () => {
-    if (!validateKsaId()) return;
+    if (!validateForm()) return;
 
     setIsSubmitting(true);
     try {
@@ -441,31 +444,73 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
 
           {step === "BOOKING_FORM" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                {t("Beratungsgespräch buchen", "Book a consultation")}
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">
+                {t("Ziel des Beratungsgesprächs", "Goal of the Consultation")}
               </h2>
-              <p className="text-emerald-700 mb-6 text-sm md:text-base font-medium">
-                {t("Deine Angaben wurden vorqualifiziert.", "Your details have been pre-qualified.")}
-              </p>
               
-              <div className="space-y-4">
-                 <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-lg text-emerald-800 text-sm mb-4 leading-relaxed">
-                    {t(
-                      "Hinweis: Dies ist ein kostenpflichtiges Expertengespräch. Die Gebühr wird bei Beauftragung verrechnet.",
-                      "Note: This is a paid expert consultation. The fee will be credited if you proceed with an engagement."
-                    )}
-                 </div>
-                 
-                 <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
-                   <a href={bookingUrl}>
-                     {t("Jetzt Termin auswählen & bezahlen", "Select a time & pay")}
-                   </a>
-                 </Button>
-                 
-                 <Button onClick={goBack} variant="link" className="text-slate-500 w-full py-3 h-auto">
-                   {t("Zurück", "Back")}
-                 </Button>
+              <div className="space-y-6 text-slate-600 mb-8">
+                <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-lg text-emerald-900 font-medium">
+                   {t(
+                    "Kein Fake, keine Theorie: Die Inhalte dieses Gesprächs basieren ausschließlich auf realer Erfahrung aus eigener unternehmerischer Praxis in Saudi-Arabien – nicht auf Annahmen oder Modellen aus Büchern.",
+                    "No fake, no theory: The content of this conversation is based exclusively on real experience from my own entrepreneurial practice in Saudi Arabia – not on assumptions or models from books."
+                   )}
+                </div>
+
+                <p>
+                  {t(
+                    "Ziel dieses Gesprächs ist es, dir eine klare, realistische und strukturierte Einschätzung zu geben, ob das Leben und der Aufbau eines Unternehmens in Saudi-Arabien für dich sinnvoll ist.",
+                    "The goal of this conversation is to give you a clear, realistic, and structured assessment of whether living and building a business in Saudi Arabia makes sense for you."
+                  )}
+                </p>
+
+                <div className="space-y-2">
+                  <p className="font-semibold text-slate-900">{t("Im Rahmen des Gesprächs erkläre ich dir:", "During the consultation, I will explain:")}</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>{t("welche Möglichkeiten es gibt, in Saudi-Arabien zu leben, und welche realen Rahmenbedingungen damit verbunden sind", "what options there are for living in Saudi Arabia and the real conditions involved")}</li>
+                    <li>{t("wie eine Unternehmensgründung in Saudi-Arabien in der Praxis abläuft", "how company formation in Saudi Arabia works in practice")}</li>
+                    <li>{t("welche Chancen bestehen und welche Risiken berücksichtigt werden müssen", "what opportunities exist and what risks must be considered")}</li>
+                    <li>{t("wie der konkrete Weg zum Markteintritt Schritt für Schritt aussieht", "what the concrete path to market entry looks like step by step")}</li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-semibold text-slate-900">{t("Darüber hinaus gehen wir realistisch auf die finanziellen Aspekte ein, unter anderem:", "Furthermore, we will realistically address financial aspects, including:")}</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>{t("welches Investitionsvolumen erforderlich ist", "what investment volume is required")}</li>
+                    <li>{t("welche Kostenstrukturen typischerweise anfallen", "what cost structures typically apply")}</li>
+                    <li>{t("wann ein Return on Investment (ROI) realistisch zu erwarten ist", "when a Return on Investment (ROI) can realistically be expected")}</li>
+                  </ul>
+                </div>
+
+                <p>
+                  {t(
+                    "Zusätzlich analysiere ich deine Geschäftsidee im Detail und prüfe, ob sie für den saudi-arabischen Markt geeignet ist oder ob Anpassungen am Konzept notwendig sind.",
+                    "Additionally, I will analyze your business idea in detail and check if it is suitable for the Saudi Arabian market or if adjustments to the concept are necessary."
+                  )}
+                </p>
+
+                <div className="flex items-center gap-2 text-slate-900 font-bold">
+                   <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+                   <span>{t("Ziel des Gesprächs ist Klarheit.", "The goal of the conversation is clarity.")}</span>
+                </div>
+
+                <p className="italic text-slate-500 text-sm">
+                   {t(
+                    "Am Ende des Beratungsgesprächs weißt du genau, ob und in welcher Form ein Business in Saudi-Arabien für dich sinnvoll und umsetzbar ist – auf Basis von Fakten, nicht von Annahmen.",
+                    "At the end of the consultation, you will know exactly if and in what form a business in Saudi Arabia is sensible and feasible for you – based on facts, not assumptions."
+                   )}
+                </p>
               </div>
+                 
+              <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
+                <a href={bookingUrl}>
+                  {t("Jetzt Termin auswählen & bezahlen", "Select a time & pay")}
+                </a>
+              </Button>
+              
+              <Button onClick={goBack} variant="link" className="text-slate-500 w-full py-3 h-auto">
+                {t("Zurück", "Back")}
+              </Button>
             </Card>
           )}
 
@@ -513,7 +558,9 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label className="text-slate-700">{t("Vollständiger Name", "Full name")}</Label>
+                  <Label className="text-slate-700">
+                    {t("Vollständiger Name", "Full name")} <span className="text-red-500">*</span>
+                  </Label>
                   <Input 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -524,7 +571,9 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">{t("Telefonnummer", "Phone number")}</Label>
+                  <Label className="text-slate-700">
+                    {t("Telefonnummer", "Phone number")} <span className="text-red-500">*</span>
+                  </Label>
                   <Input 
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -536,7 +585,9 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">{t("E-Mail Adresse", "Email address")}</Label>
+                  <Label className="text-slate-700">
+                    {t("E-Mail Adresse", "Email address")} <span className="text-red-500">*</span>
+                  </Label>
                   <Input 
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -576,13 +627,30 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 )}
 
                 <div className="space-y-2">
-                  <Label className="text-slate-700">{t("Deine Frage", "Your question")}</Label>
+                  <Label className="text-slate-700">{t("Deine Frage (Optional)", "Your question (Optional)")}</Label>
                   <Textarea 
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     placeholder={t("Wie können wir helfen?", "How can we help?")} 
                     className="bg-slate-50 border-slate-200 min-h-[100px] text-base text-slate-900"
                   />
+                </div>
+
+                <div className="flex items-start space-x-2 pt-2">
+                  <Checkbox 
+                    id="terms" 
+                    checked={formData.dataConsent}
+                    onCheckedChange={(checked) => setFormData({...formData, dataConsent: checked as boolean})}
+                  />
+                  <div className="grid gap-1.5 leading-none">
+                    <label
+                      htmlFor="terms"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-slate-700"
+                    >
+                      {t("Ich stimme der Verarbeitung meiner Daten zu.", "I agree to the processing of my data.")}
+                    </label>
+                    {errors.dataConsent && <p className="text-xs text-red-500">{errors.dataConsent}</p>}
+                  </div>
                 </div>
 
                 <div className="pt-4 flex gap-3">
