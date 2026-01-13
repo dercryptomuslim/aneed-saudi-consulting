@@ -445,59 +445,59 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
           {step === "BOOKING_FORM" && (
             <Card className="p-6 md:p-8 border border-slate-200 bg-white shadow-xl">
               <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 text-center">
-                {t("Ziel des Beratungsgesprächs", "Goal of the Consultation")}
+                {t("Ziel des Beratungsgesprächs", "Purpose of the Consultation")}
               </h2>
               
               <div className="space-y-6 text-slate-600 mb-8">
                 <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-lg text-emerald-900 font-medium">
                    {t(
                     "Kein Fake, keine Theorie: Die Inhalte dieses Gesprächs basieren ausschließlich auf realer Erfahrung aus eigener unternehmerischer Praxis in Saudi-Arabien – nicht auf Annahmen oder Modellen aus Büchern.",
-                    "No fake, no theory: The content of this conversation is based exclusively on real experience from my own entrepreneurial practice in Saudi Arabia – not on assumptions or models from books."
+                    "No fake, no theory: the content of this consultation is based exclusively on real, hands-on entrepreneurial experience in Saudi Arabia – not on assumptions or textbook models."
                    )}
                 </div>
 
                 <p>
                   {t(
                     "Ziel dieses Gesprächs ist es, dir eine klare, realistische und strukturierte Einschätzung zu geben, ob das Leben und der Aufbau eines Unternehmens in Saudi-Arabien für dich sinnvoll ist.",
-                    "The goal of this conversation is to give you a clear, realistic, and structured assessment of whether living and building a business in Saudi Arabia makes sense for you."
+                    "The purpose of this session is to provide you with a clear, realistic, and structured assessment of whether living in Saudi Arabia and building a business there makes sense for you."
                   )}
                 </p>
 
                 <div className="space-y-2">
                   <p className="font-semibold text-slate-900">{t("Im Rahmen des Gesprächs erkläre ich dir:", "During the consultation, I will explain:")}</p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>{t("welche Möglichkeiten es gibt, in Saudi-Arabien zu leben, und welche realen Rahmenbedingungen damit verbunden sind", "what options there are for living in Saudi Arabia and the real conditions involved")}</li>
+                    <li>{t("welche Möglichkeiten es gibt, in Saudi-Arabien zu leben, und welche realen Rahmenbedingungen damit verbunden sind", "the available options for living in Saudi Arabia and the real-world conditions that come with them")}</li>
                     <li>{t("wie eine Unternehmensgründung in Saudi-Arabien in der Praxis abläuft", "how company formation in Saudi Arabia works in practice")}</li>
-                    <li>{t("welche Chancen bestehen und welche Risiken berücksichtigt werden müssen", "what opportunities exist and what risks must be considered")}</li>
-                    <li>{t("wie der konkrete Weg zum Markteintritt Schritt für Schritt aussieht", "what the concrete path to market entry looks like step by step")}</li>
+                    <li>{t("welche Chancen bestehen und welche Risiken berücksichtigt werden müssen", "which opportunities exist and which risks must be taken into account")}</li>
+                    <li>{t("wie der konkrete Weg zum Markteintritt Schritt für Schritt aussieht", "what the concrete path to market entry looks like, step by step")}</li>
                   </ul>
                 </div>
 
                 <div className="space-y-2">
-                  <p className="font-semibold text-slate-900">{t("Darüber hinaus gehen wir realistisch auf die finanziellen Aspekte ein, unter anderem:", "Furthermore, we will realistically address financial aspects, including:")}</p>
+                  <p className="font-semibold text-slate-900">{t("Darüber hinaus gehen wir realistisch auf die finanziellen Aspekte ein, unter anderem:", "In addition, we will take a realistic look at the financial aspects, including:")}</p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>{t("welches Investitionsvolumen erforderlich ist", "what investment volume is required")}</li>
-                    <li>{t("welche Kostenstrukturen typischerweise anfallen", "what cost structures typically apply")}</li>
-                    <li>{t("wann ein Return on Investment (ROI) realistisch zu erwarten ist", "when a Return on Investment (ROI) can realistically be expected")}</li>
+                    <li>{t("welches Investitionsvolumen erforderlich ist", "the level of investment typically required")}</li>
+                    <li>{t("welche Kostenstrukturen typischerweise anfallen", "common cost structures")}</li>
+                    <li>{t("wann ein Return on Investment (ROI) realistisch zu erwarten ist", "when a return on investment (ROI) can realistically be expected")}</li>
                   </ul>
                 </div>
 
                 <p>
                   {t(
                     "Zusätzlich analysiere ich deine Geschäftsidee im Detail und prüfe, ob sie für den saudi-arabischen Markt geeignet ist oder ob Anpassungen am Konzept notwendig sind.",
-                    "Additionally, I will analyze your business idea in detail and check if it is suitable for the Saudi Arabian market or if adjustments to the concept are necessary."
+                    "Furthermore, I will analyse your business idea in detail and assess whether it is suitable for the Saudi market or whether the concept needs to be adjusted."
                   )}
                 </p>
 
                 <div className="flex items-center gap-2 text-slate-900 font-bold">
                    <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                   <span>{t("Ziel des Gesprächs ist Klarheit.", "The goal of the conversation is clarity.")}</span>
+                   <span>{t("Ziel des Gesprächs ist Klarheit.", "The goal of this consultation is clarity.")}</span>
                 </div>
 
                 <p className="italic text-slate-500 text-sm">
                    {t(
                     "Am Ende des Beratungsgesprächs weißt du genau, ob und in welcher Form ein Business in Saudi-Arabien für dich sinnvoll und umsetzbar ist – auf Basis von Fakten, nicht von Annahmen.",
-                    "At the end of the consultation, you will know exactly if and in what form a business in Saudi Arabia is sensible and feasible for you – based on facts, not assumptions."
+                    "By the end of the session, you will know exactly whether — and in what form — starting a business in Saudi Arabia is realistic and sensible for you, based on facts rather than assumptions."
                    )}
                 </p>
               </div>
