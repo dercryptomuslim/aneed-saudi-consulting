@@ -11,7 +11,8 @@ const deToEnPaths: Record<string, string> = {
   "/datenschutz": "/privacy",
   "/agb": "/terms",
   "/terminbuchung": "/booking",
-  "/danke": "/thankyou"
+  "/danke": "/thankyou",
+  "/blog": "/blog"
 };
 
 const enToDePaths: Record<string, string> = Object.entries(deToEnPaths).reduce((acc, [de, en]) => {

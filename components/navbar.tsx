@@ -190,6 +190,14 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link href={href("/blog")} legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
+                    Blog
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link href={href("/ueber-mich")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     {t("Über Mich", "About")}
@@ -332,6 +340,15 @@ export function Navbar() {
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
                             {t("Erfolgsgeschichten", "Case Studies")}
+                            <ChevronRight className="h-5 w-5 text-slate-400" />
+                          </Link>
+
+                          <Link
+                            href={href("/blog")}
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
+                          >
+                            Blog
                             <ChevronRight className="h-5 w-5 text-slate-400" />
                           </Link>
 
