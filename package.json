@@ -1,6 +1,7 @@
 {
   "name": "aneed-saudi-consulting",
   "version": "0.1.0",
+  "description": "Consulting website for Saudi Arabia market entry",
   "private": true,
   "scripts": {
     "dev": "next dev -p 7001",
