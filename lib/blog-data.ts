@@ -15,7 +15,7 @@ export const blogPostsDe: BlogPost[] = [
     date: "14.01.2026",
     readTime: "7 Min.",
     excerpt: "Viele sprechen über Business in Saudi-Arabien. Wenige erklären dir, wie es wirklich funktioniert. Hier ist die Praxis.",
-    image: "/blog/saudi-documents.jpg",
+    image: "/blog/saudi-documents.png",
     content: `
       <p class="lead">Viele sprechen über Business in Saudi-Arabien.<br>Wenige erklären dir, wie es wirklich funktioniert.</p>
       
@@ -24,7 +24,7 @@ export const blogPostsDe: BlogPost[] = [
       <p>Wenn du in Saudi-Arabien ein Unternehmen gründen willst, musst du eine zentrale Wahrheit verstehen: <strong>Saudi-Arabien baut nicht mit Anfängern, sondern mit nachweislich aktiven Unternehmern.</strong></p>
 
       <figure class="my-8">
-        <img src="/blog/saudi-documents.jpg" alt="Saudi Ministry of Commerce Dokumente und Stempel" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/saudi-documents.png" alt="Saudi Ministry of Commerce Dokumente und Stempel" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>Ohne bestehende Firma außerhalb von Saudi-Arabien funktioniert es nicht</h2>
@@ -43,7 +43,7 @@ export const blogPostsDe: BlogPost[] = [
       <p>Entscheidend ist nicht das Land, sondern dass es sich um eine juristische Person mit offiziellem Registereintrag handelt.</p>
 
       <figure class="my-8">
-        <img src="/blog/international-documents.jpg" alt="Internationale Firmendokumente aus Deutschland, UK, USA, Schweiz und Österreich" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/international-documents.png" alt="Internationale Firmendokumente aus Deutschland, UK, USA, Schweiz und Österreich" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>Apostille oder Legalisierung – ein entscheidender Unterschied</h2>
@@ -62,7 +62,7 @@ export const blogPostsDe: BlogPost[] = [
       <p>Hier zeigt sich sehr schnell, wer strukturiert arbeitet – und wer improvisiert.</p>
 
       <figure class="my-8">
-        <img src="/blog/business-meeting.jpg" alt="Business Meeting in Medina" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/business-meeting.png" alt="Business Meeting in Medina" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>Lizenzgebühren – Stand Januar 2026</h2>
@@ -87,7 +87,7 @@ export const blogPostsEn: BlogPost[] = [
     date: "Jan 14, 2026",
     readTime: "7 min",
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
-    image: "/blog/saudi-documents.jpg",
+    image: "/blog/saudi-documents.png",
     content: `
       <p class="lead">Many people talk about doing business in Saudi Arabia.<br>Very few explain how it actually works in practice.</p>
       
@@ -96,7 +96,7 @@ export const blogPostsEn: BlogPost[] = [
       <p>If you want to start a business in Saudi Arabia, you must understand one fundamental reality: <strong>Saudi Arabia does not build with beginners. It builds with proven, active entrepreneurs.</strong></p>
 
       <figure class="my-8">
-        <img src="/blog/saudi-documents.jpg" alt="Saudi Ministry of Commerce documents and stamp" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/saudi-documents.png" alt="Saudi Ministry of Commerce documents and stamp" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>A foreign company is mandatory</h2>
@@ -115,7 +115,7 @@ export const blogPostsEn: BlogPost[] = [
       <p>What matters is not the country, but that the business is a registered legal entity with verifiable records.</p>
 
       <figure class="my-8">
-        <img src="/blog/international-documents.jpg" alt="International company documents from Germany, UK, USA, Switzerland, and Austria" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/international-documents.png" alt="International company documents from Germany, UK, USA, Switzerland, and Austria" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>Apostille or legalisation – a critical distinction</h2>
@@ -134,7 +134,7 @@ export const blogPostsEn: BlogPost[] = [
       <p>This is where preparation makes the difference between smooth progress and costly delays.</p>
 
       <figure class="my-8">
-        <img src="/blog/business-meeting.jpg" alt="Business meeting in Medina" class="w-full rounded-xl shadow-lg" />
+        <img src="/blog/business-meeting.png" alt="Business meeting in Medina" class="w-full rounded-xl shadow-lg" />
       </figure>
 
       <h2>Licence fees – status as of January 2026</h2>
