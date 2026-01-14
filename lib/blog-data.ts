@@ -15,6 +15,7 @@ export const blogPostsDe: BlogPost[] = [
     date: "14.01.2026",
     readTime: "7 Min.",
     excerpt: "Viele sprechen über Business in Saudi-Arabien. Wenige erklären dir, wie es wirklich funktioniert. Hier ist die Praxis.",
+    image: "/blog/saudi-documents.jpg",
     content: `
       <p class="lead">Viele sprechen über Business in Saudi-Arabien.<br>Wenige erklären dir, wie es wirklich funktioniert.</p>
       
@@ -22,9 +23,9 @@ export const blogPostsDe: BlogPost[] = [
       
       <p>Wenn du in Saudi-Arabien ein Unternehmen gründen willst, musst du eine zentrale Wahrheit verstehen: <strong>Saudi-Arabien baut nicht mit Anfängern, sondern mit nachweislich aktiven Unternehmern.</strong></p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD EINFÜGEN – Business / Beratung</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/saudi-documents.jpg" alt="Saudi Ministry of Commerce Dokumente und Stempel" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>Ohne bestehende Firma außerhalb von Saudi-Arabien funktioniert es nicht</h2>
       <p>Um in Saudi-Arabien ein Unternehmen zu gründen, brauchst du zwingend eine bestehende Firma außerhalb des Landes. Diese Firma ist die Grundlage deines Antrags und kein formaler Nebenschauplatz.</p>
@@ -41,9 +42,9 @@ export const blogPostsDe: BlogPost[] = [
       </ul>
       <p>Entscheidend ist nicht das Land, sondern dass es sich um eine juristische Person mit offiziellem Registereintrag handelt.</p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD EINFÜGEN – Internationale Firmen / Dokumente</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/international-documents.jpg" alt="Internationale Firmendokumente aus Deutschland, UK, USA, Schweiz und Österreich" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>Apostille oder Legalisierung – ein entscheidender Unterschied</h2>
       <p>Ein Punkt, der in der Praxis häufig zu Verzögerungen führt, ist die Frage der Apostille.</p>
@@ -60,9 +61,9 @@ export const blogPostsDe: BlogPost[] = [
       <p>Sobald alle Unterlagen vollständig, korrekt und entweder apostilliert oder ordnungsgemäß legalisiert sind, werden sie in Saudi-Arabien eingereicht. Ist alles sauber vorbereitet, kannst du anschließend offiziell mit deinem Unternehmen starten.</p>
       <p>Hier zeigt sich sehr schnell, wer strukturiert arbeitet – und wer improvisiert.</p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD EINFÜGEN – Unternehmensgründung</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/business-meeting.jpg" alt="Business Meeting in Medina" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>Lizenzgebühren – Stand Januar 2026</h2>
       <p>Stand Januar 2026 sind die üblichen Lizenzgebühren von rund 3.000 Euro im ersten Jahr sowie die regulären Folgegebühren von etwa 15.000 Euro ab dem zweiten Jahr aktuell eingefroren. Der Grund ist eine umfassende Überarbeitung des Gebührensystems durch die saudi-arabische Regierung.</p>
@@ -86,6 +87,7 @@ export const blogPostsEn: BlogPost[] = [
     date: "Jan 14, 2026",
     readTime: "7 min",
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
+    image: "/blog/saudi-documents.jpg",
     content: `
       <p class="lead">Many people talk about doing business in Saudi Arabia.<br>Very few explain how it actually works in practice.</p>
       
@@ -93,9 +95,9 @@ export const blogPostsEn: BlogPost[] = [
       
       <p>If you want to start a business in Saudi Arabia, you must understand one fundamental reality: <strong>Saudi Arabia does not build with beginners. It builds with proven, active entrepreneurs.</strong></p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">IMAGE PLACEHOLDER – Business / Advisory</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/saudi-documents.jpg" alt="Saudi Ministry of Commerce documents and stamp" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>A foreign company is mandatory</h2>
       <p>To establish a business in Saudi Arabia, you must already own a company outside the Kingdom. This company is not a formality; it is the foundation of your application.</p>
@@ -112,9 +114,9 @@ export const blogPostsEn: BlogPost[] = [
       </ul>
       <p>What matters is not the country, but that the business is a registered legal entity with verifiable records.</p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">IMAGE PLACEHOLDER – International documents</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/international-documents.jpg" alt="International company documents from Germany, UK, USA, Switzerland, and Austria" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>Apostille or legalisation – a critical distinction</h2>
       <p>One of the most common causes of delay is misunderstanding document authentication requirements.</p>
@@ -131,9 +133,9 @@ export const blogPostsEn: BlogPost[] = [
       <p>Once all documents are complete, correctly prepared, and either apostilled or properly legalised, they can be submitted in Saudi Arabia. When done correctly, this allows you to proceed with company formation and begin operations.</p>
       <p>This is where preparation makes the difference between smooth progress and costly delays.</p>
 
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">IMAGE PLACEHOLDER – Company formation</span>
-      </div>
+      <figure class="my-8">
+        <img src="/blog/business-meeting.jpg" alt="Business meeting in Medina" class="w-full rounded-xl shadow-lg" />
+      </figure>
 
       <h2>Licence fees – status as of January 2026</h2>
       <p>As of January 2026, standard licence fees of approximately €3,000 in the first year and around €15,000 from the second year onwards are currently frozen.</p>
@@ -146,10 +148,6 @@ export const blogPostsEn: BlogPost[] = [
       <h2>The reality from experience</h2>
       <p>Saudi Arabia is not a playground.<br>But it is a serious market with real opportunity.</p>
       <p>Those who arrive prepared, informed, and structured have strong prospects. Those who rely on assumptions or incomplete information often pay a high price.</p>
-
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">IMAGE PLACEHOLDER – Consultation</span>
-      </div>
 
       <h3>I WANT TO START A BUSINESS IN SAUDI ARABIA</h3>
       <p>If you want to know whether your existing company qualifies, whether your documents are correctly prepared, and which approach is realistic for your situation, a consultation is the appropriate next step.</p>

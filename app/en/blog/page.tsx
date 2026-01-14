@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { blogPostsEn } from "@/lib/blog-data";
@@ -33,9 +34,20 @@ export default function BlogEnPage() {
               <Link key={post.slug} href={`/en/blog/${post.slug}`} className="group h-full">
                 <Card className="h-full flex flex-col border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                   
-                  {/* Image Placeholder */}
-                  <div className="h-48 w-full bg-slate-100 border-b border-slate-100 flex items-center justify-center text-slate-400">
-                    <span className="text-sm font-medium">IMAGE</span>
+                  {/* Blog Image */}
+                  <div className="h-48 w-full relative overflow-hidden">
+                    {post.image ? (
+                      <Image 
+                        src={post.image} 
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="h-full w-full bg-slate-100 flex items-center justify-center text-slate-400">
+                        <span className="text-sm font-medium">IMAGE</span>
+                      </div>
+                    )}
                   </div>
 
                   <CardHeader className="space-y-4 pb-4">
