@@ -17,7 +17,8 @@ const deToEnPaths: Record<string, string> = {
 
 // Blog slug translations (DE slug -> EN slug)
 const blogSlugDeToEn: Record<string, string> = {
-  "so-startest-du-ein-business-in-saudi-arabien": "how-to-start-a-business-in-saudi-arabia"
+  "so-startest-du-ein-business-in-saudi-arabien": "how-to-start-a-business-in-saudi-arabia",
+  "in-saudi-arabien-leben-4-wege-nach-medina": "living-in-saudi-arabia-4-legal-ways-to-medina"
 };
 
 const blogSlugEnToDe: Record<string, string> = Object.entries(blogSlugDeToEn).reduce((acc, [de, en]) => {
