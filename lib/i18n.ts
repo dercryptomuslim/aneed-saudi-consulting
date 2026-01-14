@@ -15,6 +15,16 @@ const deToEnPaths: Record<string, string> = {
   "/blog": "/blog"
 };
 
+// Blog slug translations (DE slug -> EN slug)
+const blogSlugDeToEn: Record<string, string> = {
+  "so-startest-du-ein-business-in-saudi-arabien": "how-to-start-a-business-in-saudi-arabia"
+};
+
+const blogSlugEnToDe: Record<string, string> = Object.entries(blogSlugDeToEn).reduce((acc, [de, en]) => {
+  acc[en] = de;
+  return acc;
+}, {} as Record<string, string>);
+
 const enToDePaths: Record<string, string> = Object.entries(deToEnPaths).reduce((acc, [de, en]) => {
   acc[en] = de;
   return acc;
@@ -70,6 +80,22 @@ export function switchLocalePath(currentPathname: string, targetLocale: Locale):
   if (currentLocale === targetLocale) return currentPathname;
 
   let basePath = stripLocaleFromPathname(currentPathname);
+
+  // Handle blog post slugs
+  const blogMatch = basePath.match(/^\/blog\/(.+)$/);
+  if (blogMatch) {
+    const slug = blogMatch[1];
+    
+    if (currentLocale === "en" && targetLocale === "de") {
+      // EN -> DE: translate slug if mapping exists
+      const deSlug = blogSlugEnToDe[slug] || slug;
+      return `/blog/${deSlug}`;
+    } else if (currentLocale === "de" && targetLocale === "en") {
+      // DE -> EN: translate slug if mapping exists
+      const enSlug = blogSlugDeToEn[slug] || slug;
+      return `/en/blog/${enSlug}`;
+    }
+  }
 
   // Wenn wir aktuell auf Englisch sind, ist basePath z.B. "/about".
   // Wir müssen das erst in "/ueber-mich" (Deutsch/Base) zurückübersetzen.
