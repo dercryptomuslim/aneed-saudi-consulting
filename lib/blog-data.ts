@@ -86,7 +86,7 @@ export const blogPostsEn: BlogPost[] = [
     date: "Jan 14, 2026",
     readTime: "7 min",
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
-    content: \`
+    content: `
       <p class="lead">Many people talk about doing business in Saudi Arabia.<br>Very few explain how it actually works in practice.</p>
       
       <p>I have lived and worked in Saudi Arabia for almost a decade and advise entrepreneurs from Europe, the UK, and the United States through the real company formation process. This is not theory or textbook knowledge – it is practical, on-the-ground experience.</p>
@@ -156,6 +156,6 @@ export const blogPostsEn: BlogPost[] = [
       <p>No theory.<br>No promises.<br>Just clarity based on real experience.</p>
       
       <p><em>Nearly a decade in Saudi Arabia.<br>More than two decades of entrepreneurship.<br>Saudi Arabia is not a playground – follow real experience.</em></p>
-    \`
+    `
   }
 ];
