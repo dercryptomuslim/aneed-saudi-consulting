@@ -290,88 +290,90 @@ export const blogPostsEn: BlogPost[] = [
   },
   {
     slug: "living-in-saudi-arabia-4-legal-ways-to-medina",
-    title: "Living in Saudi Arabia – 4 Legal Ways to Medina",
+    title: "Living in Saudi Arabia – the 4 Legal Paths to Medina",
     date: "Jan 15, 2026",
     readTime: "9 min",
-    excerpt: "Many people say: 'I want to live in Medina.' But very few understand what is legally, financially and practically required.",
+    excerpt: "Many people say: 'I want to live in Medina.' But very few understand what that actually means legally, financially, and in practice.",
     image: "/blog/masjid-nabawi.png",
     content: `
-      <p class="lead text-xl text-slate-700 mb-6">Many people say: <em>"I want to live in Medina."</em><br>But very few understand what is <strong>legally, financially and practically</strong> required.</p>
+      <p class="lead text-xl text-slate-700 mb-6">Many people say: <em>"I want to live in Medina."</em><br>But very few understand what that actually means <strong>legally, financially, and in practice</strong>.</p>
       
-      <p class="mb-6">After almost a decade of living and working in Saudi Arabia – over eight years of that in Medina – and more than two decades of entrepreneurship, I can say one thing clearly: There are <strong>only four real ways</strong> to obtain residency in Saudi Arabia. Everything else is rumour, half-knowledge, or social media myths. (As of January 2026)</p>
+      <p class="mb-6">After almost a decade of living and working in Saudi Arabia – more than eight years of it in Medina – and over two decades of entrepreneurship, one thing is clear: There are <strong>only four realistic ways</strong> to obtain legal residency in Saudi Arabia. Everything else is speculation, outdated information, or social-media myths.</p>
       
-      <p class="mb-8">In this article, you will learn <strong>specifically</strong> how you can come to Saudi Arabia, <strong>what it costs</strong>, and <strong>which path is realistic for whom</strong>.</p>
+      <p class="mb-8">This article explains <strong>clearly and transparently</strong> how you can live in Saudi Arabia, <strong>what it costs</strong>, and <strong>which path is realistic for whom</strong>.</p>
 
       <figure class="my-12">
         <img src="/blog/masjid-nabawi.png" alt="Masjid an-Nabawi in Medina - The Prophet's Mosque" class="w-full rounded-xl shadow-lg" loading="lazy" />
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Masjid an-Nabawi – The Prophet's Mosque in Medina</figcaption>
       </figure>
 
-      <h2 id="premium-residency" class="mt-12 mb-6">The Saudi Premium Residency – permanent residence in Saudi Arabia</h2>
+      <h2 id="premium-residency" class="mt-12 mb-6">Saudi Premium Residency – permanent residence in Saudi Arabia</h2>
       
-      <p class="mb-6">The Saudi Premium Residency is the strongest but also most capital-intensive option. It grants <strong>lifelong residence</strong> in Saudi Arabia – for you, your spouse, your children, and even your parents. You are independent of employers, sponsors, or annual visa renewals.</p>
+      <p class="mb-6">Saudi Premium Residency is the strongest, but also the most capital-intensive option. It allows <strong>permanent residence</strong> in Saudi Arabia not only for you, but also for your spouse, children, and even your parents. You are independent of employers, sponsors, and annual visa renewals.</p>
       
-      <p class="mb-6">However, this option is not for the masses. Depending on the model, either a <strong>one-time payment of approximately €200,000</strong> is required, or an <strong>annual payment of around €25,000</strong>, limited to a maximum of five years. Alternatively, investment models apply, such as purchasing <strong>real estate worth approximately €1 million</strong> or an <strong>investment of around €1.75 million</strong> in Saudi Arabia.</p>
+      <p class="mb-6">However, this programme is not designed for the general public. Depending on the model, it requires either a <strong>one-off payment of approximately €200,000</strong>, or an <strong>annual payment of around €25,000</strong>, limited to a maximum of five years. Other options are investment-based, such as purchasing <strong>property worth around €1 million</strong> or making an <strong>investment of approximately €1.75 million</strong> in Saudi Arabia.</p>
       
-      <p class="mb-6">Entrepreneurs can also qualify, for example with a startup that has already raised <strong>approximately €3.5 million in funding</strong>. In rare cases, individuals with exceptional talent or a very specific position in a white-label company are also admitted. However, these cases are strictly regulated and by no means the norm.</p>
+      <p class="mb-6">Entrepreneurs may also qualify if they operate a startup that has raised <strong>around €3.5 million in funding</strong>. In rare cases, individuals with exceptional talent or those holding a highly specialised position within a white-label company in Saudi Arabia may also qualify. These cases are strictly assessed and are not the norm.</p>
       
-      <p class="mb-8">The Saudi Premium Residency is real – but it is <strong>not an entry-level path</strong>.</p>
+      <p class="mb-8">Saudi Premium Residency is real – but it is <strong>not an entry-level solution</strong>.</p>
 
       <figure class="my-12">
         <img src="/blog/vision-2030.png" alt="Saudi Vision 2030 - Investment and Business in Saudi Arabia" class="w-full rounded-xl shadow-lg" loading="lazy" />
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Saudi Vision 2030 – Investment opportunities in the Kingdom</figcaption>
       </figure>
 
-      <h2 id="company-formation" class="mt-12 mb-6">Starting a business – the most realistic path to Medina</h2>
+      <h2 id="company-formation" class="mt-12 mb-6">Company formation – the most realistic path to Medina</h2>
       
-      <p class="mb-6">For many entrepreneurs, <strong>company formation in Saudi Arabia</strong> is the most practical and long-term stable way to live in the country – especially in Medina.</p>
+      <p class="mb-6">For many entrepreneurs, <strong>setting up a company in Saudi Arabia</strong> is the most practical and sustainable route to long-term residency, particularly in Medina.</p>
       
-      <p class="mb-6">You establish your own company and <strong>employ yourself under your own licence</strong>. Your residence status is directly linked to your business, not to a third-party employer.</p>
+      <p class="mb-6">Under this model, you establish your own company and <strong>employ yourself under your own commercial licence</strong>. Your residency is therefore linked to your business, not to a third-party employer.</p>
       
-      <p class="mb-6">The costs for a legally compliant formation – depending on licence, structure, and activity – are <strong>approximately €15,000</strong>. However, it is not just the amount that matters, but the preparation. Saudi Arabia is not a place for experiments. Without a clear business model, market understanding, and financial reserves, a formation quickly becomes expensive.</p>
+      <p class="mb-6">The cost for a legally compliant company setup is typically <strong>around €15,000</strong>, depending on the licence and structure. The cost itself is not the main challenge – preparation is. Saudi Arabia is not a place for trial and error. Without a clear business model, market understanding, and sufficient financial reserves, company formation can become expensive very quickly.</p>
       
-      <p class="mb-8">However, those who proceed in a structured manner can <strong>establish themselves in Medina long-term</strong>, independently and with perspective.</p>
+      <p class="mb-8">For those who approach it professionally, however, this route offers <strong>long-term stability and independence</strong> in Medina.</p>
 
       <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-slate-900 mb-4">I WANT TO LIVE IN MEDINA!</h3>
-        <p class="mb-4 text-slate-700">If you are seriously considering starting a business in Saudi Arabia and want to know whether your business model is <strong>realistic</strong>, <strong>approvable</strong>, and <strong>economically viable</strong>, then a consultation is the right next step.</p>
-        <p class="text-slate-600">No theory. No YouTube models.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">CONSULTATION CALL – "I WANT TO LIVE IN MEDINA"</h3>
+        <p class="mb-4 text-slate-700">If you are seriously considering company formation in Saudi Arabia and want to know whether your business idea is <strong>realistic</strong>, <strong>licensable</strong>, and <strong>financially viable</strong>, a consultation is the right next step.</p>
+        <p class="text-slate-600">No theory. No online business myths.<br>Just a clear assessment based on real experience in Saudi Arabia.</p>
       </div>
 
-      <h2 id="employment" class="mt-12 mb-6">Working in Saudi Arabia – a realistic view</h2>
+      <h2 id="employment" class="mt-12 mb-6">Employment in Saudi Arabia – a realistic assessment</h2>
       
-      <p class="mb-6">Employment with a Saudi Arabian company can also provide legal residence. Jobs are often found through platforms like Indeed, Bayt, GulfTalent, or LinkedIn.</p>
+      <p class="mb-6">Employment with a Saudi company is another legal route to residency. Vacancies are commonly found through platforms such as Indeed, Bayt, GulfTalent, and LinkedIn.</p>
       
-      <p class="mb-6">There is an important requirement that many underestimate:</p>
+      <p class="mb-6">There is, however, a critical requirement many overlook:</p>
       
-      <p class="mb-6 pl-4 border-l-4 border-emerald-500 bg-slate-50 p-4"><strong>👉 If you want to bring your family to Saudi Arabia, you typically need at least a bachelor's degree.</strong> Without a bachelor's degree, family reunification is usually not possible, even if you have an employment contract.</p>
+      <p class="mb-6 pl-4 border-l-4 border-emerald-500 bg-slate-50 p-4">To bring your <strong>family</strong> to Saudi Arabia, you generally must hold <strong>at least a Bachelor's degree</strong>. Without a Bachelor's qualification, family sponsorship is usually not possible, even with a valid employment contract.</p>
       
-      <p class="mb-6">Additionally, one point is particularly important if your goal is <strong>Medina</strong>:</p>
+      <p class="mb-6">It is also essential to understand the reality of <strong>Medina specifically</strong>. Salaries in Medina are <strong>significantly lower</strong> than in major commercial hubs such as Riyadh or Jeddah. Medina is not a corporate or industrial centre; many people move there for religious reasons, and this is reflected in salary levels.</p>
       
-      <p class="mb-6"><strong>Salaries in Medina are significantly lower compared to cities like Riyadh or Jeddah.</strong> Medina is not a typical business or corporate hub. Many come for religious reasons – and this is reflected in the salary levels.</p>
-      
-      <p class="mb-8">Anyone wanting to come to Medina as an employee should <strong>calculate very realistically</strong>. For families, this path is often financially challenging.</p>
+      <p class="mb-8">For employees with families, this makes Medina financially challenging unless expectations are managed very carefully.</p>
 
       <figure class="my-12">
         <img src="/blog/business-meeting.png" alt="Working in Saudi Arabia - Office life" class="w-full rounded-xl shadow-lg" loading="lazy" />
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Professional working life in Saudi Arabia</figcaption>
       </figure>
 
-      <h2 id="student" class="mt-12 mb-6">Student in Saudi Arabia – not a permanent solution</h2>
+      <h2 id="student" class="mt-12 mb-6">Studying in Saudi Arabia – temporary, not permanent</h2>
       
-      <p class="mb-8">Studying can also enable residence, but it is primarily suitable as a <strong>temporary solution</strong>. For families, entrepreneurs, or long-term planning, this path is not designed.</p>
+      <p class="mb-6">Studying in Saudi Arabia can provide residency for a limited period. This option is mainly suitable for younger individuals or as a transitional solution.</p>
+      
+      <p class="mb-8">It is not designed for long-term settlement, family relocation, or business development.</p>
 
-      <h2 id="reality" class="mt-12 mb-6">The reality about Medina</h2>
+      <h2 id="reality" class="mt-12 mb-6">The reality of Medina</h2>
       
-      <p class="mb-6">Medina is not difficult.<br>Medina is consistent.</p>
+      <p class="mb-6">Medina is not difficult.<br>Medina is <strong>consistent</strong>.</p>
       
-      <p class="mb-8">Saudi Arabia rewards clarity, structure, and responsibility.<br>It punishes illusions, lack of preparation, and false expectations.</p>
+      <p class="mb-8">Saudi Arabia rewards clarity, structure, and responsibility. It penalises poor preparation, unrealistic expectations, and misinformation.</p>
 
       <div class="my-12 bg-slate-900 text-white rounded-2xl p-8">
-        <h3 class="text-2xl font-bold mb-4">I WANT TO LIVE IN MEDINA!</h3>
-        <p class="mb-4 text-slate-300">If after reading this article you say:<br><em>"I want to know <strong>which path is realistic for me</strong> and what it specifically costs"</em>,</p>
-        <p class="text-white font-semibold">then let's talk.</p>
+        <h3 class="text-2xl font-bold mb-4">FINAL CALL – "I WANT TO LIVE IN MEDINA"</h3>
+        <p class="mb-4 text-slate-300">If, after reading this, you are asking yourself:<br><em>"Which of these paths is realistic for me – and what does it truly involve?"</em></p>
+        <p class="mb-6 text-white">then a consultation is the correct next step.</p>
       </div>
+      
+      <p class="text-slate-600 italic border-t border-slate-200 pt-8 mt-8"><strong>Nearly a decade in Saudi Arabia.</strong><br><strong>More than two decades of entrepreneurship.</strong><br><strong>Medina is not a playground – follow real experience.</strong></p>
     `
   }
 ];
