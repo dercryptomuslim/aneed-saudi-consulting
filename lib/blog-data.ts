@@ -4,121 +4,158 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   readTime: string;
-  content: string; // Wir nutzen einfaches HTML/String für den Content
-  image?: string; // Optional image path
+  content: string;
+  image?: string;
 }
 
 export const blogPostsDe: BlogPost[] = [
   {
-    slug: "4-wege-nach-medina",
-    title: "In Saudi-Arabien leben – diese 4 Wege führen legal nach Medina",
-    date: "13.01.2026",
-    readTime: "5 Min.",
-    excerpt: "Viele Menschen sagen: „Ich will in Medina leben.“ Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
+    slug: "so-startest-du-ein-business-in-saudi-arabien",
+    title: "So startest du ein Business in Saudi-Arabien",
+    date: "14.01.2026",
+    readTime: "7 Min.",
+    excerpt: "Viele sprechen über Business in Saudi-Arabien. Wenige erklären dir, wie es wirklich funktioniert. Hier ist die Praxis.",
     content: `
-      <p class="lead">Viele Menschen sagen: „Ich will in Medina leben.“<br>Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.</p>
+      <p class="lead">Viele sprechen über Business in Saudi-Arabien.<br>Wenige erklären dir, wie es wirklich funktioniert.</p>
       
-      <p>Nach fast einem Jahrzehnt Leben und Arbeiten in Saudi-Arabien – davon über acht Jahre in Medina – und über zwei Jahrzehnten Unternehmertum kann ich eines klar sagen:<br>
-      Es gibt nur vier reale Wege, um einen Aufenthalt in Saudi-Arabien zu bekommen. Alles andere sind Gerüchte, Halbwissen oder Social-Media-Mythen. (STAND Januar 2026)</p>
+      <p>Ich lebe und arbeite seit fast einem Jahrzehnt in Saudi-Arabien und begleite Unternehmer aus Europa, England und den USA real durch den Gründungsprozess. Keine Theorie, keine Modelle aus Büchern – sondern gelebte Praxis.</p>
       
-      <p>In diesem Beitrag erfährst du konkret, wie du nach Saudi-Arabien kommen kannst, was es kostet und welcher Weg für wen realistisch ist.</p>
+      <p>Wenn du in Saudi-Arabien ein Unternehmen gründen willst, musst du eine zentrale Wahrheit verstehen: <strong>Saudi-Arabien baut nicht mit Anfängern, sondern mit nachweislich aktiven Unternehmern.</strong></p>
 
       <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD EINFÜGEN – Medina / Masjid an-Nabawi</span>
+        <span class="font-medium">BILD EINFÜGEN – Business / Beratung</span>
       </div>
 
-      <h2>Die Saudi Premium Residency – dauerhaft in Saudi-Arabien leben</h2>
-      <p>Die Saudi Premium Residency ist der stärkste, aber auch kapitalintensivste Weg. Sie erlaubt einen lebenslangen Aufenthalt in Saudi-Arabien – für dich, deine Ehepartnerin, deine Kinder und sogar deine Eltern. Du bist dabei unabhängig von Arbeitgebern, Sponsoren oder jährlichen Visaverlängerungen.</p>
-      
-      <p>Diese Option richtet sich jedoch nicht an die breite Masse. Je nach Modell ist entweder eine Einmalzahlung von rund 200.000 Euro erforderlich oder eine jährliche Zahlung von etwa 25.000 Euro, begrenzt auf maximal fünf Jahre. Alternativ kommen Investitionsmodelle infrage, etwa der Kauf einer Immobilie im Wert von rund 1 Million Euro oder eine Investition von circa 1,75 Millionen Euro in Saudi-Arabien.</p>
-      
-      <p>Auch Unternehmer können qualifizieren, etwa mit einem Startup, das bereits rund 3,5 Millionen Euro Funding eingesammelt hat. In seltenen Fällen sind auch Personen mit einer besonderen Begabung oder mit einer sehr spezifischen Position in einem White-Label-Unternehmen zugelassen. Diese Fälle sind jedoch streng reguliert und keineswegs die Regel.</p>
-      
-      <p class="font-medium text-emerald-800">Die Saudi Premium Residency ist real – aber sie ist kein Einsteigerweg.</p>
+      <h2>Ohne bestehende Firma außerhalb von Saudi-Arabien funktioniert es nicht</h2>
+      <p>Um in Saudi-Arabien ein Unternehmen zu gründen, brauchst du zwingend eine bestehende Firma außerhalb des Landes. Diese Firma ist die Grundlage deines Antrags und kein formaler Nebenschauplatz.</p>
+      <p>Dein Unternehmen muss mindestens ein Jahr bestehen und es muss sich um eine juristische Person handeln. Saudi-Arabien möchte sehen, dass du bereits unternehmerische Verantwortung getragen hast – mit Struktur, Buchhaltung und rechtlicher Substanz.</p>
+
+      <h2>Die Firma muss offiziell registriert sein</h2>
+      <p>Dein Unternehmen muss in einem staatlich anerkannten Unternehmensregister eingetragen sein. Je nach Land unterscheidet sich der Name des Registers, die Funktion ist jedoch identisch: der rechtliche Nachweis der Existenz deines Unternehmens.</p>
+      <ul>
+        <li>In <strong>Deutschland</strong> erfolgt dieser Nachweis über das Handelsregister, etwa bei einer GmbH, UG (haftungsbeschränkt) oder AG.</li>
+        <li>In <strong>Österreich</strong> über das Firmenbuch, insbesondere bei einer GmbH oder AG.</li>
+        <li>In der <strong>Schweiz</strong> über das kantonale Handelsregisteramt, ebenfalls vor allem bei GmbH und AG.</li>
+        <li>In <strong>England</strong> über Companies House, zum Beispiel bei einer Limited (Ltd).</li>
+        <li>In den <strong>USA</strong> über die jeweilige staatliche Registrierung, etwa bei einer LLC oder Corporation (Inc.).</li>
+      </ul>
+      <p>Entscheidend ist nicht das Land, sondern dass es sich um eine juristische Person mit offiziellem Registereintrag handelt.</p>
 
       <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD EINFÜGEN – Investment / Business</span>
+        <span class="font-medium">BILD EINFÜGEN – Internationale Firmen / Dokumente</span>
       </div>
 
-      <h2>Ein Unternehmen gründen – der realistischste Weg nach Medina</h2>
-      <p>Für viele Unternehmer ist die Unternehmensgründung in Saudi-Arabien der praktikabelste und langfristig stabilste Weg, um im Land zu leben – insbesondere in Medina.</p>
-      
-      <p>Dabei gründest du ein eigenes Unternehmen und stellst dich selbst unter deiner eigenen Lizenz an. Dein Aufenthaltsstatus ist direkt mit deinem Business verknüpft, nicht mit einem fremden Arbeitgeber.</p>
-      
-      <p>Die Kosten für eine rechtssichere Gründung liegen – je nach Lizenz, Struktur und Tätigkeit – bei etwa 15.000 Euro. Entscheidend ist jedoch nicht nur der Betrag, sondern die Vorbereitung. Saudi-Arabien ist kein Ort für Experimente. Ohne klares Geschäftsmodell, Marktverständnis und finanzielle Reserve wird eine Gründung schnell teuer.</p>
-      
-      <p>Wer jedoch strukturiert vorgeht, kann sich über diesen Weg langfristig in Medina etablieren, unabhängig und mit Perspektive.</p>
-    `
-  },
-  {
-    slug: "investieren-in-saudi-arabien",
-    title: "Investieren in Saudi-Arabien: Chancen jenseits von Öl",
-    date: "10.01.2026",
-    readTime: "4 Min.",
-    excerpt: "Die Vision 2030 hat den Markt geöffnet. Welche Sektoren boomen wirklich und wo lohnt sich der Einstieg für ausländische Investoren?",
-    content: `
-      <p class="lead">Saudi-Arabien wandelt sich rasant. Weg vom Öl, hin zu einer diversifizierten Wirtschaft.</p>
-      <p>Für Investoren bieten sich Chancen im Tourismus, in der Unterhaltung und vor allem im Dienstleistungssektor. Doch Vorsicht: Nicht alles was glänzt, ist Gold.</p>
+      <h2>Apostille oder Legalisierung – ein entscheidender Unterschied</h2>
+      <p>Ein Punkt, der in der Praxis häufig zu Verzögerungen führt, ist die Frage der Apostille.</p>
+      <p>Deutschland, Österreich, die Schweiz und England sind Mitglieder des Haager Apostille-Übereinkommens. Das bedeutet: In diesen Ländern können Jahresabschlüsse und Unternehmensunterlagen apostilliert werden. Mit Apostille ist keine weitere Beglaubigung durch saudische Behörden erforderlich.</p>
+      <p>Die USA sind ein Sonderfall. Zwar sind auch die USA Teil des Apostille-Übereinkommens, jedoch sind je nach Bundesstaat, Dokumentenart und Ausstellungsbehörde nicht immer alle Unterlagen apostillierbar oder werden in der Praxis reibungslos akzeptiert.</p>
+      <p>Sollte in einem Land oder im konkreten Einzelfall keine Apostille möglich sein, müssen die Unterlagen zusätzlich über das saudische Außenministerium abgestempelt und legalisiert werden. Dieser Schritt entfällt vollständig, wenn eine gültige Apostille vorliegt.</p>
+      <p><strong>Dieser Unterschied ist entscheidend. Wer ihn nicht kennt, verliert Wochen – manchmal Monate.</strong></p>
+
+      <h2>Die Bilanzsumme – keine Vorschrift, aber klare Praxis</h2>
+      <p>Offiziell gibt es keine gesetzlich festgelegte Mindestbilanzsumme durch das saudi-arabische Ministerium. In der Praxis hat sich jedoch ein klarer Erfahrungswert etabliert.</p>
+      <p>Deine Firma sollte eine Bilanzsumme im Bereich von etwa 50.000 bis 100.000 Euro aufweisen. Das ist kein Gesetz, aber ein realistischer Maßstab, nach dem Anträge bewertet werden. Unternehmen, die deutlich darunter liegen, werden häufiger hinterfragt oder verzögert bearbeitet.</p>
+
+      <h2>Einreichung in Saudi-Arabien – dann beginnt das eigentliche Business</h2>
+      <p>Sobald alle Unterlagen vollständig, korrekt und entweder apostilliert oder ordnungsgemäß legalisiert sind, werden sie in Saudi-Arabien eingereicht. Ist alles sauber vorbereitet, kannst du anschließend offiziell mit deinem Unternehmen starten.</p>
+      <p>Hier zeigt sich sehr schnell, wer strukturiert arbeitet – und wer improvisiert.</p>
+
       <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD PLATZHALTER</span>
+        <span class="font-medium">BILD EINFÜGEN – Unternehmensgründung</span>
       </div>
-      <h2>Die Vision 2030</h2>
-      <p>Die treibende Kraft hinter allen Veränderungen. Wir analysieren, was das konkret für dein Kapital bedeutet...</p>
-      <p><em>(Weiterer Text folgt...)</em></p>
-    `
-  },
-  {
-    slug: "franchise-in-ksa",
-    title: "Franchise in KSA: Wie man deutsche Konzepte exportiert",
-    date: "05.01.2026",
-    readTime: "6 Min.",
-    excerpt: "„Made in Germany“ genießt hohes Ansehen. Wie du dein Franchise-System erfolgreich auf den saudischen Markt bringst.",
-    content: `
-      <p class="lead">Deutsche Markenqualität ist gefragt. Doch der saudische Markt tickt anders.</p>
-      <p>Vom Konsumverhalten bis zu den rechtlichen Rahmenbedingungen für Franchise-Geber – hier ist, was du wissen musst.</p>
-      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">BILD PLATZHALTER</span>
-      </div>
-      <h2>Anpassung ist der Schlüssel</h2>
-      <p>Ein 1:1 Export funktioniert selten. Wir zeigen Beispiele erfolgreicher Adaptionen...</p>
-      <p><em>(Weiterer Text folgt...)</em></p>
+
+      <h2>Lizenzgebühren – Stand Januar 2026</h2>
+      <p>Stand Januar 2026 sind die üblichen Lizenzgebühren von rund 3.000 Euro im ersten Jahr sowie die regulären Folgegebühren von etwa 15.000 Euro ab dem zweiten Jahr aktuell eingefroren. Der Grund ist eine umfassende Überarbeitung des Gebührensystems durch die saudi-arabische Regierung.</p>
+      <p>Diese Situation ist zeitlich begrenzt und kann sich jederzeit ändern.</p>
+
+      <h2>Ein strategischer Vorteil, den viele nicht nutzen</h2>
+      <p>Der Geschäftszweck deiner Firma außerhalb von Saudi-Arabien hat keinerlei Bindung an den Geschäftszweck in Saudi-Arabien. Du kannst in Europa, England oder den USA in einem Bereich tätig sein und in Saudi-Arabien ein völlig anderes Geschäftsmodell aufbauen.</p>
+      <p>Saudi-Arabien bewertet dein Vorhaben marktbezogen – nicht historisch.</p>
+
+      <h2>Die Realität aus Erfahrung</h2>
+      <p>Saudi-Arabien ist kein Spielplatz.<br>Aber es ist ein Markt mit echten Chancen.</p>
+      <p>Wer vorbereitet kommt, die Regeln versteht und sauber strukturiert arbeitet, hat heute bessere Möglichkeiten als je zuvor. Wer sich auf Halbwissen verlässt, zahlt Lehrgeld.</p>
     `
   }
 ];
 
 export const blogPostsEn: BlogPost[] = [
   {
-    slug: "4-ways-to-medina",
-    title: "Living in Saudi Arabia – 4 Legal Ways to Medina",
-    date: "Jan 13, 2026",
-    readTime: "5 min",
-    excerpt: "Many say: 'I want to live in Medina.' But few know how this is legally, financially, and practically possible.",
-    content: `
-      <p class="lead">Many people say: "I want to live in Medina."<br>But few know how this is legally, financially, and practically possible.</p>
-      <p>After nearly a decade of living and working in Saudi Arabia — over eight years of that in Medina — and over two decades of entrepreneurship, I can say one thing clearly:<br>
-      There are only four real ways to obtain residency in Saudi Arabia. Everything else is rumors, half-knowledge, or social media myths. (Status Jan 2026)</p>
+    slug: "how-to-start-a-business-in-saudi-arabia",
+    title: "How to start a business in Saudi Arabia",
+    date: "Jan 14, 2026",
+    readTime: "7 min",
+    excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
+    content: \`
+      <p class="lead">Many people talk about doing business in Saudi Arabia.<br>Very few explain how it actually works in practice.</p>
+      
+      <p>I have lived and worked in Saudi Arabia for almost a decade and advise entrepreneurs from Europe, the UK, and the United States through the real company formation process. This is not theory or textbook knowledge – it is practical, on-the-ground experience.</p>
+      
+      <p>If you want to start a business in Saudi Arabia, you must understand one fundamental reality: <strong>Saudi Arabia does not build with beginners. It builds with proven, active entrepreneurs.</strong></p>
+
       <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
-        <span class="font-medium">IMAGE PLACEHOLDER – Medina</span>
+        <span class="font-medium">IMAGE PLACEHOLDER – Business / Advisory</span>
       </div>
-      <h2>Saudi Premium Residency</h2>
-      <p>The strongest but most capital-intensive path...</p>
-      <p><em>(Full translation to follow...)</em></p>
-    `
-  },
-  {
-    slug: "investing-in-saudi-arabia",
-    title: "Investing in Saudi Arabia: Opportunities Beyond Oil",
-    date: "Jan 10, 2026",
-    readTime: "4 min",
-    excerpt: "Vision 2030 has opened the market. Which sectors are truly booming and where is entry worthwhile for foreign investors?",
-    content: "<p>Content regarding investment opportunities...</p>"
-  },
-  {
-    slug: "franchise-in-ksa",
-    title: "Franchise in KSA: Exporting German Concepts",
-    date: "Jan 05, 2026",
-    readTime: "6 min",
-    excerpt: "'Made in Germany' is highly regarded. How to successfully bring your franchise system to the Saudi market.",
-    content: "<p>Content regarding franchise systems...</p>"
+
+      <h2>A foreign company is mandatory</h2>
+      <p>To establish a business in Saudi Arabia, you must already own a company outside the Kingdom. This company is not a formality; it is the foundation of your application.</p>
+      <p>Your foreign company must have been active for at least one year and must be a legal entity. Private individuals or informal structures are not accepted. Saudi authorities expect to see a track record of responsibility, accounting, and corporate governance.</p>
+
+      <h2>Official registration is non-negotiable</h2>
+      <p>Your company must be registered in an officially recognised corporate register. The name of the register varies by country, but its function is the same: to confirm the legal existence of your company.</p>
+      <ul>
+        <li>In <strong>Germany</strong>, this is the Commercial Register (Handelsregister), typically for entities such as a GmbH, UG (limited liability), or AG.</li>
+        <li>In <strong>Austria</strong>, registration must be in the Firmenbuch, commonly for a GmbH or AG.</li>
+        <li>In <strong>Switzerland</strong>, registration is with the cantonal Commercial Register, most commonly for a GmbH or AG.</li>
+        <li>In the <strong>United Kingdom</strong>, the company must be registered with Companies House, usually as a Limited (Ltd).</li>
+        <li>In the <strong>United States</strong>, companies must be registered at state level, typically as an LLC or Corporation (Inc.).</li>
+      </ul>
+      <p>What matters is not the country, but that the business is a registered legal entity with verifiable records.</p>
+
+      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
+        <span class="font-medium">IMAGE PLACEHOLDER – International documents</span>
+      </div>
+
+      <h2>Apostille or legalisation – a critical distinction</h2>
+      <p>One of the most common causes of delay is misunderstanding document authentication requirements.</p>
+      <p>Germany, Austria, Switzerland, and the United Kingdom are all members of the Hague Apostille Convention. This means that company documents and annual financial statements from these countries can be apostilled. When an apostille is in place, no additional certification by Saudi authorities is required.</p>
+      <p>The United States also participates in the Hague Apostille Convention. However, in practice, not all documents or issuing authorities provide apostilles smoothly in every case. Depending on the state, document type, or issuing body, an apostille may not always be available or accepted without issue.</p>
+      <p>If an apostille cannot be obtained, the documents must instead undergo legalisation and stamping by the Saudi Ministry of Foreign Affairs. This additional step is not required when a valid apostille is provided.</p>
+      <p><strong>Understanding this distinction saves significant time and avoids unnecessary delays.</strong></p>
+
+      <h2>Balance sheet strength – not a law, but market reality</h2>
+      <p>There is no officially published minimum balance sheet requirement issued by Saudi authorities. However, practical experience shows a clear benchmark.</p>
+      <p>Your foreign company should typically demonstrate a balance sheet total of approximately €50,000 to €100,000. This is not a legal requirement, but it is a realistic threshold used during application reviews. Companies below this range often face additional scrutiny or delays.</p>
+
+      <h2>Submission in Saudi Arabia – when preparation pays off</h2>
+      <p>Once all documents are complete, correctly prepared, and either apostilled or properly legalised, they can be submitted in Saudi Arabia. When done correctly, this allows you to proceed with company formation and begin operations.</p>
+      <p>This is where preparation makes the difference between smooth progress and costly delays.</p>
+
+      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
+        <span class="font-medium">IMAGE PLACEHOLDER – Company formation</span>
+      </div>
+
+      <h2>Licence fees – status as of January 2026</h2>
+      <p>As of January 2026, standard licence fees of approximately €3,000 in the first year and around €15,000 from the second year onwards are currently frozen.</p>
+      <p>This is due to a comprehensive review of the licensing fee structure by the Saudi government. This situation is temporary and subject to change at any time.</p>
+
+      <h2>A strategic advantage many overlook</h2>
+      <p>One significant advantage often misunderstood is that the business activity of your foreign company does not need to match the business activity in Saudi Arabia.</p>
+      <p>You may operate one type of business in Europe, the UK, or the US and establish an entirely different commercial activity in Saudi Arabia. Saudi authorities assess your proposal based on market viability, not historical activity.</p>
+
+      <h2>The reality from experience</h2>
+      <p>Saudi Arabia is not a playground.<br>But it is a serious market with real opportunity.</p>
+      <p>Those who arrive prepared, informed, and structured have strong prospects. Those who rely on assumptions or incomplete information often pay a high price.</p>
+
+      <div class="my-8 bg-slate-100 rounded-xl h-64 flex items-center justify-center text-slate-400 border border-slate-200">
+        <span class="font-medium">IMAGE PLACEHOLDER – Consultation</span>
+      </div>
+
+      <h3>I WANT TO START A BUSINESS IN SAUDI ARABIA</h3>
+      <p>If you want to know whether your existing company qualifies, whether your documents are correctly prepared, and which approach is realistic for your situation, a consultation is the appropriate next step.</p>
+      <p>No theory.<br>No promises.<br>Just clarity based on real experience.</p>
+      
+      <p><em>Nearly a decade in Saudi Arabia.<br>More than two decades of entrepreneurship.<br>Saudi Arabia is not a playground – follow real experience.</em></p>
+    \`
   }
 ];
