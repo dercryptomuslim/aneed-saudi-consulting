@@ -108,8 +108,8 @@ export const blogPostsDe: BlogPost[] = [
     readTime: "9 Min.",
     excerpt: "Viele Menschen sagen: 'Ich will in Medina leben.' Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
     image: "/blog/masjid-nabawi.png",
-    content: \`
-      <p class="lead text-xl text-slate-700 mb-6">Viele Menschen sagen: <em>„Ich will in Medina leben."</em><br>Doch nur wenige wissen, wie das <strong>rechtlich, finanziell und praktisch</strong> überhaupt möglich ist.</p>
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">Viele Menschen sagen: <em>"Ich will in Medina leben."</em><br>Doch nur wenige wissen, wie das <strong>rechtlich, finanziell und praktisch</strong> überhaupt möglich ist.</p>
       
       <p class="mb-6">Nach fast einem Jahrzehnt Leben und Arbeiten in Saudi-Arabien – davon über acht Jahre in Medina – und über zwei Jahrzehnten Unternehmertum kann ich eines klar sagen: Es gibt <strong>nur vier reale Wege</strong>, um einen Aufenthalt in Saudi-Arabien zu bekommen. Alles andere sind Gerüchte, Halbwissen oder Social-Media-Mythen. (STAND Januar 2026)</p>
       
@@ -182,10 +182,10 @@ export const blogPostsDe: BlogPost[] = [
 
       <div class="my-12 bg-slate-900 text-white rounded-2xl p-8">
         <h3 class="text-2xl font-bold mb-4">ICH WILL IN MEDINA LEBEN!</h3>
-        <p class="mb-4 text-slate-300">Wenn du nach diesem Beitrag sagst:<br><em>„Ich will wissen, <strong>welcher Weg für mich realistisch ist</strong> und was er konkret kostet"</em>,</p>
+        <p class="mb-4 text-slate-300">Wenn du nach diesem Beitrag sagst:<br><em>"Ich will wissen, <strong>welcher Weg für mich realistisch ist</strong> und was er konkret kostet"</em>,</p>
         <p class="text-white font-semibold">dann lass uns sprechen.</p>
       </div>
-    \`
+    `
   }
 ];
 
