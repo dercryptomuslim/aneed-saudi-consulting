@@ -112,11 +112,11 @@ export const blogPostsEn: BlogPost[] = [
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
     image: "/blog/saudi-documents.png",
     content: `
-      <p class="lead text-xl text-slate-700 mb-6">Many people talk about doing business in Saudi Arabia.<br>Very few explain how it actually works in practice.</p>
+      <p class="lead text-xl text-slate-700 mb-6">Many people talk about doing business in Saudi Arabia.<br>Very few explain <strong>how it actually works in practice</strong>.</p>
       
       <p class="mb-6">I have lived and worked in Saudi Arabia for almost a decade and advise entrepreneurs from Europe, the UK, and the United States through the real company formation process. This is not theory or textbook knowledge – it is practical, on-the-ground experience.</p>
       
-      <p class="mb-8">If you want to start a business in Saudi Arabia, you must understand one fundamental reality: <strong>Saudi Arabia does not build with beginners. It builds with proven, active entrepreneurs.</strong></p>
+      <p class="mb-8">If you want to start a business in Saudi Arabia, you must understand one fundamental reality: Saudi Arabia does not build with beginners. It builds with <strong>proven, active entrepreneurs</strong>.</p>
 
       <figure class="my-12">
         <img src="/blog/saudi-documents.png" alt="Saudi Ministry of Commerce documents and stamp for company formation" class="w-full rounded-xl shadow-lg" loading="lazy" />
@@ -125,7 +125,7 @@ export const blogPostsEn: BlogPost[] = [
 
       <h2 id="foreign-company" class="mt-12 mb-6">A foreign company is mandatory</h2>
       
-      <p class="mb-6">To establish a business in Saudi Arabia, you must already own <strong>a company outside the Kingdom</strong>. This company is not a formality; it is the foundation of your application.</p>
+      <p class="mb-6">To establish a business in Saudi Arabia, you must already own a company outside the Kingdom. This company is not a formality; it is the foundation of your application.</p>
       
       <p class="mb-8">Your foreign company must have been <strong>active for at least one year</strong> and must be a <strong>legal entity</strong>. Private individuals or informal structures are not accepted. Saudi authorities expect to see a track record of responsibility, accounting, and corporate governance.</p>
 
@@ -133,15 +133,13 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">Your company must be registered in an officially recognised corporate register. The name of the register varies by country, but its function is the same: to confirm the legal existence of your company.</p>
       
-      <ul class="mb-6 space-y-3">
-        <li>In <strong>Germany</strong>, this is the Commercial Register (Handelsregister), typically for entities such as a GmbH, UG (limited liability), or AG.</li>
-        <li>In <strong>Austria</strong>, registration must be in the Firmenbuch, commonly for a GmbH or AG.</li>
-        <li>In <strong>Switzerland</strong>, registration is with the cantonal Commercial Register, most commonly for a GmbH or AG.</li>
-        <li>In the <strong>United Kingdom</strong>, the company must be registered with Companies House, usually as a Limited (Ltd).</li>
-        <li>In the <strong>United States</strong>, companies must be registered at state level, typically as an LLC or Corporation (Inc.).</li>
-      </ul>
+      <p class="mb-4">In <strong>Germany</strong>, this is the Commercial Register (Handelsregister), typically for entities such as a GmbH, UG (limited liability), or AG.</p>
+      <p class="mb-4">In <strong>Austria</strong>, registration must be in the Firmenbuch, commonly for a GmbH or AG.</p>
+      <p class="mb-4">In <strong>Switzerland</strong>, registration is with the cantonal Commercial Register, most commonly for a GmbH or AG.</p>
+      <p class="mb-4">In the <strong>United Kingdom</strong>, the company must be registered with Companies House, usually as a Limited (Ltd).</p>
+      <p class="mb-6">In the <strong>United States</strong>, companies must be registered at state level, typically as an LLC or Corporation (Inc.).</p>
       
-      <p class="mb-8">What matters is not the country, but that the business is a <strong>registered legal entity with verifiable records</strong>.</p>
+      <p class="mb-8">What matters is not the country, but that the business is a <strong>registered legal entity</strong> with verifiable records.</p>
 
       <figure class="my-12">
         <img src="/blog/international-documents.png" alt="International company documents from Germany, UK, USA, Switzerland, and Austria" class="w-full rounded-xl shadow-lg" loading="lazy" />
@@ -152,19 +150,19 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">One of the most common causes of delay is misunderstanding document authentication requirements.</p>
       
-      <p class="mb-6">Germany, Austria, Switzerland, and the United Kingdom are all members of the Hague Apostille Convention. This means that company documents and annual financial statements from these countries can be apostilled. <strong>When an apostille is in place, no additional certification by Saudi authorities is required.</strong></p>
+      <p class="mb-6">Germany, Austria, Switzerland, and the United Kingdom are all members of the Hague Apostille Convention. This means that company documents and annual financial statements from these countries can be apostilled. When an apostille is in place, <strong>no additional certification by Saudi authorities is required</strong>.</p>
       
-      <p class="mb-6"><strong>The United States is a special case.</strong> While the USA is also part of the Apostille Convention, depending on the state, document type, or issuing body, an apostille may not always be available or accepted without issue.</p>
+      <p class="mb-6">The United States also participates in the Hague Apostille Convention. However, in practice, not all documents or issuing authorities provide apostilles smoothly in every case. Depending on the state, document type, or issuing body, an apostille may not always be available or accepted without issue.</p>
       
-      <p class="mb-6">If <strong>an apostille cannot be obtained</strong>, the documents must instead undergo <strong>legalisation and stamping by the Saudi Ministry of Foreign Affairs</strong>. This additional step is not required <strong>when a valid apostille is provided</strong>.</p>
+      <p class="mb-6">If an apostille <strong>cannot be obtained</strong>, the documents must instead undergo <strong>legalisation and stamping by the Saudi Ministry of Foreign Affairs</strong>. This additional step is <strong>not required when a valid apostille is provided</strong>.</p>
       
-      <p class="mb-8"><strong>Understanding this distinction saves significant time and avoids unnecessary delays.</strong></p>
+      <p class="mb-8">Understanding this distinction saves significant time and avoids unnecessary delays.</p>
 
       <h2 id="balance-sheet" class="mt-12 mb-6">Balance sheet strength – not a law, but market reality</h2>
       
       <p class="mb-6">There is no officially published minimum balance sheet requirement issued by Saudi authorities. However, practical experience shows a clear benchmark.</p>
       
-      <p class="mb-8">Your foreign company should typically demonstrate a balance sheet total of approximately <strong>€50,000 to €100,000</strong>. This is not a legal requirement, but it is a realistic threshold used during application reviews. Companies below this range often face additional scrutiny or delays.</p>
+      <p class="mb-8">Your foreign company should typically demonstrate a balance sheet total of <strong>approximately €50,000 to €100,000</strong>. This is not a legal requirement, but it is a realistic threshold used during application reviews. Companies below this range often face additional scrutiny or delays.</p>
 
       <h2 id="submission" class="mt-12 mb-6">Submission in Saudi Arabia – when preparation pays off</h2>
       
@@ -179,27 +177,29 @@ export const blogPostsEn: BlogPost[] = [
 
       <h2 id="licence-fees" class="mt-12 mb-6">Licence fees – status as of January 2026</h2>
       
-      <p class="mb-6">As of January 2026, standard licence fees of approximately <strong>€3,000 in the first year</strong> and around <strong>€15,000 from the second year onwards</strong> are currently frozen. This is due to a comprehensive review of the licensing fee structure by the Saudi government.</p>
+      <p class="mb-6">As of <strong>January 2026</strong>, standard licence fees of approximately <strong>€3,000 in the first year</strong> and around <strong>€15,000 from the second year onwards</strong> are currently <strong>frozen</strong>.</p>
       
-      <p class="mb-8"><em>This situation is temporary and subject to change at any time.</em></p>
+      <p class="mb-8">This is due to a comprehensive review of the licensing fee structure by the Saudi government. This situation is temporary and subject to change at any time.</p>
 
       <h2 id="strategic-advantage" class="mt-12 mb-6">A strategic advantage many overlook</h2>
       
-      <p class="mb-6">The business activity of your foreign company has <strong>no connection whatsoever</strong> to the business activity in Saudi Arabia. You may operate one type of business in Europe, the UK, or the US and establish an entirely different commercial activity in Saudi Arabia.</p>
+      <p class="mb-6">One significant advantage often misunderstood is that the business activity of your foreign company <strong>does not need to match</strong> the business activity in Saudi Arabia.</p>
       
-      <p class="mb-8"><strong>Saudi authorities assess your proposal based on market viability, not historical activity.</strong></p>
+      <p class="mb-8">You may operate one type of business in Europe, the UK, or the US and establish an entirely different commercial activity in Saudi Arabia. Saudi authorities assess your proposal based on market viability, not historical activity.</p>
 
       <h2 id="reality" class="mt-12 mb-6">The reality from experience</h2>
       
-      <p class="mb-6"><strong>Saudi Arabia is not a playground.</strong><br>But it is a serious market with real opportunity.</p>
+      <p class="mb-6">Saudi Arabia is not a playground.<br>But it is a serious market with real opportunity.</p>
       
-      <p class="mb-6">Those who arrive prepared, informed, and structured have strong prospects. <strong>Those who rely on assumptions or incomplete information often pay a high price.</strong></p>
+      <p class="mb-8">Those who arrive prepared, informed, and structured have strong prospects. Those who rely on assumptions or incomplete information often pay a high price.</p>
 
-      <h3 class="mt-10 mb-4">Ready to start your business in Saudi Arabia?</h3>
+      <h3 class="mt-12 mb-6 text-2xl font-bold">I WANT TO START A BUSINESS IN SAUDI ARABIA</h3>
       
-      <p class="mb-4">If you want to know whether your existing company qualifies, whether your documents are correctly prepared, and which approach is realistic for your situation, a consultation is the appropriate next step.</p>
+      <p class="mb-6">If you want to know whether your existing company qualifies, whether your documents are correctly prepared, and which approach is realistic for your situation, a consultation is the appropriate next step.</p>
       
-      <p>No theory.<br>No promises.<br><strong>Just clarity based on real experience.</strong></p>
+      <p class="mb-8">No theory.<br>No promises.<br>Just clarity based on real experience.</p>
+      
+      <p class="text-slate-600 italic border-t border-slate-200 pt-8 mt-8"><strong>Nearly a decade in Saudi Arabia.</strong><br><strong>More than two decades of entrepreneurship.</strong><br><strong>Saudi Arabia is not a playground – follow real experience.</strong></p>
     `
   }
 ];
