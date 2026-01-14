@@ -68,11 +68,6 @@ export default async function BlogPostEnPage({ params }: Props) {
             </div>
           </header>
 
-          {/* Placeholder for Main Image */}
-          <div className="w-full h-64 md:h-96 bg-slate-100 rounded-2xl mb-12 flex items-center justify-center text-slate-400 border border-slate-200">
-            <span className="font-medium">INSERT MAIN IMAGE</span>
-          </div>
-
           <div 
             className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-slate-900 prose-a:text-emerald-700 hover:prose-a:text-emerald-800 prose-strong:text-slate-900"
             dangerouslySetInnerHTML={{ __html: post.content }}
