@@ -106,7 +106,7 @@ export const blogPostsDe: BlogPost[] = [
     title: "In Saudi-Arabien leben – diese 4 Wege führen legal nach Medina",
     date: "15.01.2026",
     readTime: "9 Min.",
-    excerpt: "Viele Menschen sagen: „Ich will in Medina leben." Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
+    excerpt: "Viele Menschen sagen: 'Ich will in Medina leben.' Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
     image: "/blog/masjid-nabawi.png",
     content: \`
       <p class="lead text-xl text-slate-700 mb-6">Viele Menschen sagen: <em>„Ich will in Medina leben."</em><br>Doch nur wenige wissen, wie das <strong>rechtlich, finanziell und praktisch</strong> überhaupt möglich ist.</p>
