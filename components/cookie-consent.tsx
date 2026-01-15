@@ -7,12 +7,23 @@ import Link from "next/link";
 const CONSENT_KEY = "cookie-consent";
 
 type ConsentStatus = "pending" | "accepted" | "declined";
+type Locale = "de" | "en";
 
 export function CookieConsent() {
   const [consentStatus, setConsentStatus] = useState<ConsentStatus>("pending");
   const [isVisible, setIsVisible] = useState(false);
+  const [locale, setLocale] = useState<Locale>("de");
+
+  // Translation helper
+  const t = (de: string, en: string) => (locale === "en" ? en : de);
 
   useEffect(() => {
+    // Detect locale from URL path
+    if (typeof window !== "undefined") {
+      const isEnglish = window.location.pathname.startsWith("/en");
+      setLocale(isEnglish ? "en" : "de");
+    }
+
     // Check if user has already made a choice
     const savedConsent = localStorage.getItem(CONSENT_KEY);
     if (savedConsent === "accepted" || savedConsent === "declined") {
@@ -73,17 +84,23 @@ export function CookieConsent() {
     return null;
   }
 
+  const privacyLink = locale === "en" ? "/en/privacy" : "/datenschutz";
+
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-white border-t border-slate-200 shadow-2xl animate-in slide-in-from-bottom duration-500">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
           <div className="flex-1">
-            <h3 className="font-semibold text-slate-900 mb-1">🍪 Cookie-Einstellungen</h3>
+            <h3 className="font-semibold text-slate-900 mb-1">
+              {t("🍪 Cookie-Einstellungen", "🍪 Cookie Settings")}
+            </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Wir verwenden Cookies und Google Analytics, um unsere Website zu verbessern und die Nutzung zu analysieren. 
-              Mit „Akzeptieren" stimmst du der Verwendung zu. Mehr Infos in unserer{" "}
-              <Link href="/datenschutz" className="text-emerald-700 hover:text-emerald-800 underline">
-                Datenschutzerklärung
+              {t(
+                "Wir verwenden Cookies und Google Analytics, um unsere Website zu verbessern und die Nutzung zu analysieren. Mit „Akzeptieren" stimmst du der Verwendung zu. Mehr Infos in unserer ",
+                "We use cookies and Google Analytics to improve our website and analyze usage. By clicking \"Accept\" you agree to their use. More info in our "
+              )}
+              <Link href={privacyLink} className="text-emerald-700 hover:text-emerald-800 underline">
+                {t("Datenschutzerklärung", "Privacy Policy")}
               </Link>.
             </p>
           </div>
@@ -93,13 +110,13 @@ export function CookieConsent() {
               onClick={handleDecline}
               className="flex-1 md:flex-none border-slate-300 text-slate-700 hover:bg-slate-50"
             >
-              Ablehnen
+              {t("Ablehnen", "Decline")}
             </Button>
             <Button
               onClick={handleAccept}
               className="flex-1 md:flex-none bg-slate-900 hover:bg-slate-800 text-white"
             >
-              Akzeptieren
+              {t("Akzeptieren", "Accept")}
             </Button>
           </div>
         </div>
