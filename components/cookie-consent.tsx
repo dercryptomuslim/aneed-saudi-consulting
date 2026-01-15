@@ -65,7 +65,7 @@ export function CookieConsent() {
     // Optionally: disable any existing tracking
     if (typeof window !== "undefined") {
       // Set GA opt-out
-      (window as Record<string, unknown>)[`ga-disable-G-5H0KZ4V7QH`] = true;
+      (window as unknown as Record<string, unknown>)[`ga-disable-G-5H0KZ4V7QH`] = true;
     }
   };
 
