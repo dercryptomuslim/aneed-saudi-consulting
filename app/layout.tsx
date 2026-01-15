@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description:
     "Unternehmensgründung in Saudi-Arabien (MISA) aus Medina: Setup, Franchise & Auswanderung. Operative Erfahrung vor Ort. Expertengespräch anfragen.",
   metadataBase: new URL("https://www.aneedashraf.de"),
+  verification: {
+    google: "Iq7y4tcgaH7MsFl6W9zfli0otwHUNrjTDsCqUVBhuH0",
+  },
   alternates: {
     canonical: "/",
   },
