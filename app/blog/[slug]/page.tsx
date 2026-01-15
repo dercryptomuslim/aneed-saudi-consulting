@@ -67,14 +67,19 @@ export default async function BlogPostPage({ params }: Props) {
           </header>
 
           <div 
-            className="prose prose-lg prose-slate max-w-none 
-              prose-headings:font-serif prose-headings:text-slate-900 
-              prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-bold prose-h2:leading-tight
-              prose-h3:text-xl prose-h3:font-bold
-              prose-p:text-slate-700 prose-p:leading-relaxed
-              prose-a:text-emerald-700 hover:prose-a:text-emerald-800 
-              prose-strong:text-slate-900 prose-strong:font-semibold
-              prose-ul:text-slate-700 prose-li:text-slate-700"
+            className="max-w-none font-serif text-slate-900
+              [&_h2]:text-[30px] [&_h2]:leading-[1.15] [&_h2]:font-extrabold [&_h2]:mt-[38px] [&_h2]:mb-[14px] [&_h2]:tracking-[-0.2px]
+              [&_h3]:text-[32px] [&_h3]:leading-[1.15] [&_h3]:font-extrabold [&_h3]:mt-[18px] [&_h3]:mb-[10px] [&_h3]:tracking-[-0.2px]
+              [&_p]:text-[18px] [&_p]:leading-[1.45] [&_p]:mb-[14px]
+              [&_ul]:my-[10px] [&_ul]:ml-[44px] [&_ul]:text-[18px] [&_ul]:leading-[1.45]
+              [&_li]:my-[6px]
+              [&_strong]:font-extrabold
+              [&_em]:italic
+              [&_a]:text-emerald-700 [&_a:hover]:text-emerald-800 [&_a]:underline
+              [&_figure]:my-12
+              [&_figcaption]:text-sm [&_figcaption]:text-slate-500 [&_figcaption]:mt-3 [&_figcaption]:text-center
+              [&_img]:w-full [&_img]:rounded-xl [&_img]:shadow-lg
+              [&_.lead]:text-xl [&_.lead]:text-slate-700 [&_.lead]:mb-6"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
