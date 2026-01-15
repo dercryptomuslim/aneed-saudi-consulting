@@ -12,6 +12,7 @@ import { AlertCircle, ArrowLeft, Building2, Globe, ShieldCheck, CheckCircle2 } f
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
+import { trackFunnelComplete, trackBookingClick, trackFormSubmit } from "@/lib/analytics";
 import {
   Dialog,
   DialogContent,
@@ -141,6 +142,16 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
       });
 
       if (response.ok) {
+        // Track funnel form submission
+        trackFormSubmit({
+          formName: "funnel_validation_form",
+          topic: formData.entityType || "new_company",
+        });
+        trackFunnelComplete({
+          outcome: funnelAnswers.outcome,
+          stepPath: stepPath.join(" -> "),
+        });
+        
         // Erfolgreich gespeichert -> Weiter zum Buchen
         goTo("BOOKING_FORM");
       } else {
@@ -503,7 +514,11 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </p>
               </div>
                  
-              <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md">
+              <Button 
+                asChild 
+                className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto min-h-[56px] py-4 text-base md:text-lg font-semibold whitespace-normal leading-tight shadow-md"
+                onClick={() => trackBookingClick({ source: "funnel", bookingType: "consultation" })}
+              >
                 <a href={bookingUrl}>
                   {t("Jetzt Termin auswählen & bezahlen", "Select a time & pay")}
                 </a>

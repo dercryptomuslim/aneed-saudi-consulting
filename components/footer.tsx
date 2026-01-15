@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Instagram, Youtube, Linkedin } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
+import { trackEmailClick, trackExternalLinkClick } from "@/lib/analytics";
 
 function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -52,24 +55,53 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
                     <ul className="space-y-3 text-sm text-slate-400">
                       <li className="flex items-center gap-2">Medina, Saudi Arabia 🇸🇦</li>
                       <li className="hover:text-white transition-colors cursor-pointer">
-                        <a href="mailto:info@oasisgate.de">info@oasisgate.de</a>
+                        <a 
+                          href="mailto:info@oasisgate.de"
+                          onClick={() => trackEmailClick("info@oasisgate.de")}
+                        >
+                          info@oasisgate.de
+                        </a>
                       </li>
                     </ul>
                     
                     <div className="flex gap-4 mt-6">
-                      <a href="https://www.instagram.com/ashrafbusiness/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                      <a 
+                        href="https://www.instagram.com/ashrafbusiness/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        onClick={() => trackExternalLinkClick({ url: "https://www.instagram.com/ashrafbusiness/", linkText: "Instagram" })}
+                      >
                         <Instagram className="h-5 w-5" />
                         <span className="sr-only">Instagram</span>
                       </a>
-                      <a href="https://www.youtube.com/@aneedashraf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                      <a 
+                        href="https://www.youtube.com/@aneedashraf" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        onClick={() => trackExternalLinkClick({ url: "https://www.youtube.com/@aneedashraf", linkText: "YouTube" })}
+                      >
                         <Youtube className="h-5 w-5" />
                         <span className="sr-only">YouTube</span>
                       </a>
-                      <a href="https://tiktok.com/@aneedashraf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                      <a 
+                        href="https://tiktok.com/@aneedashraf" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        onClick={() => trackExternalLinkClick({ url: "https://tiktok.com/@aneedashraf", linkText: "TikTok" })}
+                      >
                         <TikTokIcon className="h-5 w-5" />
                         <span className="sr-only">TikTok</span>
                       </a>
-                      <a href="https://www.linkedin.com/in/aneed-ashraf/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                      <a 
+                        href="https://www.linkedin.com/in/aneed-ashraf/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        onClick={() => trackExternalLinkClick({ url: "https://www.linkedin.com/in/aneed-ashraf/", linkText: "LinkedIn" })}
+                      >
                         <Linkedin className="h-5 w-5" />
                         <span className="sr-only">LinkedIn</span>
                       </a>

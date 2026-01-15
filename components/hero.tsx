@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
+import { trackCtaClick } from "@/lib/analytics";
 
 export function Hero({ locale = "de" }: { locale?: Locale }) {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
@@ -65,13 +66,32 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button 
+              asChild 
+              size="lg" 
+              className="h-14 rounded-full bg-slate-900 px-8 text-lg font-medium text-white hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => trackCtaClick({ 
+                buttonText: t("Expertengespräch anfragen", "Request an expert call"), 
+                location: "hero", 
+                destination: "/anfrage" 
+              })}
+            >
               <Link href={href("/anfrage")}>
                 {t("Expertengespräch anfragen", "Request an expert call")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-14 rounded-full border-slate-200 bg-white px-8 text-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm">
+            <Button 
+              asChild 
+              variant="outline" 
+              size="lg" 
+              className="h-14 rounded-full border-slate-200 bg-white px-8 text-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm"
+              onClick={() => trackCtaClick({ 
+                buttonText: t("Unsere Leistungen", "Our services"), 
+                location: "hero", 
+                destination: "/services" 
+              })}
+            >
               <Link href={href("/services")}>
                 {t("Unsere Leistungen", "Our services")}
               </Link>

@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import type { Locale } from "@/lib/i18n";
+import { trackFormSubmit } from "@/lib/analytics";
 import {
   Dialog,
   DialogContent,
@@ -64,12 +65,18 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
       });
 
       if (response.ok) {
+        // Track successful form submission
+        trackFormSubmit({
+          formName: "contact_form",
+          topic: topic,
+        });
+        
         setPopupVariant("success");
         setPopupTitle(t("Gesendet!", "Sent!"));
         setPopupMessage(
           t(
             "Danke für deine Anfrage! Wir melden uns in Kürze.",
-            "Thanks for your request! We’ll get back to you shortly."
+            "Thanks for your request! We'll get back to you shortly."
           )
         );
         setPopupOpen(true);

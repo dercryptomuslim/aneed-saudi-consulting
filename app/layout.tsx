@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { AnalyticsProvider } from "@/components/analytics-provider";
 import "./globals.css";
 
 const inter = Inter({
@@ -77,7 +78,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white text-slate-900`}
       >
-        {children}
+        <AnalyticsProvider>{children}</AnalyticsProvider>
       </body>
     </html>
   );
