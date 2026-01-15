@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import Script from "next/script";
 import { AnalyticsProvider } from "@/components/analytics-provider";
+import { CookieConsent } from "@/components/cookie-consent";
 import "./globals.css";
 
 const inter = Inter({
@@ -64,24 +64,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="scroll-smooth">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-5H0KZ4V7QH"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5H0KZ4V7QH');
-          `}
-        </Script>
-      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white text-slate-900`}
       >
         <AnalyticsProvider>{children}</AnalyticsProvider>
+        <CookieConsent />
       </body>
     </html>
   );

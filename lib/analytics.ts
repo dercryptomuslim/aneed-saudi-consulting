@@ -7,9 +7,17 @@ declare global {
   }
 }
 
-// Helper to check if gtag is available
+const CONSENT_KEY = "cookie-consent";
+
+// Helper to check if gtag is available AND user has consented
 function isGtagAvailable(): boolean {
-  return typeof window !== "undefined" && typeof window.gtag === "function";
+  if (typeof window === "undefined") return false;
+  
+  // Check consent
+  const consent = localStorage.getItem(CONSENT_KEY);
+  if (consent !== "accepted") return false;
+  
+  return typeof window.gtag === "function";
 }
 
 // Generic event tracking function
