@@ -177,7 +177,7 @@ export default function AgbPage() {
             <h3>9. Schlussbestimmungen</h3>
             <ol>
               <li>
-                Es gilt das Recht der <strong>Bundesrepublik Deutschland</strong>, sofern keine zwingenden gesetzlichen
+                Es gilt das Recht des <strong>Königreichs Saudi-Arabien</strong>, sofern keine zwingenden gesetzlichen
                 Vorschriften entgegenstehen.
               </li>
               <li>

@@ -174,7 +174,7 @@ export default function TermsEnPage() {
             <h3>9. Final provisions</h3>
             <ol>
               <li>
-                The law of the <strong>Federal Republic of Germany</strong> shall apply, unless mandatory legal
+                The law of the <strong>Kingdom of Saudi Arabia</strong> shall apply, unless mandatory legal
                 provisions provide otherwise.
               </li>
               <li>
