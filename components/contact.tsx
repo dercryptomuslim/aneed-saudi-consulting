@@ -37,16 +37,12 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
             {
               gruendung: "Company formation",
               investment: "Investment",
-              auswanderung: "Relocation",
-              sonstiges: "Other",
             } as Record<string, string>
           )[topic] || topic
         : (
             {
               gruendung: "Firmengründung",
               investment: "Investment",
-              auswanderung: "Auswanderung",
-              sonstiges: "Sonstiges",
             } as Record<string, string>
           )[topic] || topic;
 
@@ -158,8 +154,6 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
                   <option value="">{t("Bitte wählen...", "Please select...")}</option>
                   <option value="gruendung">{t("Firmengründung", "Company formation")}</option>
                   <option value="investment">{t("Investment", "Investment")}</option>
-                  <option value="auswanderung">{t("Auswanderung", "Relocation")}</option>
-                  <option value="sonstiges">{t("Sonstiges", "Other")}</option>
                 </select>
               </div>
 
