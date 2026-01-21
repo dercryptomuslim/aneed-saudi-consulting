@@ -7,22 +7,27 @@ import Link from "next/link";
 const CONSENT_KEY = "cookie-consent";
 
 type ConsentStatus = "pending" | "accepted" | "declined";
-type Locale = "de" | "en";
+type Locale = "de" | "en" | null;
 
 export function CookieConsent() {
   const [consentStatus, setConsentStatus] = useState<ConsentStatus>("pending");
   const [isVisible, setIsVisible] = useState(false);
-  const [locale, setLocale] = useState<Locale>("de");
+  const [locale, setLocale] = useState<Locale | null>(null);
 
-  // Translation helper
+  // Translation helper - use detected locale or default to "de"
   const t = (de: string, en: string) => (locale === "en" ? en : de);
 
   useEffect(() => {
-    // Detect locale from URL path
+    // Detect locale from URL path first
     if (typeof window !== "undefined") {
       const isEnglish = window.location.pathname.startsWith("/en");
       setLocale(isEnglish ? "en" : "de");
     }
+  }, []);
+
+  useEffect(() => {
+    // Only proceed after locale is detected
+    if (locale === null) return;
 
     // Check if user has already made a choice
     const savedConsent = localStorage.getItem(CONSENT_KEY);
@@ -33,9 +38,9 @@ export function CookieConsent() {
       }
     } else {
       // Show banner after a short delay for better UX
-      setTimeout(() => setIsVisible(true), 1000);
+      setTimeout(() => setIsVisible(true), 500);
     }
-  }, []);
+  }, [locale]);
 
   const enableAnalytics = () => {
     // Load Google Analytics
@@ -80,7 +85,7 @@ export function CookieConsent() {
     }
   };
 
-  if (!isVisible || consentStatus !== "pending") {
+  if (!isVisible || consentStatus !== "pending" || locale === null) {
     return null;
   }
 
