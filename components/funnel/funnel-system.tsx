@@ -459,10 +459,10 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
 
           {step === "HAS_BRAND_CHECK" && (
             <StepCard 
-              question={t("Bestehendes Unternehmen / bestehende Marke", "Existing Company / Brand")}
+              question={t("Bestehendes Unternehmen / bestehende Marke", "Existing Company / Existing Brand")}
               subtext={t(
                 "Hast du bereits ein Unternehmen oder eine Marke, die du in Saudi-Arabien aufbauen oder eröffnen möchtest?",
-                "Do you already have a company or brand that you want to build or open in Saudi Arabia?"
+                "Do you already have a company or a brand that you would like to establish or open in Saudi Arabia?"
               )}
               onBack={goBack}
               locale={locale}
@@ -495,16 +495,16 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               </button>
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-                  {t("Wie heißt das Unternehmen/Brand?", "What is the name of the company/brand?")}
+                  {t("Wie heißt das Unternehmen / die Marke?", "What is the name of the company / brand?")}
                 </h2>
                 <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-                  {t("Bitte gib den Namen deines Unternehmens oder deiner Brand ein.", "Please enter the name of your company or brand.")}
+                  {t("Bitte gib den Namen deines Unternehmens oder deiner Marke ein.", "Please enter the name of your company or brand.")}
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label className="text-slate-700">
-                    {t("Name des Unternehmens/Brand", "Company/Brand Name")} <span className="text-red-500">*</span>
+                    {t("Name des Unternehmens / der Marke", "Company / Brand Name")} <span className="text-red-500">*</span>
                   </Label>
                   <Input 
                     value={formData.brandName}
