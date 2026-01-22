@@ -101,8 +101,8 @@ export function CookieConsent() {
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
               {t(
-                "Wir verwenden Cookies und Google Analytics, um unsere Website zu verbessern und die Nutzung zu analysieren. Mit „Akzeptieren" stimmst du der Verwendung zu. Mehr Infos in unserer ",
-                "We use cookies and Google Analytics to improve our website and analyze usage. By clicking \"Accept\" you agree to their use. More info in our "
+                'Wir verwenden Cookies und Google Analytics, um unsere Website zu verbessern und die Nutzung zu analysieren. Mit "Akzeptieren" stimmst du der Verwendung zu. Mehr Infos in unserer ',
+                'We use cookies and Google Analytics to improve our website and analyze usage. By clicking "Accept" you agree to their use. More info in our '
               )}
               <Link href={privacyLink} className="text-emerald-700 hover:text-emerald-800 underline">
                 {t("Datenschutzerklärung", "Privacy Policy")}
