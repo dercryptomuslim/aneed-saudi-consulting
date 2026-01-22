@@ -18,11 +18,22 @@ export function CookieConsent() {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
 
   useEffect(() => {
-    // Detect locale from URL path first
-    if (typeof window !== "undefined") {
-      const isEnglish = window.location.pathname.startsWith("/en");
-      setLocale(isEnglish ? "en" : "de");
-    }
+    // Detect locale from URL path first - check multiple times for mobile
+    const detectLocale = () => {
+      if (typeof window !== "undefined") {
+        const path = window.location.pathname;
+        const isEnglish = path.startsWith("/en") || path.startsWith("/en/");
+        setLocale(isEnglish ? "en" : "de");
+      }
+    };
+    
+    // Initial detection
+    detectLocale();
+    
+    // Re-check after a short delay for mobile browsers
+    const timer = setTimeout(detectLocale, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
