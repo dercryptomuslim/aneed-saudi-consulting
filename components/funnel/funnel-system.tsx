@@ -32,6 +32,8 @@ type Step =
   | "KOSTEN_AWARENESS_RISK"
   | "LOW_BUDGET_WARNING"
   | "KOSTEN_AWARENESS_KAUF"
+  | "HAS_BRAND_CHECK"
+  | "BRAND_NAME_INPUT"
   | "BERATUNG_TROTZDEM"
   | "EXISTING_KSA_CHECK"
   | "VALIDATION_FORM"
@@ -58,6 +60,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     proceedDespiteRisk: "" as "YES" | "NO" | "",
     companyPurchaseOption: "" as "YES" | "NO" | "",
     costAwarenessAccepted: "" as "YES" | "NO" | "YES_DESPITE_WARNING" | "",
+    hasExistingBrand: "" as "YES" | "NO" | "",
     wantsPaidConsultationAnyway: "" as "YES" | "NO" | "",
     outcome: "" as "BOOKING" | "REJECTED" | "",
   });
@@ -68,6 +71,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
     message: "",
     unn: "", 
     iqama: "", 
+    brandName: "",
     entityType: "" as "COMPANY" | "RESIDENCY" | "",
     dataConsent: true,
   });
@@ -133,6 +137,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
           entityType: formData.entityType || "",
           unn: formData.unn || "",
           iqama: formData.iqama || "",
+          brandName: formData.brandName || "",
         },
       };
       const response = await fetch('/api/leads', {
@@ -399,9 +404,8 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                <div className="grid gap-4">
                  <Button
                    onClick={() => {
-                     setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES", outcome: "BOOKING" }));
-                    // Capture lead details before sending to the calendar
-                    goTo("VALIDATION_FORM");
+                     setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES" }));
+                     goTo("HAS_BRAND_CHECK");
                    }}
                    className="w-full bg-slate-900 hover:bg-slate-800 text-white h-auto py-4 text-base md:text-lg whitespace-normal leading-tight"
                  >
@@ -415,7 +419,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                    variant="ghost"
                    className="text-slate-500 h-auto py-3 hover:text-slate-900"
                  >
-                   {t("Nein, das ist zu teuer", "No, that’s too expensive")}
+                   {t("Nein, das ist zu teuer", "No, that's too expensive")}
                  </Button>
                </div>
              </StepCard>
@@ -435,9 +439,8 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <OptionButton
                   onClick={() => {
-                    setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES_DESPITE_WARNING", outcome: "BOOKING" }));
-                    // Still send to validation/booking
-                    goTo("VALIDATION_FORM");
+                    setFunnelAnswers((prev) => ({ ...prev, costAwarenessAccepted: "YES_DESPITE_WARNING" }));
+                    goTo("HAS_BRAND_CHECK");
                   }}
                 >
                   {t("Ja, trotzdem fortfahren", "Yes, proceed anyway")}
@@ -452,6 +455,78 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
                 </OptionButton>
               </div>
             </StepCard>
+          )}
+
+          {step === "HAS_BRAND_CHECK" && (
+            <StepCard 
+              question={t("Bestehendes Unternehmen / bestehende Marke", "Existing Company / Brand")}
+              subtext={t(
+                "Hast du bereits ein Unternehmen oder eine Marke, die du in Saudi-Arabien aufbauen oder eröffnen möchtest?",
+                "Do you already have a company or brand that you want to build or open in Saudi Arabia?"
+              )}
+              onBack={goBack}
+              locale={locale}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, hasExistingBrand: "YES" }));
+                    goTo("BRAND_NAME_INPUT");
+                  }}
+                >
+                  {t("Ja, habe ich", "Yes, I do")}
+                </OptionButton>
+                <OptionButton
+                  onClick={() => {
+                    setFunnelAnswers((prev) => ({ ...prev, hasExistingBrand: "NO", outcome: "BOOKING" }));
+                    goTo("VALIDATION_FORM");
+                  }}
+                >
+                  {t("Nein, ich will was Neues starten", "No, I want to start something new")}
+                </OptionButton>
+              </div>
+            </StepCard>
+          )}
+
+          {step === "BRAND_NAME_INPUT" && (
+            <Card className="p-5 md:p-8 border border-slate-200 bg-white shadow-xl">
+              <button onClick={goBack} className="flex items-center text-sm text-slate-500 hover:text-slate-900 mb-4 transition-colors">
+                <ArrowLeft className="h-4 w-4 mr-1" /> {t("Zurück", "Back")}
+              </button>
+              <div className="text-center mb-6">
+                <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+                  {t("Wie heißt das Unternehmen/Brand?", "What is the name of the company/brand?")}
+                </h2>
+                <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+                  {t("Bitte gib den Namen deines Unternehmens oder deiner Brand ein.", "Please enter the name of your company or brand.")}
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label className="text-slate-700">
+                    {t("Name des Unternehmens/Brand", "Company/Brand Name")} <span className="text-red-500">*</span>
+                  </Label>
+                  <Input 
+                    value={formData.brandName}
+                    onChange={(e) => setFormData({...formData, brandName: e.target.value})}
+                    placeholder={t("z.B. Mein Café, Meine Marke...", "e.g. My Café, My Brand...")} 
+                    className="bg-slate-50 border-slate-200 h-12 text-base text-slate-900"
+                  />
+                </div>
+                <Button
+                  onClick={() => {
+                    if (formData.brandName.trim()) {
+                      setFunnelAnswers((prev) => ({ ...prev, outcome: "BOOKING" }));
+                      goTo("VALIDATION_FORM");
+                    }
+                  }}
+                  disabled={!formData.brandName.trim()}
+                  className="w-full bg-slate-900 hover:bg-slate-800 text-white h-12 font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {t("Weiter", "Continue")}
+                </Button>
+              </div>
+            </Card>
           )}
 
           {step === "BOOKING_FORM" && (
