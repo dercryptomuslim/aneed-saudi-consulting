@@ -188,7 +188,7 @@ export const blogPostsDe: BlogPost[] = [
     `
   },
   {
-    slug: "saudi-premium-residency-modelle-vergleich-beantragung",
+    slug: "saudi-premium-residency",
     title: "Saudi Premium Residency – Modelle, Vergleich und Beantragung",
     date: "22.01.2026",
     readTime: "12 Min.",
