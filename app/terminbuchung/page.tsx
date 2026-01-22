@@ -1,5 +1,32 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Termin buchen | Beratungsgespräch Saudi-Arabien - Aneed Ashraf",
+  description: "Buche jetzt dein persönliches Beratungsgespräch für Unternehmensgründung in Saudi-Arabien. 60 Minuten Expertengespräch mit Aneed Ashraf.",
+  alternates: {
+    canonical: "/terminbuchung",
+    languages: {
+      "de": "/terminbuchung",
+      "en": "/en/booking",
+    },
+  },
+  keywords: ["Termin buchen", "Beratungsgespräch Saudi-Arabien", "Expertengespräch", "Unternehmensgründung Beratung"],
+  openGraph: {
+    title: "Termin buchen | Beratungsgespräch Saudi-Arabien",
+    description: "Buche jetzt dein persönliches Beratungsgespräch für Unternehmensgründung in Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/terminbuchung",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Termin buchen | Beratungsgespräch Saudi-Arabien",
+    description: "Buche jetzt dein persönliches Beratungsgespräch für Unternehmensgründung in Saudi-Arabien.",
+  },
+};
 
 export default function BookingPage() {
   return (

@@ -3,8 +3,32 @@ import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Imprint | Aneed Ashraf - Consulting Saudi Arabia",
-  description: "Legal information and imprint of Aneed Ashraf Consulting.",
+  title: "Imprint | Aneed Ashraf - Oasis Gate LLC",
+  description: "Legal information and imprint of Oasis Gate LLC, Medina, Saudi Arabia. Contact details and legal notices.",
+  alternates: {
+    canonical: "/en/imprint",
+    languages: {
+      "de": "/impressum",
+      "en": "/en/imprint",
+    },
+  },
+  openGraph: {
+    title: "Imprint | Aneed Ashraf - Oasis Gate LLC",
+    description: "Legal information and imprint of Oasis Gate LLC, Medina, Saudi Arabia.",
+    url: "https://www.aneedashraf.de/en/imprint",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Imprint | Aneed Ashraf",
+    description: "Legal information and imprint of Oasis Gate LLC.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ImprintEnPage() {

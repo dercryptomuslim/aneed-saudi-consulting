@@ -3,8 +3,28 @@ import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Aneed Ashraf - Consulting Saudi-Arabien",
-  description: "Rechtliche Angaben und Impressum von Aneed Ashraf Consulting.",
+  title: "Impressum | Aneed Ashraf - Oasis Gate LLC",
+  description: "Rechtliche Angaben und Impressum von Oasis Gate LLC, Medina, Saudi-Arabien. Kontaktdaten und Angaben gemäß § 5 TMG.",
+  alternates: {
+    canonical: "/impressum",
+  },
+  openGraph: {
+    title: "Impressum | Aneed Ashraf - Oasis Gate LLC",
+    description: "Rechtliche Angaben und Impressum von Oasis Gate LLC, Medina, Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/impressum",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Impressum | Aneed Ashraf",
+    description: "Rechtliche Angaben und Impressum von Oasis Gate LLC.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ImpressumPage() {

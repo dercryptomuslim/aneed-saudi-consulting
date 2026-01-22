@@ -3,8 +3,28 @@ import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AGB | Oasis Gate LLC",
-  description: "Allgemeine Geschäftsbedingungen (AGB) von Oasis Gate LLC.",
+  title: "AGB | Oasis Gate LLC - Beratung Saudi-Arabien",
+  description: "Allgemeine Geschäftsbedingungen (AGB) von Oasis Gate LLC für Beratungsleistungen zur Unternehmensgründung in Saudi-Arabien.",
+  alternates: {
+    canonical: "/agb",
+  },
+  openGraph: {
+    title: "AGB | Oasis Gate LLC",
+    description: "Allgemeine Geschäftsbedingungen (AGB) von Oasis Gate LLC für Beratungsleistungen zur Unternehmensgründung in Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/agb",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "AGB | Oasis Gate LLC",
+    description: "Allgemeine Geschäftsbedingungen (AGB) von Oasis Gate LLC für Beratungsleistungen.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AgbPage() {

@@ -17,9 +17,29 @@ import { Contact } from "@/components/contact";
 import { localizeHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Services | Aneed Ashraf - Consulting Saudi Arabia",
-  description:
-    "Company formation, business setup, operations & management, business consulting, investment and franchise in Saudi Arabia.",
+  title: "Services | Company Formation & Consulting Saudi Arabia",
+  description: "Company formation, business setup, operations & management, business consulting, investment and franchise in Saudi Arabia. MISA License & more.",
+  alternates: {
+    canonical: "/en/services",
+    languages: {
+      "de": "/services",
+      "en": "/en/services",
+    },
+  },
+  keywords: ["Services Saudi Arabia", "Company Formation", "MISA License", "Franchise Saudi Arabia", "Investment Saudi Arabia", "Business Consulting"],
+  openGraph: {
+    title: "Services | Company Formation Saudi Arabia",
+    description: "Company formation, business setup, operations & management, business consulting, investment and franchise in Saudi Arabia.",
+    url: "https://www.aneedashraf.de/en/services",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Company Formation Saudi Arabia",
+    description: "Company formation, business setup, consulting, investment and franchise in Saudi Arabia.",
+  },
 };
 
 const quickLinks = [

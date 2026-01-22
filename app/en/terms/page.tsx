@@ -3,8 +3,32 @@ import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms (AGB) | Oasis Gate LLC",
-  description: "Terms and conditions (AGB) of Oasis Gate LLC.",
+  title: "Terms & Conditions | Oasis Gate LLC - Consulting Saudi Arabia",
+  description: "Terms and conditions of Oasis Gate LLC for consulting services related to company formation in Saudi Arabia.",
+  alternates: {
+    canonical: "/en/terms",
+    languages: {
+      "de": "/agb",
+      "en": "/en/terms",
+    },
+  },
+  openGraph: {
+    title: "Terms & Conditions | Oasis Gate LLC",
+    description: "Terms and conditions of Oasis Gate LLC for consulting services related to company formation in Saudi Arabia.",
+    url: "https://www.aneedashraf.de/en/terms",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms & Conditions | Oasis Gate LLC",
+    description: "Terms and conditions of Oasis Gate LLC for consulting services.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TermsEnPage() {

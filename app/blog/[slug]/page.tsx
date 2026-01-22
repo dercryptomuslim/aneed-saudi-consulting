@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
+import Script from "next/script";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -30,6 +31,63 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Aneed Ashraf`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    keywords: [post.title, "Saudi-Arabien", "Unternehmensgründung", "Medina", "Blog"],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://www.aneedashraf.de/blog/${post.slug}`,
+      siteName: "Aneed Ashraf",
+      locale: "de_DE",
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Aneed Ashraf"],
+      images: post.image ? [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.image ? [post.image] : undefined,
+    },
+  };
+}
+
+function generateArticleJsonLd(post: { slug: string; title: string; date: string; excerpt: string; image?: string; readTime: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image ? `https://www.aneedashraf.de${post.image}` : undefined,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": "Aneed Ashraf",
+      "url": "https://www.aneedashraf.de/ueber-mich"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aneed Ashraf - Oasis Gate LLC",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aneedashraf.de/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.aneedashraf.de/blog/${post.slug}`
+    }
   };
 }
 
@@ -41,8 +99,15 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const jsonLd = generateArticleJsonLd(post);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <Script
+        id="article-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       
       <article className="pt-32 pb-16 md:pb-24">

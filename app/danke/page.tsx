@@ -7,8 +7,23 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Danke | Aneed Ashraf",
-  description: "Danke für deine Buchung. Wir melden uns in Kürze mit den Details.",
+  title: "Danke für deine Buchung | Aneed Ashraf",
+  description: "Danke für deine Buchung. Wir melden uns in Kürze mit den Details für dein Beratungsgespräch.",
+  alternates: {
+    canonical: "/danke",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: "Danke für deine Buchung | Aneed Ashraf",
+    description: "Danke für deine Buchung. Wir melden uns in Kürze mit den Details.",
+    url: "https://www.aneedashraf.de/danke",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function DankePage() {

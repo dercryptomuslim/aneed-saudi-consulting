@@ -4,8 +4,29 @@ import { ConsultingFunnelLocalized } from "@/components/funnel/funnel-system";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Request | Aneed Ashraf",
-  description: "Check your options for company formation or consulting in Saudi Arabia.",
+  title: "Request | Company Formation Saudi Arabia - Aneed Ashraf",
+  description: "Check your options for company formation or consulting in Saudi Arabia. Find out in 2 minutes which options are available for you.",
+  alternates: {
+    canonical: "/en/inquiry",
+    languages: {
+      "de": "/anfrage",
+      "en": "/en/inquiry",
+    },
+  },
+  keywords: ["Request Saudi Arabia", "Consulting Saudi Arabia", "Company Formation Request", "MISA License Request"],
+  openGraph: {
+    title: "Request | Company Formation Saudi Arabia",
+    description: "Check your options for company formation or consulting in Saudi Arabia.",
+    url: "https://www.aneedashraf.de/en/inquiry",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Request | Company Formation Saudi Arabia",
+    description: "Check your options for company formation or consulting in Saudi Arabia.",
+  },
 };
 
 export default function RequestPageEn() {

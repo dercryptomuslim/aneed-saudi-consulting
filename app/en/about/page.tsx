@@ -10,9 +10,37 @@ import type { Metadata } from "next";
 import { localizeHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "About | Aneed Ashraf - Consulting Saudi Arabia",
-  description:
-    "Entrepreneur & Consultant. A bridge between worlds. Trusted partner to elite entrepreneurs and investors shaping success in Saudi Arabia.",
+  title: "About | Aneed Ashraf - Entrepreneur & Consultant Saudi Arabia",
+  description: "Learn more about Aneed Ashraf: Entrepreneur, consultant and bridge builder between Germany and Saudi Arabia. 9+ years of experience in Medina.",
+  alternates: {
+    canonical: "/en/about",
+    languages: {
+      "de": "/ueber-mich",
+      "en": "/en/about",
+    },
+  },
+  keywords: ["Aneed Ashraf", "Business Consultant Saudi Arabia", "Medina", "Oasis Gate", "Vision 2030"],
+  openGraph: {
+    title: "About | Aneed Ashraf - Entrepreneur & Consultant",
+    description: "Entrepreneur, consultant and bridge builder between Germany and Saudi Arabia. 9+ years of experience in Medina.",
+    url: "https://www.aneedashraf.de/en/about",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "profile",
+    images: [
+      {
+        url: "/aneed-1.jpg",
+        width: 800,
+        height: 800,
+        alt: "Aneed Ashraf - Entrepreneur & Consultant",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Aneed Ashraf",
+    description: "Entrepreneur, consultant and bridge builder between Germany and Saudi Arabia.",
+  },
 };
 
 const skills = [

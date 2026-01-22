@@ -22,8 +22,37 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Erfolgsgeschichten | Aneed Ashraf - Consulting Saudi-Arabien",
-  description: "Reale Case Studies aus Saudi-Arabien: Gastronomie, Expansion, Restrukturierung und kulturelle Projekte.",
+  title: "Erfolgsgeschichten & Case Studies | Aneed Ashraf - Saudi-Arabien",
+  description: "Reale Case Studies aus Saudi-Arabien: Gastronomie-Projekte, Expansion, Restrukturierung und kulturelle Projekte. Echte Ergebnisse aus Medina.",
+  alternates: {
+    canonical: "/erfolgsgeschichten",
+    languages: {
+      "de": "/erfolgsgeschichten",
+      "en": "/en/case-studies",
+    },
+  },
+  keywords: ["Case Studies Saudi-Arabien", "Erfolgsgeschichten", "Gastronomie Saudi-Arabien", "Expansion Riyadh", "Unternehmensberatung Medina"],
+  openGraph: {
+    title: "Erfolgsgeschichten & Case Studies | Saudi-Arabien",
+    description: "Reale Case Studies aus Saudi-Arabien: Gastronomie, Expansion, Restrukturierung und kulturelle Projekte.",
+    url: "https://www.aneedashraf.de/erfolgsgeschichten",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+    images: [
+      {
+        url: "/laveu-logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Erfolgsgeschichten - Aneed Ashraf Consulting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Erfolgsgeschichten & Case Studies | Saudi-Arabien",
+    description: "Reale Case Studies aus Saudi-Arabien: Gastronomie, Expansion, Restrukturierung.",
+  },
 };
 
 const caseStudies = [

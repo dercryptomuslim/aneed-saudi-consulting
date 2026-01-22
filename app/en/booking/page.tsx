@@ -1,5 +1,32 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Book Consultation | Expert Call Saudi Arabia - Aneed Ashraf",
+  description: "Book your personal consultation for company formation in Saudi Arabia. 60-minute expert call with Aneed Ashraf from Medina.",
+  alternates: {
+    canonical: "/en/booking",
+    languages: {
+      "de": "/terminbuchung",
+      "en": "/en/booking",
+    },
+  },
+  keywords: ["Book Consultation", "Expert Call Saudi Arabia", "Company Formation Consulting", "Business Consultation"],
+  openGraph: {
+    title: "Book Consultation | Expert Call Saudi Arabia",
+    description: "Book your personal consultation for company formation in Saudi Arabia.",
+    url: "https://www.aneedashraf.de/en/booking",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Consultation | Expert Call Saudi Arabia",
+    description: "Book your personal consultation for company formation in Saudi Arabia.",
+  },
+};
 
 export default function BookingPageEn() {
   return (

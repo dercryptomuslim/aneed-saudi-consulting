@@ -10,8 +10,37 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Über Mich | Aneed Ashraf - Consulting Saudi-Arabien",
-  description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
+  title: "Über Mich | Aneed Ashraf - Unternehmer & Berater Saudi-Arabien",
+  description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien. 9+ Jahre Erfahrung in Medina.",
+  alternates: {
+    canonical: "/ueber-mich",
+    languages: {
+      "de": "/ueber-mich",
+      "en": "/en/about",
+    },
+  },
+  keywords: ["Aneed Ashraf", "Unternehmensberater Saudi-Arabien", "Medina", "Oasis Gate", "Vision 2030"],
+  openGraph: {
+    title: "Über Mich | Aneed Ashraf - Unternehmer & Berater",
+    description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/ueber-mich",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "profile",
+    images: [
+      {
+        url: "/aneed-1.jpg",
+        width: 800,
+        height: 800,
+        alt: "Aneed Ashraf - Unternehmer & Berater",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Über Mich | Aneed Ashraf",
+    description: "Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
+  },
 };
 
 const skills = [

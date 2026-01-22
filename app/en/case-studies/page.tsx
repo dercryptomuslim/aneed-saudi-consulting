@@ -23,9 +23,37 @@ import {
 import { localizeHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Aneed Ashraf - Consulting Saudi Arabia",
-  description:
-    "Real case studies from Saudi Arabia: hospitality, expansion, restructuring and cultural projects.",
+  title: "Case Studies & Success Stories | Aneed Ashraf - Saudi Arabia",
+  description: "Real case studies from Saudi Arabia: hospitality projects, expansion, restructuring and cultural projects. Real results from Medina.",
+  alternates: {
+    canonical: "/en/case-studies",
+    languages: {
+      "de": "/erfolgsgeschichten",
+      "en": "/en/case-studies",
+    },
+  },
+  keywords: ["Case Studies Saudi Arabia", "Success Stories", "Hospitality Saudi Arabia", "Expansion Riyadh", "Business Consulting Medina"],
+  openGraph: {
+    title: "Case Studies & Success Stories | Saudi Arabia",
+    description: "Real case studies from Saudi Arabia: hospitality, expansion, restructuring and cultural projects.",
+    url: "https://www.aneedashraf.de/en/case-studies",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/laveu-logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Case Studies - Aneed Ashraf Consulting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies & Success Stories | Saudi Arabia",
+    description: "Real case studies from Saudi Arabia: hospitality, expansion, restructuring.",
+  },
 };
 
 const caseStudies = [

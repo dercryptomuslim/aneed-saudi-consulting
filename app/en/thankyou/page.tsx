@@ -8,8 +8,23 @@ import type { Metadata } from "next";
 import { localizeHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Thank you | Aneed Ashraf",
-  description: "Thanks for booking. You’ll receive confirmation details shortly.",
+  title: "Thank you for your booking | Aneed Ashraf",
+  description: "Thanks for booking. You'll receive confirmation details shortly for your consultation call.",
+  alternates: {
+    canonical: "/en/thankyou",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: "Thank you for your booking | Aneed Ashraf",
+    description: "Thanks for booking. You'll receive confirmation details shortly.",
+    url: "https://www.aneedashraf.de/en/thankyou",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function ThankYouPageEn() {

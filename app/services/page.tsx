@@ -16,8 +16,29 @@ import { Metadata } from "next";
 import { Contact } from "@/components/contact";
 
 export const metadata: Metadata = {
-  title: "Leistungen | Aneed Ashraf - Consulting Saudi-Arabien",
-  description: "Unsere 6 Kernkompetenzen: Gründung, Aufbau, Führung, Beratung, Investment und Franchise in Saudi-Arabien.",
+  title: "Leistungen | Unternehmensgründung & Beratung Saudi-Arabien",
+  description: "Unsere 6 Kernkompetenzen: Unternehmensgründung, Aufbau, Führung, Beratung, Investment und Franchise in Saudi-Arabien. MISA Lizenz & mehr.",
+  alternates: {
+    canonical: "/services",
+    languages: {
+      "de": "/services",
+      "en": "/en/services",
+    },
+  },
+  keywords: ["Leistungen Saudi-Arabien", "Unternehmensgründung", "MISA Lizenz", "Franchise Saudi-Arabien", "Investment Saudi-Arabien", "Unternehmensberatung"],
+  openGraph: {
+    title: "Leistungen | Unternehmensgründung Saudi-Arabien",
+    description: "Unsere 6 Kernkompetenzen: Gründung, Aufbau, Führung, Beratung, Investment und Franchise in Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/services",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leistungen | Unternehmensgründung Saudi-Arabien",
+    description: "Unsere 6 Kernkompetenzen: Gründung, Aufbau, Führung, Beratung, Investment und Franchise.",
+  },
 };
 
 const quickLinks = [

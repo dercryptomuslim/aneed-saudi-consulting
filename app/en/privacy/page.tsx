@@ -4,7 +4,31 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Aneed Ashraf - Consulting Saudi Arabia",
-  description: "Information about privacy and the processing of personal data.",
+  description: "Information about privacy and the processing of personal data on aneedashraf.de in accordance with GDPR.",
+  alternates: {
+    canonical: "/en/privacy",
+    languages: {
+      "de": "/datenschutz",
+      "en": "/en/privacy",
+    },
+  },
+  openGraph: {
+    title: "Privacy Policy | Aneed Ashraf",
+    description: "Information about privacy and the processing of personal data.",
+    url: "https://www.aneedashraf.de/en/privacy",
+    siteName: "Aneed Ashraf",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Aneed Ashraf",
+    description: "Information about privacy and the processing of personal data.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyEnPage() {

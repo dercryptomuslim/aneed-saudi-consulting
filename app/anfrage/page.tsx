@@ -4,8 +4,25 @@ import { ConsultingFunnel } from "@/components/funnel/funnel-system";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Anfrage | Aneed Ashraf",
-  description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
+  title: "Anfrage | Unternehmensgründung Saudi-Arabien - Aneed Ashraf",
+  description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien. In 2 Minuten herausfinden, welche Optionen für dich möglich sind.",
+  alternates: {
+    canonical: "/anfrage",
+  },
+  keywords: ["Anfrage Saudi-Arabien", "Beratung Saudi-Arabien", "Unternehmensgründung Anfrage", "MISA Lizenz Anfrage"],
+  openGraph: {
+    title: "Anfrage | Unternehmensgründung Saudi-Arabien",
+    description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
+    url: "https://www.aneedashraf.de/anfrage",
+    siteName: "Aneed Ashraf",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anfrage | Unternehmensgründung Saudi-Arabien",
+    description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
+  },
 };
 
 export default function CheckPage() {
