@@ -464,5 +464,94 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="text-slate-600 italic border-t border-slate-200 pt-8 mt-8"><strong>Nearly a decade in Saudi Arabia.</strong><br><strong>More than two decades of entrepreneurship.</strong><br><strong>Medina is not a playground – follow real experience.</strong></p>
     `
+  },
+  {
+    slug: "saudi-premium-residency",
+    title: "Saudi Premium Residency – Models, Comparison and Application",
+    date: "Jan 22, 2026",
+    readTime: "12 min",
+    excerpt: "The Saudi Premium Residency enables foreign nationals to live, work, and invest in Saudi Arabia without a local sponsor. A comprehensive overview of all models.",
+    image: "/images/Saudi Premium Residency.png",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">The <strong>Saudi Premium Residency</strong> is a special residence status in Saudi Arabia that enables foreign nationals to live, work, and invest in businesses or real estate in the Kingdom without the need for a local sponsor.</p>
+      
+      <p class="mb-6">It represents one of the key pillars of <strong>Vision 2030</strong> and is designed to attract and retain highly qualified professionals, entrepreneurs, investors, and high-net-worth individuals on a long-term basis.</p>
+      
+      <p class="mb-8">Unlike the traditional <strong>Iqama</strong> system, the Premium Residency offers significantly greater freedom, legal certainty, and long-term planning security—subject, however, to clearly defined eligibility criteria depending on the selected model.</p>
+
+      <figure class="my-12">
+        <img src="/images/Saudi Premium Residency.png" alt="Saudi Premium Residency" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Saudi Premium Residency – Your path to permanent settlement</figcaption>
+      </figure>
+
+      <h2 id="overview" class="mt-12 mb-6">Overview of Residency Models</h2>
+      
+      <p class="mb-6">The <strong>Saudi Premium Residency</strong> is divided into a total of <strong>seven models</strong>, each designed to address specific target groups. Broadly, these models can be categorised into two duration-based residency types and five category-based special programmes, each with distinct admission requirements.</p>
+      
+      <p class="mb-6">The <strong>Limited Duration Premium Residency</strong> is a residence permit granted for a period of one to five years and may be renewed annually upon payment of a fee. This option does not require a specific investment commitment, other than proof of financial solvency to cover the annual charges. It is particularly suitable for individuals who wish to experience Saudi Arabia on a temporary basis or undertake time-bound business projects, such as professionals on fixed-term assignments or expatriates who wish to explore life in the Kingdom before committing long term.</p>
+      
+      <p class="mb-8">The <strong>Unlimited Duration Premium Residency</strong>, by contrast, is a permanent residence status with no expiry date. It is granted in exchange for a one-off, substantial lump-sum fee and is intended for individuals seeking long-term settlement in Saudi Arabia. This model is particularly attractive to high-net-worth expatriates and investors who value stability and long-term security for themselves and their families.</p>
+
+      <h2 id="special-programmes" class="mt-12 mb-6">Category-Based Special Programmes</h2>
+
+      <figure class="my-12">
+        <img src="/images/Kategorienbasierte Sonderprogramme.png" alt="Category-Based Special Programmes" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Various pathways to Premium Residency</figcaption>
+      </figure>
+      
+      <p class="mb-6">The <strong>Special Talent Residency</strong> is aimed at exceptionally qualified <strong>professionals and senior executives</strong> in fields such as <strong>science, research, healthcare, and executive management</strong>. Key requirements include a high level of education (<strong>at least a bachelor's degree</strong>), several years of relevant professional experience, an employment contract with a priority entity in Saudi Arabia, a defined <strong>minimum salary</strong>, and an <strong>employer recommendation</strong>. This residency is initially granted for <strong>five years</strong> and may be renewed. Continued compliance with the criteria may allow for conversion to an <strong>unlimited Premium Residency</strong>. Holders of this category are also personally exempt from the Saudisation (Nitaqat) quota.</p>
+      
+      <p class="mb-6">The <strong>Gifted Residency</strong> targets individuals with <strong>outstanding achievements</strong> or <strong>recognised excellence</strong> in <strong>sports, arts, and culture</strong>. Typical applicants include <strong>elite athletes, internationally recognised artists, musicians, and writers</strong>. Applicants generally require an official <strong>recommendation from a Saudi authority</strong> and must demonstrate exceptional achievements, such as <strong>major awards or international nominations</strong>. This residency is granted for <strong>five years</strong>, with the possibility of renewal or conversion to <strong>permanent residency</strong> if eligibility continues. An exemption from the Nitaqat programme also applies.</p>
+      
+      <p class="mb-6">The <strong>Investor Residency</strong> is designed for foreign investors and business owners intending to establish substantial economic activity in Saudi Arabia. The core requirements include a valid investment licence and a commitment to invest at least <strong>SAR 7 million in equity capital</strong> within the first two years, as well as the creation of at least <strong>ten jobs for Saudi nationals</strong>. Upon fulfilling these conditions, investors are granted an unlimited Premium Residency without recurring annual fees. The economic contribution is the central focus of this model, which is reflected in comparatively low application fees.</p>
+      
+      <p class="mb-6">The <strong>Entrepreneur Residency</strong> is specifically tailored for start-up founders and innovative entrepreneurs. Applicants must hold an entrepreneur licence and secure funding from accredited investors or incubators, with a minimum initial capital participation of <strong>SAR 400,000</strong>. The founder is granted a five-year residency, renewable provided that at least <strong>20% equity ownership</strong> is maintained and the business continues to operate successfully. In cases of significant growth—particularly where investment volume reaches <strong>SAR 15 million</strong> and new jobs are created—permanent residency may be granted. An additional benefit of this category is a three-year exemption from Saudisation requirements, as well as the ability to nominate two senior executives for Premium Residency under the Special Talent category.</p>
+      
+      <p class="mb-8">The <strong>Real Estate Owner Residency</strong> enables Premium Residency through ownership of residential property in Saudi Arabia. Applicants must own property valued at a minimum of <strong>SAR 4 million</strong> or hold an equivalent long-term usufruct right. The property must be fully completed, unencumbered, and officially valued. Residency remains valid as long as ownership is maintained; selling or encumbering the property results in loss of eligibility. Financing through mortgages or loans is not permitted under this programme.</p>
+
+      <h2 id="requirements" class="mt-12 mb-6">Common Requirements Across All Models</h2>
+      
+      <p class="mb-8">All Premium Residency models require applicants to be <strong>at least 21 years of age</strong>, hold a valid passport, demonstrate financial solvency, possess a clean criminal record, and undergo a recent medical examination confirming the absence of infectious diseases. Applicants already residing in Saudi Arabia must be legally registered in the Kingdom. Family applications may include spouses, children under the age of 25, and parents. The Premium Residency does not confer an automatic right to Saudi citizenship, and existing professional or occupational restrictions for non-Saudis remain in effect.</p>
+
+      <h2 id="application" class="mt-12 mb-6">Application Process and Processing Times</h2>
+
+      <figure class="my-12">
+        <img src="/images/Beantragungsprozess.png" alt="Application Process" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Online application via the Premium Residency Portal</figcaption>
+      </figure>
+      
+      <p class="mb-6">Applications for the <strong>Saudi Premium Residency</strong> are submitted entirely online through the official <strong>Premium Residency Portal</strong>. While the core application process is similar across all models, the required documentation varies depending on the selected category.</p>
+      
+      <p class="mb-8">Processing times can vary significantly. Straightforward cases, such as applications for unlimited residency through capital payment, have in some instances been approved within <strong>four to eight weeks</strong>. More complex applications involving ministerial endorsements or business assessments may take <strong>three to six months or longer</strong>. Applicants can monitor the status of their application through an online tracking system. In general, the more complete and well-structured the submitted documentation, the lower the risk of delays or additional inquiries.</p>
+
+      <h2 id="risks" class="mt-12 mb-6">Risks and Considerations</h2>
+
+      <figure class="my-12">
+        <img src="/images/Risiken und Gefahren.png" alt="Risks and Considerations" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Legal framework considerations</figcaption>
+      </figure>
+      
+      <p class="mb-6">Despite its many advantages, the Premium Residency also carries certain risks. The residence status may be revoked if the holder violates Saudi law, particularly in cases involving serious criminal offences. Legislation stipulates that <strong>imprisonment of at least 60 days</strong> or <strong>fines of SAR 100,000 or more</strong> may result in automatic termination of the Premium Residency. Deportation orders issued for reasons of public security also jeopardise residency status.</p>
+      
+      <p class="mb-6">In addition, many residency categories are subject to ongoing compliance with programme-specific conditions. Entrepreneurs who cease operations or sell their equity prematurely, as well as property owners who sell or encumber their assets, may lose their eligibility. Continuous monitoring of compliance requirements and proactive contingency planning are therefore strongly advised.</p>
+      
+      <p class="mb-8">In the event of the death of the primary residency holder, the individual's personal status naturally ceases. However, dependants included in the original application retain their residency rights, providing legal protection and continuity for surviving family members.</p>
+
+      <h2 id="opportunities" class="mt-12 mb-6">Opportunities and Benefits</h2>
+      
+      <p class="mb-6">The <strong>Saudi Premium Residency</strong> opens long-term opportunities for expatriates, families, investors, and businesses. The <strong>unlimited variant</strong> in particular offers a stable residence status comparable to permanent settlement, enabling reliable long-term personal and professional planning. Premium residents enjoy <strong>unrestricted access to the private labour market without employer sponsorship</strong> and may change employers freely. Entrepreneurs benefit from the ability to fully own and manage businesses without the need for a Saudi majority partner.</p>
+      
+      <p class="mb-8">Furthermore, the residency allows for property ownership across much of Saudi Arabia and provides financial advantages such as <strong>exemption from expatriate levies</strong> and <strong>exit/re-entry visa fees</strong>. For frequent travellers, this offers maximum flexibility; for families, it provides long-term stability and security.</p>
+
+      <h2 id="conclusion" class="mt-12 mb-6">Conclusion</h2>
+      
+      <p class="mb-6">The <strong>Saudi Premium Residency</strong> combines the advantages of an international <strong>"Golden Visa" model</strong> with incentives specifically aligned with Saudi Arabia's Vision 2030. For professionals, entrepreneurs, and investors, it offers a rare blend of legal certainty, economic freedom, and high quality of life. At the same time, the Kingdom benefits from the inflow of talent, capital, and expertise. For many expatriates, the Saudi Premium Residency therefore represents a genuine <strong>win-win opportunity</strong>—for their personal future and for the continued development of Saudi Arabia.</p>
+      
+      <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Interested in the Saudi Premium Residency?</h3>
+        <p class="mb-4 text-slate-700">If you would like to know which residency model is best suited to your situation and what specific steps are required, a consultation is the right next step.</p>
+        <p class="text-slate-600">No theory. No generic information.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
+      </div>
+    `
   }
 ];
