@@ -123,6 +123,7 @@ export async function POST(req: NextRequest) {
     const contactRow = [date, fullName, email, phone, type, message, extra];
 
     const funnel = body?.funnel || {};
+    const brandName = funnel?.brandName || body?.brandName || "";
     const funnelRow = [
       date, // A
       body?.locale || "", // B
@@ -143,6 +144,7 @@ export async function POST(req: NextRequest) {
       message, // Q
       body?.bookingUrl || "", // R
       Array.isArray(funnel?.stepPath) ? funnel.stepPath.join(" > ") : "", // S
+      brandName, // T - Unternehmen/Marke Name
     ];
 
     const row = isFunnelLead ? funnelRow : contactRow;
@@ -210,6 +212,7 @@ export async function POST(req: NextRequest) {
               <tr><td style="padding: 6px 0;"><strong>E-Mail</strong></td><td style="padding: 6px 0;">${email || "-"}</td></tr>
               <tr><td style="padding: 6px 0;"><strong>Telefon</strong></td><td style="padding: 6px 0;">${phone || "-"}</td></tr>
               <tr><td style="padding: 6px 0;"><strong>Typ</strong></td><td style="padding: 6px 0;">${type || "-"}</td></tr>
+              <tr><td style="padding: 6px 0;"><strong>Unternehmen/Marke</strong></td><td style="padding: 6px 0;">${brandName || "-"}</td></tr>
               <tr><td style="padding: 6px 0;"><strong>Extra</strong></td><td style="padding: 6px 0;">${extra || "-"}</td></tr>
             </table>
             <h3 style="margin: 18px 0 8px;">Nachricht</h3>
