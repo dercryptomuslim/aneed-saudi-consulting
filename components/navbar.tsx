@@ -197,37 +197,35 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem className="static">
-                <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
+              {/* Über Mich - Custom Dropdown */}
+              <div className="relative group">
+                <button className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors">
                   {t("Über Mich", "About")}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="!left-auto !right-0">
-                  <ul className="grid w-[280px] gap-2 p-4 bg-white border border-slate-100 rounded-xl shadow-xl">
+                  <ChevronRight className="ml-1 h-3 w-3 rotate-90 transition-transform group-hover:rotate-[270deg]" />
+                </button>
+                <div className="absolute right-0 top-full mt-1.5 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <ul className="grid gap-2 p-4 bg-white border border-slate-100 rounded-xl shadow-xl">
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href={href("/ueber-mich")}
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
-                        >
-                          <div className="text-sm font-semibold text-slate-900 mb-1">{t("Über Mich", "About Me")}</div>
-                          <p className="text-sm text-slate-500">{t("Erfahrung & Hintergrund", "Experience & Background")}</p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        href={href("/ueber-mich")}
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                      >
+                        <div className="text-sm font-semibold text-slate-900 mb-1">{t("Über Mich", "About Me")}</div>
+                        <p className="text-sm text-slate-500">{t("Erfahrung & Hintergrund", "Experience & Background")}</p>
+                      </Link>
                     </li>
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href={href("/vision-mission")}
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
-                        >
-                          <div className="text-sm font-semibold text-slate-900 mb-1">{t("Vision & Mission", "Vision & Mission")}</div>
-                          <p className="text-sm text-slate-500">{t("Werte & Haltung", "Values & Principles")}</p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        href={href("/vision-mission")}
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                      >
+                        <div className="text-sm font-semibold text-slate-900 mb-1">{t("Vision & Mission", "Vision & Mission")}</div>
+                        <p className="text-sm text-slate-500">{t("Werte & Haltung", "Values & Principles")}</p>
+                      </Link>
                     </li>
                   </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                </div>
+              </div>
             </NavigationMenuList>
           </NavigationMenu>
 
