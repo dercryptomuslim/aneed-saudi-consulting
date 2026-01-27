@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3 } from "lucide-react";
+import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3, User, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import {
@@ -106,6 +106,7 @@ const servicesEn = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const router = useRouter();
   const locale: Locale = getLocaleFromPathname(pathname || "/");
@@ -153,21 +154,39 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
+              {/* Leistungen - Custom Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('services')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className={cn(
+                  "inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                  activeDropdown === 'services' ? "text-slate-900 bg-slate-50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                )}>
                   {t("Leistungen", "Services")}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-white border border-slate-200 rounded-xl shadow-lg">
+                  <ChevronRight className={cn("ml-1 h-3 w-3 transition-transform", activeDropdown === 'services' ? "rotate-[270deg]" : "rotate-90")} />
+                </button>
+                <div className={cn(
+                  "absolute left-0 top-full pt-2 w-[600px] transition-all duration-150",
+                  activeDropdown === 'services' ? "opacity-100 visible z-[60]" : "opacity-0 invisible pointer-events-none z-40"
+                )}>
+                  <ul className="grid grid-cols-2 gap-3 p-4 bg-white border border-slate-200 rounded-xl shadow-md">
                     {services.map((service) => (
-                      <ListItem
-                        key={service.title}
-                        title={service.title}
-                        href={href(service.href)}
-                        icon={service.icon}
-                      >
-                        {service.description}
-                      </ListItem>
+                      <li key={service.title}>
+                        <Link
+                          href={href(service.href)}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 group/item"
+                        >
+                          <div className="flex items-center gap-2 mb-1">
+                            <service.icon className="h-4 w-4 text-slate-500 group-hover/item:text-emerald-600 transition-colors" />
+                            <div className="text-sm font-semibold leading-none text-slate-900">{service.title}</div>
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-slate-500 pl-6">
+                            {service.description}
+                          </p>
+                        </Link>
+                      </li>
                     ))}
                     <li className="col-span-2 pt-2 border-t border-slate-100">
                       <Link 
@@ -178,8 +197,8 @@ export function Navbar() {
                       </Link>
                     </li>
                   </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                </div>
+              </div>
 
               <NavigationMenuItem>
                 <Link href={href("/erfolgsgeschichten")} legacyBehavior passHref>
@@ -198,29 +217,45 @@ export function Navbar() {
               </NavigationMenuItem>
 
               {/* Über Mich - Custom Dropdown */}
-              <div className="relative group">
-                <button className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors">
+              <div 
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('about')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className={cn(
+                  "inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                  activeDropdown === 'about' ? "text-slate-900 bg-slate-50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                )}>
                   {t("Über Mich", "About")}
-                  <ChevronRight className="ml-1 h-3 w-3 rotate-90 transition-transform group-hover:rotate-[270deg]" />
+                  <ChevronRight className={cn("ml-1 h-3 w-3 transition-transform", activeDropdown === 'about' ? "rotate-[270deg]" : "rotate-90")} />
                 </button>
-                <div className="absolute right-0 top-full mt-1.5 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <ul className="grid gap-2 p-4 bg-white border border-slate-200 rounded-xl shadow-lg">
+                <div className={cn(
+                  "absolute right-0 top-full pt-2 w-[280px] transition-all duration-150",
+                  activeDropdown === 'about' ? "opacity-100 visible z-[60]" : "opacity-0 invisible pointer-events-none z-40"
+                )}>
+                  <ul className="grid gap-2 p-4 bg-white border border-slate-200 rounded-xl shadow-md">
                     <li>
                       <Link
                         href={href("/ueber-mich")}
-                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 group/item"
                       >
-                        <div className="text-sm font-semibold text-slate-900 mb-1">{t("Über Mich", "About Me")}</div>
-                        <p className="text-sm text-slate-500">{t("Erfahrung & Hintergrund", "Experience & Background")}</p>
+                        <div className="flex items-center gap-2 mb-1">
+                          <User className="h-4 w-4 text-slate-500 group-hover/item:text-emerald-600 transition-colors" />
+                          <div className="text-sm font-semibold text-slate-900">{t("Über Mich", "About Me")}</div>
+                        </div>
+                        <p className="text-sm text-slate-500 pl-6">{t("Erfahrung & Hintergrund", "Experience & Background")}</p>
                       </Link>
                     </li>
                     <li>
                       <Link
                         href={href("/vision-mission")}
-                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 group/item"
                       >
-                        <div className="text-sm font-semibold text-slate-900 mb-1">{t("Vision & Mission", "Vision & Mission")}</div>
-                        <p className="text-sm text-slate-500">{t("Werte & Haltung", "Values & Principles")}</p>
+                        <div className="flex items-center gap-2 mb-1">
+                          <Target className="h-4 w-4 text-slate-500 group-hover/item:text-emerald-600 transition-colors" />
+                          <div className="text-sm font-semibold text-slate-900">{t("Vision & Mission", "Vision & Mission")}</div>
+                        </div>
+                        <p className="text-sm text-slate-500 pl-6">{t("Werte & Haltung", "Values & Principles")}</p>
                       </Link>
                     </li>
                   </ul>
