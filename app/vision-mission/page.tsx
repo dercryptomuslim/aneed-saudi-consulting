@@ -95,7 +95,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8">
@@ -136,7 +136,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* Mission Section */}
-      <section id="mission" className="py-16 md:py-24 bg-slate-50">
+      <section id="mission" className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8">
@@ -210,7 +210,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* Core Value Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8">
             Unser Core Value
@@ -226,7 +226,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* Grundwerte Section */}
-      <section className="py-16 md:py-24 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-12 text-center">
             Unsere Grundwerte
@@ -245,7 +245,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* Haltung Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-10">
@@ -285,7 +285,7 @@ export default function VisionMissionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-slate-100 border-y border-slate-200">
+      <section className="py-12 md:py-16 bg-slate-100 border-y border-slate-200">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="lg:max-w-2xl">
