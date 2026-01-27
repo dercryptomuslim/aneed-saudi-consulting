@@ -158,7 +158,7 @@ export function Navbar() {
                   {t("Leistungen", "Services")}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-white border border-slate-100 rounded-xl shadow-xl">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px] bg-white border border-slate-200 rounded-xl shadow-lg">
                     {services.map((service) => (
                       <ListItem
                         key={service.title}
@@ -204,7 +204,7 @@ export function Navbar() {
                   <ChevronRight className="ml-1 h-3 w-3 rotate-90 transition-transform group-hover:rotate-[270deg]" />
                 </button>
                 <div className="absolute right-0 top-full mt-1.5 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <ul className="grid gap-2 p-4 bg-white border border-slate-100 rounded-xl shadow-xl">
+                  <ul className="grid gap-2 p-4 bg-white border border-slate-200 rounded-xl shadow-lg">
                     <li>
                       <Link
                         href={href("/ueber-mich")}
