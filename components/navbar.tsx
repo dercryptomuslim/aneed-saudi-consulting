@@ -198,11 +198,35 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href={href("/ueber-mich")} legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    {t("Über Mich", "About")}
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
+                  {t("Über Mich", "About")}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[280px] gap-2 p-4 bg-white border border-slate-100 rounded-xl shadow-xl">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href={href("/ueber-mich")}
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                        >
+                          <div className="text-sm font-semibold text-slate-900 mb-1">{t("Über Mich", "About Me")}</div>
+                          <p className="text-sm text-slate-500">{t("Erfahrung & Hintergrund", "Experience & Background")}</p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href={href("/vision-mission")}
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900"
+                        >
+                          <div className="text-sm font-semibold text-slate-900 mb-1">{t("Vision & Mission", "Vision & Mission")}</div>
+                          <p className="text-sm text-slate-500">{t("Werte & Haltung", "Values & Principles")}</p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -352,14 +376,31 @@ export function Navbar() {
                             <ChevronRight className="h-5 w-5 text-slate-400" />
                           </Link>
 
-                          <Link
-                            href={href("/ueber-mich")}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
-                          >
-                            {t("Über Mich", "About")}
-                            <ChevronRight className="h-5 w-5 text-slate-400" />
-                          </Link>
+                          <Accordion type="single" collapsible className="w-full border-b border-slate-100">
+                            <AccordionItem value="about" className="border-none">
+                              <AccordionTrigger className="text-lg font-medium text-slate-900 hover:no-underline py-4">
+                                {t("Über Mich", "About")}
+                              </AccordionTrigger>
+                              <AccordionContent>
+                                <div className="flex flex-col space-y-3 pl-2 pb-4 pt-2 bg-slate-50/50 rounded-lg mb-2">
+                                  <Link
+                                    href={href("/ueber-mich")}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
+                                  >
+                                    <span className="text-sm font-medium">{t("Über Mich", "About Me")}</span>
+                                  </Link>
+                                  <Link
+                                    href={href("/vision-mission")}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
+                                  >
+                                    <span className="text-sm font-medium">{t("Vision & Mission", "Vision & Mission")}</span>
+                                  </Link>
+                                </div>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
                 </div>
               </div>
 
