@@ -48,7 +48,7 @@ export default function VisionMissionPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-28 pb-12 md:pt-32 md:pb-20 overflow-hidden bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
