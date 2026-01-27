@@ -197,11 +197,11 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="static">
                 <NavigationMenuTrigger className="text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium">
                   {t("Über Mich", "About")}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="!left-auto !right-0">
                   <ul className="grid w-[280px] gap-2 p-4 bg-white border border-slate-100 rounded-xl shadow-xl">
                     <li>
                       <NavigationMenuLink asChild>
