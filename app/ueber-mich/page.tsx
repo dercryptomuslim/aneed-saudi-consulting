@@ -89,15 +89,16 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Right Column: Placeholder/Empty to balance layout if needed or keep text focused */}
+            {/* Right Column: Portrait Image */}
             <div className="lg:w-1/2 relative hidden lg:block">
-               {/* Optional: Hier könnte eine Grafik oder ein Zitat stehen, 
-                   aber wir haben das Bild nach unten verschoben. 
-                   Lassen wir es leer für einen cleanen Look oder fügen ein Zitat ein. */}
-               <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 max-w-md mx-auto italic text-slate-600 leading-relaxed relative">
-                  <span className="absolute top-4 left-4 text-6xl text-emerald-100 font-serif -z-10">"</span>
-                  Die Vision 2030 ist nicht nur ein Plan, sondern eine Einladung an alle, die Zukunft mitzugestalten. Ich helfe dir dabei, diese Einladung anzunehmen.
-               </div>
+              <div className="relative aspect-square w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+                <Image
+                  src="/aneed-1.jpg"
+                  alt="Aneed Ashraf"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -183,15 +184,12 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              {/* Second Image (Square) */}
-              <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                <Image
-                  src="/aneed-1.jpg"
-                  alt="Aneed Ashraf"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {/* Quote */}
+              <blockquote className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-r-xl">
+                <p className="text-xl font-serif text-emerald-800 italic leading-relaxed">
+                  „Die Vision 2030 ist nicht nur ein Plan, sondern eine Einladung an alle, die Zukunft mitzugestalten. Ich helfe dir dabei, diese Einladung anzunehmen."
+                </p>
+              </blockquote>
 
               {/* CTA */}
               <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center space-y-4">
