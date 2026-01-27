@@ -30,7 +30,7 @@ export default function CheckPage() {
     <main className="min-h-screen bg-white text-slate-900 flex flex-col">
       <Navbar />
       
-      <section className="relative flex-1 flex flex-col items-center justify-center py-12 md:py-24 overflow-hidden min-h-[85dvh] bg-slate-50">
+      <section className="relative flex-1 flex flex-col items-center justify-center pt-28 pb-12 md:py-24 overflow-hidden min-h-[85dvh] bg-slate-50">
         
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
