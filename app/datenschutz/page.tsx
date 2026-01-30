@@ -119,7 +119,7 @@ export default function PrivacyPage() {
             <p className="text-slate-600 mb-4">
               Oasis Gate LLC<br />
               Medina<br />
-              Saudi Arabie
+              Saudi-Arabien
             </p>
             <p className="text-slate-600 mb-4">
               Telefon: +966507390833<br />
