@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
       version: "v4",
     });
 
-    // Datum formatieren (Saudi Arabien)
+    // Datum formatieren (Saudi-Arabien)
     const date = new Date().toLocaleString("de-DE", { timeZone: "Asia/Riyadh" });
 
     // Daten normalisieren (Kontaktformular + Funnel unterstützen)

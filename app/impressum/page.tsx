@@ -48,7 +48,7 @@ export default function ImpressumPage() {
             <p className="text-slate-600 mb-8">
               Oasis Gate LLC<br />
               Medina<br />
-              Saudi Arabien
+              Saudi-Arabien
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Kontakt</h2>

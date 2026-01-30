@@ -429,7 +429,7 @@ export function ConsultingFunnelLocalized({ locale = "de" }: { locale?: Locale }
             <StepCard 
               question={t("Budget-Warnung", "Budget Warning")}
               subtext={t(
-                "Eine Gründung einer Firma unterhalb dieser Summe ist schwierig in Saudi Arabien, gerade wenn es um die Gastronomie geht. Es ist sehr Konzept abhängig aber 90% der Konzepte liegen in dieser Range. Möchtest Du trotzdem fortfahren?",
+                "Eine Gründung einer Firma unterhalb dieser Summe ist schwierig in Saudi-Arabien, gerade wenn es um die Gastronomie geht. Es ist sehr Konzept abhängig aber 90% der Konzepte liegen in dieser Range. Möchtest Du trotzdem fortfahren?",
                 "Starting a company below this amount is difficult in Saudi Arabia, especially when it comes to gastronomy. It is very concept-dependent but 90% of concepts lie in this range. Do you still want to proceed?"
               )}
               icon={<AlertCircle className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />}
