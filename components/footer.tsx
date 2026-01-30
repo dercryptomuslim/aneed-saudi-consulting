@@ -66,11 +66,11 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
                     
                     <div className="flex gap-4 mt-6">
                       <a 
-                        href="https://www.instagram.com/ashrafbusiness/" 
+                        href="https://www.instagram.com/aneedashraf" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-slate-400 hover:text-white transition-colors"
-                        onClick={() => trackExternalLinkClick({ url: "https://www.instagram.com/ashrafbusiness/", linkText: "Instagram" })}
+                        onClick={() => trackExternalLinkClick({ url: "https://www.instagram.com/aneedashraf", linkText: "Instagram" })}
                       >
                         <Instagram className="h-5 w-5" />
                         <span className="sr-only">Instagram</span>
