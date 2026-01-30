@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 import { localizeHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "About | Aneed Ashraf - Entrepreneur & Consultant Saudi Arabia",
+  title: "About | Aneed Ashraf - Entrepreneur - Consultant - Investor Saudi Arabia",
   description: "Learn more about Aneed Ashraf: Entrepreneur, consultant and bridge builder between Germany and Saudi Arabia. 9+ years of experience in Medina.",
   alternates: {
     canonical: "/en/about",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   keywords: ["Aneed Ashraf", "Business Consultant Saudi Arabia", "Medina", "Oasis Gate", "Vision 2030"],
   openGraph: {
-    title: "About | Aneed Ashraf - Entrepreneur & Consultant",
+    title: "About | Aneed Ashraf - Entrepreneur - Consultant - Investor",
     description: "Entrepreneur, consultant and bridge builder between Germany and Saudi Arabia. 9+ years of experience in Medina.",
     url: "https://www.aneedashraf.de/en/about",
     siteName: "Aneed Ashraf",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "/aneed-1.jpg",
         width: 800,
         height: 800,
-        alt: "Aneed Ashraf - Entrepreneur & Consultant",
+        alt: "Aneed Ashraf - Entrepreneur - Consultant - Investor",
       },
     ],
   },
@@ -71,7 +71,7 @@ export default function AboutEnPage() {
             {/* Left Column: Intro */}
             <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
               <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm font-medium">
-                Entrepreneur & Consultant
+                Entrepreneur - Consultant - Investor
               </div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-tight">
                 Aneed Ashraf

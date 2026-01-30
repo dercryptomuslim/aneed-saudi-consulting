@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Über Mich | Aneed Ashraf - Unternehmer & Berater Saudi-Arabien",
+  title: "Über Mich | Aneed Ashraf - Unternehmer - Berater - Investor Saudi-Arabien",
   description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien. 9+ Jahre Erfahrung in Medina.",
   alternates: {
     canonical: "/ueber-mich",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   keywords: ["Aneed Ashraf", "Unternehmensberater Saudi-Arabien", "Medina", "Oasis Gate", "Vision 2030"],
   openGraph: {
-    title: "Über Mich | Aneed Ashraf - Unternehmer & Berater",
+    title: "Über Mich | Aneed Ashraf - Unternehmer - Berater - Investor",
     description: "Erfahre mehr über Aneed Ashraf: Unternehmer, Berater und Brückenbauer zwischen Deutschland und Saudi-Arabien.",
     url: "https://www.aneedashraf.de/ueber-mich",
     siteName: "Aneed Ashraf",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "/aneed-1.jpg",
         width: 800,
         height: 800,
-        alt: "Aneed Ashraf - Unternehmer & Berater",
+        alt: "Aneed Ashraf - Unternehmer - Berater - Investor",
       },
     ],
   },
@@ -70,7 +70,7 @@ export default function AboutPage() {
             {/* Left Column: Intro */}
             <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
               <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm font-medium">
-                Unternehmer & Berater
+                Unternehmer - Berater - Investor
               </div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-tight">
                 Aneed Ashraf
