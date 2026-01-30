@@ -53,8 +53,8 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
           
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 md:text-xl leading-relaxed">
             {t(
-              "9 Jahre Expertise direkt aus Medina. Wir begleiten dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.",
-              "With over nine years of hands-on experience in Medina, we guide you through company formation, investment opportunities, and relocation across Saudi Arabia."
+              "9 Jahre Expertise direkt aus Medina. Ich begleite dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.",
+              "9 years of expertise directly from Medina. I guide you safely through company formation, investment, and relocation across Saudi Arabia."
             )}{" "}
             <br className="hidden md:block" />
             <span className="font-medium text-slate-800">
@@ -64,6 +64,18 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
               )}
             </span>
           </p>
+
+          {/* Quote Highlight */}
+          <div className="mx-auto mt-8 max-w-2xl">
+            <blockquote className="border-l-4 border-emerald-500 bg-emerald-50/50 pl-5 pr-6 py-4 rounded-r-lg">
+              <p className="text-base md:text-lg font-medium text-slate-700 italic">
+                {t(
+                  "Als erster deutscher Unternehmer habe ich eine Unternehmensberatung in Medina aufgebaut.",
+                  "As the first German entrepreneur, I built a consulting firm in Medina."
+                )}
+              </p>
+            </blockquote>
+          </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button 

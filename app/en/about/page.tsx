@@ -80,6 +80,13 @@ export default function AboutEnPage() {
                 A bridge between worlds. Trusted partner to elite entrepreneurs and investors shaping success in Saudi Arabia.
               </p>
 
+              {/* Quote Highlight */}
+              <blockquote className="border-l-4 border-emerald-500 bg-emerald-50/50 pl-5 pr-6 py-4 rounded-r-lg text-left">
+                <p className="text-base font-medium text-slate-700 italic">
+                  As the first German entrepreneur, I built a consulting firm in Medina.
+                </p>
+              </blockquote>
+
               <div className="grid grid-cols-2 gap-6 pt-4 text-center md:text-left">
                 {stats.map((stat) => (
                   <div key={stat.label}>
