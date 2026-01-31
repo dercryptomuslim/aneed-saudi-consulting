@@ -304,7 +304,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Wenn du deine Familie nachholen willst, musst du ein paar grundlegende Anforderungen erfüllen:</p>
       
-      <ul class="mb-6 space-y-3">
+      <ul class="mb-6 space-y-3 list-disc pl-6">
         <li>Du brauchst eine <strong>gültige Iqama</strong>, die bestenfalls noch mindestens drei Monate gültig ist.</li>
         <li>Du solltest seit mindestens <strong>drei Monaten in Saudi-Arabien leben und arbeiten</strong>.</li>
         <li>Deine <strong>Berufsbezeichnung</strong> auf der Iqama muss zu den qualifizierten Tätigkeiten zählen – einfache Jobs wie „Fahrer" oder „Hilfsarbeiter" reichen leider nicht.</li>
@@ -338,7 +338,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Damit dein Antrag Aussicht auf Erfolg hat, brauchst du eine ganze Reihe an Dokumenten:</p>
       
-      <ul class="mb-8 space-y-3">
+      <ul class="mb-8 space-y-3 list-disc pl-6">
         <li><strong>Reisepässe</strong> aller nachziehenden Familienmitglieder (mind. 6 Monate gültig)</li>
         <li><strong>Heirats- und Geburtsurkunden</strong> im Original, arabisch übersetzt und beglaubigt</li>
         <li><strong>Ärztliches Gesundheitszeugnis</strong> (Medical Clearance) aus dem Heimatland</li>
@@ -399,7 +399,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Insgesamt solltest du mit etwa <strong>4 bis 8 Wochen</strong> rechnen – abhängig vom Antragssystem, Terminverfügbarkeit und Botschaftsprozessen.</p>
       
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li><strong>Istiqdam-Anträge:</strong> teils noch am selben Tag genehmigt</li>
         <li><strong>Absher-Anträge:</strong> meist einige Tage bis wenige Wochen</li>
         <li><strong>Visum im Heimatland:</strong> 1–3 Wochen (inkl. Biometrie und Atteste)</li>
@@ -410,15 +410,15 @@ export const blogPostsDe: BlogPost[] = [
       <h2 id="kosten" class="mt-12 mb-6">Kostenübersicht (Stand 2025)</h2>
       
       <div class="mb-8 bg-slate-50 rounded-2xl p-6">
-        <ul class="space-y-4">
+        <ul class="space-y-4 list-disc pl-6">
           <li><strong>Visumantrag:</strong> ca. 2.000 SAR ≈ 494 €</li>
           <li><strong>Dependent Fee pro Jahr & Person:</strong> 4.800 SAR ≈ 1.185 €
-            <ul class="mt-2 ml-6 text-slate-600">
+            <ul class="mt-2 ml-6 text-slate-600 list-disc">
               <li>Ehefrau + 2 Kinder: <strong>14.400 SAR/Jahr ≈ 3.556 €</strong></li>
             </ul>
           </li>
           <li><strong>Weitere Einmalkosten:</strong>
-            <ul class="mt-2 ml-6 text-slate-600">
+            <ul class="mt-2 ml-6 text-slate-600 list-disc">
               <li>Urkundenbeglaubigung: variabel</li>
               <li>Ärztliches Attest: ca. 500 SAR ≈ 123 €</li>
               <li>Konsular-/Servicegebühren: ca. 100 SAR ≈ 25 €</li>
@@ -434,12 +434,12 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Dieser Weg ist teurer, aber für manche eine gute Lösung.</p>
       
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li><strong>Jährliche Kosten:</strong> ca. 2.600 €, abhängig von Branche, Lizenz und Struktur</li>
       </ul>
       
       <p class="mb-6"><strong>Voraussetzungen:</strong></p>
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li>Eine <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Firma in Saudi-Arabien</a> auf deinen Namen</li>
         <li>Deine Frau muss aktiv in der Firma mitarbeiten</li>
         <li>Abhängig von der Unternehmensform (z. B. Einzelunternehmen, LLC) gelten unterschiedliche Anforderungen</li>
@@ -768,7 +768,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">If you want to bring your family over, you need to meet a few basic requirements:</p>
       
-      <ul class="mb-6 space-y-3">
+      <ul class="mb-6 space-y-3 list-disc pl-6">
         <li>You need a <strong>valid Iqama</strong> that is ideally still valid for at least three months.</li>
         <li>You should have been <strong>living and working in Saudi Arabia for at least three months</strong>.</li>
         <li>Your <strong>job title</strong> on the Iqama must be among the qualified occupations – simple jobs like "driver" or "labourer" are unfortunately not sufficient.</li>
@@ -802,7 +802,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">For your application to have a chance of success, you need a whole range of documents:</p>
       
-      <ul class="mb-8 space-y-3">
+      <ul class="mb-8 space-y-3 list-disc pl-6">
         <li><strong>Passports</strong> of all family members joining (valid for at least 6 months)</li>
         <li><strong>Marriage and birth certificates</strong> in original, Arabic translated and certified</li>
         <li><strong>Medical clearance certificate</strong> from the home country</li>
@@ -863,7 +863,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">Overall, you should expect about <strong>4 to 8 weeks</strong> – depending on the application system, appointment availability and embassy processes.</p>
       
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li><strong>Istiqdam applications:</strong> sometimes approved the same day</li>
         <li><strong>Absher applications:</strong> usually a few days to a few weeks</li>
         <li><strong>Visa in home country:</strong> 1-3 weeks (incl. biometrics and certificates)</li>
@@ -874,15 +874,15 @@ export const blogPostsEn: BlogPost[] = [
       <h2 id="costs" class="mt-12 mb-6">Cost Overview (Status 2025)</h2>
       
       <div class="mb-8 bg-slate-50 rounded-2xl p-6">
-        <ul class="space-y-4">
+        <ul class="space-y-4 list-disc pl-6">
           <li><strong>Visa application:</strong> approx. 2,000 SAR ≈ €494</li>
           <li><strong>Dependent Fee per year & person:</strong> 4,800 SAR ≈ €1,185
-            <ul class="mt-2 ml-6 text-slate-600">
+            <ul class="mt-2 ml-6 text-slate-600 list-disc">
               <li>Wife + 2 children: <strong>14,400 SAR/year ≈ €3,556</strong></li>
             </ul>
           </li>
           <li><strong>Other one-time costs:</strong>
-            <ul class="mt-2 ml-6 text-slate-600">
+            <ul class="mt-2 ml-6 text-slate-600 list-disc">
               <li>Document certification: variable</li>
               <li>Medical certificate: approx. 500 SAR ≈ €123</li>
               <li>Consular/service fees: approx. 100 SAR ≈ €25</li>
@@ -898,12 +898,12 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">This route is more expensive, but for some a good solution.</p>
       
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li><strong>Annual costs:</strong> approx. €2,600, depending on industry, licence and structure</li>
       </ul>
       
       <p class="mb-6"><strong>Requirements:</strong></p>
-      <ul class="mb-6 space-y-2">
+      <ul class="mb-6 space-y-2 list-disc pl-6">
         <li>A <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">company in Saudi Arabia</a> in your name</li>
         <li>Your wife must actively work in the company</li>
         <li>Depending on the company type (e.g. sole proprietorship, LLC), different requirements apply</li>
