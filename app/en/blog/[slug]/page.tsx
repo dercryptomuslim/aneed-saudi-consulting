@@ -29,13 +29,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  // SEO Keywords based on slug
+  const keywordMap: Record<string, string[]> = {
+    "family-reunification": ["Family Reunification Saudi Arabia", "Bring Family to Saudi Arabia", "Iqama Family Visa", "Family Residence Visa KSA", "Dependent Visa Saudi Arabia", "Spouse Visa Saudi Arabia"],
+    "saudi-premium-residency": ["Saudi Premium Residency", "Permanent Residence Saudi Arabia", "Golden Visa Saudi Arabia", "Investor Visa KSA", "Long-term Residency Saudi"],
+    "how-to-start-a-business-in-saudi-arabia": ["Start Business Saudi Arabia", "Company Formation KSA", "LLC Saudi Arabia", "Open Business Medina", "Entrepreneur Visa Saudi"],
+    "living-in-saudi-arabia-4-legal-ways-to-medina": ["Living in Saudi Arabia", "Move to Medina", "Work in Saudi Arabia", "Visa Saudi Arabia", "Residency KSA"],
+  };
+  
+  const specificKeywords = keywordMap[slug] || [];
+  const defaultKeywords = ["Saudi Arabia", "Aneed Ashraf", "Consulting", "Medina"];
+
   return {
     title: `${post.title} | Aneed Ashraf`,
     description: post.excerpt,
     alternates: {
       canonical: `/en/blog/${post.slug}`,
     },
-    keywords: [post.title, "Saudi Arabia", "Company Formation", "Medina", "Blog"],
+    keywords: [...specificKeywords, ...defaultKeywords],
     openGraph: {
       title: post.title,
       description: post.excerpt,

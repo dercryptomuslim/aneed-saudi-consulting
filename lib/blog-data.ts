@@ -288,7 +288,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Die Antwort: In vielen Fällen ja – einen Job zu finden, ist oft gar nicht so schwer. Natürlich kommt es auf die Stadt, die Branche und manchmal auch ein bisschen Glück an. Aber zwei andere Fragen sind meist viel entscheidender:</p>
       
-      <ol class="mb-6 space-y-2 list-decimal pl-6">
+      <ol class="mb-6 space-y-2 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>Wie hoch ist mein Gehalt?</strong></li>
         <li><strong>Kann ich meine Familie dauerhaft nach Saudi-Arabien holen?</strong></li>
       </ol>
@@ -304,7 +304,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Wenn du deine Familie nachholen willst, musst du ein paar grundlegende Anforderungen erfüllen:</p>
       
-      <ul class="mb-6 space-y-3 list-disc pl-6">
+      <ul class="mb-6 space-y-3 list-disc pl-6 text-lg text-slate-700">
         <li>Du brauchst eine <strong>gültige Iqama</strong>, die bestenfalls noch mindestens drei Monate gültig ist.</li>
         <li>Du solltest seit mindestens <strong>drei Monaten in Saudi-Arabien leben und arbeiten</strong>.</li>
         <li>Deine <strong>Berufsbezeichnung</strong> auf der Iqama muss zu den qualifizierten Tätigkeiten zählen – einfache Jobs wie „Fahrer" oder „Hilfsarbeiter" reichen leider nicht.</li>
@@ -338,7 +338,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Damit dein Antrag Aussicht auf Erfolg hat, brauchst du eine ganze Reihe an Dokumenten:</p>
       
-      <ul class="mb-8 space-y-3 list-disc pl-6">
+      <ul class="mb-8 space-y-3 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Reisepässe</strong> aller nachziehenden Familienmitglieder (mind. 6 Monate gültig)</li>
         <li><strong>Heirats- und Geburtsurkunden</strong> im Original, arabisch übersetzt und beglaubigt</li>
         <li><strong>Ärztliches Gesundheitszeugnis</strong> (Medical Clearance) aus dem Heimatland</li>
@@ -364,7 +364,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Für Familienmitglieder gibt es zwei Hauptarten von Visa:</p>
       
-      <ol class="mb-6 space-y-3 list-decimal pl-6">
+      <ol class="mb-6 space-y-3 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>Family Residence Visa</strong> – für dauerhaften Aufenthalt + eigene Iqama</li>
         <li><strong>Family Visit Visa</strong> – für Kurzbesuche (typisch: 90 Tage, verlängerbar)</li>
       </ol>
@@ -380,7 +380,7 @@ export const blogPostsDe: BlogPost[] = [
 
       <h2 id="ablauf" class="mt-12 mb-6">Ablauf des Antragsverfahrens – Schritt für Schritt</h2>
       
-      <ol class="mb-8 space-y-4 list-decimal pl-6">
+      <ol class="mb-8 space-y-4 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>Gebühren & Unterlagen vorbereiten:</strong> Alles legalisieren, 2.000 SAR Visagebühr vorab zahlen</li>
         <li><strong>Antrag stellen:</strong> Online (Absher) oder persönlich (Istiqdam), je nach Beruf</li>
         <li><strong>Arbeitgeberbestätigung:</strong> Kammerstempel über die Handelskammer einholen</li>
@@ -399,7 +399,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Insgesamt solltest du mit etwa <strong>4 bis 8 Wochen</strong> rechnen – abhängig vom Antragssystem, Terminverfügbarkeit und Botschaftsprozessen.</p>
       
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Istiqdam-Anträge:</strong> teils noch am selben Tag genehmigt</li>
         <li><strong>Absher-Anträge:</strong> meist einige Tage bis wenige Wochen</li>
         <li><strong>Visum im Heimatland:</strong> 1–3 Wochen (inkl. Biometrie und Atteste)</li>
@@ -434,12 +434,12 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Dieser Weg ist teurer, aber für manche eine gute Lösung.</p>
       
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Jährliche Kosten:</strong> ca. 2.600 €, abhängig von Branche, Lizenz und Struktur</li>
       </ul>
       
       <p class="mb-6"><strong>Voraussetzungen:</strong></p>
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li>Eine <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Firma in Saudi-Arabien</a> auf deinen Namen</li>
         <li>Deine Frau muss aktiv in der Firma mitarbeiten</li>
         <li>Abhängig von der Unternehmensform (z. B. Einzelunternehmen, LLC) gelten unterschiedliche Anforderungen</li>
@@ -752,7 +752,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">The answer: In many cases, yes – finding a job is often not that difficult. Of course, it depends on the city, the industry, and sometimes a bit of luck. But two other questions are usually much more decisive:</p>
       
-      <ol class="mb-6 space-y-2 list-decimal pl-6">
+      <ol class="mb-6 space-y-2 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>How high is my salary?</strong></li>
         <li><strong>Can I bring my family permanently to Saudi Arabia?</strong></li>
       </ol>
@@ -768,7 +768,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">If you want to bring your family over, you need to meet a few basic requirements:</p>
       
-      <ul class="mb-6 space-y-3 list-disc pl-6">
+      <ul class="mb-6 space-y-3 list-disc pl-6 text-lg text-slate-700">
         <li>You need a <strong>valid Iqama</strong> that is ideally still valid for at least three months.</li>
         <li>You should have been <strong>living and working in Saudi Arabia for at least three months</strong>.</li>
         <li>Your <strong>job title</strong> on the Iqama must be among the qualified occupations – simple jobs like "driver" or "labourer" are unfortunately not sufficient.</li>
@@ -802,7 +802,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">For your application to have a chance of success, you need a whole range of documents:</p>
       
-      <ul class="mb-8 space-y-3 list-disc pl-6">
+      <ul class="mb-8 space-y-3 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Passports</strong> of all family members joining (valid for at least 6 months)</li>
         <li><strong>Marriage and birth certificates</strong> in original, Arabic translated and certified</li>
         <li><strong>Medical clearance certificate</strong> from the home country</li>
@@ -828,7 +828,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">There are two main types of visas for family members:</p>
       
-      <ol class="mb-6 space-y-3 list-decimal pl-6">
+      <ol class="mb-6 space-y-3 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>Family Residence Visa</strong> – for permanent residence + own Iqama</li>
         <li><strong>Family Visit Visa</strong> – for short visits (typically: 90 days, extendable)</li>
       </ol>
@@ -844,7 +844,7 @@ export const blogPostsEn: BlogPost[] = [
 
       <h2 id="process" class="mt-12 mb-6">Application Process – Step by Step</h2>
       
-      <ol class="mb-8 space-y-4 list-decimal pl-6">
+      <ol class="mb-8 space-y-4 list-decimal pl-6 text-lg text-slate-700">
         <li><strong>Prepare fees & documents:</strong> Legalise everything, pay 2,000 SAR visa fee in advance</li>
         <li><strong>Submit application:</strong> Online (Absher) or in person (Istiqdam), depending on profession</li>
         <li><strong>Employer confirmation:</strong> Get chamber stamp via the Chamber of Commerce</li>
@@ -863,7 +863,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">Overall, you should expect about <strong>4 to 8 weeks</strong> – depending on the application system, appointment availability and embassy processes.</p>
       
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Istiqdam applications:</strong> sometimes approved the same day</li>
         <li><strong>Absher applications:</strong> usually a few days to a few weeks</li>
         <li><strong>Visa in home country:</strong> 1-3 weeks (incl. biometrics and certificates)</li>
@@ -898,12 +898,12 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">This route is more expensive, but for some a good solution.</p>
       
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li><strong>Annual costs:</strong> approx. €2,600, depending on industry, licence and structure</li>
       </ul>
       
       <p class="mb-6"><strong>Requirements:</strong></p>
-      <ul class="mb-6 space-y-2 list-disc pl-6">
+      <ul class="mb-6 space-y-2 list-disc pl-6 text-lg text-slate-700">
         <li>A <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">company in Saudi Arabia</a> in your name</li>
         <li>Your wife must actively work in the company</li>
         <li>Depending on the company type (e.g. sole proprietorship, LLC), different requirements apply</li>
