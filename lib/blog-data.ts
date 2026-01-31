@@ -741,7 +741,7 @@ export const blogPostsEn: BlogPost[] = [
     `
   },
   {
-    slug: "family-reunification",
+    slug: "familienzusammenfuehrung",
     title: "Family Reunification with Iqama in Saudi Arabia",
     date: "Jan 31, 2026",
     readTime: "14 min",
