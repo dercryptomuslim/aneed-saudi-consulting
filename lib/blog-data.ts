@@ -275,6 +275,192 @@ export const blogPostsDe: BlogPost[] = [
         <p class="text-slate-600">Keine Theorie. Keine allgemeinen Informationen.<br>Sondern eine klare Einschätzung auf Basis realer Erfahrung aus Saudi-Arabien.</p>
       </div>
     `
+  },
+  {
+    slug: "familienzusammenfuehrung",
+    title: "Familienzusammenführung für EU-Arbeiter mit Iqama in Saudi-Arabien",
+    date: "31.01.2026",
+    readTime: "14 Min.",
+    excerpt: "Kann ich meine Familie dauerhaft nach Saudi-Arabien holen? Dieser Beitrag zeigt dir Schritt für Schritt, unter welchen Bedingungen ein Arbeitnehmer mit Iqama seine Frau und Kinder nachholen kann.",
+    image: "/images/Vater mit Kindern am Flughafen.png",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">Eine Frage, die bei vielen sich stellen: „Kann ich mit diesem Job in Saudi-Arabien arbeiten?"</p>
+      
+      <p class="mb-6">Die Antwort: In vielen Fällen ja – einen Job zu finden, ist oft gar nicht so schwer. Natürlich kommt es auf die Stadt, die Branche und manchmal auch ein bisschen Glück an. Aber zwei andere Fragen sind meist viel entscheidender:</p>
+      
+      <ol class="mb-6 space-y-2 list-decimal pl-6">
+        <li><strong>Wie hoch ist mein Gehalt?</strong></li>
+        <li><strong>Kann ich meine Familie dauerhaft nach Saudi-Arabien holen?</strong></li>
+      </ol>
+      
+      <p class="mb-8">Dieser Beitrag konzentriert sich auf genau diese zweite Frage. Er zeigt dir, unter welchen Bedingungen ein Arbeitnehmer mit regulärer Iqama – also ohne Daueraufenthalt, <a href="/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> oder <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">eigenes Unternehmen</a> – seine Frau und Kinder dauerhaft nach Saudi-Arabien bringen kann. Und das Schritt für Schritt, mit allen wichtigen Voraussetzungen und Dokumenten.</p>
+
+      <figure class="my-12">
+        <img src="/images/Vater mit Kindern am Flughafen.png" alt="Familie mit Koffern bereit zur Auswanderung nach Saudi-Arabien" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Familie mit Koffern – bereit für den Umzug nach Saudi-Arabien</figcaption>
+      </figure>
+
+      <h2 id="rechtliche-voraussetzungen" class="mt-12 mb-6">Rechtliche Voraussetzungen für den Familiennachzug</h2>
+      
+      <p class="mb-6">Wenn du deine Familie nachholen willst, musst du ein paar grundlegende Anforderungen erfüllen:</p>
+      
+      <ul class="mb-6 space-y-3">
+        <li>Du brauchst eine <strong>gültige Iqama</strong>, die bestenfalls noch mindestens drei Monate gültig ist.</li>
+        <li>Du solltest seit mindestens <strong>drei Monaten in Saudi-Arabien leben und arbeiten</strong>.</li>
+        <li>Deine <strong>Berufsbezeichnung</strong> auf der Iqama muss zu den qualifizierten Tätigkeiten zählen – einfache Jobs wie „Fahrer" oder „Hilfsarbeiter" reichen leider nicht.</li>
+      </ul>
+      
+      <p class="mb-6">Zudem ist der Nachzug auf die <strong>engste Kernfamilie</strong> beschränkt: also Ehepartnerin (bzw. Ehepartner) und minderjährige Kinder. Söhne über 18 brauchen ein eigenes Visum (z. B. Studentenvisum), Eltern oder Geschwister können über diesen Weg nicht nachgeholt werden.</p>
+      
+      <p class="mb-8 pl-4 border-l-4 border-emerald-500 bg-slate-50 p-4">👉 <strong>Nur wer eine <a href="/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> besitzt, hat hier erweiterte Möglichkeiten</strong> – inklusive der Option, auch Eltern nachzuholen.</p>
+
+      <h2 id="ohne-studium" class="mt-12 mb-6">Familienzusammenführung ohne Studium (Stand 2025/2026)</h2>
+      
+      <p class="mb-6">Ein echtes Hindernis, das viele betrifft: Ein nachgewiesener <strong>Hochschulabschluss (mind. Bachelor)</strong> ist Pflicht, um ein dauerhaftes Familienvisum zu erhalten.</p>
+      
+      <p class="mb-6">Selbst mit einem guten Gehalt und einer „qualifizierten" Iqama-Berufsbezeichnung (z. B. Techniker, Administrator, Spezialist) reicht das nicht aus – ohne offiziell beglaubigte und arabisch übersetzte Abschlussurkunde, die zur Berufsbezeichnung passt, wird der Antrag abgelehnt.</p>
+      
+      <h3 class="mt-8 mb-4 text-xl font-bold">Gibt es Berufe, die keinen Studienabschluss erfordern?</h3>
+      
+      <p class="mb-6">Leider nein. Heute gibt es praktisch <strong>keine anerkannten Berufe mehr</strong>, die ohne Studium für den Familiennachzug zugelassen sind. Früher war das bei manchen Technik- oder Büroberufen noch denkbar – heute sind das nur noch Einzelfälle mit viel Glück und meist auf Kulanzbasis.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="font-bold text-amber-800 mb-2">Fazit:</p>
+        <p class="text-amber-900">👉 Ohne akademischen Abschluss ist ein dauerhafter Familiennachzug faktisch ausgeschlossen. Maximal ist noch ein Besuchsvisum möglich, aber kein dauerhaftes Aufenthaltsrecht.</p>
+      </div>
+
+      <figure class="my-12">
+        <img src="/images/Offizielle Dokumente und Zertifikate.png" alt="Dokumente, Reisepass und Bachelorurkunde für Visumsantrag" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Erforderliche Dokumente: Reisepass, Bachelorurkunde und mehr</figcaption>
+      </figure>
+
+      <h2 id="unterlagen" class="mt-12 mb-6">Erforderliche Unterlagen für den Visumsantrag</h2>
+      
+      <p class="mb-6">Damit dein Antrag Aussicht auf Erfolg hat, brauchst du eine ganze Reihe an Dokumenten:</p>
+      
+      <ul class="mb-8 space-y-3">
+        <li><strong>Reisepässe</strong> aller nachziehenden Familienmitglieder (mind. 6 Monate gültig)</li>
+        <li><strong>Heirats- und Geburtsurkunden</strong> im Original, arabisch übersetzt und beglaubigt</li>
+        <li><strong>Ärztliches Gesundheitszeugnis</strong> (Medical Clearance) aus dem Heimatland</li>
+        <li><strong>Biometrische Passbilder</strong></li>
+        <li><strong>Iqama und Reisepasskopie</strong> des Antragstellers</li>
+        <li><strong>Gehaltsnachweis</strong> vom Arbeitgeber (kammerbeglaubigt)</li>
+        <li><strong>GOSI-Versicherungsnachweis</strong> (zeigt offizielles Gehalt)</li>
+        <li><strong>Hochschulabschluss</strong> (beglaubigt und legalisiert)</li>
+        <li><strong>Nachweis über Krankenversicherung</strong> für alle Familienmitglieder</li>
+      </ul>
+      
+      <p class="mb-8 pl-4 border-l-4 border-red-500 bg-red-50 p-4"><strong>Wichtig:</strong> Alle Unterlagen müssen vollständig, korrekt übersetzt und rechtzeitig legalisiert sein – sonst wird dein Antrag abgelehnt.</p>
+
+      <h2 id="mindestgehalt" class="mt-12 mb-6">Mindestgehalt – was zählt wirklich?</h2>
+      
+      <p class="mb-6">Ein zentraler Punkt ist das offizielle Einkommen. Das muss mindestens <strong>5.000 SAR (≈ 1.185 €)</strong> pro Monat betragen – und zwar im <strong>GOSI-System</strong>, nicht nur im Arbeitsvertrag.</p>
+      
+      <p class="mb-6">Viele Arbeitgeber melden ein niedrigeres Gehalt, um bei Versicherungsbeiträgen zu sparen. Das kann dir beim Visumsantrag das Genick brechen! Also unbedingt: <strong>Vertrag und GOSI vergleichen.</strong></p>
+      
+      <p class="mb-8">Diese Regelung existiert schon seit einigen Jahren und ist Teil der saudischen Strategie, nur qualifizierte Arbeitskräfte mit Familiennachzug zuzulassen.</p>
+
+      <h2 id="visumarten" class="mt-12 mb-6">Visumarten für Ehepartner und Kinder</h2>
+      
+      <p class="mb-6">Für Familienmitglieder gibt es zwei Hauptarten von Visa:</p>
+      
+      <ol class="mb-6 space-y-3 list-decimal pl-6">
+        <li><strong>Family Residence Visa</strong> – für dauerhaften Aufenthalt + eigene Iqama</li>
+        <li><strong>Family Visit Visa</strong> – für Kurzbesuche (typisch: 90 Tage, verlängerbar)</li>
+      </ol>
+      
+      <p class="mb-6">Für echtes Zusammenleben kommt nur das <strong>Residence Visa</strong> in Frage. Das Besuchsvisum ist nur für kurzfristige Besuche gedacht – es muss regelmäßig erneuert werden und erlaubt keinen dauerhaften Aufenthalt.</p>
+      
+      <p class="mb-8">Kinder über 18 sind nicht mehr als „Dependents" zulässig und brauchen ein separates Visum.</p>
+
+      <figure class="my-12">
+        <img src="/images/Antragsteller am Jawazat.png" alt="Antragsteller am Jawazat-Schalter für Familienvisa" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Antragsteller beim Jawazat-Schalter</figcaption>
+      </figure>
+
+      <h2 id="ablauf" class="mt-12 mb-6">Ablauf des Antragsverfahrens – Schritt für Schritt</h2>
+      
+      <ol class="mb-8 space-y-4 list-decimal pl-6">
+        <li><strong>Gebühren & Unterlagen vorbereiten:</strong> Alles legalisieren, 2.000 SAR Visagebühr vorab zahlen</li>
+        <li><strong>Antrag stellen:</strong> Online (Absher) oder persönlich (Istiqdam), je nach Beruf</li>
+        <li><strong>Arbeitgeberbestätigung:</strong> Kammerstempel über die Handelskammer einholen</li>
+        <li><strong>Visumgenehmigung:</strong> Bei Erfolg erhältst du den „Yellow Slip" (Papier) oder eine Online-Bestätigung</li>
+        <li><strong>Visum im Heimatland beantragen:</strong> Beim Visa-Center oder saudischer Botschaft mit allen Unterlagen</li>
+        <li><strong>Einreise & Iqama:</strong> Nach Ankunft binnen 90 Tagen Krankenversicherung abschließen, Dependent Fee zahlen, Iqama beantragen</li>
+      </ol>
+
+      <h2 id="nationalitaet" class="mt-12 mb-6">Gibt es Unterschiede je nach Nationalität?</h2>
+      
+      <p class="mb-6">Nein – das System gilt für <strong>alle Nationalitäten gleich</strong>. Ein EU-Bürger hat keine Sonderrechte gegenüber anderen Expats.</p>
+      
+      <p class="mb-8">Der einzige Unterschied kann in der praktischen Umsetzung liegen – z. B. welcher Visa-Dienstleister zuständig ist oder wie Übersetzungen anerkannt werden.</p>
+
+      <h2 id="dauer" class="mt-12 mb-6">Wie lange dauert der gesamte Prozess?</h2>
+      
+      <p class="mb-6">Insgesamt solltest du mit etwa <strong>4 bis 8 Wochen</strong> rechnen – abhängig vom Antragssystem, Terminverfügbarkeit und Botschaftsprozessen.</p>
+      
+      <ul class="mb-6 space-y-2">
+        <li><strong>Istiqdam-Anträge:</strong> teils noch am selben Tag genehmigt</li>
+        <li><strong>Absher-Anträge:</strong> meist einige Tage bis wenige Wochen</li>
+        <li><strong>Visum im Heimatland:</strong> 1–3 Wochen (inkl. Biometrie und Atteste)</li>
+      </ul>
+      
+      <p class="mb-8">Puffer einplanen lohnt sich – Verzögerungen sind nicht unüblich.</p>
+
+      <h2 id="kosten" class="mt-12 mb-6">Kostenübersicht (Stand 2025)</h2>
+      
+      <div class="mb-8 bg-slate-50 rounded-2xl p-6">
+        <ul class="space-y-4">
+          <li><strong>Visumantrag:</strong> ca. 2.000 SAR ≈ 494 €</li>
+          <li><strong>Dependent Fee pro Jahr & Person:</strong> 4.800 SAR ≈ 1.185 €
+            <ul class="mt-2 ml-6 text-slate-600">
+              <li>Ehefrau + 2 Kinder: <strong>14.400 SAR/Jahr ≈ 3.556 €</strong></li>
+            </ul>
+          </li>
+          <li><strong>Weitere Einmalkosten:</strong>
+            <ul class="mt-2 ml-6 text-slate-600">
+              <li>Urkundenbeglaubigung: variabel</li>
+              <li>Ärztliches Attest: ca. 500 SAR ≈ 123 €</li>
+              <li>Konsular-/Servicegebühren: ca. 100 SAR ≈ 25 €</li>
+              <li>Iqama-Ausstellung: ca. 500 SAR ≈ 123 € (oft vom Arbeitgeber übernommen)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <h2 id="eigene-firma" class="mt-12 mb-6">Familiennachzug über eigene Firma</h2>
+      
+      <p class="mb-6">Wenn du selbstständig bist oder eine Firma gründest, kannst du deine Ehefrau als Mitarbeiterin im eigenen Unternehmen anstellen – und so eine Iqama für sie erhalten.</p>
+      
+      <p class="mb-6">Dieser Weg ist teurer, aber für manche eine gute Lösung.</p>
+      
+      <ul class="mb-6 space-y-2">
+        <li><strong>Jährliche Kosten:</strong> ca. 2.600 €, abhängig von Branche, Lizenz und Struktur</li>
+      </ul>
+      
+      <p class="mb-6"><strong>Voraussetzungen:</strong></p>
+      <ul class="mb-6 space-y-2">
+        <li>Eine <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Firma in Saudi-Arabien</a> auf deinen Namen</li>
+        <li>Deine Frau muss aktiv in der Firma mitarbeiten</li>
+        <li>Abhängig von der Unternehmensform (z. B. Einzelunternehmen, LLC) gelten unterschiedliche Anforderungen</li>
+      </ul>
+      
+      <p class="mb-8">👉 <strong>Mehr Infos zur Firmengründung:</strong> <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">So startest du ein Business in Saudi-Arabien</a></p>
+
+      <h2 id="fazit" class="mt-12 mb-6">Fazit</h2>
+      
+      <p class="mb-6">Trotz Bürokratie und Kosten ist ein Familiennachzug mit Iqama möglich – wenn du alle Voraussetzungen erfüllst.</p>
+      
+      <p class="mb-6">Das heißt konkret: <strong>Bachelorabschluss, qualifizierter Beruf, offizielles Gehalt über 5.000 SAR, vollständige Dokumente.</strong></p>
+      
+      <p class="mb-8">Mit guter Vorbereitung und realistischen Erwartungen kannst du deine Familie nachholen – und in Saudi-Arabien ein gemeinsames Leben aufbauen.</p>
+      
+      <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Du hast Fragen zum Familiennachzug?</h3>
+        <p class="mb-4 text-slate-700">Ob Iqama, <a href="/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> oder <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">eigene Firma</a> – ich helfe dir, den richtigen Weg für deine Situation zu finden.</p>
+        <p class="text-slate-600">Keine Theorie. Keine allgemeinen Informationen.<br>Sondern eine klare Einschätzung auf Basis realer Erfahrung aus Saudi-Arabien.</p>
+      </div>
+    `
   }
 ];
 
@@ -550,6 +736,192 @@ export const blogPostsEn: BlogPost[] = [
       <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
         <h3 class="text-2xl font-bold text-slate-900 mb-4">Interested in the Saudi Premium Residency?</h3>
         <p class="mb-4 text-slate-700">If you would like to know which residency model is best suited to your situation and what specific steps are required, a consultation is the right next step.</p>
+        <p class="text-slate-600">No theory. No generic information.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
+      </div>
+    `
+  },
+  {
+    slug: "family-reunification",
+    title: "Family Reunification for EU Workers with Iqama in Saudi Arabia",
+    date: "Jan 31, 2026",
+    readTime: "14 min",
+    excerpt: "Can I bring my family permanently to Saudi Arabia? This article shows you step by step under which conditions an employee with an Iqama can bring their spouse and children.",
+    image: "/images/Vater mit Kindern am Flughafen.png",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">A question many people ask themselves: "Can I work in Saudi Arabia with this job?"</p>
+      
+      <p class="mb-6">The answer: In many cases, yes – finding a job is often not that difficult. Of course, it depends on the city, the industry, and sometimes a bit of luck. But two other questions are usually much more decisive:</p>
+      
+      <ol class="mb-6 space-y-2 list-decimal pl-6">
+        <li><strong>How high is my salary?</strong></li>
+        <li><strong>Can I bring my family permanently to Saudi Arabia?</strong></li>
+      </ol>
+      
+      <p class="mb-8">This article focuses on exactly this second question. It shows you under which conditions an employee with a regular Iqama – i.e. without permanent residence, <a href="/en/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> or <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">own company</a> – can bring their spouse and children permanently to Saudi Arabia. Step by step, with all important requirements and documents.</p>
+
+      <figure class="my-12">
+        <img src="/images/Vater mit Kindern am Flughafen.png" alt="Family with suitcases ready to emigrate to Saudi Arabia" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Family with suitcases – ready for the move to Saudi Arabia</figcaption>
+      </figure>
+
+      <h2 id="legal-requirements" class="mt-12 mb-6">Legal Requirements for Family Reunification</h2>
+      
+      <p class="mb-6">If you want to bring your family over, you need to meet a few basic requirements:</p>
+      
+      <ul class="mb-6 space-y-3">
+        <li>You need a <strong>valid Iqama</strong> that is ideally still valid for at least three months.</li>
+        <li>You should have been <strong>living and working in Saudi Arabia for at least three months</strong>.</li>
+        <li>Your <strong>job title</strong> on the Iqama must be among the qualified occupations – simple jobs like "driver" or "labourer" are unfortunately not sufficient.</li>
+      </ul>
+      
+      <p class="mb-6">Additionally, reunification is limited to the <strong>immediate nuclear family</strong>: spouse and minor children. Sons over 18 need their own visa (e.g. student visa), parents or siblings cannot be brought over through this route.</p>
+      
+      <p class="mb-8 pl-4 border-l-4 border-emerald-500 bg-slate-50 p-4">👉 <strong>Only those with a <a href="/en/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> have extended options here</strong> – including the possibility to bring over parents.</p>
+
+      <h2 id="without-degree" class="mt-12 mb-6">Family Reunification Without a Degree (Status 2025/2026)</h2>
+      
+      <p class="mb-6">A real obstacle that affects many: A proven <strong>university degree (at least Bachelor's)</strong> is mandatory to obtain a permanent family visa.</p>
+      
+      <p class="mb-6">Even with a good salary and a "qualified" Iqama job title (e.g. technician, administrator, specialist), this is not enough – without an officially certified and Arabic-translated degree certificate that matches the job title, the application will be rejected.</p>
+      
+      <h3 class="mt-8 mb-4 text-xl font-bold">Are there professions that don't require a university degree?</h3>
+      
+      <p class="mb-6">Unfortunately not. Today there are practically <strong>no more recognised professions</strong> that allow family reunification without a degree. In the past, this was still conceivable for some technical or office jobs – today these are only isolated cases with a lot of luck and mostly on a goodwill basis.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="font-bold text-amber-800 mb-2">Conclusion:</p>
+        <p class="text-amber-900">👉 Without an academic degree, permanent family reunification is effectively excluded. At most, a visitor visa is still possible, but not permanent residence rights.</p>
+      </div>
+
+      <figure class="my-12">
+        <img src="/images/Offizielle Dokumente und Zertifikate.png" alt="Documents, passport and bachelor's certificate for visa application" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Required documents: Passport, bachelor's certificate and more</figcaption>
+      </figure>
+
+      <h2 id="documents" class="mt-12 mb-6">Required Documents for the Visa Application</h2>
+      
+      <p class="mb-6">For your application to have a chance of success, you need a whole range of documents:</p>
+      
+      <ul class="mb-8 space-y-3">
+        <li><strong>Passports</strong> of all family members joining (valid for at least 6 months)</li>
+        <li><strong>Marriage and birth certificates</strong> in original, Arabic translated and certified</li>
+        <li><strong>Medical clearance certificate</strong> from the home country</li>
+        <li><strong>Biometric passport photos</strong></li>
+        <li><strong>Iqama and passport copy</strong> of the applicant</li>
+        <li><strong>Salary certificate</strong> from employer (chamber-certified)</li>
+        <li><strong>GOSI insurance proof</strong> (shows official salary)</li>
+        <li><strong>University degree</strong> (certified and legalised)</li>
+        <li><strong>Health insurance proof</strong> for all family members</li>
+      </ul>
+      
+      <p class="mb-8 pl-4 border-l-4 border-red-500 bg-red-50 p-4"><strong>Important:</strong> All documents must be complete, correctly translated and legalised in time – otherwise your application will be rejected.</p>
+
+      <h2 id="minimum-salary" class="mt-12 mb-6">Minimum Salary – What Really Counts?</h2>
+      
+      <p class="mb-6">A central point is the official income. This must be at least <strong>5,000 SAR (≈ €1,185)</strong> per month – and in the <strong>GOSI system</strong>, not just in the employment contract.</p>
+      
+      <p class="mb-6">Many employers report a lower salary to save on insurance contributions. This can break your neck when applying for a visa! So definitely: <strong>Compare contract and GOSI.</strong></p>
+      
+      <p class="mb-8">This regulation has existed for several years and is part of Saudi strategy to only allow qualified workers with family reunification.</p>
+
+      <h2 id="visa-types" class="mt-12 mb-6">Visa Types for Spouses and Children</h2>
+      
+      <p class="mb-6">There are two main types of visas for family members:</p>
+      
+      <ol class="mb-6 space-y-3 list-decimal pl-6">
+        <li><strong>Family Residence Visa</strong> – for permanent residence + own Iqama</li>
+        <li><strong>Family Visit Visa</strong> – for short visits (typically: 90 days, extendable)</li>
+      </ol>
+      
+      <p class="mb-6">For actually living together, only the <strong>Residence Visa</strong> is an option. The visitor visa is only intended for short-term visits – it must be renewed regularly and does not allow permanent residence.</p>
+      
+      <p class="mb-8">Children over 18 are no longer allowed as "dependents" and need a separate visa.</p>
+
+      <figure class="my-12">
+        <img src="/images/Antragsteller am Jawazat.png" alt="Applicant at Jawazat counter for family visas" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Applicant at the Jawazat counter</figcaption>
+      </figure>
+
+      <h2 id="process" class="mt-12 mb-6">Application Process – Step by Step</h2>
+      
+      <ol class="mb-8 space-y-4 list-decimal pl-6">
+        <li><strong>Prepare fees & documents:</strong> Legalise everything, pay 2,000 SAR visa fee in advance</li>
+        <li><strong>Submit application:</strong> Online (Absher) or in person (Istiqdam), depending on profession</li>
+        <li><strong>Employer confirmation:</strong> Get chamber stamp via the Chamber of Commerce</li>
+        <li><strong>Visa approval:</strong> If successful, you receive the "Yellow Slip" (paper) or online confirmation</li>
+        <li><strong>Apply for visa in home country:</strong> At the Visa Center or Saudi Embassy with all documents</li>
+        <li><strong>Entry & Iqama:</strong> After arrival, within 90 days: take out health insurance, pay Dependent Fee, apply for Iqama</li>
+      </ol>
+
+      <h2 id="nationality" class="mt-12 mb-6">Are There Differences by Nationality?</h2>
+      
+      <p class="mb-6">No – the system applies <strong>equally to all nationalities</strong>. An EU citizen has no special rights compared to other expats.</p>
+      
+      <p class="mb-8">The only difference may lie in practical implementation – e.g. which visa service provider is responsible or how translations are recognised.</p>
+
+      <h2 id="duration" class="mt-12 mb-6">How Long Does the Entire Process Take?</h2>
+      
+      <p class="mb-6">Overall, you should expect about <strong>4 to 8 weeks</strong> – depending on the application system, appointment availability and embassy processes.</p>
+      
+      <ul class="mb-6 space-y-2">
+        <li><strong>Istiqdam applications:</strong> sometimes approved the same day</li>
+        <li><strong>Absher applications:</strong> usually a few days to a few weeks</li>
+        <li><strong>Visa in home country:</strong> 1-3 weeks (incl. biometrics and certificates)</li>
+      </ul>
+      
+      <p class="mb-8">Planning a buffer is worthwhile – delays are not uncommon.</p>
+
+      <h2 id="costs" class="mt-12 mb-6">Cost Overview (Status 2025)</h2>
+      
+      <div class="mb-8 bg-slate-50 rounded-2xl p-6">
+        <ul class="space-y-4">
+          <li><strong>Visa application:</strong> approx. 2,000 SAR ≈ €494</li>
+          <li><strong>Dependent Fee per year & person:</strong> 4,800 SAR ≈ €1,185
+            <ul class="mt-2 ml-6 text-slate-600">
+              <li>Wife + 2 children: <strong>14,400 SAR/year ≈ €3,556</strong></li>
+            </ul>
+          </li>
+          <li><strong>Other one-time costs:</strong>
+            <ul class="mt-2 ml-6 text-slate-600">
+              <li>Document certification: variable</li>
+              <li>Medical certificate: approx. 500 SAR ≈ €123</li>
+              <li>Consular/service fees: approx. 100 SAR ≈ €25</li>
+              <li>Iqama issuance: approx. 500 SAR ≈ €123 (often covered by employer)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <h2 id="own-company" class="mt-12 mb-6">Family Reunification via Own Company</h2>
+      
+      <p class="mb-6">If you are self-employed or start a company, you can employ your wife as an employee in your own company – and thus obtain an Iqama for her.</p>
+      
+      <p class="mb-6">This route is more expensive, but for some a good solution.</p>
+      
+      <ul class="mb-6 space-y-2">
+        <li><strong>Annual costs:</strong> approx. €2,600, depending on industry, licence and structure</li>
+      </ul>
+      
+      <p class="mb-6"><strong>Requirements:</strong></p>
+      <ul class="mb-6 space-y-2">
+        <li>A <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">company in Saudi Arabia</a> in your name</li>
+        <li>Your wife must actively work in the company</li>
+        <li>Depending on the company type (e.g. sole proprietorship, LLC), different requirements apply</li>
+      </ul>
+      
+      <p class="mb-8">👉 <strong>More information on company formation:</strong> <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">How to start a business in Saudi Arabia</a></p>
+
+      <h2 id="conclusion" class="mt-12 mb-6">Conclusion</h2>
+      
+      <p class="mb-6">Despite bureaucracy and costs, family reunification with an Iqama is possible – if you meet all the requirements.</p>
+      
+      <p class="mb-6">This means specifically: <strong>Bachelor's degree, qualified profession, official salary over 5,000 SAR, complete documents.</strong></p>
+      
+      <p class="mb-8">With good preparation and realistic expectations, you can bring your family over – and build a life together in Saudi Arabia.</p>
+      
+      <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Do you have questions about family reunification?</h3>
+        <p class="mb-4 text-slate-700">Whether Iqama, <a href="/en/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> or <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">own company</a> – I'll help you find the right path for your situation.</p>
         <p class="text-slate-600">No theory. No generic information.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
       </div>
     `
