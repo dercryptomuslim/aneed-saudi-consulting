@@ -284,7 +284,7 @@ export const blogPostsDe: BlogPost[] = [
     excerpt: "Kann ich meine Familie dauerhaft nach Saudi-Arabien holen? Dieser Beitrag zeigt dir Schritt für Schritt, unter welchen Bedingungen ein Arbeitnehmer mit Iqama seine Frau und Kinder nachholen kann.",
     image: "/images/Vater mit Kindern am Flughafen.png",
     content: `
-      <p class="lead text-xl text-slate-700 mb-6">Eine Frage, die bei vielen sich stellen: „Kann ich mit diesem Job in Saudi-Arabien arbeiten?"</p>
+      <p class="lead text-xl text-slate-700 mb-6">Eine Frage, die sich viele stellen: „Kann ich mit meinem Job in Saudi-Arabien arbeiten?"</p>
       
       <p class="mb-6">Die Antwort: In vielen Fällen ja – einen Job zu finden, ist oft gar nicht so schwer. Natürlich kommt es auf die Stadt, die Branche und manchmal auch ein bisschen Glück an. Aber zwei andere Fragen sind meist viel entscheidender:</p>
       
@@ -748,7 +748,7 @@ export const blogPostsEn: BlogPost[] = [
     excerpt: "Can I bring my family permanently to Saudi Arabia? This article shows you step by step under which conditions an employee with an Iqama can bring their spouse and children.",
     image: "/images/Vater mit Kindern am Flughafen.png",
     content: `
-      <p class="lead text-xl text-slate-700 mb-6">A question many people ask themselves: "Can I work in Saudi Arabia with this job?"</p>
+      <p class="lead text-xl text-slate-700 mb-6">A question many people ask: "Can I work in Saudi Arabia with my job?"</p>
       
       <p class="mb-6">The answer: In many cases, yes – finding a job is often not that difficult. Of course, it depends on the city, the industry, and sometimes a bit of luck. But two other questions are usually much more decisive:</p>
       
