@@ -278,7 +278,7 @@ export const blogPostsDe: BlogPost[] = [
   },
   {
     slug: "familienzusammenfuehrung",
-    title: "Familienzusammenführung für EU-Arbeiter mit Iqama in Saudi-Arabien",
+    title: "Familien­zusammen­führung mit Iqama in Saudi-Arabien",
     date: "31.01.2026",
     readTime: "14 Min.",
     excerpt: "Kann ich meine Familie dauerhaft nach Saudi-Arabien holen? Dieser Beitrag zeigt dir Schritt für Schritt, unter welchen Bedingungen ein Arbeitnehmer mit Iqama seine Frau und Kinder nachholen kann.",
@@ -742,7 +742,7 @@ export const blogPostsEn: BlogPost[] = [
   },
   {
     slug: "family-reunification",
-    title: "Family Reunification for EU Workers with Iqama in Saudi Arabia",
+    title: "Family Reunification with Iqama in Saudi Arabia",
     date: "Jan 31, 2026",
     readTime: "14 min",
     excerpt: "Can I bring my family permanently to Saudi Arabia? This article shows you step by step under which conditions an employee with an Iqama can bring their spouse and children.",
