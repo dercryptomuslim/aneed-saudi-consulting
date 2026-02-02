@@ -65,7 +65,7 @@ export function SuccessStoriesTeaser({ locale = "de" }: { locale?: Locale }) {
   const href = (raw: string) => localizeHref(raw, locale);
   const stories = locale === "en" ? storiesEn : storiesDe;
   return (
-    <section className="py-16 md:py-24 bg-white relative pb-8 md:pb-24">
+    <section className="pt-16 md:pt-24 pb-12 md:pb-16 bg-white relative">
       <div className="container mx-auto px-4 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">

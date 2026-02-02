@@ -16,7 +16,7 @@ export function BlogTeaser({ locale = "de" }: { locale?: Locale }) {
   const latestPosts = sortByDateDesc(posts).slice(0, 3);
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-12 md:py-16 bg-slate-50">
       <div className="container mx-auto px-4 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
