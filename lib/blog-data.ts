@@ -38,7 +38,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <p class="mb-6">Dein Unternehmen muss in einem staatlich anerkannten Unternehmensregister eingetragen sein. Je nach Land unterscheidet sich der Name des Registers, die Funktion ist jedoch identisch: der rechtliche Nachweis der Existenz deines Unternehmens.</p>
       
-      <ul class="mb-6 space-y-3">
+      <ul class="mb-6 space-y-3 list-disc pl-6 text-lg text-slate-700">
         <li>In <strong>Deutschland</strong> erfolgt dieser Nachweis über das Handelsregister, etwa bei einer GmbH, UG (haftungsbeschränkt) oder AG.</li>
         <li>In <strong>Österreich</strong> über das Firmenbuch, insbesondere bei einer GmbH oder AG.</li>
         <li>In der <strong>Schweiz</strong> über das kantonale Handelsregisteramt, ebenfalls vor allem bei GmbH und AG.</li>
@@ -120,7 +120,7 @@ export const blogPostsDe: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Masjid an-Nabawi – Die Prophetenmoschee in Medina</figcaption>
       </figure>
 
-      <h2 id="premium-residency" class="mt-12 mb-6">Die Saudi Premium Residency – dauerhaft in Saudi-Arabien leben</h2>
+      <h2 id="premium-residency" class="mt-12 mb-6">1. Die Saudi Premium Residency – dauerhaft in Saudi-Arabien leben</h2>
       
       <p class="mb-6">Die Saudi Premium Residency ist der stärkste, aber auch kapitalintensivste Weg. Sie erlaubt einen <strong>lebenslangen Aufenthalt</strong> in Saudi-Arabien – für dich, deine Ehepartnerin, deine Kinder und sogar deine Eltern. Du bist dabei unabhängig von Arbeitgebern, Sponsoren oder jährlichen Visaverlängerungen.</p>
       
@@ -135,7 +135,7 @@ export const blogPostsDe: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Saudi Vision 2030 – Investitionsmöglichkeiten im Königreich</figcaption>
       </figure>
 
-      <h2 id="unternehmensgruendung" class="mt-12 mb-6">Ein Unternehmen gründen – der realistischste Weg nach Medina</h2>
+      <h2 id="unternehmensgruendung" class="mt-12 mb-6">2. Ein Unternehmen gründen – der realistischste Weg nach Medina</h2>
       
       <p class="mb-6">Für viele Unternehmer ist die <strong>Unternehmensgründung in Saudi-Arabien</strong> der praktikabelste und langfristig stabilste Weg, um im Land zu leben – insbesondere in Medina.</p>
       
@@ -151,7 +151,7 @@ export const blogPostsDe: BlogPost[] = [
         <p class="text-slate-600">Keine Theorie. Keine YouTube-Modelle.<br>Sondern eine klare Einschätzung auf Basis realer Erfahrung aus Saudi-Arabien.</p>
       </div>
 
-      <h2 id="arbeiten" class="mt-12 mb-6">Arbeiten in Saudi-Arabien – realistisch betrachtet</h2>
+      <h2 id="arbeiten" class="mt-12 mb-6">3. Arbeiten in Saudi-Arabien – realistisch betrachtet</h2>
       
       <p class="mb-6">Auch eine Anstellung bei einem saudi-arabischen Unternehmen kann einen legalen Aufenthalt ermöglichen. Jobs werden häufig über Plattformen wie Indeed, Bayt, GulfTalent oder LinkedIn gefunden.</p>
       
@@ -170,7 +170,7 @@ export const blogPostsDe: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Professioneller Arbeitsalltag in Saudi-Arabien</figcaption>
       </figure>
 
-      <h2 id="student" class="mt-12 mb-6">Student in Saudi-Arabien – kein Dauerweg</h2>
+      <h2 id="student" class="mt-12 mb-6">4. Student in Saudi-Arabien – kein Dauerweg</h2>
       
       <p class="mb-8">Ein Studium kann ebenfalls einen Aufenthalt ermöglichen, eignet sich jedoch vor allem als <strong>zeitlich begrenzte Lösung</strong>. Für Familien, Unternehmer oder langfristige Planung ist dieser Weg nicht ausgelegt.</p>
 
@@ -494,11 +494,13 @@ export const blogPostsEn: BlogPost[] = [
       
       <p class="mb-6">Your company must be registered in an officially recognised corporate register. The name of the register varies by country, but its function is the same: to confirm the legal existence of your company.</p>
       
-      <p class="mb-4">In <strong>Germany</strong>, this is the Commercial Register (Handelsregister), typically for entities such as a GmbH, UG (limited liability), or AG.</p>
-      <p class="mb-4">In <strong>Austria</strong>, registration must be in the Firmenbuch, commonly for a GmbH or AG.</p>
-      <p class="mb-4">In <strong>Switzerland</strong>, registration is with the cantonal Commercial Register, most commonly for a GmbH or AG.</p>
-      <p class="mb-4">In the <strong>United Kingdom</strong>, the company must be registered with Companies House, usually as a Limited (Ltd).</p>
-      <p class="mb-6">In the <strong>United States</strong>, companies must be registered at state level, typically as an LLC or Corporation (Inc.).</p>
+      <ul class="mb-6 space-y-3 list-disc pl-6 text-lg text-slate-700">
+        <li>In <strong>Germany</strong>, this is the Commercial Register (Handelsregister), typically for entities such as a GmbH, UG (limited liability), or AG.</li>
+        <li>In <strong>Austria</strong>, registration must be in the Firmenbuch, commonly for a GmbH or AG.</li>
+        <li>In <strong>Switzerland</strong>, registration is with the cantonal Commercial Register, most commonly for a GmbH or AG.</li>
+        <li>In the <strong>United Kingdom</strong>, the company must be registered with Companies House, usually as a Limited (Ltd).</li>
+        <li>In the <strong>United States</strong>, companies must be registered at state level, typically as an LLC or Corporation (Inc.).</li>
+      </ul>
       
       <p class="mb-8">What matters is not the country, but that the business is a <strong>registered legal entity</strong> with verifiable records.</p>
 
@@ -582,7 +584,7 @@ export const blogPostsEn: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Masjid an-Nabawi – The Prophet's Mosque in Medina</figcaption>
       </figure>
 
-      <h2 id="premium-residency" class="mt-12 mb-6">Saudi Premium Residency – permanent residence in Saudi Arabia</h2>
+      <h2 id="premium-residency" class="mt-12 mb-6">1. Saudi Premium Residency – permanent residence in Saudi Arabia</h2>
       
       <p class="mb-6">Saudi Premium Residency is the strongest, but also the most capital-intensive option. It allows <strong>permanent residence</strong> in Saudi Arabia not only for you, but also for your spouse, children, and even your parents. You are independent of employers, sponsors, and annual visa renewals.</p>
       
@@ -597,7 +599,7 @@ export const blogPostsEn: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Saudi Vision 2030 – Investment opportunities in the Kingdom</figcaption>
       </figure>
 
-      <h2 id="company-formation" class="mt-12 mb-6">Company formation – the most realistic path to Medina</h2>
+      <h2 id="company-formation" class="mt-12 mb-6">2. Company formation – the most realistic path to Medina</h2>
       
       <p class="mb-6">For many entrepreneurs, <strong>setting up a company in Saudi Arabia</strong> is the most practical and sustainable route to long-term residency, particularly in Medina.</p>
       
@@ -613,7 +615,7 @@ export const blogPostsEn: BlogPost[] = [
         <p class="text-slate-600">No theory. No online business myths.<br>Just a clear assessment based on real experience in Saudi Arabia.</p>
       </div>
 
-      <h2 id="employment" class="mt-12 mb-6">Employment in Saudi Arabia – a realistic assessment</h2>
+      <h2 id="employment" class="mt-12 mb-6">3. Employment in Saudi Arabia – a realistic assessment</h2>
       
       <p class="mb-6">Employment with a Saudi company is another legal route to residency. Vacancies are commonly found through platforms such as Indeed, Bayt, GulfTalent, and LinkedIn.</p>
       
@@ -630,7 +632,7 @@ export const blogPostsEn: BlogPost[] = [
         <figcaption class="text-sm text-slate-500 mt-3 text-center">Professional working life in Saudi Arabia</figcaption>
       </figure>
 
-      <h2 id="student" class="mt-12 mb-6">Studying in Saudi Arabia – temporary, not permanent</h2>
+      <h2 id="student" class="mt-12 mb-6">4. Studying in Saudi Arabia – temporary, not permanent</h2>
       
       <p class="mb-6">Studying in Saudi Arabia can provide residency for a limited period. This option is mainly suitable for younger individuals or as a transitional solution.</p>
       
