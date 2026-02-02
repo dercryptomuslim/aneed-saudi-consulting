@@ -1,7 +1,10 @@
 "use client";
 
-import { MessageSquare, Search, Settings, Handshake } from "lucide-react";
+import Link from "next/link";
+import { MessageSquare, Search, Settings, Handshake, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import type { Locale } from "@/lib/i18n";
+import { localizeHref } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
 const stepsDe = [
@@ -60,6 +63,7 @@ const stepsEn = [
 
 export function ProcessSteps({ locale = "de" }: { locale?: Locale }) {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
+  const href = (raw: string) => localizeHref(raw, locale);
   const steps = locale === "en" ? stepsEn : stepsDe;
 
   return (
@@ -113,6 +117,25 @@ export function ProcessSteps({ locale = "de" }: { locale?: Locale }) {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-slate-400 mb-6">
+            {t("Bereit für Schritt 1?", "Ready for step 1?")}
+          </p>
+          <Button asChild className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 py-6 text-lg">
+            <Link href={href("/anfrage")}>
+              {t("Erstgespräch vereinbaren", "Schedule initial consultation")}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </motion.div>
 
       </div>
     </section>

@@ -85,10 +85,15 @@ export function About({ locale = "de" }: { locale?: Locale }) {
               ))}
             </div>
 
-            <div className="pt-6">
+            <div className="pt-6 flex flex-col sm:flex-row gap-4">
               <Button asChild variant="outline" className="border-slate-200 hover:bg-slate-50 hover:text-emerald-700">
                 <Link href={href("/ueber-mich")}>
                   {t("Mehr über Aneed erfahren", "Learn more about Aneed")} <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white">
+                <Link href={href("/anfrage")}>
+                  {t("Direkt Kontakt aufnehmen", "Get in touch directly")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>

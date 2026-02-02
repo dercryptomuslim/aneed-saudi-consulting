@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, TrendingUp, Briefcase, Store, ArrowUpRight, Users, BarChart3 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Building2, TrendingUp, Briefcase, Store, ArrowUpRight, Users, BarChart3, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
@@ -147,6 +148,27 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
               </Card>
             </Link>
           ))}
+        </div>
+
+        {/* CTA Banner */}
+        <div className="mt-16 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-2">
+              {t("Nicht sicher, welcher Service passt?", "Not sure which service fits?")}
+            </h3>
+            <p className="text-slate-600">
+              {t(
+                "In einem kurzen Gespräch finden wir gemeinsam die beste Lösung für dich.",
+                "In a short call, we'll find the best solution for your situation together."
+              )}
+            </p>
+          </div>
+          <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-6 whitespace-nowrap">
+            <Link href={href("/anfrage")}>
+              {t("Kostenlos beraten lassen", "Get free consultation")}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

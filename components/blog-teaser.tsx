@@ -98,6 +98,23 @@ export function BlogTeaser({ locale = "de" }: { locale?: Locale }) {
           </Button>
         </div>
 
+        {/* Subtle CTA */}
+        <div className="mt-12 pt-8 border-t border-slate-100 text-center">
+          <p className="text-slate-600 mb-4">
+            {t(
+              "Du hast konkrete Fragen zu deinem Vorhaben?",
+              "Do you have specific questions about your plans?"
+            )}
+          </p>
+          <Link 
+            href={href("/anfrage")} 
+            className="inline-flex items-center text-emerald-700 hover:text-emerald-800 font-semibold transition-colors group"
+          >
+            {t("Lass uns persönlich sprechen", "Let's talk personally")}
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );
