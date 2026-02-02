@@ -61,6 +61,52 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Aneed Ashraf - Oasis Gate LLC",
+  "alternateName": "Oasis Gate",
+  "url": "https://aneedashraf.de",
+  "logo": "https://aneedashraf.de/logo.png",
+  "image": "https://aneedashraf.de/aneed-1.jpg",
+  "description": "Unternehmensberatung für Saudi-Arabien: Firmengründung, MISA-Lizenz, Premium Residency und Auswanderung. 9+ Jahre Erfahrung in Medina.",
+  "founder": {
+    "@type": "Person",
+    "name": "Aneed Ashraf"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Medina",
+    "addressCountry": "SA"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Saudi Arabia"
+    },
+    {
+      "@type": "Country",
+      "name": "Germany"
+    }
+  ],
+  "serviceType": [
+    "Unternehmensberatung",
+    "Firmengründung",
+    "MISA-Lizenz",
+    "Premium Residency Beratung",
+    "Auswanderungsberatung"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/aneedashraf"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://aneedashraf.de/anfrage",
+    "availableLanguage": ["German", "English", "Arabic"]
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,6 +118,11 @@ export default function RootLayout({
         {/* DNS Prefetch & Preconnect for faster external resource loading */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        {/* Schema.org Organization JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white text-slate-900`}

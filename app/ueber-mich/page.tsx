@@ -8,6 +8,7 @@ import { ArrowRight, MapPin, Award, Briefcase, TrendingUp, Users } from "lucide-
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Über Mich | Aneed Ashraf - Unternehmer - Berater - Investor Saudi-Arabien",
@@ -57,9 +58,47 @@ const stats = [
   { label: "Realisierte Einsparungen", value: "> 2 Mio. €" },
 ];
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aneed Ashraf",
+  "jobTitle": "Unternehmer, Berater, Investor",
+  "description": "Brückenbauer zwischen Deutschland und Saudi-Arabien. Gründer der ersten deutsch-saudischen Unternehmensberatung in Medina.",
+  "url": "https://aneedashraf.de/ueber-mich",
+  "image": "https://aneedashraf.de/aneed-1.jpg",
+  "sameAs": [
+    "https://www.instagram.com/aneedashraf"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Oasis Gate LLC",
+    "url": "https://aneedashraf.de"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Master in Projektmanagement"
+  },
+  "knowsAbout": [
+    "Unternehmensgründung Saudi-Arabien",
+    "MISA Lizenz",
+    "Premium Residency",
+    "Vision 2030",
+    "Auswanderung Saudi-Arabien"
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Germany"
+  }
+};
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900 flex flex-col scroll-smooth">
+      <Script
+        id="person-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <Navbar />
       
       {/* Hero Section */}

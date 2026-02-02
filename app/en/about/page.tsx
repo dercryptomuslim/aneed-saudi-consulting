@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { localizeHref } from "@/lib/i18n";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "About | Aneed Ashraf - Entrepreneur - Consultant - Investor Saudi Arabia",
@@ -57,11 +58,49 @@ const stats = [
   { label: "Realised savings", value: "> €2M" },
 ];
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aneed Ashraf",
+  "jobTitle": "Entrepreneur, Consultant, Investor",
+  "description": "Bridge builder between Germany and Saudi Arabia. Founder of the first German-Saudi consulting firm in Medina.",
+  "url": "https://aneedashraf.de/en/about",
+  "image": "https://aneedashraf.de/aneed-1.jpg",
+  "sameAs": [
+    "https://www.instagram.com/aneedashraf"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Oasis Gate LLC",
+    "url": "https://aneedashraf.de"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Master in Project Management"
+  },
+  "knowsAbout": [
+    "Company Formation Saudi Arabia",
+    "MISA License",
+    "Premium Residency",
+    "Vision 2030",
+    "Relocation Saudi Arabia"
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Germany"
+  }
+};
+
 export default function AboutEnPage() {
   const href = (raw: string) => localizeHref(raw, "en");
 
   return (
     <main className="min-h-screen bg-white text-slate-900 flex flex-col scroll-smooth">
+      <Script
+        id="person-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <Navbar />
 
       {/* Hero Section */}
