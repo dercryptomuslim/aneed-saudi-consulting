@@ -13,7 +13,7 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
   const href = (raw: string) => localizeHref(raw, locale);
   return (
-    <section className="relative flex min-h-[85dvh] w-full items-center justify-center overflow-hidden bg-white pt-24 md:pt-32 pb-24 md:pb-32">
+    <section className="relative flex min-h-[85dvh] w-full items-center justify-center overflow-hidden bg-white pt-24 md:pt-32 pb-12 md:pb-16">
       
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
