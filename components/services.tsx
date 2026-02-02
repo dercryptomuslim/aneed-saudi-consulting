@@ -154,12 +154,12 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
         <div className="mt-16 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-2">
-              {t("Du weißt, was du willst – aber nicht, wo anfangen?", "You know what you want – but not where to start?")}
+              {t("Individuelle Beratung für dein Vorhaben", "Individual consulting for your project")}
             </h3>
             <p className="text-slate-600">
               {t(
-                "In einem intensiven Gespräch analysieren wir deine Situation und entwickeln einen klaren Plan.",
-                "In an in-depth conversation, we analyze your situation and develop a clear plan."
+                "Wir analysieren deine Situation und entwickeln gemeinsam einen klaren Plan.",
+                "We analyze your situation and develop a clear plan together."
               )}
             </p>
           </div>
