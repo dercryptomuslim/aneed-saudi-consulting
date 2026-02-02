@@ -53,8 +53,8 @@ export function Hero({ locale = "de" }: { locale?: Locale }) {
           
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 md:text-xl leading-relaxed">
             {t(
-              "9 Jahre Expertise direkt aus Medina. Ich begleite dich sicher durch Gründung, Investment und Auswanderung in ganz Saudi-Arabien.",
-              "9 years of expertise directly from Medina. I guide you safely through company formation, investment, and relocation across Saudi Arabia."
+              "9 Jahre Expertise direkt aus Medina – dein Tor zu echtem Erfolg in Saudi-Arabien. Ich begleite dich sicher durch Gründung, Investment und Auswanderung.",
+              "9 years of expertise directly from Medina – your gateway to real success in Saudi Arabia. I guide you safely through company formation, investment, and relocation."
             )}{" "}
             <br className="hidden md:block" />
             <span className="font-medium text-slate-800">
