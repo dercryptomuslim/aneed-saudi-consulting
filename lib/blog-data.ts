@@ -6,7 +6,21 @@ export interface BlogPost {
   readTime: string;
   content: string;
   image?: string;
+  category: "gruendung" | "residency" | "leben";
 }
+
+export const blogCategories = {
+  de: {
+    gruendung: { label: "Firmengründung", icon: "Building2" },
+    residency: { label: "Residency & Visum", icon: "FileCheck" },
+    leben: { label: "Leben in KSA", icon: "Home" },
+  },
+  en: {
+    gruendung: { label: "Company Formation", icon: "Building2" },
+    residency: { label: "Residency & Visa", icon: "FileCheck" },
+    leben: { label: "Living in KSA", icon: "Home" },
+  },
+};
 
 export const blogPostsDe: BlogPost[] = [
   {
@@ -16,6 +30,7 @@ export const blogPostsDe: BlogPost[] = [
     readTime: "7 Min.",
     excerpt: "Viele sprechen über Business in Saudi-Arabien. Wenige erklären dir, wie es wirklich funktioniert. Hier ist die Praxis.",
     image: "/blog/saudi-documents.png",
+    category: "gruendung",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Viele sprechen über Business in Saudi-Arabien.<br>Wenige erklären dir, wie es wirklich funktioniert.</p>
       
@@ -108,6 +123,7 @@ export const blogPostsDe: BlogPost[] = [
     readTime: "9 Min.",
     excerpt: "Viele Menschen sagen: 'Ich will in Medina leben.' Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
     image: "/blog/masjid-nabawi.png",
+    category: "leben",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Viele Menschen sagen: <em>"Ich will in Medina leben."</em><br>Doch nur wenige wissen, wie das <strong>rechtlich, finanziell und praktisch</strong> überhaupt möglich ist.</p>
       
@@ -194,6 +210,7 @@ export const blogPostsDe: BlogPost[] = [
     readTime: "12 Min.",
     excerpt: "Die Saudi Premium Residency ermöglicht ausländischen Staatsangehörigen, ohne Sponsor in Saudi-Arabien zu leben, arbeiten und investieren. Ein umfassender Überblick über alle Modelle.",
     image: "/images/Saudi Premium Residency.png",
+    category: "residency",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Die <strong>Saudi Premium Residency</strong> ist ein spezieller Aufenthaltstitel in Saudi-Arabien, der es ausländischen Staatsangehörigen ermöglicht, ohne einen einheimischen Sponsor im Königreich zu leben, zu arbeiten sowie in Unternehmen oder Immobilien zu investieren.</p>
       
@@ -283,6 +300,7 @@ export const blogPostsDe: BlogPost[] = [
     readTime: "14 Min.",
     excerpt: "Kann ich meine Familie dauerhaft nach Saudi-Arabien holen? Dieser Beitrag zeigt dir Schritt für Schritt, unter welchen Bedingungen ein Arbeitnehmer mit Iqama seine Frau und Kinder nachholen kann.",
     image: "/images/Vater mit Kindern am Flughafen.png",
+    category: "residency",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Eine Frage, die sich viele stellen: „Kann ich mit meinem Job in Saudi-Arabien arbeiten?"</p>
       
@@ -472,6 +490,7 @@ export const blogPostsEn: BlogPost[] = [
     readTime: "7 min",
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
     image: "/blog/saudi-documents.png",
+    category: "gruendung",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Many people talk about doing business in Saudi Arabia.<br>Very few explain <strong>how it actually works in practice</strong>.</p>
       
@@ -572,6 +591,7 @@ export const blogPostsEn: BlogPost[] = [
     readTime: "9 min",
     excerpt: "Many people say: 'I want to live in Medina.' But very few understand what that actually means legally, financially, and in practice.",
     image: "/blog/masjid-nabawi.png",
+    category: "leben",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">Many people say: <em>"I want to live in Medina."</em><br>But very few understand what that actually means <strong>legally, financially, and in practice</strong>.</p>
       
@@ -660,6 +680,7 @@ export const blogPostsEn: BlogPost[] = [
     readTime: "12 min",
     excerpt: "The Saudi Premium Residency enables foreign nationals to live, work, and invest in Saudi Arabia without a local sponsor. A comprehensive overview of all models.",
     image: "/images/Saudi Premium Residency.png",
+    category: "residency",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">The <strong>Saudi Premium Residency</strong> is a special residence status in Saudi Arabia that enables foreign nationals to live, work, and invest in businesses or real estate in the Kingdom without the need for a local sponsor.</p>
       
@@ -749,6 +770,7 @@ export const blogPostsEn: BlogPost[] = [
     readTime: "14 min",
     excerpt: "Can I bring my family permanently to Saudi Arabia? This article shows you step by step under which conditions an employee with an Iqama can bring their spouse and children.",
     image: "/images/Vater mit Kindern am Flughafen.png",
+    category: "residency",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">A question many people ask: "Can I work in Saudi Arabia with my job?"</p>
       

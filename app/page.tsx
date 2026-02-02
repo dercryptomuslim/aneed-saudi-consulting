@@ -5,6 +5,9 @@ import { SuccessStoriesTeaser } from "@/components/success-stories-teaser";
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { StatsSection } from "@/components/stats-section";
+import { ProcessSteps } from "@/components/process-steps";
+import { BlogTeaser } from "@/components/blog-teaser";
 
 export default function Home() {
   return (
@@ -13,8 +16,11 @@ export default function Home() {
       <div className="flex-1">
         <Hero />
         <About />
+        <StatsSection />
         <Services />
+        <ProcessSteps />
         <SuccessStoriesTeaser />
+        <BlogTeaser />
         <Contact />
       </div>
       <Footer />
