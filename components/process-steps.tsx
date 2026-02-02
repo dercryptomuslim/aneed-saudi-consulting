@@ -127,7 +127,7 @@ export function ProcessSteps({ locale = "de" }: { locale?: Locale }) {
           className="mt-16 text-center"
         >
           <p className="text-slate-400 mb-6">
-            {t("Bereit für Schritt 1?", "Ready for step 1?")}
+            {t("Dein Erfolg beginnt mit einem Gespräch.", "Your success starts with a conversation.")}
           </p>
           <Button asChild className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 py-6 text-lg">
             <Link href={href("/anfrage")}>

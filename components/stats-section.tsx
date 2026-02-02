@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
-import { localizeHref } from "@/lib/i18n";
 
 const statsDe = [
   { value: 9, prefix: "+", suffix: "", label: "Jahre KSA" },
@@ -75,7 +72,6 @@ function AnimatedCounter({
 
 export function StatsSection({ locale = "de" }: { locale?: Locale }) {
   const t = (de: string, en: string) => (locale === "en" ? en : de);
-  const href = (raw: string) => localizeHref(raw, locale);
   const stats = locale === "en" ? statsEn : statsDe;
 
   return (
@@ -115,16 +111,6 @@ export function StatsSection({ locale = "de" }: { locale?: Locale }) {
           ))}
         </div>
 
-        {/* Subtle CTA */}
-        <div className="mt-12 text-center">
-          <Link 
-            href={href("/anfrage")} 
-            className="inline-flex items-center text-white/90 hover:text-white font-medium transition-colors group"
-          >
-            {t("Lass uns über deine Ziele sprechen", "Let's discuss your goals")}
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
 
       </div>
     </section>
