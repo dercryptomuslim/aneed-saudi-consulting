@@ -45,13 +45,13 @@ export function About({ locale = "de" }: { locale?: Locale }) {
           {/* Content Side */}
           <div className="lg:w-1/2 space-y-8">
             <div>
-              <h2 className="text-sm font-bold text-emerald-700 tracking-wide uppercase mb-3">
+              <span className="text-sm font-bold text-emerald-700 tracking-wide uppercase mb-3 block">
                 {t("Über Aneed Ashraf", "About Aneed Ashraf")}
-              </h2>
-              <h3 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
                 {t("Brückenbauer zwischen", "A Bridge Between")} <br/>
                 <span className="text-slate-500">{t("Deutschland & Saudi-Arabien", "Germany & Saudi Arabia")}</span>
-              </h3>
+              </h2>
             </div>
             
             <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
