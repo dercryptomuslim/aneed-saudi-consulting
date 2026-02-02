@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import { blogPostsDe, blogPostsEn } from "@/lib/blog-data";
+import { blogPostsDe, blogPostsEn, sortByDateDesc } from "@/lib/blog-data";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
 
@@ -12,8 +12,8 @@ export function BlogTeaser({ locale = "de" }: { locale?: Locale }) {
   const href = (raw: string) => localizeHref(raw, locale);
   const posts = locale === "en" ? blogPostsEn : blogPostsDe;
   
-  // Die 3 neuesten Artikel
-  const latestPosts = posts.slice(0, 3);
+  // Die 3 neuesten Artikel (sortiert nach Datum)
+  const latestPosts = sortByDateDesc(posts).slice(0, 3);
 
   return (
     <section className="py-16 md:py-24 bg-white">

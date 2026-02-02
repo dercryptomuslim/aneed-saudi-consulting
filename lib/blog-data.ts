@@ -3,10 +3,18 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   date: string;
+  dateISO: string; // For sorting: YYYY-MM-DD
   readTime: string;
   content: string;
   image?: string;
   category: "gruendung" | "residency" | "leben";
+}
+
+// Helper to sort blog posts by date (newest first)
+export function sortByDateDesc(posts: BlogPost[]): BlogPost[] {
+  return [...posts].sort((a, b) => 
+    new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime()
+  );
 }
 
 export const blogCategories = {
@@ -27,6 +35,7 @@ export const blogPostsDe: BlogPost[] = [
     slug: "so-startest-du-ein-business-in-saudi-arabien",
     title: "So startest du ein Business in Saudi-Arabien",
     date: "14.01.2026",
+    dateISO: "2026-01-14",
     readTime: "7 Min.",
     excerpt: "Viele sprechen über Business in Saudi-Arabien. Wenige erklären dir, wie es wirklich funktioniert. Hier ist die Praxis.",
     image: "/blog/saudi-documents.png",
@@ -120,6 +129,7 @@ export const blogPostsDe: BlogPost[] = [
     slug: "in-saudi-arabien-leben-4-wege-nach-medina",
     title: "In Saudi-Arabien leben – diese 4 Wege führen legal nach Medina",
     date: "15.01.2026",
+    dateISO: "2026-01-15",
     readTime: "9 Min.",
     excerpt: "Viele Menschen sagen: 'Ich will in Medina leben.' Doch nur wenige wissen, wie das rechtlich, finanziell und praktisch überhaupt möglich ist.",
     image: "/blog/masjid-nabawi.png",
@@ -207,6 +217,7 @@ export const blogPostsDe: BlogPost[] = [
     slug: "saudi-premium-residency",
     title: "Saudi Premium Residency – Modelle, Vergleich und Beantragung",
     date: "22.01.2026",
+    dateISO: "2026-01-22",
     readTime: "12 Min.",
     excerpt: "Die Saudi Premium Residency ermöglicht ausländischen Staatsangehörigen, ohne Sponsor in Saudi-Arabien zu leben, arbeiten und investieren. Ein umfassender Überblick über alle Modelle.",
     image: "/images/Saudi Premium Residency.png",
@@ -297,6 +308,7 @@ export const blogPostsDe: BlogPost[] = [
     slug: "familienzusammenfuehrung",
     title: "Familien­zusammen­führung mit Iqama in Saudi-Arabien",
     date: "31.01.2026",
+    dateISO: "2026-01-31",
     readTime: "14 Min.",
     excerpt: "Kann ich meine Familie dauerhaft nach Saudi-Arabien holen? Dieser Beitrag zeigt dir Schritt für Schritt, unter welchen Bedingungen ein Arbeitnehmer mit Iqama seine Frau und Kinder nachholen kann.",
     image: "/images/Vater mit Kindern am Flughafen.png",
@@ -487,6 +499,7 @@ export const blogPostsEn: BlogPost[] = [
     slug: "how-to-start-a-business-in-saudi-arabia",
     title: "How to start a business in Saudi Arabia",
     date: "Jan 14, 2026",
+    dateISO: "2026-01-14",
     readTime: "7 min",
     excerpt: "Many people talk about doing business in Saudi Arabia. Very few explain how it actually works in practice. Here is the reality.",
     image: "/blog/saudi-documents.png",
@@ -588,6 +601,7 @@ export const blogPostsEn: BlogPost[] = [
     slug: "living-in-saudi-arabia-4-legal-ways-to-medina",
     title: "Living in Saudi Arabia – the 4 Legal Paths to Medina",
     date: "Jan 15, 2026",
+    dateISO: "2026-01-15",
     readTime: "9 min",
     excerpt: "Many people say: 'I want to live in Medina.' But very few understand what that actually means legally, financially, and in practice.",
     image: "/blog/masjid-nabawi.png",
@@ -677,6 +691,7 @@ export const blogPostsEn: BlogPost[] = [
     slug: "saudi-premium-residency",
     title: "Saudi Premium Residency – Models, Comparison and Application",
     date: "Jan 22, 2026",
+    dateISO: "2026-01-22",
     readTime: "12 min",
     excerpt: "The Saudi Premium Residency enables foreign nationals to live, work, and invest in Saudi Arabia without a local sponsor. A comprehensive overview of all models.",
     image: "/images/Saudi Premium Residency.png",
@@ -767,6 +782,7 @@ export const blogPostsEn: BlogPost[] = [
     slug: "family-reunification",
     title: "Family Reunification with Iqama in Saudi Arabia",
     date: "Jan 31, 2026",
+    dateISO: "2026-01-31",
     readTime: "14 min",
     excerpt: "Can I bring my family permanently to Saudi Arabia? This article shows you step by step under which conditions an employee with an Iqama can bring their spouse and children.",
     image: "/images/Vater mit Kindern am Flughafen.png",

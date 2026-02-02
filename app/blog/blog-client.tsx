@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { ArrowRight, Calendar, Clock, Building2, FileCheck, Home } from "lucide-react";
-import { blogPostsDe, blogCategories } from "@/lib/blog-data";
+import { blogPostsDe, blogCategories, sortByDateDesc } from "@/lib/blog-data";
 
 const categoryIcons = {
   gruendung: Building2,
@@ -19,9 +19,12 @@ export function BlogPageClient() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const categories = blogCategories.de;
   
-  // Featured Post ist der neueste (erster im Array)
-  const featuredPost = blogPostsDe[0];
-  const otherPosts = blogPostsDe.slice(1);
+  // Sort posts by date (newest first)
+  const sortedPosts = sortByDateDesc(blogPostsDe);
+  
+  // Featured Post ist der neueste (erster nach Sortierung)
+  const featuredPost = sortedPosts[0];
+  const otherPosts = sortedPosts.slice(1);
   
   // Filter nach Kategorie
   const filteredPosts = activeCategory 
@@ -132,7 +135,7 @@ export function BlogPageClient() {
 
           {/* Other Posts Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {(activeCategory ? blogPostsDe.filter(p => p.category === activeCategory) : filteredPosts).map((post) => (
+            {(activeCategory ? sortedPosts.filter(p => p.category === activeCategory) : filteredPosts).map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group h-full">
                 <Card className="h-full flex flex-col border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                   
@@ -195,7 +198,7 @@ export function BlogPageClient() {
           </div>
 
           {/* Empty State */}
-          {activeCategory && blogPostsDe.filter(p => p.category === activeCategory).length === 0 && (
+          {activeCategory && sortedPosts.filter(p => p.category === activeCategory).length === 0 && (
             <div className="text-center py-16">
               <p className="text-slate-500 text-lg">Keine Artikel in dieser Kategorie gefunden.</p>
             </div>
