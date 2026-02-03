@@ -16,10 +16,10 @@ export default function HomeEn() {
       <div className="flex-1">
         <Hero locale="en" />
         <About locale="en" />
-        <StatsSection locale="en" />
         <Services locale="en" />
         <ProcessSteps locale="en" />
         <SuccessStoriesTeaser locale="en" />
+        <StatsSection locale="en" />
         <BlogTeaser locale="en" />
         <Contact locale="en" />
       </div>

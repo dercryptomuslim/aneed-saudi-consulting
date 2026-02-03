@@ -16,10 +16,10 @@ export default function Home() {
       <div className="flex-1">
         <Hero />
         <About />
-        <StatsSection />
         <Services />
         <ProcessSteps />
         <SuccessStoriesTeaser />
+        <StatsSection />
         <BlogTeaser />
         <Contact />
       </div>
