@@ -49,6 +49,7 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
     const data = {
       name: `${formData.get("firstName")} ${formData.get("lastName")}`,
       email: formData.get("email"),
+      phone: formData.get("phone"),
       type: `${t("Kontaktformular", "Contact form")} - ${topicLabel}`,
       message: formData.get("message"),
     };
@@ -141,6 +142,11 @@ export function Contact({ locale = "de" }: { locale?: Locale }) {
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-700 font-medium">{t("E-Mail", "Email")}</Label>
                 <Input name="email" id="email" type="email" placeholder="max@firma.de" className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone" className="text-slate-700 font-medium">{t("Telefonnummer", "Phone number")}</Label>
+                <Input name="phone" id="phone" type="tel" placeholder={t("+49 123 456789", "+1 234 567890")} className="bg-slate-50 border-slate-200 text-slate-900 focus:ring-emerald-600 h-11" required />
               </div>
 
               <div className="space-y-2">
