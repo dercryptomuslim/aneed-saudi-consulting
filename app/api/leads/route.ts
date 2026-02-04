@@ -97,7 +97,9 @@ export async function POST(req: NextRequest) {
       "";
 
     const email = body.email || "";
-    const phone = body.phone || "";
+    // Prefix with apostrophe to force Google Sheets to treat as text (preserves leading zeros)
+    const phoneRaw = body.phone || "";
+    const phone = phoneRaw ? `'${phoneRaw}` : "";
     const type =
       body.entityType || // Funnel
       body.topic || // Kontaktformular
