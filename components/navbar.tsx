@@ -209,6 +209,14 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link href={href("/investor")} legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
+                    {t("Investieren in Medina", "Invest in Medina")}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link href={href("/blog")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     Blog
@@ -397,6 +405,15 @@ export function Navbar() {
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >
                             {t("Erfolgsgeschichten", "Case Studies")}
+                            <ChevronRight className="h-5 w-5 text-slate-400" />
+                          </Link>
+
+                          <Link
+                            href={href("/investor")}
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
+                          >
+                            {t("Investieren in Medina", "Invest in Medina")}
                             <ChevronRight className="h-5 w-5 text-slate-400" />
                           </Link>
 
