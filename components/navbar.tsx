@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3, User, Target } from "lucide-react";
+import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3, User, Target, Wallet, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import {
@@ -200,21 +200,51 @@ export function Navbar() {
                 </div>
               </div>
 
-              <NavigationMenuItem>
-                <Link href={href("/erfolgsgeschichten")} legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    {t("Erfolgsgeschichten", "Case Studies")}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href={href("/investieren-in-medina")} legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
-                    {t("Investieren in Medina", "Invest in Medina")}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+              {/* Investieren in Medina - Custom Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('invest')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className={cn(
+                  "inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                  activeDropdown === 'invest' ? "text-slate-900 bg-slate-50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                )}>
+                  {t("Investieren in Medina", "Invest in Medina")}
+                  <ChevronRight className={cn("ml-1 h-3 w-3 transition-transform", activeDropdown === 'invest' ? "rotate-[270deg]" : "rotate-90")} />
+                </button>
+                <div className={cn(
+                  "absolute left-0 top-full pt-2 w-[300px] transition-all duration-150",
+                  activeDropdown === 'invest' ? "opacity-100 visible z-[60]" : "opacity-0 invisible pointer-events-none z-40"
+                )}>
+                  <ul className="grid gap-2 p-4 bg-white border border-slate-200 rounded-xl shadow-md">
+                    <li>
+                      <Link
+                        href={href("/investieren-in-medina")}
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 group/item"
+                      >
+                        <div className="flex items-center gap-2 mb-1">
+                          <Wallet className="h-4 w-4 text-slate-500 group-hover/item:text-emerald-600 transition-colors" />
+                          <div className="text-sm font-semibold text-slate-900">{t("Investor werden", "Become Investor")}</div>
+                        </div>
+                        <p className="text-sm text-slate-500 pl-6">{t("Geschäftskonzepte & Beteiligung", "Business concepts & participation")}</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={href("/erfolgsgeschichten")}
+                        className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 group/item"
+                      >
+                        <div className="flex items-center gap-2 mb-1">
+                          <Trophy className="h-4 w-4 text-slate-500 group-hover/item:text-emerald-600 transition-colors" />
+                          <div className="text-sm font-semibold text-slate-900">{t("Erfolgsgeschichten", "Success Stories")}</div>
+                        </div>
+                        <p className="text-sm text-slate-500 pl-6">{t("Case Studies aus Medina", "Case studies from Medina")}</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <NavigationMenuItem>
                 <Link href={href("/blog")} legacyBehavior passHref>
@@ -399,23 +429,33 @@ export function Navbar() {
                             </AccordionItem>
                           </Accordion>
 
-                          <Link
-                            href={href("/erfolgsgeschichten")}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
-                          >
-                            {t("Erfolgsgeschichten", "Case Studies")}
-                            <ChevronRight className="h-5 w-5 text-slate-400" />
-                          </Link>
-
-                          <Link
-                            href={href("/investieren-in-medina")}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
-                          >
-                            {t("Investieren in Medina", "Invest in Medina")}
-                            <ChevronRight className="h-5 w-5 text-slate-400" />
-                          </Link>
+                          <Accordion type="single" collapsible className="w-full border-b border-slate-100">
+                            <AccordionItem value="invest" className="border-none">
+                              <AccordionTrigger className="text-lg font-medium text-slate-900 hover:no-underline py-4">
+                                {t("Investieren in Medina", "Invest in Medina")}
+                              </AccordionTrigger>
+                              <AccordionContent>
+                                <div className="flex flex-col space-y-3 pl-2 pb-4 pt-2 bg-slate-50/50 rounded-lg mb-2">
+                                  <Link
+                                    href={href("/investieren-in-medina")}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
+                                  >
+                                    <Wallet className="h-4 w-4 text-emerald-600" />
+                                    <span className="text-sm font-medium">{t("Investor werden", "Become Investor")}</span>
+                                  </Link>
+                                  <Link
+                                    href={href("/erfolgsgeschichten")}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center gap-3 text-slate-600 hover:text-emerald-700 transition-colors p-2 rounded-lg hover:bg-white"
+                                  >
+                                    <Trophy className="h-4 w-4 text-emerald-600" />
+                                    <span className="text-sm font-medium">{t("Erfolgsgeschichten", "Success Stories")}</span>
+                                  </Link>
+                                </div>
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
 
                           <Link
                             href={href("/blog")}
