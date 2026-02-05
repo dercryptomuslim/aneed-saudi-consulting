@@ -32,67 +32,67 @@ import {
 import { Contact } from "@/components/contact";
 
 export const metadata: Metadata = {
-  title: "Invest in Medina | Capital Investment Saudi Arabia with MISA License",
-  description: "Invest and live in Saudi Arabia: Ready-made business concepts for passive investors. Mudaraba model, MISA license, ROI 3-5 years. No operational responsibility – we handle setup and management.",
+  title: "Investieren in Medina | Kapitalanlage Saudi-Arabien mit MISA-Lizenz",
+  description: "Investieren und leben in Saudi-Arabien: Fertige Geschäftskonzepte für passive Investoren. Mudaraba-Modell, MISA-Lizenz, ROI 3-5 Jahre. Keine operative Verantwortung – wir übernehmen Aufbau und Führung.",
   alternates: {
-    canonical: "/en/investor",
+    canonical: "/investieren-in-medina",
     languages: {
-      "de": "/investor",
-      "en": "/en/investor",
+      "de": "/investieren-in-medina",
+      "en": "/en/invest-in-medina",
     },
   },
   keywords: [
-    "Invest in Medina",
-    "Capital investment Saudi Arabia",
-    "Investment Saudi Arabia",
-    "MISA License Investor",
-    "Business concepts Medina",
-    "Living in Saudi Arabia",
+    "Investieren in Medina",
+    "Kapitalanlage Saudi-Arabien", 
+    "Investment Saudi-Arabien",
+    "MISA Lizenz Investor",
+    "Geschäftskonzepte Medina",
+    "Leben in Saudi-Arabien",
     "Mudaraba Investment",
-    "Passive investment Saudi Arabia",
-    "Relocate to Medina investor",
-    "ROI Saudi Arabia"
+    "Passive Investition Saudi-Arabien",
+    "Auswandern Medina Investor",
+    "ROI Saudi-Arabien"
   ],
   openGraph: {
-    title: "Invest in Medina | Capital Investment Saudi Arabia",
-    description: "Ready-made business concepts for investors: Mudaraba model, MISA license, ROI 3-5 years. Live & invest in Saudi Arabia without operational responsibility.",
-    url: "https://aneedashraf.de/en/investor",
+    title: "Investieren in Medina | Kapitalanlage Saudi-Arabien",
+    description: "Fertige Geschäftskonzepte für Investoren: Mudaraba-Modell, MISA-Lizenz, ROI 3-5 Jahre. Leben & Investieren in Saudi-Arabien ohne operative Verantwortung.",
+    url: "https://aneedashraf.de/investieren-in-medina",
     siteName: "Aneed Ashraf",
-    locale: "en_US",
+    locale: "de_DE",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Invest in Medina | Capital Investment Saudi Arabia",
-    description: "Ready-made business concepts for passive investors. MISA license, ROI 3-5 years.",
+    title: "Investieren in Medina | Kapitalanlage Saudi-Arabien",
+    description: "Fertige Geschäftskonzepte für passive Investoren. MISA-Lizenz, ROI 3-5 Jahre.",
   },
 };
 
 const focusAreas = [
-  { name: "Food & Beverage", icon: Utensils, description: "Gastronomy & Cafés" },
-  { name: "Tourism & Hospitality", icon: Plane, description: "Hotels & Services" },
-  { name: "Entertainment", icon: Gamepad2, description: "Leisure & Events" },
-  { name: "Child Education", icon: GraduationCap, description: "Education & Childcare" },
+  { name: "Food & Beverage", icon: Utensils, description: "Gastronomie & Cafés" },
+  { name: "Tourismus & Hospitality", icon: Plane, description: "Hotels & Services" },
+  { name: "Entertainment", icon: Gamepad2, description: "Freizeit & Events" },
+  { name: "Child Education", icon: GraduationCap, description: "Bildung & Kinderbetreuung" },
 ];
 
 const investorRequirements = [
-  { text: "Available investment capital starting from approx. 150,000 EUR", icon: Wallet },
-  { text: "Proof that this capital is actually available", icon: FileCheck },
-  { text: "Willingness to invest in building a start-up or new brand", icon: Target },
-  { text: "Long-term thinking and understanding of real market conditions", icon: Clock },
+  { text: "Freies Investitionskapital ab ca. 150.000 EUR", icon: Wallet },
+  { text: "Nachweis, dass dieses Kapital tatsächlich verfügbar ist", icon: FileCheck },
+  { text: "Bereitschaft, in den Aufbau eines Start-ups bzw. einer neuen Marke zu investieren", icon: Target },
+  { text: "Langfristiges Denken und Verständnis für reale Marktbedingungen", icon: Clock },
 ];
 
 const misaRequirements = [
-  "An existing company outside Saudi Arabia (e.g. Germany or EU)",
-  "The company has been active for at least 12 months",
-  "An official commercial register entry exists",
-  "A verifiable balance sheet value between approx. 50,000–100,000 EUR",
+  "Ein bestehendes Unternehmen außerhalb Saudi-Arabiens (z.B. Deutschland oder EU)",
+  "Das Unternehmen ist seit mindestens 12 Monaten aktiv",
+  "Ein offizieller Handelsregistereintrag liegt vor",
+  "Ein nachweisbarer Bilanzwert zwischen ca. 50.000–100.000 EUR ist vorhanden",
 ];
 
 const livingCosts = [
-  { label: "Residence fees", value: "approx. 2,500 EUR / year" },
-  { label: "Per person (monthly)", value: "approx. 100 EUR / month" },
-  { label: "Family (5 people)", value: "approx. 3,000–4,000 EUR / month" },
+  { label: "Aufenthaltsgebühren", value: "ca. 2.500 EUR / Jahr" },
+  { label: "Pro Person (monatlich)", value: "ca. 100 EUR / Monat" },
+  { label: "Familie (5 Personen)", value: "ca. 3.000–4.000 EUR / Monat" },
 ];
 
 export default function InvestorPage() {
@@ -111,30 +111,30 @@ export default function InvestorPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-300 shadow-sm mb-8 font-medium backdrop-blur-sm">
               <TrendingUp className="inline-block h-4 w-4 mr-2 -mt-0.5" />
-              Investment & Living in Saudi Arabia
+              Investment & Leben in Saudi-Arabien
             </div>
             
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-              Become an Investor in Medina
+              Investor werden in Medina
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-4 font-light">
-              Structured investments without your own concept
+              Strukturierte Investments ohne eigenes Konzept
             </p>
             <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-              You want to invest in Saudi Arabia and live there, but have no business idea, no ready concept, or no desire for operational work?
+              Du möchtest in Saudi-Arabien investieren und dort leben, hast aber keine eigene Geschäftsidee, kein fertiges Konzept oder keine Lust auf operative Arbeit?
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-14 rounded-full bg-emerald-600 px-8 text-lg font-medium text-white hover:bg-emerald-500 shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
-                <Link href="/en/inquiry">
-                  Submit Inquiry
+                <Link href="/anfrage">
+                  Jetzt Anfrage stellen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-14 rounded-full px-8 text-lg font-medium border-slate-600 text-white hover:bg-white/10 backdrop-blur-sm">
-                <Link href="#concepts">
-                  Discover Concepts
+                <Link href="#konzepte">
+                  Konzepte entdecken
                 </Link>
               </Button>
             </div>
@@ -155,30 +155,30 @@ export default function InvestorPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm">
               <p className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light">
-                That's exactly why we offer <span className="font-semibold text-emerald-700">structured, investment-ready business concepts</span> that are already market-tested, economically calculated, and operationally prepared.
+                Genau dafür bieten wir <span className="font-semibold text-emerald-700">strukturierte, investitionsbereite Geschäftskonzepte</span>, die bereits marktgeprüft, wirtschaftlich kalkuliert und operativ vorbereitet sind.
               </p>
               <div className="flex flex-wrap justify-center gap-6 mt-8 text-slate-600">
-                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> No theory</span>
-                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> No generic concepts</span>
-                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> Real market data</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> Keine Theorie</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> Keine generischen Konzepte</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-600" /> Reale Marktdaten</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Investment-ready Business Concepts */}
-      <section id="concepts" className="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+      {/* Investitionsbereite Geschäftskonzepte */}
+      <section id="konzepte" className="py-16 md:py-24 bg-slate-50 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
-              Investment-Ready Business Concepts
+              Investitionsbereite Geschäftskonzepte
             </div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
-              Invest in Functioning Structures
+              In funktionierende Strukturen investieren
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Our concepts are aimed at investors who want to invest in functioning structures – not ideas on paper. Each concept is designed as a future brand.
+              Unsere Konzepte richten sich an Investoren, die in funktionierende Strukturen investieren möchten – nicht in Ideen auf dem Papier. Jedes Konzept ist als zukünftige Marke aufgebaut.
             </p>
           </div>
 
@@ -198,48 +198,48 @@ export default function InvestorPage() {
 
           <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-6 md:p-8 text-center max-w-3xl mx-auto">
             <p className="text-lg text-emerald-900 font-medium">
-              The concepts are structured so that you are <span className="font-bold">an investor, not an operator</span>.
+              Die Konzepte sind so strukturiert, dass du <span className="font-bold">Investor bist, nicht Betreiber</span>.
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* Economics & Time Horizon */}
+      {/* Wirtschaftlichkeit & Zeithorizont */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
                 <Clock className="inline-block h-4 w-4 mr-2 -mt-0.5" />
-                Economics
+                Wirtschaftlichkeit
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
-                ROI of 3–5 Years
+                ROI von 3–5 Jahren
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Most concepts are designed for a realistic Return on Investment (ROI) of approximately 3–5 years.
+                Die meisten Konzepte sind auf einen realistischen Return on Investment (ROI) von ca. 3–5 Jahren ausgelegt.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                The focus is not on short-term profits, but on <span className="font-semibold text-slate-900">sustainable, marketable business models</span> that can last long-term and be further developed.
+                Der Fokus liegt nicht auf kurzfristigen Gewinnen, sondern auf <span className="font-semibold text-slate-900">nachhaltigen, marktfähigen Geschäftsmodellen</span>, die langfristig Bestand haben und weiterentwickelt werden können.
               </p>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-slate-900 to-emerald-900 rounded-2xl p-8 md:p-10 text-white shadow-xl">
                 <div className="text-6xl md:text-7xl font-bold mb-2">3–5</div>
-                <div className="text-2xl font-light text-slate-300 mb-6">Years to ROI</div>
+                <div className="text-2xl font-light text-slate-300 mb-6">Jahre bis ROI</div>
                 <div className="space-y-4 text-slate-300">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <span>Sustainable business models</span>
+                    <span>Nachhaltige Geschäftsmodelle</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <span>Long-term viability</span>
+                    <span>Langfristiger Bestand</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <span>Scaling potential</span>
+                    <span>Skalierungspotenzial</span>
                   </div>
                 </div>
               </div>
@@ -248,18 +248,18 @@ export default function InvestorPage() {
         </div>
       </section>
 
-      {/* Requirements for Investors */}
+      {/* Voraussetzungen für Investoren */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
-              Requirements
+              Voraussetzungen
             </div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
-              Requirements for Investors
+              Voraussetzungen für Investoren
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Clear minimum requirements apply for participation
+              Für eine Beteiligung gelten klare Mindestvoraussetzungen
             </p>
           </div>
 
@@ -279,13 +279,13 @@ export default function InvestorPage() {
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 max-w-4xl mx-auto flex items-start gap-4">
             <AlertTriangle className="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
             <p className="text-amber-900">
-              <span className="font-semibold">Important:</span> Proof of capital is necessary to ensure the seriousness, feasibility, and legal viability of the project.
+              <span className="font-semibold">Wichtig:</span> Der Kapitalnachweis ist notwendig, um die Seriosität, Umsetzbarkeit und rechtliche Tragfähigkeit des Projekts sicherzustellen.
             </p>
           </div>
         </div>
       </section>
 
-      {/* MISA License Section */}
+      {/* MISA-Lizenz Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -293,18 +293,18 @@ export default function InvestorPage() {
             <div>
               <div className="inline-block rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
                 <Shield className="inline-block h-4 w-4 mr-2 -mt-0.5" />
-                Legal Framework
+                Rechtlicher Rahmen
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">
-                MISA License – Mandatory Requirement
+                MISA-Lizenz – Zwingende Voraussetzung
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                A separate MISA license is applied for each investment. This license forms the legal basis for the respective business idea and is mandatory to operate a company in Saudi Arabia in compliance with the law.
+                Für jedes Investment wird eine eigene MISA-Lizenz beantragt. Diese Lizenz bildet die rechtliche Grundlage für die jeweilige Geschäftsidee und ist zwingend erforderlich, um ein Unternehmen in Saudi-Arabien rechtskonform zu betreiben.
               </p>
               <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                 <p className="text-red-900 font-medium">
                   <AlertTriangle className="inline-block h-5 w-5 mr-2 -mt-0.5" />
-                  Without a MISA license, there is no legal security – neither for the investment, nor for operational business, nor for residence in the country.
+                  Ohne MISA-Lizenz besteht keine rechtliche Sicherheit – weder für das Investment, noch für den operativen Betrieb oder den Aufenthalt im Land.
                 </p>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function InvestorPage() {
             <div>
               <Card className="border-slate-200 bg-slate-50 h-full">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Requirements for MISA License</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">Voraussetzungen für die MISA-Lizenz</h3>
                   <ul className="space-y-4">
                     {misaRequirements.map((req, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -324,7 +324,7 @@ export default function InvestorPage() {
                   </ul>
                   <div className="mt-8 pt-6 border-t border-slate-200">
                     <p className="text-sm text-slate-500 italic">
-                      These requirements are not recommendations but part of the regulatory requirements for a legally viable corporate structure.
+                      Diese Anforderungen sind keine Empfehlung, sondern Teil der regulatorischen Vorgaben für eine rechtlich belastbare Unternehmensstruktur.
                     </p>
                   </div>
                 </CardContent>
@@ -334,156 +334,156 @@ export default function InvestorPage() {
         </div>
       </section>
 
-      {/* Participation Structure & Role Distribution */}
+      {/* Beteiligungsstruktur & Rollenverteilung */}
       <section className="py-16 md:py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300 shadow-sm mb-6 font-medium">
                 <Handshake className="inline-block h-4 w-4 mr-2 -mt-0.5" />
-                Partnership
+                Partnerschaft
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-                Participation Structure & Role Distribution
+                Beteiligungsstruktur & Rollenverteilung
               </h2>
               <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                The offered projects are our own developed business concepts. 
-                We act as the operational party and take full responsibility for implementation, management, and operations.
+                Die angebotenen Projekte sind eigene, von uns entwickelte Geschäftskonzepte. 
+                Wir treten als operative Partei auf und übernehmen die vollständige Umsetzung, Steuerung und operative Verantwortung.
               </p>
             </div>
 
-            {/* Mudaraba Concept */}
+            {/* Mudaraba Konzept */}
             <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-8 mb-12 text-center">
               <p className="text-lg text-emerald-200 leading-relaxed">
-                <span className="font-semibold">Structurally, the model follows the principle of a Mudaraba contract:</span><br />
-                One party provides the capital, the other party manages and operates the business.
+                <span className="font-semibold">Strukturell entspricht das Modell dem Prinzip eines Mudaraba-Vertrags:</span><br />
+                Eine Partei stellt das Kapital, die andere Partei führt und operiert das Geschäft.
               </p>
             </div>
 
-            {/* Two Roles Side by Side */}
+            {/* Zwei Rollen nebeneinander */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Investor Role */}
+              {/* Rolle des Investors */}
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="h-14 w-14 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
                     <Wallet className="h-7 w-7 text-emerald-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-6">Investor Role</h3>
+                  <h3 className="text-xl font-bold text-white mb-6">Rolle des Investors</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Capital participation in the company</span>
+                      <span>Kapitalbeteiligung am Unternehmen</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>No operational responsibility</span>
+                      <span>Keine operative Verantwortung</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>No involvement in day-to-day operations</span>
+                      <span>Keine Einbindung in das Tagesgeschäft</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Participation in a brand / startup, not in a single business</span>
+                      <span>Beteiligung an einem Brand / Startup, nicht an einem einzelnen Geschäft</span>
                     </li>
                   </ul>
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <p className="text-sm text-slate-400 italic">
-                      Participation always occurs at the company level and is oriented long-term.
+                      Die Beteiligung erfolgt stets auf Unternehmensebene und ist langfristig ausgerichtet.
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Operational Party Role */}
+              {/* Rolle der operativen Partei */}
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="h-14 w-14 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
                     <Users className="h-7 w-7 text-emerald-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-6">Our Role (Operational Party)</h3>
+                  <h3 className="text-xl font-bold text-white mb-6">Unsere Rolle (operative Partei)</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Development and ownership of the concept</span>
+                      <span>Entwicklung und Eigentum des Konzepts</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Building and managing the company</span>
+                      <span>Aufbau und Führung des Unternehmens</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Operational implementation, management and scaling</span>
+                      <span>Operative Umsetzung, Management und Skalierung</span>
                     </li>
                     <li className="flex items-start gap-3 text-slate-300">
                       <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span>Strategic direction and brand development</span>
+                      <span>Strategische Steuerung und Markenentwicklung</span>
                     </li>
                   </ul>
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <p className="text-sm text-slate-400 italic">
-                      We bear operational responsibility and ensure the company is built and run under real market conditions.
+                      Wir tragen die operative Verantwortung und stellen sicher, dass das Unternehmen unter realen Marktbedingungen geführt wird.
                     </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Participation Level */}
+            {/* Beteiligungshöhe */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="md:col-span-1 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-                <div className="text-5xl font-bold text-white mb-2">up to 30%</div>
-                <div className="text-emerald-100 font-medium">Maximum Participation</div>
+                <div className="text-5xl font-bold text-white mb-2">bis 30%</div>
+                <div className="text-emerald-100 font-medium">Maximale Beteiligung</div>
                 <p className="text-emerald-200/80 text-sm mt-4">
-                  Depending on investment amount
+                  Abhängig von der Investitionssumme
                 </p>
               </div>
               <div className="md:col-span-2 bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                <h3 className="text-lg font-bold text-white mb-4">Why this structure?</h3>
+                <h3 className="text-lg font-bold text-white mb-4">Warum diese Struktur?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-slate-300">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Ensure clear responsibilities</span>
+                    <span>Klare Verantwortlichkeiten sicherstellen</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-300">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Preserve operational agility</span>
+                    <span>Operative Handlungsfähigkeit bewahren</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-300">
                     <CheckCircle2 className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span>Build the brand consistently long-term</span>
+                    <span>Die Marke langfristig konsistent aufbauen</span>
                   </li>
                 </ul>
                 <p className="text-sm text-slate-400 mt-6 italic">
-                  Majority and operational control remain with us.
+                  Mehrheit und operative Kontrolle verbleiben bei uns.
                 </p>
               </div>
             </div>
 
-            {/* Important Understanding */}
+            {/* Wichtiges Verständnis */}
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-8">
               <h3 className="text-lg font-bold text-amber-300 mb-4 flex items-center gap-2">
                 <AlertTriangle className="h-5 w-5" />
-                Important Understanding
+                Wichtiges Verständnis
               </h3>
               <p className="text-slate-200 leading-relaxed mb-6">
-                The investor does <span className="font-semibold text-white">not invest in a single business</span>, 
-                but in the <span className="font-semibold text-white">building and development of a brand with scaling potential</span>.
+                Der Investor investiert <span className="font-semibold text-white">nicht in ein einzelnes Geschäft</span>, 
+                sondern in den <span className="font-semibold text-white">Aufbau und die Entwicklung einer Marke mit Skalierungspotenzial</span>.
               </p>
               <div className="pt-6 border-t border-amber-500/20">
-                <p className="text-sm text-slate-300 mb-3">This model is aimed at investors who:</p>
+                <p className="text-sm text-slate-300 mb-3">Dieses Modell richtet sich an Investoren, die:</p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-3 text-slate-300 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                    <span>Want to participate entrepreneurially</span>
+                    <span>Unternehmerisch beteiligt sein möchten</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-300 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                    <span>Want responsibility clearly separated</span>
+                    <span>Verantwortung klar getrennt wissen wollen</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-300 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                    <span>Think long-term and don't seek short-term co-determination</span>
+                    <span>Langfristig denken und nicht kurzfristige Mitbestimmung suchen</span>
                   </li>
                 </ul>
               </div>
@@ -492,26 +492,26 @@ export default function InvestorPage() {
         </div>
       </section>
 
-      {/* Living in Saudi Arabia */}
+      {/* Leben in Saudi-Arabien */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
                 <Home className="inline-block h-4 w-4 mr-2 -mt-0.5" />
-                Residence & Living
+                Aufenthalt & Leben
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
-                Living in Saudi Arabia Through Investment
+                Leben in Saudi-Arabien über das Investment
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                An investment can simultaneously create the foundation for legal residence in Saudi Arabia.
+                Ein Investment kann gleichzeitig die Grundlage für ein legales Leben in Saudi-Arabien schaffen.
               </p>
             </div>
 
             <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-8 md:p-10 mb-12">
               <p className="text-lg text-emerald-900 leading-relaxed text-center">
-                As an investor, it is possible to <span className="font-bold">be employed through the company</span> and thereby obtain a residence and work permit.
+                Als Investor ist es möglich, <span className="font-bold">über das Unternehmen angestellt zu werden</span> und dadurch eine Aufenthalts- und Arbeitsberechtigung zu erhalten.
               </p>
             </div>
 
@@ -528,29 +528,29 @@ export default function InvestorPage() {
 
             <div className="bg-slate-100 border border-slate-200 rounded-xl p-6 text-center">
               <p className="text-slate-700">
-                <span className="font-semibold">Realistic estimate:</span> For a family of five, you should realistically budget approximately 3,000–4,000 EUR per month to live stably and without restrictions in Saudi Arabia – especially in Medina.
+                <span className="font-semibold">Realistische Einschätzung:</span> Für eine fünfköpfige Familie sollte realistisch mit ca. 3.000–4.000 EUR pro Monat gerechnet werden, um in Saudi-Arabien – insbesondere in Medina – stabil und ohne Einschränkungen leben zu können.
               </p>
               <p className="text-sm text-slate-500 mt-4 italic">
-                This estimate is based on real experience, not theoretical assumptions.
+                Diese Einschätzung basiert auf realen Erfahrungswerten und nicht auf theoretischen Annahmen.
               </p>
             </div>
 
             <div className="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-6 flex items-start gap-4">
               <AlertTriangle className="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
               <p className="text-amber-900">
-                Living in Saudi Arabia is possible <span className="font-semibold">as long as the company actively exists and is operated</span>.
+                Ein Leben in Saudi-Arabien ist möglich, <span className="font-semibold">solange das Unternehmen aktiv besteht und betrieben wird</span>.
               </p>
             </div>
 
             {/* CTA 2 */}
             <div className="mt-12 bg-slate-900 rounded-2xl p-8 md:p-10 text-center">
-              <h3 className="text-xl font-bold text-white mb-3">Is this model right for you?</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Passt dieses Modell zu dir?</h3>
               <p className="text-slate-300 mb-6 max-w-xl mx-auto">
-                Let's clarify in a personal conversation whether an investment in Saudi Arabia fits your goals.
+                Lass uns in einem persönlichen Gespräch klären, ob ein Investment in Saudi-Arabien zu deinen Zielen passt.
               </p>
               <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-500 shadow-md h-12 px-8 text-base rounded-full">
-                <Link href="/en/inquiry">
-                  Request a consultation
+                <Link href="/anfrage">
+                  Beratungsgespräch anfragen
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -559,29 +559,29 @@ export default function InvestorPage() {
         </div>
       </section>
 
-      {/* Our Commitment */}
+      {/* Unser Anspruch */}
       <section className="py-10 md:py-14 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-emerald-700 shadow-sm mb-6 font-medium">
-              Our Commitment
+              Unser Anspruch
             </div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-8">
-              No Dreams. No Shortcuts.
+              Keine Träume. Keine Abkürzungen.
             </h2>
             
             <div className="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm mb-8">
               <p className="text-xl text-slate-700 leading-relaxed mb-6">
-                We don't sell dreams, shortcuts, or theoretical models.
+                Wir verkaufen keine Träume, keine Abkürzungen und keine theoretischen Modelle.
               </p>
               <p className="text-xl text-slate-700 leading-relaxed font-semibold">
-                We create clear, legally secure, and realistic investment structures.
+                Wir schaffen klare, rechtssichere und realistische Investmentstrukturen.
               </p>
             </div>
 
             <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-6">
               <p className="text-emerald-900 text-lg">
-                Not every investment suits everyone. Our goal is to <span className="font-bold">create clarity before the decision</span> – so no wrong decisions are made.
+                Nicht jedes Investment passt zu jedem Menschen. Unser Ziel ist es, <span className="font-bold">vor der Entscheidung Klarheit zu schaffen</span> – damit keine falschen Entscheidungen getroffen werden.
               </p>
             </div>
           </div>
@@ -594,51 +594,51 @@ export default function InvestorPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
-                Frequently Asked Questions
+                Häufige Fragen
               </h2>
             </div>
 
             <Accordion type="single" collapsible className="w-full border border-slate-200 rounded-xl overflow-hidden">
               <AccordionItem value="item-1" className="border-b border-slate-200 px-6 bg-white">
                 <AccordionTrigger className="hover:no-underline py-5 text-left">
-                  <span className="text-base font-bold text-slate-900">Do I need my own business ideas?</span>
+                  <span className="text-base font-bold text-slate-900">Brauche ich eigene Geschäftsideen?</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="pb-6 text-slate-600 leading-relaxed">
-                    No. We offer ready, market-tested business concepts. You invest in an already developed concept and don't need to bring your own idea.
+                    Nein. Wir bieten fertige, marktgeprüfte Geschäftskonzepte an. Du investierst in ein bereits ausgearbeitetes Konzept und musst keine eigene Idee mitbringen.
                   </p>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="item-2" className="border-b border-slate-200 px-6 bg-white">
                 <AccordionTrigger className="hover:no-underline py-5 text-left">
-                  <span className="text-base font-bold text-slate-900">Do I have to be operationally active?</span>
+                  <span className="text-base font-bold text-slate-900">Muss ich operativ tätig sein?</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="pb-6 text-slate-600 leading-relaxed">
-                    No. The concepts are structured so that you are an investor – not an operator. Operational management is organized separately.
+                    Nein. Die Konzepte sind so strukturiert, dass du Investor bist – nicht Betreiber. Das operative Management wird separat organisiert.
                   </p>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="item-3" className="border-b border-slate-200 px-6 bg-white">
                 <AccordionTrigger className="hover:no-underline py-5 text-left">
-                  <span className="text-base font-bold text-slate-900">Can I move to Saudi Arabia with my family?</span>
+                  <span className="text-base font-bold text-slate-900">Kann ich mit meiner Familie nach Saudi-Arabien ziehen?</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="pb-6 text-slate-600 leading-relaxed">
-                    Yes. As an investor, you can be employed through the company and receive a residence and work permit that can also include your family.
+                    Ja. Als Investor kannst du über das Unternehmen angestellt werden und erhältst dadurch eine Aufenthalts- und Arbeitsberechtigung, die auch deine Familie einschließen kann.
                   </p>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="item-4" className="px-6 bg-white">
                 <AccordionTrigger className="hover:no-underline py-5 text-left">
-                  <span className="text-base font-bold text-slate-900">What is the minimum investment?</span>
+                  <span className="text-base font-bold text-slate-900">Wie hoch ist das Mindestinvestment?</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="pb-6 text-slate-600 leading-relaxed">
-                    Free investment capital should be available starting from approx. 150,000 EUR. Additionally, formation costs of approx. 10,000 EUR apply for the MISA license.
+                    Das freie Investitionskapital sollte ab ca. 150.000 EUR verfügbar sein. Zusätzlich fallen Gründungskosten von ca. 10.000 EUR für die MISA-Lizenz an.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -647,8 +647,8 @@ export default function InvestorPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <div id="contact-form">
+      {/* Kontaktformular */}
+      <div id="kontakt-form">
         <Contact />
       </div>
 

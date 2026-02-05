@@ -209,7 +209,7 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href={href("/investor")} legacyBehavior passHref>
+                <Link href={href("/investieren-in-medina")} legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-50 font-medium")}>
                     {t("Investieren in Medina", "Invest in Medina")}
                   </NavigationMenuLink>
@@ -409,7 +409,7 @@ export function Navbar() {
                           </Link>
 
                           <Link
-                            href={href("/investor")}
+                            href={href("/investieren-in-medina")}
                             onClick={() => setIsOpen(false)}
                             className="flex items-center justify-between text-lg font-medium text-slate-900 py-4 border-b border-slate-100"
                           >

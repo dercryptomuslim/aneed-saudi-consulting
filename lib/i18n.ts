@@ -12,7 +12,8 @@ const deToEnPaths: Record<string, string> = {
   "/agb": "/terms",
   "/terminbuchung": "/booking",
   "/danke": "/thankyou",
-  "/blog": "/blog"
+  "/blog": "/blog",
+  "/investieren-in-medina": "/invest-in-medina"
 };
 
 // Blog slug translations (DE slug -> EN slug)
