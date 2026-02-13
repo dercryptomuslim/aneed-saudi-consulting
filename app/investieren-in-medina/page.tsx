@@ -215,7 +215,6 @@ export default function InvestorPage() {
                   <span className="text-sm text-slate-300">Operative Führung</span>
                 </div>
               </div>
-              <p className="text-center text-emerald-400 font-semibold mt-6 text-lg">Das übernehmen wir.</p>
             </div>
 
             {/* 5 Phasen Akkordeon */}

@@ -215,7 +215,6 @@ export default function InvestorPage() {
                   <span className="text-sm text-slate-300">Operational management</span>
                 </div>
               </div>
-              <p className="text-center text-emerald-400 font-semibold mt-6 text-lg">We handle all of that.</p>
             </div>
 
             {/* 5 Phases Accordion */}
