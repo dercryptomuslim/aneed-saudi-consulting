@@ -219,7 +219,8 @@ export default function InvestorPage() {
 
             {/* 5 Phases Accordion */}
             <div className="mb-8">
-              <h3 className="text-xl font-bold text-white mb-6 text-center">From idea to running operation – everything from one source</h3>
+              <h3 className="text-xl font-bold text-white mb-2 text-center">From idea to running operation – everything from one source</h3>
+              <p className="text-emerald-400 font-semibold text-center mb-6">We handle everything.</p>
               
               <Accordion type="single" collapsible className="w-full space-y-3">
                 <AccordionItem value="phase-1" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
