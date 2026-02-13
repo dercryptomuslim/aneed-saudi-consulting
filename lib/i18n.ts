@@ -21,7 +21,8 @@ const blogSlugDeToEn: Record<string, string> = {
   "so-startest-du-ein-business-in-saudi-arabien": "how-to-start-a-business-in-saudi-arabia",
   "in-saudi-arabien-leben-4-wege-nach-medina": "living-in-saudi-arabia-4-legal-ways-to-medina",
   "saudi-premium-residency": "saudi-premium-residency",
-  "familienzusammenfuehrung": "family-reunification"
+  "familienzusammenfuehrung": "family-reunification",
+  "investieren-in-medina": "investing-in-medina"
 };
 
 const blogSlugEnToDe: Record<string, string> = Object.entries(blogSlugDeToEn).reduce((acc, [de, en]) => {

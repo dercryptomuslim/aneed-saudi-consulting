@@ -32,6 +32,178 @@ export const blogCategories = {
 
 export const blogPostsDe: BlogPost[] = [
   {
+    slug: "investieren-in-medina",
+    title: "Investieren in Medina – rechtlich sauber, realistisch kalkuliert",
+    date: "13.02.2026",
+    dateISO: "2026-02-13",
+    readTime: "10 Min.",
+    excerpt: "Medina ist längst nicht mehr nur ein spirituelles Zentrum. Die Stadt entwickelt sich wirtschaftlich spürbar. Für Investoren ergeben sich daraus reale Chancen – aber nur mit Struktur.",
+    image: "/blog/Medina%20SkylineInvestmen.png",
+    category: "gruendung",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">Medina ist längst nicht mehr nur ein spirituelles Zentrum. Die Stadt entwickelt sich wirtschaftlich spürbar – besonders in den Bereichen <strong>Gastronomie, Hospitality, Bildung und Dienstleistungen</strong>. Für Investoren ergeben sich daraus reale Chancen. Aber diese Chancen funktionieren nicht über Emotion oder Wunschdenken, sondern über Struktur.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900 font-medium">⚠️ <strong>Wichtig:</strong> Das Investment beginnt nicht mit Geld, sondern mit einer rechtlich sauberen Grundlage. Ohne Unternehmensstruktur ist jede Beteiligung riskant – und im Zweifel nicht einmal zulässig.</p>
+      </div>
+
+      <figure class="my-12">
+        <img src="/blog/Medina%20SkylineInvestmen.png" alt="Medina Skyline - Investment Möglichkeiten in Saudi-Arabien" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Medina – wachsender Wirtschaftsstandort mit Potenzial</figcaption>
+      </figure>
+
+      <h2 id="vorgefertigte-konzepte" class="mt-12 mb-6">Vorgefertigte Konzepte statt Experimente</h2>
+      
+      <p class="mb-6">Viele Investoren möchten nicht selbst ein Geschäftsmodell entwickeln. Das ist auch nicht notwendig. Ich biete marktreife, wirtschaftlich durchgerechnete Konzepte, die operativ vorbereitet sind und als strukturierte Beteiligungsmodelle umgesetzt werden können.</p>
+      
+      <div class="my-8 bg-slate-50 border border-slate-200 rounded-2xl p-6">
+        <p class="text-lg text-slate-700 mb-4"><strong>Das Modell ist einfach:</strong></p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">💰</div>
+            <p class="text-sm text-slate-600">Du bringst das <strong>Kapital</strong> ein</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">⚙️</div>
+            <p class="text-sm text-slate-600">Mit <strong>+9 Jahren Erfahrung</strong> übernehme ich die Führung</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">📋</div>
+            <p class="text-sm text-slate-600"><strong>Vertraglich</strong> klar geregelt</p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mb-8">Doch auch hier gilt: <strong>Ohne Firma kein Investment.</strong></p>
+
+      <h2 id="firmengruendung" class="mt-12 mb-6">Warum eine Firmengründung zwingend ist</h2>
+
+      <figure class="my-12">
+        <img src="/blog/FirmengründungDokumente.png" alt="MISA Lizenz und Firmengründung Dokumente Saudi-Arabien" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">MISA-Lizenz – Grundlage für jedes rechtssichere Investment</figcaption>
+      </figure>
+      
+      <p class="mb-6">Saudi-Arabien erlaubt keine informellen Beteiligungen. Wer investieren will, benötigt eine juristische Person. Das bedeutet konkret:</p>
+      
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Bestehende Firma außerhalb Saudi-Arabiens</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Mindestens 12 Monate aktiv</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Im offiziellen Register eingetragen</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Bilanzwert ca. 50.000–100.000 EUR</li>
+        </ul>
+      </div>
+      
+      <div class="my-8 bg-red-50 border border-red-200 rounded-2xl p-6">
+        <p class="text-red-900 font-medium">⛔ <strong>Ohne MISA-Lizenz</strong> können keine rechtsverbindlichen Verträge geschlossen, keine Gewinne ausgeschüttet und keine operativen Aktivitäten legitim durchgeführt werden.</p>
+      </div>
+
+      <h2 id="kapitalbedarf" class="mt-12 mb-6">Wie viel Kapital braucht man wirklich?</h2>
+      
+      <p class="mb-6">Jetzt kommt der entscheidende Punkt, über den viele nicht offen sprechen. Ich arbeite nicht mit romantischen Zahlen – ich rechne betriebswirtschaftlich.</p>
+      
+      <div class="my-10 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-8 text-center text-white shadow-lg">
+        <div class="text-xs uppercase tracking-wide text-emerald-200 mb-2">Normale Gründung</div>
+        <div class="text-4xl md:text-5xl font-bold mb-2">150.000 – 250.000 €</div>
+        <div class="text-emerald-100">Damit lassen sich fast alle Konzepte im normalen Bereich realisieren.</div>
+      </div>
+      
+      <p class="mb-6">Diese Beträge umfassen: Aufbau, Einrichtung, Personalstruktur, Marketing, Lizenzierung und operative Vorbereitung.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900"><strong>⚠️ Liquiditätsreserve nicht vergessen:</strong> Ein Unternehmen benötigt Zeit, um stabil zu laufen. Deshalb kalkuliere ich grundsätzlich mit <strong>6–12 Monaten Puffer</strong> für laufende Kosten.</p>
+      </div>
+
+      <h2 id="rendite" class="mt-12 mb-6">Wann kann man mit Rendite rechnen?</h2>
+
+      <figure class="my-12">
+        <img src="/blog/BusinessplanungStrategie.png" alt="Business Planung und Strategie für Investment in Medina" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Strategische Planung – der Schlüssel zum erfolgreichen Investment</figcaption>
+      </figure>
+
+      <div class="my-10 bg-gradient-to-br from-slate-900 to-emerald-900 rounded-2xl p-8 text-white">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="text-6xl font-bold mb-2">3–5</div>
+            <div class="text-xl text-slate-300 mb-4">Jahre bis ROI</div>
+            <p class="text-slate-300">Ein Investment in Medina ist kein kurzfristiges Spekulationsmodell. Im ersten Jahr geht es um Stabilisierung und Markenaufbau.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Jahr 1:</strong> Stabilisierung & Aufbau</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Jahr 2:</strong> Gewinnzone erreichbar</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Jahr 3+:</strong> Stabile Renditen möglich</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mb-8">Erfahrungswerte zeigen, dass langfristig <strong>zweistellige Renditen</strong> erreichbar sind, sofern Standort, Management und Kostenstruktur stimmen. Aber wichtig ist: <strong>Wer über Nacht reich werden will, ist im falschen Markt.</strong></p>
+
+      <h2 id="aufenthaltsstatus" class="mt-12 mb-6">Investment und Aufenthaltsstatus</h2>
+      
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <p class="text-emerald-900 text-lg">Ein strukturiertes Investment kann auch die Grundlage für einen <strong>Aufenthalt in Saudi-Arabien</strong> bilden. Als Investor kannst du über das Unternehmen angestellt werden und erhältst dadurch eine Aufenthalts- und Arbeitsberechtigung.</p>
+      </div>
+      
+      <div class="my-8 grid md:grid-cols-3 gap-4">
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">~2.500 €</div>
+          <div class="text-sm text-slate-500">Behördliche Kosten / Jahr</div>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">~100 €</div>
+          <div class="text-sm text-slate-500">Pro Person / Monat</div>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">3.000–4.000 €</div>
+          <div class="text-sm text-slate-500">Familie (5 Pers.) / Monat</div>
+        </div>
+      </div>
+
+      <h2 id="realismus" class="mt-12 mb-6">Realismus statt Träumerei</h2>
+
+      <figure class="my-12">
+        <img src="/blog/BeratungVerantwortung.png" alt="Professionelle Beratung für Investment in Saudi-Arabien" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Strukturierte Vorbereitung – die Basis für erfolgreiches Investieren</figcaption>
+      </figure>
+      
+      <p class="mb-6">Medina bietet Chancen. Aber nur für Investoren, die strukturiert denken. Erfolgreiche Projekte basieren nicht auf Hoffnung, sondern auf:</p>
+      
+      <div class="my-8 bg-slate-900 text-white rounded-2xl p-6">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Sauberer rechtlicher Struktur</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Realistisch kalkuliertem Kapital</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Ausreichender Liquiditätsreserve</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Geduld bis Jahr 2 oder 3</div>
+          <div class="flex items-center gap-3 md:col-span-2"><span class="text-emerald-400">✓</span> Professioneller operativer Führung</div>
+        </div>
+      </div>
+
+      <h2 id="fazit" class="mt-12 mb-6">Fazit</h2>
+      
+      <p class="mb-6">Investieren in Medina kann wirtschaftlich attraktiv sein – wenn es strategisch aufgebaut wird. Die Kombination aus bestehender Firma, MISA-Lizenz, klarer Beteiligungsstruktur und realistischer Kapitalplanung ist die Grundlage für ein tragfähiges Projekt.</p>
+      
+      <div class="my-8 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-2xl p-8 text-center">
+        <p class="text-2xl font-bold mb-2">Medina ist kein Spielplatz für Experimente.</p>
+        <p class="text-emerald-100">Aber für strukturierte Investoren bietet der Markt langfristige Perspektiven.</p>
+      </div>
+      
+      <div class="my-12 bg-slate-50 border border-slate-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Du möchtest in Medina investieren?</h3>
+        <p class="mb-4 text-slate-700">Wenn du wissen möchtest, ob dein Kapitaleinsatz realistisch ist, welche Konzepte aktuell verfügbar sind und wie die rechtliche Struktur aussieht – dann ist ein Beratungsgespräch der richtige nächste Schritt.</p>
+        <p class="text-slate-600">Keine Theorie. Keine romantischen Zahlen.<br>Sondern eine klare Einschätzung auf Basis realer Erfahrung aus Saudi-Arabien.</p>
+      </div>
+    `
+  },
+  {
     slug: "so-startest-du-ein-business-in-saudi-arabien",
     title: "So startest du ein Business in Saudi-Arabien",
     date: "14.01.2026",
@@ -495,6 +667,178 @@ export const blogPostsDe: BlogPost[] = [
 ];
 
 export const blogPostsEn: BlogPost[] = [
+  {
+    slug: "investing-in-medina",
+    title: "Investing in Medina – Legally Sound, Realistically Calculated",
+    date: "Feb 13, 2026",
+    dateISO: "2026-02-13",
+    readTime: "10 min",
+    excerpt: "Medina is no longer just a spiritual center. The city is developing economically – especially in gastronomy, hospitality, education, and services. For investors, this creates real opportunities.",
+    image: "/blog/Medina%20SkylineInvestmen.png",
+    category: "gruendung",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">Medina is no longer just a spiritual center. The city is developing economically – especially in <strong>gastronomy, hospitality, education, and services</strong>. For investors, this creates real opportunities. But these opportunities don't work through emotion or wishful thinking – they work through structure.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900 font-medium">⚠️ <strong>Important:</strong> The investment doesn't start with money, but with a legally sound foundation. Without a corporate structure, any participation is risky – and potentially not even permissible.</p>
+      </div>
+
+      <figure class="my-12">
+        <img src="/blog/Medina%20SkylineInvestmen.png" alt="Medina Skyline - Investment opportunities in Saudi Arabia" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Medina – a growing economic location with potential</figcaption>
+      </figure>
+
+      <h2 id="ready-made-concepts" class="mt-12 mb-6">Ready-Made Concepts Instead of Experiments</h2>
+      
+      <p class="mb-6">Many investors don't want to develop their own business model. That's not necessary. I offer market-ready, financially calculated concepts that are operationally prepared and can be implemented as structured participation models.</p>
+      
+      <div class="my-8 bg-slate-50 border border-slate-200 rounded-2xl p-6">
+        <p class="text-lg text-slate-700 mb-4"><strong>The model is simple:</strong></p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">💰</div>
+            <p class="text-sm text-slate-600">You contribute the <strong>capital</strong></p>
+          </div>
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">⚙️</div>
+            <p class="text-sm text-slate-600">With <strong>+9 years experience</strong> I take over management</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+            <div class="text-2xl mb-2">📋</div>
+            <p class="text-sm text-slate-600">Clearly regulated by <strong>contract</strong></p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mb-8">But here too: <strong>No company, no investment.</strong></p>
+
+      <h2 id="company-formation" class="mt-12 mb-6">Why Company Formation is Mandatory</h2>
+
+      <figure class="my-12">
+        <img src="/blog/FirmengründungDokumente.png" alt="MISA license and company formation documents Saudi Arabia" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">MISA License – the foundation for any legally secure investment</figcaption>
+      </figure>
+      
+      <p class="mb-6">Saudi Arabia does not allow informal participations. Anyone who wants to invest needs a legal entity. This means specifically:</p>
+      
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Existing company outside Saudi Arabia</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Active for at least 12 months</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Registered in official register</li>
+          <li class="flex items-start gap-3"><span class="text-emerald-600 font-bold">✓</span> Balance sheet value approx. €50,000–100,000</li>
+        </ul>
+      </div>
+      
+      <div class="my-8 bg-red-50 border border-red-200 rounded-2xl p-6">
+        <p class="text-red-900 font-medium">⛔ <strong>Without MISA license</strong> no legally binding contracts can be concluded, no profits distributed, and no operational activities legitimately carried out.</p>
+      </div>
+
+      <h2 id="capital-requirements" class="mt-12 mb-6">How Much Capital Do You Really Need?</h2>
+      
+      <p class="mb-6">Now comes the crucial point that many don't talk about openly. I don't work with romantic numbers – I calculate based on business economics.</p>
+      
+      <div class="my-10 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-8 text-center text-white shadow-lg">
+        <div class="text-xs uppercase tracking-wide text-emerald-200 mb-2">Standard Formation</div>
+        <div class="text-4xl md:text-5xl font-bold mb-2">€150,000 – 250,000</div>
+        <div class="text-emerald-100">This allows you to realize almost all concepts in the normal range.</div>
+      </div>
+      
+      <p class="mb-6">These amounts include: setup, equipment, personnel structure, marketing, licensing, and operational preparation.</p>
+      
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900"><strong>⚠️ Don't forget the liquidity reserve:</strong> A company needs time to run stably. That's why I always calculate with a <strong>6–12 month buffer</strong> for running costs.</p>
+      </div>
+
+      <h2 id="returns" class="mt-12 mb-6">When Can You Expect Returns?</h2>
+
+      <figure class="my-12">
+        <img src="/blog/BusinessplanungStrategie.png" alt="Business planning and strategy for investment in Medina" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Strategic planning – the key to successful investment</figcaption>
+      </figure>
+
+      <div class="my-10 bg-gradient-to-br from-slate-900 to-emerald-900 rounded-2xl p-8 text-white">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="text-6xl font-bold mb-2">3–5</div>
+            <div class="text-xl text-slate-300 mb-4">Years to ROI</div>
+            <p class="text-slate-300">An investment in Medina is not a short-term speculation model. In the first year, it's about stabilization and brand building.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Year 1:</strong> Stabilization & setup</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Year 2:</strong> Profit zone reachable</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <span class="text-emerald-400">✓</span>
+              <span><strong>Year 3+:</strong> Stable returns possible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mb-8">Experience shows that <strong>double-digit returns</strong> are achievable in the long term, provided location, management, and cost structure are right. But importantly: <strong>Anyone who wants to get rich overnight is in the wrong market.</strong></p>
+
+      <h2 id="residence-status" class="mt-12 mb-6">Investment and Residence Status</h2>
+      
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <p class="text-emerald-900 text-lg">A structured investment can also form the basis for <strong>residence in Saudi Arabia</strong>. As an investor, you can be employed through the company and receive a residence and work permit.</p>
+      </div>
+      
+      <div class="my-8 grid md:grid-cols-3 gap-4">
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€2,500</div>
+          <div class="text-sm text-slate-500">Administrative costs / year</div>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€100</div>
+          <div class="text-sm text-slate-500">Per person / month</div>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
+          <div class="text-2xl font-bold text-slate-900 mb-1">€3,000–4,000</div>
+          <div class="text-sm text-slate-500">Family (5 pers.) / month</div>
+        </div>
+      </div>
+
+      <h2 id="realism" class="mt-12 mb-6">Realism Instead of Dreams</h2>
+
+      <figure class="my-12">
+        <img src="/blog/BeratungVerantwortung.png" alt="Professional consulting for investment in Saudi Arabia" class="w-full rounded-xl shadow-lg" loading="lazy" />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">Structured preparation – the basis for successful investing</figcaption>
+      </figure>
+      
+      <p class="mb-6">Medina offers opportunities. But only for investors who think structurally. Successful projects are not based on hope, but on:</p>
+      
+      <div class="my-8 bg-slate-900 text-white rounded-2xl p-6">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Clean legal structure</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Realistically calculated capital</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Sufficient liquidity reserve</div>
+          <div class="flex items-center gap-3"><span class="text-emerald-400">✓</span> Patience until year 2 or 3</div>
+          <div class="flex items-center gap-3 md:col-span-2"><span class="text-emerald-400">✓</span> Professional operational management</div>
+        </div>
+      </div>
+
+      <h2 id="conclusion" class="mt-12 mb-6">Conclusion</h2>
+      
+      <p class="mb-6">Investing in Medina can be economically attractive – if it's set up strategically. The combination of an existing company, MISA license, clear participation structure, and realistic capital planning is the foundation for a viable project.</p>
+      
+      <div class="my-8 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-2xl p-8 text-center">
+        <p class="text-2xl font-bold mb-2">Medina is not a playground for experiments.</p>
+        <p class="text-emerald-100">But for structured investors, the market offers long-term perspectives.</p>
+      </div>
+      
+      <div class="my-12 bg-slate-50 border border-slate-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Want to invest in Medina?</h3>
+        <p class="mb-4 text-slate-700">If you want to know whether your capital investment is realistic, which concepts are currently available, and what the legal structure looks like – then a consultation is the right next step.</p>
+        <p class="text-slate-600">No theory. No romantic numbers.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
+      </div>
+    `
+  },
   {
     slug: "how-to-start-a-business-in-saudi-arabia",
     title: "How to start a business in Saudi Arabia",
