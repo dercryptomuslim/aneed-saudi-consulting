@@ -167,6 +167,185 @@ export default function InvestorPage() {
         </div>
       </section>
 
+      {/* We handle the entire setup */}
+      <section className="py-16 md:py-24 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300 shadow-sm mb-6 font-medium">
+                Full-Service Implementation
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+                We handle the entire setup for you
+              </h2>
+              <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-4">
+                Many want to invest in Medina. Very few know what it really takes to build a project from zero to operational.
+              </p>
+              <p className="text-slate-400">
+                A business doesn't emerge from capital alone – it emerges from structure, planning, execution, and operational leadership.
+              </p>
+            </div>
+
+            {/* What we handle - Grid */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
+              <p className="text-center text-slate-300 mb-6">When you invest in Medina, you <strong className="text-white">don't handle</strong>:</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                <div className="bg-white/5 rounded-xl p-4">
+                  <Building2 className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Construction coordination</span>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <FileCheck className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Architect coordination</span>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <Home className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Interior design</span>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <Handshake className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Supplier sourcing</span>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <Users className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Staff recruitment</span>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <Target className="h-6 w-6 text-emerald-400 mx-auto mb-2" />
+                  <span className="text-sm text-slate-300">Operational management</span>
+                </div>
+              </div>
+              <p className="text-center text-emerald-400 font-semibold mt-6 text-lg">We handle all of that.</p>
+            </div>
+
+            {/* 5 Phases Accordion */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-white mb-6 text-center">From idea to running operation – everything from one source</h3>
+              
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                <AccordionItem value="phase-1" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
+                  <AccordionTrigger className="hover:no-underline px-6 py-5 text-left">
+                    <div className="flex items-center gap-4">
+                      <span className="h-10 w-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">1</span>
+                      <span className="text-base font-bold text-white">Location analysis & concept development</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="px-6 pb-6 text-slate-300">
+                      <p className="mb-4">Before construction begins, we analyze. We examine:</p>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Location</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Target audience</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Rental structure</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Competition</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Price level</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Demand potential</div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">Based on this, we develop a viable concept – not a trend model, but an economically calculated business model.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="phase-2" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
+                  <AccordionTrigger className="hover:no-underline px-6 py-5 text-left">
+                    <div className="flex items-center gap-4">
+                      <span className="h-10 w-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">2</span>
+                      <span className="text-base font-bold text-white">Construction & design – professional execution</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="px-6 pb-6 text-slate-300">
+                      <p className="mb-4">A major risk for investors lies in the construction process. Delays, budget overruns, wrong material decisions – that costs time and money. We handle:</p>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Selection & coordination of contractors</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Authority coordination</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Design & interior concept</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Budget control</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Timeline planning</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Quality assurance</div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">You don't need to be on-site. You don't need a construction manager. You get transparency and reporting.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="phase-3" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
+                  <AccordionTrigger className="hover:no-underline px-6 py-5 text-left">
+                    <div className="flex items-center gap-4">
+                      <span className="h-10 w-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">3</span>
+                      <span className="text-base font-bold text-white">Licensing & legal structure</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="px-6 pb-6 text-slate-300">
+                      <p className="mb-4">Parallel to construction, we handle:</p>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> MISA license</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Commercial registration</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Tax registration</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Authority processes</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Contract structures</div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">The project runs legally clean – from the start.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="phase-4" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
+                  <AccordionTrigger className="hover:no-underline px-6 py-5 text-left">
+                    <div className="flex items-center gap-4">
+                      <span className="h-10 w-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">4</span>
+                      <span className="text-base font-bold text-white">Staff recruitment & team building</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="px-6 pb-6 text-slate-300">
+                      <p className="mb-4">A business stands and falls with its team. We handle:</p>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Recruiting</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Contract design</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Training</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Operational processes</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Leadership structure</div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">You don't get an improvised team, but a structured setup.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="phase-5" className="border border-white/10 rounded-xl overflow-hidden bg-white/5">
+                  <AccordionTrigger className="hover:no-underline px-6 py-5 text-left">
+                    <div className="flex items-center gap-4">
+                      <span className="h-10 w-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">5</span>
+                      <span className="text-base font-bold text-white">Operational management – we run the project</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="px-6 pb-6 text-slate-300">
+                      <p className="mb-4">Many investors underestimate the operational day-to-day. A project isn't finished after opening – it just begins there. On request, we handle:</p>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Operational management</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Cost control</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Reporting</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Process optimization</div>
+                        <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-emerald-400" /> Strategic development</div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">You are the investor. We are the operational partner.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
+              <p className="text-emerald-300 font-medium">
+                Our approach is not theoretical. We don't develop PowerPoint concepts, but <strong className="text-white">real, implementable projects</strong> with a clear economic foundation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Investment-ready Business Concepts */}
       <section id="concepts" className="py-16 md:py-24 bg-slate-50 scroll-mt-20">
         <div className="container mx-auto px-4 lg:px-8">
