@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Datenschutzerklärung | Aneed Ashraf",
-    description: "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten.",
+  description: "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten.",
   },
   robots: {
     index: true,

@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import { StatsSection } from "@/components/stats-section";
 import { ProcessSteps } from "@/components/process-steps";
 import { BlogTeaser } from "@/components/blog-teaser";
+import { InvestmentBanner } from "@/components/investment-banner";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <ProcessSteps />
         <SuccessStoriesTeaser />
+        <InvestmentBanner />
         <StatsSection />
         <BlogTeaser />
         <Contact />

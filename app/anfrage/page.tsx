@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Anfrage | Unternehmensgründung Saudi-Arabien",
-    description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
+  description: "Prüfe jetzt deine Möglichkeiten für eine Unternehmensgründung oder Beratung in Saudi-Arabien.",
   },
 };
 

@@ -100,7 +100,7 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
   const href = (raw: string) => localizeHref(raw, locale);
   const services = locale === "en" ? servicesEn : servicesDe;
   return (
-    <section id="leistungen" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-slate-50 relative">
+    <section id="leistungen" className="pt-8 md:pt-12 pb-16 md:pb-20 bg-slate-50 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-6">
@@ -151,7 +151,7 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-16 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="mt-12 bg-white border border-slate-200 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-2">
               {t("Individuelle Beratung für dein Vorhaben", "Individual consulting for your project")}

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "AGB | Oasis Gate LLC",
+  title: "AGB | Oasis Gate LLC",
     description: "Allgemeine Geschäftsbedingungen (AGB) von Oasis Gate LLC für Beratungsleistungen.",
   },
   robots: {
@@ -43,7 +43,7 @@ export default function AgbPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="prose prose-slate lg:prose-lg mx-auto">
-            
+
             <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">1. Geltungsbereich</h2>
             <p className="text-slate-600 mb-4">
               Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen{" "}
