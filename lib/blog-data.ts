@@ -98,6 +98,11 @@ export const blogPostsDe: BlogPost[] = [
         <p class="text-red-900 font-medium">⛔ <strong>Ohne MISA-Lizenz</strong> können keine rechtsverbindlichen Verträge geschlossen, keine Gewinne ausgeschüttet und keine operativen Aktivitäten legitim durchgeführt werden.</p>
       </div>
       
+      <div class="my-8 bg-blue-50 border-2 border-blue-300 rounded-2xl p-6">
+        <p class="text-blue-900 font-semibold text-lg mb-2">💡 Wichtiger Hinweis:</p>
+        <p class="text-blue-800">Der <strong>Geschäftszweck deiner Firma in Deutschland</strong> hat <strong>keinerlei Bindung</strong> an den Geschäftszweck in Saudi-Arabien. Du kannst in Deutschland in einem völlig anderen Bereich tätig sein und in Saudi-Arabien ein komplett anderes Geschäftsmodell aufbauen. <strong>Saudi-Arabien bewertet dein Vorhaben marktbezogen – nicht historisch.</strong></p>
+      </div>
+      
       <p class="mb-8">Wie der gesamte Gründungsprozess im Detail abläuft – von der Apostille bis zur Lizenzierung – erkläre ich ausführlich im Artikel <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 underline font-medium">So startest du ein Business in Saudi-Arabien</a>.</p>
 
       <h2 id="kapitalbedarf" class="mt-12 mb-6">Wie viel Kapital braucht man wirklich?</h2>
@@ -734,6 +739,11 @@ export const blogPostsEn: BlogPost[] = [
       
       <div class="my-8 bg-red-50 border border-red-200 rounded-2xl p-6">
         <p class="text-red-900 font-medium">⛔ <strong>Without MISA license</strong> no legally binding contracts can be concluded, no profits distributed, and no operational activities legitimately carried out.</p>
+      </div>
+      
+      <div class="my-8 bg-blue-50 border-2 border-blue-300 rounded-2xl p-6">
+        <p class="text-blue-900 font-semibold text-lg mb-2">💡 Important Note:</p>
+        <p class="text-blue-800">The <strong>business purpose of your company in Germany</strong> has <strong>no connection whatsoever</strong> to the business purpose in Saudi Arabia. You can be active in a completely different sector in Germany and build a completely different business model in Saudi Arabia. <strong>Saudi Arabia evaluates your project based on the market – not historically.</strong></p>
       </div>
       
       <p class="mb-8">I explain the entire formation process in detail – from apostille to licensing – in my article <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 underline font-medium">How to start a business in Saudi Arabia</a>.</p>
