@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Script from "next/script";
+import { BlogViewCounter } from "@/components/blog-view-counter";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -132,13 +133,14 @@ export default async function BlogPostPage({ params }: Props) {
             <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center gap-6 text-sm text-slate-500 font-medium uppercase tracking-wider">
+            <div className="flex items-center gap-6 text-sm text-slate-500 font-medium uppercase tracking-wider flex-wrap">
               <span className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" /> {post.date}
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" /> {post.readTime}
               </span>
+              <BlogViewCounter slug={post.slug} />
             </div>
           </header>
 
