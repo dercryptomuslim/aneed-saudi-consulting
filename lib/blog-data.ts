@@ -97,6 +97,8 @@ export const blogPostsDe: BlogPost[] = [
       <div class="my-8 bg-red-50 border border-red-200 rounded-2xl p-6">
         <p class="text-red-900 font-medium">⛔ <strong>Ohne MISA-Lizenz</strong> können keine rechtsverbindlichen Verträge geschlossen, keine Gewinne ausgeschüttet und keine operativen Aktivitäten legitim durchgeführt werden.</p>
       </div>
+      
+      <p class="mb-8">Wie der gesamte Gründungsprozess im Detail abläuft – von der Apostille bis zur Lizenzierung – erkläre ich ausführlich im Artikel <a href="/blog/so-startest-du-ein-business-in-saudi-arabien" class="text-emerald-600 hover:text-emerald-700 underline font-medium">So startest du ein Business in Saudi-Arabien</a>.</p>
 
       <h2 id="kapitalbedarf" class="mt-12 mb-6">Wie viel Kapital braucht man wirklich?</h2>
       
@@ -198,7 +200,7 @@ export const blogPostsDe: BlogPost[] = [
       
       <div class="my-12 bg-slate-50 border border-slate-200 rounded-2xl p-8">
         <h3 class="text-2xl font-bold text-slate-900 mb-4">Du möchtest in Medina investieren?</h3>
-        <p class="mb-4 text-slate-700">Wenn du wissen möchtest, ob dein Kapitaleinsatz realistisch ist, welche Konzepte aktuell verfügbar sind und wie die rechtliche Struktur aussieht – dann ist ein Beratungsgespräch der richtige nächste Schritt.</p>
+        <p class="mb-4 text-slate-700">Wenn du wissen möchtest, ob dein Kapitaleinsatz realistisch ist, welche Konzepte aktuell verfügbar sind und wie die rechtliche Struktur aussieht – alle Details findest du auf der Seite <a href="/investieren-in-medina" class="text-emerald-600 hover:text-emerald-700 underline font-medium">Investor werden in Medina</a>.</p>
         <p class="text-slate-600">Keine Theorie. Keine romantischen Zahlen.<br>Sondern eine klare Einschätzung auf Basis realer Erfahrung aus Saudi-Arabien.</p>
       </div>
     `
@@ -733,6 +735,8 @@ export const blogPostsEn: BlogPost[] = [
       <div class="my-8 bg-red-50 border border-red-200 rounded-2xl p-6">
         <p class="text-red-900 font-medium">⛔ <strong>Without MISA license</strong> no legally binding contracts can be concluded, no profits distributed, and no operational activities legitimately carried out.</p>
       </div>
+      
+      <p class="mb-8">I explain the entire formation process in detail – from apostille to licensing – in my article <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 underline font-medium">How to start a business in Saudi Arabia</a>.</p>
 
       <h2 id="capital-requirements" class="mt-12 mb-6">How Much Capital Do You Really Need?</h2>
       
@@ -834,7 +838,7 @@ export const blogPostsEn: BlogPost[] = [
       
       <div class="my-12 bg-slate-50 border border-slate-200 rounded-2xl p-8">
         <h3 class="text-2xl font-bold text-slate-900 mb-4">Want to invest in Medina?</h3>
-        <p class="mb-4 text-slate-700">If you want to know whether your capital investment is realistic, which concepts are currently available, and what the legal structure looks like – then a consultation is the right next step.</p>
+        <p class="mb-4 text-slate-700">If you want to know whether your capital investment is realistic, which concepts are currently available, and what the legal structure looks like – find all the details on the page <a href="/en/invest-in-medina" class="text-emerald-600 hover:text-emerald-700 underline font-medium">Become an Investor in Medina</a>.</p>
         <p class="text-slate-600">No theory. No romantic numbers.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
       </div>
     `
