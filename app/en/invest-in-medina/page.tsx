@@ -480,10 +480,17 @@ export default function InvestorPage() {
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
                 A separate MISA license is applied for each investment. This license forms the legal basis for the respective business idea and is mandatory to operate a company in Saudi Arabia in compliance with the law.
               </p>
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
                 <p className="text-red-900 font-medium">
                   <AlertTriangle className="inline-block h-5 w-5 mr-2 -mt-0.5" />
                   Without a MISA license, there is no legal security – neither for the investment, nor for operational business, nor for residence in the country.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-6">
+                <p className="text-blue-900 font-semibold text-lg mb-2">💡 Important Note:</p>
+                <p className="text-blue-800">
+                  The <strong>business purpose of your company in Germany</strong> has <strong>no connection whatsoever</strong> to the business purpose in Saudi Arabia. You can be active in a completely different sector in Germany and build a completely different business model in Saudi Arabia. <strong>Saudi Arabia evaluates your project based on the market – not historically.</strong>
                 </p>
               </div>
             </div>

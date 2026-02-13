@@ -480,10 +480,17 @@ export default function InvestorPage() {
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
                 Für jedes Investment wird eine eigene MISA-Lizenz beantragt. Diese Lizenz bildet die rechtliche Grundlage für die jeweilige Geschäftsidee und ist zwingend erforderlich, um ein Unternehmen in Saudi-Arabien rechtskonform zu betreiben.
               </p>
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
                 <p className="text-red-900 font-medium">
                   <AlertTriangle className="inline-block h-5 w-5 mr-2 -mt-0.5" />
                   Ohne MISA-Lizenz besteht keine rechtliche Sicherheit – weder für das Investment, noch für den operativen Betrieb oder den Aufenthalt im Land.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-6">
+                <p className="text-blue-900 font-semibold text-lg mb-2">💡 Wichtiger Hinweis:</p>
+                <p className="text-blue-800">
+                  Der <strong>Geschäftszweck deiner Firma in Deutschland</strong> hat <strong>keinerlei Bindung</strong> an den Geschäftszweck in Saudi-Arabien. Du kannst in Deutschland in einem völlig anderen Bereich tätig sein und in Saudi-Arabien ein komplett anderes Geschäftsmodell aufbauen. <strong>Saudi-Arabien bewertet dein Vorhaben marktbezogen – nicht historisch.</strong>
                 </p>
               </div>
             </div>
