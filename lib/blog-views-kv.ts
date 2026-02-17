@@ -47,16 +47,23 @@ export async function getAllViewsFromKv(): Promise<Record<string, number>> {
   }
 
   try {
-    const keys = await redis!.keys(`${VIEWS_PREFIX}*`);
+    // Upstash Redis verwendet SCAN statt KEYS für bessere Performance
     const views: Record<string, number> = {};
-
-    for (const key of keys) {
-      const slug = key.replace(VIEWS_PREFIX, '');
-      const value = await redis!.get<number>(key);
-      if (value !== null) {
-        views[slug] = value;
+    let cursor = 0;
+    
+    do {
+      const result = await redis!.scan(cursor, { match: `${VIEWS_PREFIX}*`, count: 100 });
+      cursor = result[0];
+      const keys = result[1] as string[];
+      
+      for (const key of keys) {
+        const slug = key.replace(VIEWS_PREFIX, '');
+        const value = await redis!.get<number>(key);
+        if (value !== null) {
+          views[slug] = value;
+        }
       }
-    }
+    } while (cursor !== 0);
 
     // Wenn keine Views vorhanden, initialisiere mit Startwerten
     if (Object.keys(views).length === 0) {
