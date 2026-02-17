@@ -8,6 +8,16 @@ const IP_TRACKING_FILE = join(process.cwd(), 'data', 'blog-ip-tracking.json');
 let memoryViews: Record<string, number> = {};
 let memoryIpTracking: Record<string, Record<string, number>> = {};
 
+// Initialwerte für Blog-Views (falls Datei nicht existiert)
+const INITIAL_VIEWS_STARTUP: Record<string, number> = {
+  "investieren-in-medina": 27,
+  "investing-in-medina": 27,
+  "saudi-premium-residency": 28,
+  "familienzusammenfuehrung": 38,
+  "in-saudi-arabien-leben-4-wege-nach-medina": 41,
+  "so-startest-du-ein-business-in-saudi-arabien": 53
+};
+
 // Initialisiere Views beim Import (beim Server-Start)
 try {
   console.log('[Blog Views] Initializing...');
@@ -21,23 +31,24 @@ try {
     console.log('[Blog Views] ✅ Initialized from file on startup:', memoryViews);
   } else {
     console.warn('[Blog Views] ⚠️ Views file not found on startup:', VIEWS_FILE);
-    // Versuche alternative Pfade
-    const altPaths = [
-      join(process.cwd(), 'data', 'blog-views.json'),
-      join(process.cwd(), '..', 'data', 'blog-views.json'),
-    ];
-    for (const altPath of altPaths) {
-      console.log('[Blog Views] Trying alternative path:', altPath);
-      if (existsSync(altPath)) {
-        const content = readFileSync(altPath, 'utf-8');
-        memoryViews = JSON.parse(content);
-        console.log('[Blog Views] ✅ Loaded from alternative path:', altPath, memoryViews);
-        break;
-      }
+    // Initialisiere mit Startwerten, falls Datei nicht existiert
+    memoryViews = { ...INITIAL_VIEWS_STARTUP };
+    console.log('[Blog Views] ✅ Initialized with default values:', memoryViews);
+    
+    // Versuche die Datei zu erstellen (funktioniert nicht in Production)
+    try {
+      ensureDataDir();
+      writeFileSync(VIEWS_FILE, JSON.stringify(INITIAL_VIEWS_STARTUP, null, 2), 'utf-8');
+      console.log('[Blog Views] Created views file with initial values');
+    } catch (error) {
+      console.warn('[Blog Views] Could not create views file (normal in production):', error);
     }
   }
 } catch (error) {
   console.error('[Blog Views] ❌ Error initializing views on startup:', error);
+  // Fallback zu Initialwerten bei Fehler
+  memoryViews = { ...INITIAL_VIEWS_STARTUP };
+  console.log('[Blog Views] Using fallback initial values:', memoryViews);
 }
 
 interface BlogViewCount {
@@ -59,6 +70,16 @@ function ensureDataDir() {
   }
 }
 
+// Initialwerte für Blog-Views (falls Datei nicht existiert)
+const INITIAL_VIEWS: Record<string, number> = {
+  "investieren-in-medina": 27,
+  "investing-in-medina": 27,
+  "saudi-premium-residency": 28,
+  "familienzusammenfuehrung": 38,
+  "in-saudi-arabien-leben-4-wege-nach-medina": 41,
+  "so-startest-du-ein-business-in-saudi-arabien": 53
+};
+
 // Lade Views aus Datei oder Memory
 function loadViews(): Record<string, number> {
   // Lade IMMER neu aus der Datei, um sicherzustellen, dass die neuesten Werte verwendet werden
@@ -79,10 +100,20 @@ function loadViews(): Record<string, number> {
   }
   console.warn('[Blog Views] Views file does not exist:', VIEWS_FILE);
   console.log('[Blog Views] Current working directory:', process.cwd());
-  // Wenn Datei nicht existiert, initialisiere mit leeren Werten
+  
+  // Wenn Datei nicht existiert und Memory leer ist, initialisiere mit Startwerten
   if (Object.keys(memoryViews).length === 0) {
-    console.warn('[Blog Views] Memory views is empty, returning empty object');
-    return {};
+    console.log('[Blog Views] Initializing with default values:', INITIAL_VIEWS);
+    memoryViews = { ...INITIAL_VIEWS };
+    // Versuche die Datei zu erstellen (funktioniert nicht in Production, aber versuchen wir es)
+    try {
+      ensureDataDir();
+      writeFileSync(VIEWS_FILE, JSON.stringify(INITIAL_VIEWS, null, 2), 'utf-8');
+      console.log('[Blog Views] Created views file with initial values');
+    } catch (error) {
+      console.warn('[Blog Views] Could not create views file (normal in production):', error);
+    }
+    return INITIAL_VIEWS;
   }
   console.log('[Blog Views] Using memory views:', memoryViews);
   return memoryViews;
