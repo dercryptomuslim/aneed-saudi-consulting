@@ -8,6 +8,19 @@ const IP_TRACKING_FILE = join(process.cwd(), 'data', 'blog-ip-tracking.json');
 let memoryViews: Record<string, number> = {};
 let memoryIpTracking: Record<string, Record<string, number>> = {};
 
+// Initialisiere Views beim Import (beim Server-Start)
+try {
+  if (existsSync(VIEWS_FILE)) {
+    const content = readFileSync(VIEWS_FILE, 'utf-8');
+    memoryViews = JSON.parse(content);
+    console.log('[Blog Views] Initialized from file on startup:', memoryViews);
+  } else {
+    console.warn('[Blog Views] Views file not found on startup:', VIEWS_FILE);
+  }
+} catch (error) {
+  console.error('[Blog Views] Error initializing views on startup:', error);
+}
+
 interface BlogViewCount {
   slug: string;
   views: number;
