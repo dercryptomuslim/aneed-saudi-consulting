@@ -20,8 +20,9 @@ function getClientIp(request: NextRequest): string {
     return realIp.split(",")[0].trim();
   }
 
-  // Fallback: Verwende Remote-Adresse
-  return request.ip || "unknown";
+  // Fallback: Verwende eine generische IP oder generiere eine Session-ID
+  // In Production sollte immer einer der Header vorhanden sein
+  return "unknown";
 }
 
 export async function GET(
