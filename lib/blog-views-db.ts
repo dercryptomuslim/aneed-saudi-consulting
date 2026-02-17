@@ -31,8 +31,8 @@ function loadViews(): Record<string, number> {
     try {
       const content = readFileSync(VIEWS_FILE, 'utf-8');
       const views = JSON.parse(content);
-      // Synchronisiere Memory mit Datei
-      memoryViews = { ...memoryViews, ...views };
+      // Überschreibe Memory komplett mit Datei-Werten
+      memoryViews = { ...views };
       return views;
     } catch (error) {
       console.warn('Could not read views file, using memory:', error);
