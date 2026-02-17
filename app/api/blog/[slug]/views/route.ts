@@ -31,7 +31,7 @@ export async function GET(
 ) {
   try {
     const { slug } = await params;
-    const views = getBlogViews(slug);
+    const views = await getBlogViews(slug);
     console.log(`[API] GET /api/blog/${slug}/views -> ${views}`);
     
     return NextResponse.json({ views });
@@ -53,7 +53,7 @@ export async function POST(
     const ip = getClientIp(request);
     
     // Erhöhe Views nur wenn IP nicht blockiert ist
-    const result = incrementBlogViews(slug, ip);
+    const result = await incrementBlogViews(slug, ip);
     
     return NextResponse.json({ 
       views: result.views,

@@ -1,5 +1,11 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
+import { 
+  getBlogViewsFromKv, 
+  incrementBlogViewsInKv, 
+  hasIpViewedRecentlyKv, 
+  recordIpViewKv 
+} from './blog-views-kv';
 
 const VIEWS_FILE = join(process.cwd(), 'data', 'blog-views.json');
 const IP_TRACKING_FILE = join(process.cwd(), 'data', 'blog-ip-tracking.json');
@@ -215,12 +221,28 @@ export function recordIpView(slug: string, ip: string): void {
 }
 
 /**
+ * Prüft, ob wir in Production sind (Upstash Redis verfügbar)
+ */
+function isProduction(): boolean {
+  return process.env.VERCEL === '1' || (process.env.UPSTASH_REDIS_REST_URL !== undefined && process.env.UPSTASH_REDIS_REST_TOKEN !== undefined);
+}
+
+/**
  * Holt die View-Anzahl für einen Blog-Post
  */
-export function getBlogViews(slug: string): number {
+export async function getBlogViews(slug: string): Promise<number> {
+  // In Production: Verwende Vercel KV
+  if (isProduction()) {
+    try {
+      return await getBlogViewsFromKv(slug);
+    } catch (error) {
+      console.error('[Blog Views] Error getting views from KV, falling back to file:', error);
+    }
+  }
+  
+  // Lokal: Verwende Datei-basierte Lösung
   const views = loadViews();
   const viewCount = views[slug] ?? 0;
-  // Debug: Log immer, um zu sehen was geladen wird
   console.log(`[Blog Views] getBlogViews(${slug}) -> ${viewCount}, all views:`, views);
   return viewCount;
 }
@@ -228,11 +250,32 @@ export function getBlogViews(slug: string): number {
 /**
  * Erhöht die View-Anzahl für einen Blog-Post um 1 (nur wenn IP nicht blockiert ist)
  */
-export function incrementBlogViews(slug: string, ip: string): { views: number; counted: boolean } {
+export async function incrementBlogViews(slug: string, ip: string): Promise<{ views: number; counted: boolean }> {
+  // In Production: Verwende Vercel KV
+  if (isProduction()) {
+    try {
+      // Prüfe, ob IP bereits innerhalb der letzten 24 Stunden gezählt hat
+      const hasViewed = await hasIpViewedRecentlyKv(slug, ip);
+      if (hasViewed) {
+        const currentViews = await getBlogViewsFromKv(slug);
+        return { views: currentViews, counted: false };
+      }
+
+      // IP hat noch nicht gezählt, erhöhe Counter
+      const newViews = await incrementBlogViewsInKv(slug);
+      await recordIpViewKv(slug, ip);
+      return { views: newViews, counted: true };
+    } catch (error) {
+      console.error('[Blog Views] Error incrementing views in KV, falling back to file:', error);
+    }
+  }
+
+  // Lokal: Verwende Datei-basierte Lösung
   // Prüfe, ob IP bereits innerhalb der letzten 24 Stunden gezählt hat
   if (hasIpViewedRecently(slug, ip)) {
     // IP hat bereits gezählt, gebe aktuellen Wert zurück ohne zu erhöhen
-    return { views: getBlogViews(slug), counted: false };
+    const currentViews = await getBlogViews(slug);
+    return { views: currentViews, counted: false };
   }
 
   // IP hat noch nicht gezählt oder 24 Stunden sind vergangen
