@@ -10,15 +10,34 @@ let memoryIpTracking: Record<string, Record<string, number>> = {};
 
 // Initialisiere Views beim Import (beim Server-Start)
 try {
+  console.log('[Blog Views] Initializing...');
+  console.log('[Blog Views] process.cwd():', process.cwd());
+  console.log('[Blog Views] VIEWS_FILE path:', VIEWS_FILE);
+  console.log('[Blog Views] File exists:', existsSync(VIEWS_FILE));
+  
   if (existsSync(VIEWS_FILE)) {
     const content = readFileSync(VIEWS_FILE, 'utf-8');
     memoryViews = JSON.parse(content);
-    console.log('[Blog Views] Initialized from file on startup:', memoryViews);
+    console.log('[Blog Views] ✅ Initialized from file on startup:', memoryViews);
   } else {
-    console.warn('[Blog Views] Views file not found on startup:', VIEWS_FILE);
+    console.warn('[Blog Views] ⚠️ Views file not found on startup:', VIEWS_FILE);
+    // Versuche alternative Pfade
+    const altPaths = [
+      join(process.cwd(), 'data', 'blog-views.json'),
+      join(process.cwd(), '..', 'data', 'blog-views.json'),
+    ];
+    for (const altPath of altPaths) {
+      console.log('[Blog Views] Trying alternative path:', altPath);
+      if (existsSync(altPath)) {
+        const content = readFileSync(altPath, 'utf-8');
+        memoryViews = JSON.parse(content);
+        console.log('[Blog Views] ✅ Loaded from alternative path:', altPath, memoryViews);
+        break;
+      }
+    }
   }
 } catch (error) {
-  console.error('[Blog Views] Error initializing views on startup:', error);
+  console.error('[Blog Views] ❌ Error initializing views on startup:', error);
 }
 
 interface BlogViewCount {
