@@ -49,19 +49,23 @@ function loadViews(): Record<string, number> {
       const views = JSON.parse(content);
       // Überschreibe Memory komplett mit Datei-Werten
       memoryViews = { ...views };
-      console.log('[Blog Views] Loaded views from file:', views);
+      console.log('[Blog Views] loadViews() - Loaded from file:', VIEWS_FILE, views);
       return views;
     } catch (error) {
-      console.error('[Blog Views] Error reading views file:', error);
+      console.error('[Blog Views] Error reading views file:', VIEWS_FILE, error);
       // Fallback zu Memory nur wenn Datei nicht lesbar ist
+      console.log('[Blog Views] Using memory fallback:', memoryViews);
       return memoryViews;
     }
   }
   console.warn('[Blog Views] Views file does not exist:', VIEWS_FILE);
+  console.log('[Blog Views] Current working directory:', process.cwd());
   // Wenn Datei nicht existiert, initialisiere mit leeren Werten
   if (Object.keys(memoryViews).length === 0) {
+    console.warn('[Blog Views] Memory views is empty, returning empty object');
     return {};
   }
+  console.log('[Blog Views] Using memory views:', memoryViews);
   return memoryViews;
 }
 
@@ -165,11 +169,9 @@ export function recordIpView(slug: string, ip: string): void {
  */
 export function getBlogViews(slug: string): number {
   const views = loadViews();
-  const viewCount = views[slug] || 0;
-  // Debug: Log wenn Wert nicht gefunden wird
-  if (viewCount === 0 && !views[slug]) {
-    console.log(`[Blog Views] No views found for slug: ${slug}, available slugs:`, Object.keys(views));
-  }
+  const viewCount = views[slug] ?? 0;
+  // Debug: Log immer, um zu sehen was geladen wird
+  console.log(`[Blog Views] getBlogViews(${slug}) -> ${viewCount}, all views:`, views);
   return viewCount;
 }
 
