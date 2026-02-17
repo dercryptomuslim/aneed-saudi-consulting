@@ -2,9 +2,11 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
 const VIEWS_FILE = join(process.cwd(), 'data', 'blog-views.json');
+const IP_TRACKING_FILE = join(process.cwd(), 'data', 'blog-ip-tracking.json');
 
 // In-Memory Fallback für Production (read-only filesystem)
 let memoryViews: Record<string, number> = {};
+let memoryIpTracking: Record<string, Record<string, number>> = {};
 
 interface BlogViewCount {
   slug: string;
@@ -42,6 +44,42 @@ function loadViews(): Record<string, number> {
   return memoryViews;
 }
 
+// Lade IP-Tracking-Daten aus Datei oder Memory
+function loadIpTracking(): Record<string, Record<string, number>> {
+  if (existsSync(IP_TRACKING_FILE)) {
+    try {
+      const content = readFileSync(IP_TRACKING_FILE, 'utf-8');
+      const tracking = JSON.parse(content);
+      // Bereinige alte Einträge (älter als 24 Stunden)
+      const cleanedTracking = cleanOldEntries(tracking);
+      memoryIpTracking = cleanedTracking;
+      return cleanedTracking;
+    } catch (error) {
+      console.warn('Could not read IP tracking file, using memory:', error);
+      return memoryIpTracking;
+    }
+  }
+  return memoryIpTracking;
+}
+
+// Bereinige Einträge, die älter als 24 Stunden sind
+function cleanOldEntries(tracking: Record<string, Record<string, number>>): Record<string, Record<string, number>> {
+  const now = Date.now();
+  const twentyFourHours = 24 * 60 * 60 * 1000; // 24 Stunden in Millisekunden
+  const cleaned: Record<string, Record<string, number>> = {};
+
+  for (const [slug, ips] of Object.entries(tracking)) {
+    cleaned[slug] = {};
+    for (const [ip, timestamp] of Object.entries(ips)) {
+      if (now - timestamp < twentyFourHours) {
+        cleaned[slug][ip] = timestamp;
+      }
+    }
+  }
+
+  return cleaned;
+}
+
 // Speichere Views in Datei (mit Fallback zu Memory)
 function saveViews(views: Record<string, number>) {
   ensureDataDir();
@@ -56,6 +94,51 @@ function saveViews(views: Record<string, number>) {
   }
 }
 
+// Speichere IP-Tracking-Daten in Datei (mit Fallback zu Memory)
+function saveIpTracking(tracking: Record<string, Record<string, number>>) {
+  ensureDataDir();
+  try {
+    writeFileSync(IP_TRACKING_FILE, JSON.stringify(tracking, null, 2), 'utf-8');
+    // Synchronisiere Memory
+    memoryIpTracking = tracking;
+  } catch (error) {
+    // In Production (read-only filesystem) speichere nur im Memory
+    console.warn('Could not save IP tracking to file (using memory fallback):', error);
+    memoryIpTracking = tracking;
+  }
+}
+
+/**
+ * Prüft, ob eine IP-Adresse innerhalb der letzten 24 Stunden bereits gezählt hat
+ */
+export function hasIpViewedRecently(slug: string, ip: string): boolean {
+  const tracking = loadIpTracking();
+  const slugTracking = tracking[slug] || {};
+  const lastViewTime = slugTracking[ip];
+
+  if (!lastViewTime) {
+    return false; // IP hat noch nie gezählt
+  }
+
+  const now = Date.now();
+  const twentyFourHours = 24 * 60 * 60 * 1000; // 24 Stunden in Millisekunden
+
+  // Prüfe, ob weniger als 24 Stunden vergangen sind
+  return (now - lastViewTime) < twentyFourHours;
+}
+
+/**
+ * Speichert die IP-Adresse und Timestamp für einen Blog-Post
+ */
+export function recordIpView(slug: string, ip: string): void {
+  const tracking = loadIpTracking();
+  if (!tracking[slug]) {
+    tracking[slug] = {};
+  }
+  tracking[slug][ip] = Date.now();
+  saveIpTracking(tracking);
+}
+
 /**
  * Holt die View-Anzahl für einen Blog-Post
  */
@@ -65,13 +148,24 @@ export function getBlogViews(slug: string): number {
 }
 
 /**
- * Erhöht die View-Anzahl für einen Blog-Post um 1
+ * Erhöht die View-Anzahl für einen Blog-Post um 1 (nur wenn IP nicht blockiert ist)
  */
-export function incrementBlogViews(slug: string): number {
+export function incrementBlogViews(slug: string, ip: string): { views: number; counted: boolean } {
+  // Prüfe, ob IP bereits innerhalb der letzten 24 Stunden gezählt hat
+  if (hasIpViewedRecently(slug, ip)) {
+    // IP hat bereits gezählt, gebe aktuellen Wert zurück ohne zu erhöhen
+    return { views: getBlogViews(slug), counted: false };
+  }
+
+  // IP hat noch nicht gezählt oder 24 Stunden sind vergangen
   const views = loadViews();
   views[slug] = (views[slug] || 0) + 1;
   saveViews(views);
-  return views[slug];
+
+  // Speichere IP und Timestamp
+  recordIpView(slug, ip);
+
+  return { views: views[slug], counted: true };
 }
 
 /**
