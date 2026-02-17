@@ -29,6 +29,7 @@ function ensureDataDir() {
 
 // Lade Views aus Datei oder Memory
 function loadViews(): Record<string, number> {
+  // Lade IMMER neu aus der Datei, um sicherzustellen, dass die neuesten Werte verwendet werden
   if (existsSync(VIEWS_FILE)) {
     try {
       const content = readFileSync(VIEWS_FILE, 'utf-8');
@@ -37,9 +38,14 @@ function loadViews(): Record<string, number> {
       memoryViews = { ...views };
       return views;
     } catch (error) {
-      console.warn('Could not read views file, using memory:', error);
+      console.error('Error reading views file:', error);
+      // Fallback zu Memory nur wenn Datei nicht lesbar ist
       return memoryViews;
     }
+  }
+  // Wenn Datei nicht existiert, initialisiere mit leeren Werten
+  if (Object.keys(memoryViews).length === 0) {
+    return {};
   }
   return memoryViews;
 }
@@ -144,7 +150,12 @@ export function recordIpView(slug: string, ip: string): void {
  */
 export function getBlogViews(slug: string): number {
   const views = loadViews();
-  return views[slug] || 0;
+  const viewCount = views[slug] || 0;
+  // Debug: Log wenn Wert nicht gefunden wird
+  if (viewCount === 0 && !views[slug]) {
+    console.log(`[Blog Views] No views found for slug: ${slug}, available slugs:`, Object.keys(views));
+  }
+  return viewCount;
 }
 
 /**
