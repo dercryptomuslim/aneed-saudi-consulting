@@ -36,13 +36,15 @@ function loadViews(): Record<string, number> {
       const views = JSON.parse(content);
       // Überschreibe Memory komplett mit Datei-Werten
       memoryViews = { ...views };
+      console.log('[Blog Views] Loaded views from file:', views);
       return views;
     } catch (error) {
-      console.error('Error reading views file:', error);
+      console.error('[Blog Views] Error reading views file:', error);
       // Fallback zu Memory nur wenn Datei nicht lesbar ist
       return memoryViews;
     }
   }
+  console.warn('[Blog Views] Views file does not exist:', VIEWS_FILE);
   // Wenn Datei nicht existiert, initialisiere mit leeren Werten
   if (Object.keys(memoryViews).length === 0) {
     return {};

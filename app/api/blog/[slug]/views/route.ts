@@ -31,6 +31,7 @@ export async function GET(
   try {
     const { slug } = await params;
     const views = getBlogViews(slug);
+    console.log(`[API] GET /api/blog/${slug}/views -> ${views}`);
     
     return NextResponse.json({ views });
   } catch (error) {
