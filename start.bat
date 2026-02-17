@@ -6,7 +6,7 @@ echo ========================================
 echo   ANEED SAUDI CONSULTING - DEV SERVER
 echo ========================================
 echo.
-cd /d "C:\Users\konta\aneed-saudi-consulting"
+cd /d "D:\Cursor\aneed-saudi-consulting"
 echo Aktuelles Verzeichnis: %cd%
 echo.
 echo Server startet auf Port 7001...
