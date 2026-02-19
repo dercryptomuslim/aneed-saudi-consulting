@@ -7,91 +7,49 @@ import { localizeHref } from "@/lib/i18n";
 
 const servicesDe = [
   {
-    title: "1. Unternehmensgründung",
-    description: "Rechtssicherer Start in Saudi-Arabien. Wahl der Rechtsform, Lizenzen (MISA) und Behördenmanagement.",
+    title: "Unternehmensaufbau & Marktführung",
+    description: "Von der Gründung über den Aufbau bis zur operativen Führung. Du bestimmst, wie weit die Reise geht.",
     icon: Building2,
-    features: ["Rechtsform & Lizenzen", "Behörden & Register", "Steuern & Compliance"],
-    href: "/services#gruendung"
+    features: ["Unternehmensgründung", "Unternehmensaufbau", "Unternehmensführung"],
+    href: "/services#reise-zum-business"
   },
   {
-    title: "2. Unternehmensaufbau",
-    description: "Operativer Aufbau vor Ort. Standortwahl, Personalrekrutierung und Prozess-Implementierung.",
-    icon: Users,
-    features: ["Standort & Büro", "Recruiting & HR", "Marketing & Launch"],
-    href: "/services#aufbau"
-  },
-  {
-    title: "3. Unternehmensführung",
-    description: "Laufendes Management und Controlling. Finanzen, Mitarbeiterführung und Profitabilitäts-Optimierung.",
-    icon: BarChart3,
-    features: ["Finanzen & Controlling", "Operations & QM", "Wachstumsstrategie"],
-    href: "/services#fuehrung"
-  },
-  {
-    title: "4. Unternehmensberatung",
-    description: "Strategie für bestehende Firmen. Markteintritt, Expansion und Prozessoptimierung.",
-    icon: Briefcase,
-    features: ["Strategie & Wachstum", "Restrukturierung", "Joint Ventures"],
-    href: "/services#beratung"
-  },
-  {
-    title: "5. Investment",
+    title: "Investment",
     description: "Investition in ausgearbeitete Geschäftskonzepte mit transparenten Finanzplänen.",
     icon: TrendingUp,
     features: ["Businesspläne", "Kalkulation & ROI", "Operative Begleitung"],
     href: "/services#investment"
   },
   {
-    title: "6. Franchise",
-    description: "Systematisierte Expansion. Aufbau und Anpassung von Franchise-Systemen für den saudischen Markt.",
-    icon: Store,
-    features: ["System-Analyse", "Recht & Verträge", "Rollout & Schulung"],
-    href: "/services#franchise"
+    title: "Unternehmensberatung",
+    description: "Strategie für bestehende Firmen. Markteintritt, Expansion und Prozessoptimierung.",
+    icon: Briefcase,
+    features: ["Strategie & Wachstum", "Restrukturierung", "Joint Ventures"],
+    href: "/services#beratung"
   },
 ];
 
 const servicesEn = [
   {
-    title: "1. Company Formation",
-    description: "A compliant start in Saudi Arabia: legal structure, licenses (MISA), and authority coordination.",
+    title: "Business Setup & Market Management",
+    description: "From formation through setup to operational management. You decide how far the journey goes.",
     icon: Building2,
-    features: ["Legal form & licenses", "Authorities & registry", "Tax & compliance"],
-    href: "/services#gruendung",
+    features: ["Company Formation", "Business Setup", "Operations & Management"],
+    href: "/services#reise-zum-business",
   },
   {
-    title: "2. Business Setup",
-    description: "Operational setup on the ground: location, hiring, and process implementation.",
-    icon: Users,
-    features: ["Location & office", "Recruiting & HR", "Marketing & launch"],
-    href: "/services#aufbau",
-  },
-  {
-    title: "3. Operations & Management",
-    description: "Ongoing operations and controlling: finance, leadership, and profitability optimization.",
-    icon: BarChart3,
-    features: ["Finance & controlling", "Operations & quality", "Growth strategy"],
-    href: "/services#fuehrung",
-  },
-  {
-    title: "4. Business Consulting",
-    description: "Strategy for existing companies: market entry, expansion, and process optimization.",
-    icon: Briefcase,
-    features: ["Strategy & growth", "Restructuring", "Joint ventures"],
-    href: "/services#beratung",
-  },
-  {
-    title: "5. Investment",
+    title: "Investment",
     description: "Invest in ready-to-launch concepts with transparent financial planning.",
     icon: TrendingUp,
     features: ["Business plans", "Modeling & ROI", "Operational support"],
     href: "/services#investment",
   },
   {
-    title: "6. Franchise",
-    description: "Systematic expansion: adapt and launch franchise systems for the Saudi market.",
-    icon: Store,
-    features: ["System analysis", "Legal & contracts", "Rollout & training"],
-    href: "/services#franchise",
+    title: "Business Consulting",
+    description: "Strategy for existing companies: market entry, expansion, and process optimization.",
+    icon: Briefcase,
+    features: ["Strategy & growth", "Restructuring", "Joint ventures"],
+    href: "/services#beratung",
   },
 ];
 
@@ -106,19 +64,26 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-6">
             {t("Unsere Expertise. Dein Vorteil.", "Our Expertise. Your Advantage.")}
           </h2>
-          <p className="text-lg text-slate-600">
-            {t(
-              "Wir übernehmen die komplette Unternehmensgründung in Medina – von A bis Z. Dazu gehören MISA-Lizenz, Behördenabstimmungen, rechtliche und steuerliche Grundlagen sowie die Vorbereitung & Durchführung für den operativen Geschäftsbetrieb.",
-              "We manage the entire company formation process in Medina — from start to finish. This includes securing the MISA licence, coordinating with all relevant authorities, establishing the legal and tax framework, and preparing your business for full operational readiness."
-            )}
-          </p>
+          <div className="text-lg text-slate-600 space-y-4 text-center">
+            <p>
+              {t(
+                "Wir übernehmen die komplette Unternehmensgründung in Medina – von A bis Z. Dazu gehören MISA-Lizenz, Behördenabstimmungen, rechtliche und steuerliche Grundlagen sowie die Vorbereitung & Durchführung für den operativen Geschäftsbetrieb.",
+                "We manage the entire company formation process in Medina — from start to finish. This includes securing the MISA licence, coordinating with all relevant authorities, establishing the legal and tax framework, and preparing & implementing for operational business operations."
+              )}
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Link key={service.title} href={href(service.href)} className="group block h-full">
               <Card className="h-full border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
+                  <div className="mb-2">
+                    <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">
+                      {t("Pfeiler", "Pillar")} {index + 1}
+                    </span>
+                  </div>
                   <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-900 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">
                     <service.icon className="h-6 w-6" />
                   </div>

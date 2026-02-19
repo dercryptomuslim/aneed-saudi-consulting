@@ -27,28 +27,10 @@ import { getLocaleFromPathname, localizeHref, switchLocalePath, type Locale } fr
 
 const servicesDe = [
   {
-    title: "Unternehmensgründung",
-    href: "/services#gruendung",
-    description: "Rechtssicherer Start & Lizenzen.",
+    title: "Unternehmensaufbau & Marktführung",
+    href: "/services#reise-zum-business",
+    description: "Gründung, Aufbau & Führung.",
     icon: Building2
-  },
-  {
-    title: "Unternehmensaufbau",
-    href: "/services#aufbau",
-    description: "Standort, Personal & Prozesse.",
-    icon: Users
-  },
-  {
-    title: "Unternehmensführung",
-    href: "/services#fuehrung",
-    description: "Betrieb, Finanzen & Controlling.",
-    icon: BarChart3
-  },
-  {
-    title: "Unternehmensberatung",
-    href: "/services#beratung",
-    description: "Strategie für bestehende Firmen.",
-    icon: Briefcase
   },
   {
     title: "Investment",
@@ -57,37 +39,19 @@ const servicesDe = [
     icon: TrendingUp
   },
   {
-    title: "Franchise",
-    href: "/services#franchise",
-    description: "Expansion von Systemen.",
-    icon: Store
+    title: "Unternehmensberatung",
+    href: "/services#beratung",
+    description: "Strategie für bestehende Firmen.",
+    icon: Briefcase
   },
 ];
 
 const servicesEn = [
   {
-    title: "Company Formation",
-    href: "/services#gruendung",
-    description: "Licenses, structure & compliance.",
+    title: "Business Setup & Market Management",
+    href: "/services#reise-zum-business",
+    description: "Formation, setup & management.",
     icon: Building2,
-  },
-  {
-    title: "Business Setup",
-    href: "/services#aufbau",
-    description: "Location, hiring & processes.",
-    icon: Users,
-  },
-  {
-    title: "Operations & Management",
-    href: "/services#fuehrung",
-    description: "Finance, KPIs & controlling.",
-    icon: BarChart3,
-  },
-  {
-    title: "Business Consulting",
-    href: "/services#beratung",
-    description: "Strategy for existing companies.",
-    icon: Briefcase,
   },
   {
     title: "Investment",
@@ -96,10 +60,10 @@ const servicesEn = [
     icon: TrendingUp,
   },
   {
-    title: "Franchise",
-    href: "/services#franchise",
-    description: "Scale systems into KSA.",
-    icon: Store,
+    title: "Business Consulting",
+    href: "/services#beratung",
+    description: "Strategy for existing companies.",
+    icon: Briefcase,
   },
 ];
 
