@@ -49,11 +49,11 @@ export async function getAllViewsFromKv(): Promise<Record<string, number>> {
   try {
     // Upstash Redis verwendet SCAN statt KEYS für bessere Performance
     const views: Record<string, number> = {};
-    let cursor = 0;
+    let cursor: string | number = 0;
     
     do {
       const result = await redis!.scan(cursor, { match: `${VIEWS_PREFIX}*`, count: 100 });
-      cursor = result[0];
+      cursor = result[0] as string | number;
       const keys = result[1] as string[];
       
       for (const key of keys) {

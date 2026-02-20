@@ -7,6 +7,9 @@ import {
   CheckCircle2,
   ArrowDown,
   Route,
+  Building2,
+  Users,
+  BarChart3,
 } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -508,66 +511,6 @@ export default function ServicesEnPage() {
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
                     <span>Direct, practical access to the Saudi market</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Franchise - REMOVED */}
-      <section id="franchise" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20 hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12">
-            <div className="lg:w-1/3">
-              <div className="sticky top-32">
-                <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
-                  <Store className="h-7 w-7 text-emerald-600" />
-                </div>
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">
-                  6. Franchise in Saudi Arabia
-                </h2>
-                <p className="text-emerald-700 font-medium mb-8 text-lg">Expansion & system build</p>
-                <Button
-                  asChild
-                  className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base"
-                >
-                  <Link href={href("/anfrage")}>Discuss franchise</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
-              <p>
-                I support entrepreneurs and investors in successfully launching franchise models in Saudi Arabia — from strategic planning through to operational expansion.
-              </p>
-
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
-                <h3 className="text-slate-900 font-bold mb-6 text-xl">Franchise services:</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Analysis of existing concepts for the Saudi (KSA) market</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Advisory on legal structures, licences, and franchise agreements</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Location selection, setup, and franchise partner selection</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Implementation of operational processes and brand standards</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Training programmes for franchisees and staff</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />{" "}
-                    <span>Ongoing support, performance monitoring, and quality control</span>
                   </li>
                 </ul>
               </div>
