@@ -10,6 +10,7 @@ import {
   Building2,
   Users,
   BarChart3,
+  Plane,
 } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ import { BusinessJourney } from "@/components/business-journey";
 
 export const metadata: Metadata = {
   title: "Services | Company Formation & Consulting Saudi Arabia",
-  description: "Three pillars for your business: Business Setup & Market Management (formation, setup, management), investment opportunities, and strategic business consulting in Saudi Arabia.",
+  description: "Four pillars for your business: Business Setup & Management (formation, setup, management), investment opportunities, strategic business consulting, and immigrating to Saudi Arabia.",
   alternates: {
     canonical: "/en/services",
     languages: {
@@ -27,10 +28,10 @@ export const metadata: Metadata = {
       "en": "/en/services",
     },
   },
-  keywords: ["Services Saudi Arabia", "Company Formation", "MISA License", "Franchise Saudi Arabia", "Investment Saudi Arabia", "Business Consulting"],
+  keywords: ["Services Saudi Arabia", "Company Formation", "MISA License", "Franchise Saudi Arabia", "Investment Saudi Arabia", "Business Consulting", "Immigrate Saudi Arabia", "Premium Residency"],
   openGraph: {
     title: "Services | Company Formation Saudi Arabia",
-    description: "Three pillars for your business: Business Setup & Market Management, investment opportunities, and strategic business consulting in Saudi Arabia.",
+    description: "Four pillars for your business: Business Setup & Management, investment opportunities, strategic business consulting, and immigrating to Saudi Arabia.",
     url: "https://www.aneedashraf.de/en/services",
     siteName: "Aneed Ashraf",
     locale: "en_US",
@@ -44,9 +45,10 @@ export const metadata: Metadata = {
 };
 
 const quickLinks = [
-  { id: "reise-zum-business", title: "Business Setup & Market Management", icon: Route },
+  { id: "reise-zum-business", title: "Business Setup & Management", icon: Route },
   { id: "investment", title: "Investment", icon: TrendingUp },
   { id: "beratung", title: "Business Consulting", icon: Briefcase },
+  { id: "auswandern", title: "Immigrate to Saudi Arabia", icon: Plane },
 ];
 
 export default function ServicesEnPage() {
@@ -65,11 +67,11 @@ export default function ServicesEnPage() {
             Our Services
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Three pillars for your business in Saudi Arabia: Business Setup & Market Management, investment opportunities, and strategic business consulting.
+            Four pillars for your business in Saudi Arabia: Business Setup & Management, investment opportunities, strategic business consulting, and immigrating to Saudi Arabia.
           </p>
 
-          {/* Quick Links Grid (3 columns) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-12">
+          {/* Quick Links Grid (4 columns) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mt-12">
             {quickLinks.map((link) => (
               <Link
                 key={link.id}
@@ -89,7 +91,7 @@ export default function ServicesEnPage() {
         </div>
       </section>
 
-      {/* Pillar 1: Business Setup & Market Management */}
+      {/* Pillar 1: Business Setup & Management */}
       <BusinessJourney locale="en" />
 
       {/* Pillar 2: Investment */}
@@ -210,6 +212,126 @@ export default function ServicesEnPage() {
                     <span>Support for partnerships and joint ventures</span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillar 4: Immigrate to Saudi Arabia */}
+      <section id="auswandern" className="py-16 md:py-24 border-t border-slate-100 scroll-mt-20 bg-slate-50/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12">
+            <div className="lg:w-1/3">
+              <div className="sticky top-32">
+                <div className="inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm text-emerald-700 shadow-sm mb-4 font-medium">
+                  Pillar 4
+                </div>
+                <div className="h-14 w-14 rounded-xl bg-emerald-50 flex items-center justify-center border border-emerald-100 mb-6">
+                  <Plane className="h-7 w-7 text-emerald-600" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-2">Immigrate to Saudi Arabia</h2>
+                <p className="text-emerald-700 font-medium mb-8 text-lg">Legal, structured & long-term</p>
+                <Button asChild className="w-full md:w-auto bg-slate-900 text-white hover:bg-slate-800 shadow-md h-12 px-6 text-base">
+                  <Link href={href("/anfrage")}>Request consultation</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="lg:w-2/3 space-y-8 text-slate-600 leading-relaxed text-lg">
+              <p>
+                We support people in immigrating to Saudi Arabia <Link href={href("/anfrage")} className="text-emerald-700 hover:text-emerald-800 font-medium underline decoration-1 underline-offset-2">legally, structured and long-term</Link>.
+              </p>
+              
+              <p>
+                A permanent stay in the Kingdom requires a clear legal basis. This is exactly where we come in – with entrepreneurial solutions that are legally sound and operationally feasible.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 shadow-sm">
+                <h3 className="text-slate-900 font-bold mb-6 text-xl">Three possible paths:</h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-emerald-500 pl-6">
+                    <h4 className="text-slate-900 font-bold mb-2 text-lg">
+                      <Link href={href("/services#reise-zum-business")} className="hover:text-emerald-700 transition-colors underline decoration-2 underline-offset-4">
+                        1. Company formation as residence basis
+                      </Link>
+                    </h4>
+                    <p className="text-slate-600 mb-3">
+                      We establish your own company in Saudi Arabia for you – including MISA license, legal structure and operational preparation.
+                    </p>
+                    <p className="text-slate-600 mb-3">
+                      Through this company structure, a residence and work permit can be established, provided all regulatory requirements are met.
+                    </p>
+                    <p className="text-slate-600">
+                      This path is suitable for entrepreneurs who want to actively run their own business.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-emerald-500 pl-6">
+                    <h4 className="text-slate-900 font-bold mb-2 text-lg">
+                      <Link href={href("/services#reise-zum-business")} className="hover:text-emerald-700 transition-colors underline decoration-2 underline-offset-4">
+                        2. Building a market-ready business
+                      </Link>
+                    </h4>
+                    <p className="text-slate-600 mb-3">
+                      You don't just want to form a company, but build a functioning business model?
+                    </p>
+                    <p className="text-slate-600 mb-3">
+                      We accompany you from concept through location, personnel and processes to operational management.
+                    </p>
+                    <p className="text-slate-600">
+                      The goal is not only to enable a stay, but to establish an economically viable company.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-emerald-500 pl-6">
+                    <h4 className="text-slate-900 font-bold mb-2 text-lg">
+                      <Link href={href("/blog/saudi-premium-residency")} className="hover:text-emerald-700 transition-colors underline decoration-2 underline-offset-4">
+                        3. Application for Saudi Premium Residency
+                      </Link>
+                    </h4>
+                    <p className="text-slate-600 mb-3">
+                      For qualified individuals or investors, there is alternatively the possibility of <Link href={href("/blog/saudi-premium-residency")} className="text-emerald-700 hover:text-emerald-800 font-medium underline decoration-1 underline-offset-2">Saudi Premium Residency</Link>.
+                    </p>
+                    <p className="text-slate-600 mb-3">
+                      We support you in structured preparation and application – including checking requirements, documentation and submission.
+                    </p>
+                    <p className="text-slate-600">
+                      This path is particularly suitable for people who want to live in Saudi Arabia long-term without necessarily being operationally active.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-8 mt-8 shadow-sm">
+                <h3 className="text-slate-900 font-bold mb-4 text-xl">Our approach</h3>
+                <p className="text-slate-700 mb-4 font-semibold">
+                  We don't sell "visa solutions".
+                </p>
+                <p className="text-slate-700 mb-6">
+                  We create legally sound structures on the basis of which a stay becomes possible.
+                </p>
+                <p className="text-slate-700 mb-4 font-semibold">
+                  Every case is individual.
+                </p>
+                <p className="text-slate-700 mb-4">
+                  That's why we first check your individual situation. <Link href={href("/anfrage")} className="text-emerald-700 hover:text-emerald-800 font-semibold underline decoration-1 underline-offset-2">Book a call</Link> to discuss your options.
+                </p>
+                <p className="text-slate-700 mb-4">
+                  We analyze:
+                </p>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>Your financial starting situation</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>Your entrepreneurial goals</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>The regulatory requirements</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"/> <span>The long-term viability of the project</span></li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-900 text-white rounded-xl p-8 mt-8 shadow-lg">
+                <p className="text-xl font-serif font-bold text-center">
+                  Immigrating to Saudi Arabia is possible –<br />
+                  but only with the right structure.
+                </p>
               </div>
             </div>
           </div>

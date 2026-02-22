@@ -182,7 +182,7 @@ export function BusinessJourney({ locale = "de" }: BusinessJourneyProps) {
             {t("Pfeiler 1", "Pillar 1")}
           </span>
           <h2 className="text-3xl font-serif font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-8">
-            {t("Unternehmensaufbau & Marktführung", "Business Setup & Market Management")}
+            {t("Unternehmensaufbau & -führung", "Business Setup & Management")}
           </h2>
           
           {/* Quote Block - Green styled */}

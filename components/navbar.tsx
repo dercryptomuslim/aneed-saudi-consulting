@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3, User, Target, Wallet, Trophy } from "lucide-react";
+import { Menu, X, ChevronRight, Building2, TrendingUp, Briefcase, Store, ArrowRight, Users, BarChart3, User, Target, Wallet, Trophy, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import {
@@ -27,7 +27,7 @@ import { getLocaleFromPathname, localizeHref, switchLocalePath, type Locale } fr
 
 const servicesDe = [
   {
-    title: "Unternehmensaufbau & Marktführung",
+    title: "Unternehmensaufbau & -führung",
     href: "/services#reise-zum-business",
     description: "Gründung, Aufbau & Führung.",
     icon: Building2
@@ -44,11 +44,17 @@ const servicesDe = [
     description: "Strategie für bestehende Firmen.",
     icon: Briefcase
   },
+  {
+    title: "Auswandern nach Saudi-Arabien",
+    href: "/services#auswandern",
+    description: "Legal, strukturiert & langfristig.",
+    icon: Plane
+  },
 ];
 
 const servicesEn = [
   {
-    title: "Business Setup & Market Management",
+    title: "Business Setup & Management",
     href: "/services#reise-zum-business",
     description: "Formation, setup & management.",
     icon: Building2,
@@ -64,6 +70,12 @@ const servicesEn = [
     href: "/services#beratung",
     description: "Strategy for existing companies.",
     icon: Briefcase,
+  },
+  {
+    title: "Immigrate to Saudi Arabia",
+    href: "/services#auswandern",
+    description: "Legal, structured & long-term.",
+    icon: Plane,
   },
 ];
 

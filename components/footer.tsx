@@ -32,12 +32,13 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
           <div>
             <h4 className="font-semibold text-white mb-6">{t("Leistungen", "Services")}</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><Link href={href("/services#reise-zum-business")} className="hover:text-white transition-colors">{t("Unternehmensaufbau & Marktführung", "Business Setup & Market Management")}</Link></li>
+              <li><Link href={href("/services#reise-zum-business")} className="hover:text-white transition-colors">{t("Unternehmensaufbau & -führung", "Business Setup & Management")}</Link></li>
               <li><Link href={href("/services#gruendung")} className="hover:text-white transition-colors pl-4 text-xs">{t("→ Unternehmensgründung", "→ Company formation")}</Link></li>
               <li><Link href={href("/services#aufbau")} className="hover:text-white transition-colors pl-4 text-xs">{t("→ Unternehmensaufbau", "→ Business setup")}</Link></li>
               <li><Link href={href("/services#fuehrung")} className="hover:text-white transition-colors pl-4 text-xs">{t("→ Unternehmensführung", "→ Operations & management")}</Link></li>
               <li><Link href={href("/services#investment")} className="hover:text-white transition-colors">{t("Investment", "Investment")}</Link></li>
               <li><Link href={href("/services#beratung")} className="hover:text-white transition-colors">{t("Unternehmensberatung", "Business consulting")}</Link></li>
+              <li><Link href={href("/services#auswandern")} className="hover:text-white transition-colors">{t("Auswandern nach Saudi-Arabien", "Immigrate to Saudi Arabia")}</Link></li>
             </ul>
           </div>
 

@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, TrendingUp, Briefcase, Store, ArrowUpRight, Users, BarChart3, ArrowRight } from "lucide-react";
+import { Building2, TrendingUp, Briefcase, Store, ArrowUpRight, Users, BarChart3, ArrowRight, Plane } from "lucide-react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
 
 const servicesDe = [
   {
-    title: "Unternehmensaufbau & Marktführung",
+    title: "Unternehmensaufbau & -führung",
     description: "Von der Gründung über den Aufbau bis zur operativen Führung. Du bestimmst, wie weit die Reise geht.",
     icon: Building2,
     features: ["Unternehmensgründung", "Unternehmensaufbau", "Unternehmensführung"],
@@ -27,11 +27,18 @@ const servicesDe = [
     features: ["Strategie & Wachstum", "Restrukturierung", "Joint Ventures"],
     href: "/services#beratung"
   },
+  {
+    title: "Auswandern nach Saudi-Arabien",
+    description: "Wir unterstützen Menschen dabei, legal, strukturiert und langfristig nach Saudi-Arabien auszuwandern.",
+    icon: Plane,
+    features: ["Unternehmensgründung", "Premium Residency", "Langfristiger Aufenthalt"],
+    href: "/services#auswandern"
+  },
 ];
 
 const servicesEn = [
   {
-    title: "Business Setup & Market Management",
+    title: "Business Setup & Management",
     description: "From formation through setup to operational management. You decide how far the journey goes.",
     icon: Building2,
     features: ["Company Formation", "Business Setup", "Operations & Management"],
@@ -50,6 +57,13 @@ const servicesEn = [
     icon: Briefcase,
     features: ["Strategy & growth", "Restructuring", "Joint ventures"],
     href: "/services#beratung",
+  },
+  {
+    title: "Immigrate to Saudi Arabia",
+    description: "We support people in immigrating to Saudi Arabia legally, structured and long-term.",
+    icon: Plane,
+    features: ["Company Formation", "Premium Residency", "Long-term Stay"],
+    href: "/services#auswandern",
   },
 ];
 
@@ -74,7 +88,7 @@ export function Services({ locale = "de" }: { locale?: Locale }) {
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <Link key={service.title} href={href(service.href)} className="group block h-full">
               <Card className="h-full border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
