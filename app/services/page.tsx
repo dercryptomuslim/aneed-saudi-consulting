@@ -209,7 +209,7 @@ export default function ServicesPage() {
                       Über diese Unternehmensstruktur kann eine Aufenthalts- und Arbeitserlaubnis aufgebaut werden, sofern alle regulatorischen Voraussetzungen erfüllt sind.
                     </p>
                     <p className="text-slate-600">
-                      Dieser Weg eignet sich für Unternehmer, die aktiv ein eigenes Geschäft betreiben möchten.
+                      Dieser Ansatz richtet sich an Unternehmer mit einem bestehenden, aktiven Business außerhalb Saudi-Arabiens, die in Saudi-Arabien leben möchten, ohne dort eine neue operative Geschäftstätigkeit aufzunehmen.
                     </p>
                   </div>
 
