@@ -209,7 +209,7 @@ export default function ServicesPage() {
                       Über diese Unternehmensstruktur kann eine Aufenthalts- und Arbeitserlaubnis aufgebaut werden, sofern alle regulatorischen Voraussetzungen erfüllt sind.
                     </p>
                     <p className="text-slate-600">
-                      Dieser Ansatz richtet sich an Unternehmer mit einem bestehenden, aktiven Business außerhalb Saudi-Arabiens, die in Saudi-Arabien leben möchten, ohne dort eine neue operative Geschäftstätigkeit aufzunehmen.
+                      <span className="font-bold">Dieser Weg</span> richtet sich an Unternehmer mit einem bestehenden, aktiven Business außerhalb Saudi-Arabiens, die in Saudi-Arabien leben möchten, ohne dort eine neue operative Geschäftstätigkeit aufzunehmen.
                     </p>
                   </div>
 
@@ -243,7 +243,7 @@ export default function ServicesPage() {
                       Wir unterstützen dich bei der strukturierten Vorbereitung und Beantragung – einschließlich Prüfung der Voraussetzungen, Dokumentation und Einreichung.
                     </p>
                     <p className="text-slate-600">
-                      Dieser Weg ist besonders geeignet für Personen, die langfristig in Saudi-Arabien leben möchten, ohne zwingend operativ tätig zu sein.
+                      <span className="font-bold">Dieser Weg</span> ist besonders geeignet für Personen, die langfristig in Saudi-Arabien leben möchten, ohne zwingend operativ tätig zu sein.
                     </p>
                   </div>
                 </div>

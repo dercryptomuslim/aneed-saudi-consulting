@@ -262,7 +262,7 @@ export default function ServicesEnPage() {
                       Through this company structure, a residence and work permit can be established, provided all regulatory requirements are met.
                     </p>
                     <p className="text-slate-600">
-                      This approach is aimed at entrepreneurs with an existing, active business outside Saudi Arabia who want to live in Saudi Arabia without taking up new operational business activities there.
+                      <span className="font-bold">This path</span> is aimed at entrepreneurs with an existing, active business outside Saudi Arabia who want to live in Saudi Arabia without taking up new operational business activities there.
                     </p>
                   </div>
 
@@ -296,7 +296,7 @@ export default function ServicesEnPage() {
                       We support you in structured preparation and application – including checking requirements, documentation and submission.
                     </p>
                     <p className="text-slate-600">
-                      This path is particularly suitable for people who want to live in Saudi Arabia long-term without necessarily being operationally active.
+                      <span className="font-bold">This path</span> is particularly suitable for people who want to live in Saudi Arabia long-term without necessarily being operationally active.
                     </p>
                   </div>
                 </div>
