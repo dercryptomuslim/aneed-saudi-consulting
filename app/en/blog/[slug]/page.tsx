@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "saudi-premium-residency": ["Saudi Premium Residency", "Permanent Residence Saudi Arabia", "Golden Visa Saudi Arabia", "Investor Visa KSA", "Long-term Residency Saudi"],
     "how-to-start-a-business-in-saudi-arabia": ["Start Business Saudi Arabia", "Company Formation KSA", "LLC Saudi Arabia", "Open Business Medina", "Entrepreneur Visa Saudi"],
     "living-in-saudi-arabia-4-legal-ways-to-medina": ["Living in Saudi Arabia", "Move to Medina", "Work in Saudi Arabia", "Visa Saudi Arabia", "Residency KSA"],
+    "what-does-living-in-medina-really-cost": ["Cost of Living Medina", "Living Costs Medina", "Medina Expenses", "Family Costs Medina", "Rent Medina", "School Medina", "Cost of Living Saudi Arabia", "Medina Monthly Costs", "Living in Medina Budget", "Medina Family Expenses"],
   };
   
   const specificKeywords = keywordMap[slug] || [];

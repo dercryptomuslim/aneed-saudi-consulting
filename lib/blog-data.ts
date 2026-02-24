@@ -32,6 +32,471 @@ export const blogCategories = {
 
 export const blogPostsDe: BlogPost[] = [
   {
+    slug: "was-kostet-dich-das-leben-in-medina",
+    title: "Was kostet dich das Leben in Medina wirklich?",
+    date: "24.02.2026",
+    dateISO: "2026-02-24",
+    readTime: "9 Min.",
+    excerpt:
+      "Viele sprechen über Auswandern, wenige ehrlich über Kosten. Eine realistische Beispielrechnung, was dich das Leben in Medina als Familie wirklich kostet.",
+    image: "/blog/MedinaFamilieAlltag_1.png",
+    category: "leben",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">
+        Viele sprechen über Auswandern.<br>
+        Wenige sprechen ehrlich über Kosten.
+      </p>
+
+      <p class="mb-6">
+        Medina ist für viele ein Traumziel – spirituell, familiär und deutlich ruhiger als Riyadh oder Jeddah. Aber wenn du als normaler Arbeitnehmer mit Familie dort leben willst, brauchst du Klarheit über die tatsächlichen Lebenshaltungskosten.
+      </p>
+
+      <div class="mb-4 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
+        <p class="text-sm md:text-base text-slate-800 text-center">
+          <strong>Wichtig für die Einordnung:</strong><br>
+          Die folgende Beispielrechnung bezieht sich auf eine
+          <strong> fünfköpfige Familie</strong> (Eltern mit drei Kindern) in Medina.
+        </p>
+      </div>
+
+      <p class="mb-8">
+        Hier bekommst du keine romantischen Zahlen, sondern realistische Erfahrungswerte.
+      </p>
+
+      <figure class="my-10">
+        <img
+          src="/blog/MedinaFamilieAlltag_1.png"
+          alt="Familie im Alltag in Medina"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Familienalltag in Medina – realer Lebensstandard statt romantischer Vorstellungen
+        </figcaption>
+      </figure>
+
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <p class="text-emerald-900 text-lg mb-2">
+          <strong>Kurz zusammengefasst:</strong> Für eine fünfköpfige Familie in Medina bewegen sich die <strong>reinen Fixkosten</strong> schnell im Bereich von <strong>3.500–3.700 € im Monat</strong>.
+        </p>
+        <p class="text-emerald-900 text-sm md:text-base">
+          Alles darunter ist meist nur mit massiven Abstrichen beim Lebensstandard oder mit geschönten Annahmen erreichbar.
+        </p>
+      </div>
+      <h2 class="mt-8 mb-4">Aufenthaltskosten – was übernimmt der Arbeitgeber?</h2>
+
+      <p class="mb-4">
+        Wenn du normal bei einer Firma in Saudi-Arabien angestellt bist, übernimmt der Arbeitgeber in der Regel:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>deine <strong>Aufenthaltsgebühr von 2.500 € pro Jahr</strong></li>
+        <li>die <strong>Krankenversicherung für dich</strong> (ca. <strong>50 € pro Jahr</strong>)</li>
+        <li>häufig auch die einmalige <strong>Visagebühr von ca. 500 €</strong></li>
+      </ul>
+
+      <p class="mb-4">
+        Was normalerweise nicht übernommen wird, sind die <strong>Aufenthaltsgebühren für deine Familie</strong>. Für jedes Familienmitglied fallen etwa <strong>100 € pro Monat</strong> an. Bei vier Familienmitgliedern sind das <strong>400 € monatlich</strong>.
+      </p>
+
+      <p class="mb-6">
+        Für Transparenz lassen wir dennoch alle Beträge in der Berechnung stehen – auch wenn dein Arbeitgeber Teile davon übernimmt. So bekommst du ein vollständiges Bild, insbesondere falls du später selbstständig bist oder den Arbeitgeber wechselst.
+      </p>
+
+      <h2 class="mt-8 mb-4">Wohnen in Medina</h2>
+
+      <p class="mb-4">
+        Für eine fünfköpfige Familie auf solidem europäischem Niveau kostet eine <strong>5-Zimmer-Wohnung mit drei Badezimmern</strong> realistisch etwa <strong>7.000–8.000 € pro Jahr</strong>, also rund <strong>600 € monatlich</strong>.
+      </p>
+
+      <p class="mb-6">
+        Natürlich gibt es günstigere Wohnungen – hier kalkulieren wir bewusst mit einem stabilen Familienstandard.
+      </p>
+
+      <figure class="my-10">
+        <img
+          src="/blog/Wohnung.png"
+          alt="Wohnung in Medina für eine fünfköpfige Familie"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Moderne Wohnung in Medina – Beispiel für ein familiengeeignetes Mietniveau
+        </figcaption>
+      </figure>
+
+      <h2 class="mt-8 mb-4">Essen, Kleidung und Alltag</h2>
+
+      <p class="mb-6">
+        Für eine fünfköpfige Familie – inklusive <strong>einmal pro Woche auswärts essen</strong> und <strong>Kleidung</strong> – solltest du realistisch mit <strong>600–800 € pro Monat</strong> rechnen. In der Beispielrechnung kalkulieren wir mit <strong>700 € monatlich</strong> als Durchschnitt.
+      </p>
+
+      <h2 class="mt-8 mb-4">Krankenversicherung und medizinische Versorgung</h2>
+
+      <p class="mb-4">
+        Die Krankenversicherung für den Arbeitnehmer kostet etwa <strong>50 € pro Jahr</strong> und wird in der Regel vom Arbeitgeber übernommen.
+      </p>
+
+      <p class="mb-4">
+        Die <strong>Krankenversicherung für die Familie</strong> kostet in der Basisvariante etwa <strong>400 € pro Jahr</strong>. Dabei handelt es sich um eine gesetzlich vorgeschriebene Mindestversicherung in Saudi-Arabien. Sie deckt vor allem grundlegende Leistungen sowie längere Krankenhausaufenthalte ab, ist jedoch auf bestimmte Kliniken beschränkt und bietet keinen umfassenden Premiumschutz.
+      </p>
+
+      <p class="mb-4">
+        Viele ambulante Behandlungen, spezialisierte Leistungen oder hochwertige Privatkliniken müssen häufig zusätzlich bar bezahlt werden. Eine finanzielle Reserve für medizinische Themen ist deshalb sinnvoll.
+      </p>
+
+      <p class="mb-6">
+        Darüber hinaus gibt es deutlich leistungsstärkere Versicherungsmodelle. Je nach Anbieter und Leistungsumfang können solche Policen beispielsweise <strong>10.000 €</strong> oder auch <strong>15.000 € pro Jahr</strong> kosten – mit Zugang zu hochwertigen Privatkliniken, erweiterten Behandlungsleistungen und internationaler Absicherung. Welche Variante sinnvoll ist, hängt von den individuellen Ansprüchen, der familiären Situation und dem gewünschten Sicherheitsniveau ab.
+      </p>
+
+      <h2 class="mt-8 mb-4">Weitere monatliche Fixkosten</h2>
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <ul class="space-y-2 list-disc pl-6 text-lg text-slate-700">
+          <li><strong>Telefon-Flatrates (pro Person)</strong>: ca. <strong>90 € / Monat</strong></li>
+          <li><strong>Strom</strong>: ca. <strong>80 € / Monat</strong></li>
+          <li><strong>Benzin</strong> (2x volltanken): ca. <strong>70 € / Monat</strong></li>
+          <li><strong>Sport &amp; Entertainment</strong>: ca. <strong>150 € / Monat</strong></li>
+          <li><strong>Monatliche Umrah</strong> mit Übernachtung: ca. <strong>300 € / Monat</strong></li>
+          <li><strong>Auto</strong> (Ratenzahlung): ca. <strong>400 € / Monat</strong></li>
+        </ul>
+      </div>
+
+      <p class="mb-4">
+        Viele Familien in Medina nutzen ihre mobilen Datentarife und das Smartphone als Hotspot-Lösung für den Heimgebrauch. Für den normalen Alltagsgebrauch – Streaming, Social Media und gelegentliches Arbeiten – ist das häufig ausreichend.
+      </p>
+
+      <p class="mb-6">
+        Wenn jedoch ein separater WLAN-Router für eine stabilere Verbindung im gesamten Haushalt gewünscht ist, sollte man mit <strong>monatlichen Kosten von ca. 100 €</strong> rechnen. Diese laufende Zusatzposition ist in unserer bisherigen Fixkosten-Kalkulation nicht berücksichtigt.
+      </p>
+
+      <h2 class="mt-8 mb-4">Schulgebühren – stark abhängig vom System</h2>
+
+      <p class="mb-4">
+        Je nach System können die Kosten pro Kind zwischen <strong>100 € und 600 € monatlich</strong> liegen:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li><strong>Home-Schooling</strong>: ab ca. <strong>100 €</strong></li>
+        <li><strong>Internationale Schulen</strong> in Medina: <strong>400–600 €</strong> oder mehr</li>
+      </ul>
+
+      <p class="mb-4">
+        Natürlich besteht auch die Möglichkeit, Kinder auf eine <strong>staatliche Schule</strong> zu schicken. Diese sind kostenfrei. Allerdings erfolgt der Unterricht ausschließlich auf <strong>Arabisch</strong>.
+      </p>
+
+      <p class="mb-6">
+        Für Kinder ohne ausreichende Sprachkenntnisse kann dies eine erhebliche Umstellung darstellen. Ob dieses Modell geeignet ist, hängt vom individuellen Hintergrund und den langfristigen Bildungszielen ab.
+      </p>
+
+      <p class="mb-6">
+        Bei <strong>zwei schulpflichtigen Kindern</strong> kann das also zwischen <strong>200 € und 1.200 € monatlich</strong> zusätzlich bedeuten.
+      </p>
+
+      <h2 class="mt-8 mb-6">Gesamtrechnung – realistische Monats- und Jahreskosten</h2>
+
+      <p class="mb-4">
+        Beispielrechnung für eine <strong>fünfköpfige Familie</strong> mit zwei Kindern (mittleres Schulniveau ca. <strong>150 € pro Kind</strong>).
+      </p>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          1
+        </span>
+        <span>Aufenthalts- &amp; Verwaltungskosten</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Position</th>
+                <th class="pb-2 px-4 text-right">Monatlich</th>
+                <th class="pb-2 pl-4 text-right">Jährlich</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Aufenthalt Hauptperson</td>
+                <td class="py-2 px-4 text-right">208 €</td>
+                <td class="py-2 pl-4 text-right">2.500 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Visagebühr (einmalig)</td>
+                <td class="py-2 px-4 text-right">–</td>
+                <td class="py-2 pl-4 text-right">500 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Krankenversicherung Arbeitnehmer</td>
+                <td class="py-2 px-4 text-right">–</td>
+                <td class="py-2 pl-4 text-right">50 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Krankenversicherung Familie (Basis)</td>
+                <td class="py-2 px-4 text-right">33 €</td>
+                <td class="py-2 pl-4 text-right">400 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Aufenthaltsgebühren Familie</td>
+                <td class="py-2 px-4 text-right">400 €</td>
+                <td class="py-2 pl-4 text-right">4.800 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Zwischensumme pro Monat:</strong> 641 €</p>
+          <p><strong>Zwischensumme pro Jahr:</strong> 8.250 €</p>
+          <p class="text-xs md:text-sm text-slate-600 mt-2">
+            Hinweis: 2.500 €, 50 € und oft auch 500 € werden in der Praxis meist vom Arbeitgeber übernommen.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          2
+        </span>
+        <span>Wohnen &amp; Alltag</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Position</th>
+                <th class="pb-2 px-4 text-right">Monatlich</th>
+                <th class="pb-2 pl-4 text-right">Jährlich</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Miete</td>
+                <td class="py-2 px-4 text-right">600 €</td>
+                <td class="py-2 pl-4 text-right">7.200 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Essen &amp; Kleidung</td>
+                <td class="py-2 px-4 text-right">700 €</td>
+                <td class="py-2 pl-4 text-right">8.400 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Strom</td>
+                <td class="py-2 px-4 text-right">80 €</td>
+                <td class="py-2 pl-4 text-right">960 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Telefon (pro Person)</td>
+                <td class="py-2 px-4 text-right">90 €</td>
+                <td class="py-2 pl-4 text-right">1.080 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Benzin (2x volltanken)</td>
+                <td class="py-2 px-4 text-right">70 €</td>
+                <td class="py-2 pl-4 text-right">840 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Zwischensumme pro Monat:</strong> 1.540 €</p>
+          <p><strong>Zwischensumme pro Jahr:</strong> 18.480 €</p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          3
+        </span>
+        <span>Lebensstil &amp; Mobilität</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Position</th>
+                <th class="pb-2 px-4 text-right">Monatlich</th>
+                <th class="pb-2 pl-4 text-right">Jährlich</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Sport &amp; Entertainment</td>
+                <td class="py-2 px-4 text-right">150 €</td>
+                <td class="py-2 pl-4 text-right">1.800 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Monatliche Umrah</td>
+                <td class="py-2 px-4 text-right">300 €</td>
+                <td class="py-2 pl-4 text-right">3.600 €</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Auto (Ratenzahlung)</td>
+                <td class="py-2 px-4 text-right">400 €</td>
+                <td class="py-2 pl-4 text-right">4.800 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Zwischensumme pro Monat:</strong> 850 €</p>
+          <p><strong>Zwischensumme pro Jahr:</strong> 10.200 €</p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          4
+        </span>
+        <span>Bildung</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Position</th>
+                <th class="pb-2 px-4 text-right">Monatlich</th>
+                <th class="pb-2 pl-4 text-right">Jährlich</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Schule (2 Kinder à 150 €)</td>
+                <td class="py-2 px-4 text-right">300 €</td>
+                <td class="py-2 pl-4 text-right">3.600 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="mt-10 mb-3 text-2xl font-extrabold tracking-tight text-slate-900">
+        Gesamtübersicht
+      </h3>
+
+      <p class="mb-2">
+        <strong>Gesamtkosten pro Monat:</strong> ca. <strong>3.331 €</strong>
+      </p>
+      <p class="mb-6">
+        <strong>Gesamtkosten pro Jahr:</strong> ca. <strong>40.530 €</strong>
+      </p>
+
+      <p class="mb-8 text-slate-700">
+        Wenn dein Arbeitgeber die <strong>2.500 € Aufenthaltsgebühr</strong>, die <strong>50 € Krankenversicherung</strong> und die <strong>500 € Visagebühr</strong> übernimmt, reduziert sich deine reale Belastung entsprechend.
+      </p>
+
+      <div class="mb-10 grid gap-4 md:grid-cols-3">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Fixkosten / Monat</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~3.331 €</div>
+          <div class="text-xs text-slate-500">ohne zusätzlichen Puffer</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Fixkosten / Jahr</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~40.530 €</div>
+          <div class="text-xs text-slate-500">bei realistischem Familienstandard</div>
+        </div>
+        <div class="bg-emerald-600 text-white rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-emerald-100 mb-1">Empfohlene Liquidität</div>
+          <div class="text-2xl font-bold mb-1">4.000–4.500 €</div>
+          <div class="text-xs text-emerald-100">inkl. Sicherheitsreserve</div>
+        </div>
+      </div>
+
+      <h2 class="mt-12 mb-4">Minimalkosten – was ist theoretisch möglich?</h2>
+
+      <p class="mb-4">
+        Wenn man bewusst auf ein absolutes Minimum reduzieren möchte, lassen sich bestimmte Ausgaben konsequent einsparen oder deutlich verringern. Dabei handelt es sich vor allem um Kosten, die nicht zwingend notwendig sind, sondern vom individuellen Lebensstil abhängen.
+      </p>
+
+      <p class="mb-4">
+        Lebensmittel und Wohnung werden natürlich entsprechend günstiger, wenn man eine kleinere Familie hat.
+      </p>
+
+      <div class="mb-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
+        <p class="text-amber-900 font-semibold mb-3">Folgende Positionen können theoretisch eingespart werden:</p>
+        <ul class="space-y-2 list-disc pl-6 text-base text-amber-900">
+          <li><strong>Sport &amp; Entertainment</strong>: 150 € / Monat</li>
+          <li><strong>Monatliche Umrah</strong>: 300 € / Monat</li>
+          <li><strong>Auto (Ratenzahlung)</strong>: 400 € / Monat (bei Verzicht auf eigenes Fahrzeug)</li>
+          <li><strong>Schule (2 Kinder à 150 €)</strong>: 300 € / Monat (bei staatlicher Schule auf Arabisch)</li>
+        </ul>
+      </div>
+
+      <p class="mb-6">
+        <strong>Gesamteinsparung:</strong> ca. <strong>1.150 € pro Monat</strong> bzw. <strong>13.800 € pro Jahr</strong>
+      </p>
+
+      <div class="mb-10 grid gap-4 md:grid-cols-3">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Minimalkosten / Monat</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~2.181 €</div>
+          <div class="text-xs text-slate-500">bei konsequenter Reduzierung</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Minimalkosten / Jahr</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~26.172 €</div>
+          <div class="text-xs text-slate-500">ohne Lifestyle-Ausgaben</div>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-amber-700 mb-1">Empfohlene Liquidität</div>
+          <div class="text-2xl font-bold text-amber-900 mb-1">2.400–2.700 €</div>
+          <div class="text-xs text-amber-700">inkl. Sicherheitsreserve</div>
+        </div>
+      </div>
+
+      <div class="mb-8 bg-slate-100 border border-slate-300 rounded-2xl p-5">
+        <p class="text-slate-800 text-sm">
+          <strong>⚠️ Wichtig:</strong> Diese Minimalkosten setzen voraus, dass du auf Sport &amp; Entertainment verzichtest, keine monatlichen Umrah-Reisen unternimmst, das Auto in Cash bezahlst (und dementsprechend mit entsprechenden Reserven nach Saudi-Arabien kommst) und deine Kinder auf eine staatliche arabische Schule schickst. Ob diese Einschränkungen für dich und deine Familie realistisch sind, musst du individuell beurteilen.
+        </p>
+      </div>
+
+      <h2 class="mt-8 mb-4">Wichtiger Hinweis: Das sind nur die Fixkosten</h2>
+
+      <p class="mb-4">
+        Nicht enthalten sind:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>Heimflüge</li>
+        <li>größere medizinische Eingriffe</li>
+        <li>Möbel und Umzug</li>
+        <li>Reparaturen</li>
+        <li>größere Anschaffungen</li>
+        <li>Rücklagenbildung</li>
+      </ul>
+
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900 text-lg">
+          Plane zusätzlich mindestens <strong>10–20 % finanziellen Puffer</strong> ein. Bei rund <strong>3.600 € Fixkosten</strong> solltest du realistisch eher mit
+          <strong>4.000–4.500 € verfügbarer Liquidität</strong> pro Monat rechnen.
+        </p>
+      </div>
+
+      <h2 class="mt-12 mb-4">Fazit – Medina ist möglich, aber nur mit Planung</h2>
+
+      <p class="mb-4">
+        Medina ist absolut lebbar – auch für Familien. Aber nur mit:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>stabilem Einkommen</li>
+        <li>klarer Aufenthaltsstruktur</li>
+        <li>ehrlicher Kalkulation</li>
+        <li>ausreichendem Sicherheitspuffer</li>
+      </ul>
+
+      <p class="mb-6">
+        Auswandern funktioniert nicht über Emotion. Es funktioniert über Planung.
+      </p>
+    `,
+  },
+  {
     slug: "investieren-in-medina",
     title: "Investieren in Medina – rechtlich sauber, realistisch kalkuliert",
     date: "13.02.2026",
@@ -1322,6 +1787,471 @@ export const blogPostsEn: BlogPost[] = [
         <p class="mb-4 text-slate-700">Whether Iqama, <a href="/en/blog/saudi-premium-residency" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Premium Residency</a> or <a href="/en/blog/how-to-start-a-business-in-saudi-arabia" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">own company</a> – I'll help you find the right path for your situation.</p>
         <p class="text-slate-600">No theory. No generic information.<br>Just a clear assessment based on real experience from Saudi Arabia.</p>
       </div>
+    `
+  },
+  {
+    slug: "what-does-living-in-medina-really-cost",
+    title: "What Does Living in Medina Really Cost?",
+    date: "Feb 24, 2026",
+    dateISO: "2026-02-24",
+    readTime: "9 min",
+    excerpt:
+      "Many talk about emigrating, few honestly about costs. A realistic calculation of what living in Medina as a family really costs.",
+    image: "/blog/MedinaFamilieAlltag_1.png",
+    category: "leben",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">
+        Many talk about emigrating.<br>
+        Few talk honestly about costs.
+      </p>
+
+      <p class="mb-6">
+        Medina is a dream destination for many – spiritual, family-friendly, and significantly quieter than Riyadh or Jeddah. But if you want to live there as a regular employee with a family, you need clarity about the actual cost of living.
+      </p>
+
+      <div class="mb-4 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
+        <p class="text-sm md:text-base text-slate-800 text-center">
+          <strong>Important for context:</strong><br>
+          The following example calculation refers to a
+          <strong> family of five</strong> (parents with three children) in Medina.
+        </p>
+      </div>
+
+      <p class="mb-8">
+        Here you get no romantic numbers, but realistic experience-based values.
+      </p>
+
+      <figure class="my-10">
+        <img
+          src="/blog/MedinaFamilieAlltag_1.png"
+          alt="Family daily life in Medina"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Family daily life in Medina – real living standard instead of romantic ideas
+        </figcaption>
+      </figure>
+
+      <div class="my-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+        <p class="text-emerald-900 text-lg mb-2">
+          <strong>In short:</strong> For a family of five in Medina, the <strong>pure fixed costs</strong> quickly range from <strong>€3,500–3,700 per month</strong>.
+        </p>
+        <p class="text-emerald-900 text-sm md:text-base">
+          Anything below that is usually only achievable with massive cuts in living standards or with embellished assumptions.
+        </p>
+      </div>
+      <h2 class="mt-8 mb-4">Residence Costs – What Does the Employer Cover?</h2>
+
+      <p class="mb-4">
+        If you are normally employed by a company in Saudi Arabia, the employer typically covers:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>your <strong>residence fee of €2,500 per year</strong></li>
+        <li>your <strong>health insurance</strong> (approx. <strong>€50 per year</strong>)</li>
+        <li>often also the one-time <strong>visa fee of approx. €500</strong></li>
+      </ul>
+
+      <p class="mb-4">
+        What is usually not covered are the <strong>residence fees for your family</strong>. For each family member, approximately <strong>€100 per month</strong> applies. For four family members, that's <strong>€400 monthly</strong>.
+      </p>
+
+      <p class="mb-6">
+        For transparency, we still include all amounts in the calculation – even if your employer covers parts of it. This way you get a complete picture, especially if you later become self-employed or change employers.
+      </p>
+
+      <h2 class="mt-8 mb-4">Living in Medina</h2>
+
+      <p class="mb-4">
+        For a family of five at a solid European level, a <strong>5-room apartment with three bathrooms</strong> realistically costs approximately <strong>€7,000–8,000 per year</strong>, or around <strong>€600 monthly</strong>.
+      </p>
+
+      <p class="mb-6">
+        Of course, there are cheaper apartments – here we consciously calculate with a stable family standard.
+      </p>
+
+      <figure class="my-10">
+        <img
+          src="/blog/Wohnung.png"
+          alt="Apartment in Medina for a family of five"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Modern apartment in Medina – example of a family-suitable rental level
+        </figcaption>
+      </figure>
+
+      <h2 class="mt-8 mb-4">Food, Clothing, and Daily Life</h2>
+
+      <p class="mb-6">
+        For a family of five – including <strong>eating out once a week</strong> and <strong>clothing</strong> – you should realistically budget <strong>€600–800 per month</strong>. In the example calculation, we use <strong>€700 monthly</strong> as an average.
+      </p>
+
+      <h2 class="mt-8 mb-4">Health Insurance and Medical Care</h2>
+
+      <p class="mb-4">
+        Health insurance for the employee costs approximately <strong>€50 per year</strong> and is typically covered by the employer.
+      </p>
+
+      <p class="mb-4">
+        <strong>Health insurance for the family</strong> costs approximately <strong>€400 per year</strong> in the basic version. This is a legally required minimum insurance in Saudi Arabia. It covers primarily basic services as well as longer hospital stays, but is limited to certain clinics and does not offer comprehensive premium protection.
+      </p>
+
+      <p class="mb-4">
+        Many outpatient treatments, specialized services, or high-quality private clinics often must be paid additionally in cash. A financial reserve for medical matters is therefore advisable.
+      </p>
+
+      <p class="mb-6">
+        In addition, there are significantly more powerful insurance models. Depending on the provider and scope of coverage, such policies can cost, for example, <strong>€10,000</strong> or even <strong>€15,000 per year</strong> – with access to high-quality private clinics, extended treatment services, and international coverage. Which variant makes sense depends on individual requirements, family situation, and desired level of security.
+      </p>
+
+      <h2 class="mt-8 mb-4">Additional Monthly Fixed Costs</h2>
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <ul class="space-y-2 list-disc pl-6 text-lg text-slate-700">
+          <li><strong>Phone flat rates (per person)</strong>: approx. <strong>€90 / month</strong></li>
+          <li><strong>Electricity</strong>: approx. <strong>€80 / month</strong></li>
+          <li><strong>Gasoline</strong> (2x fill up): approx. <strong>€70 / month</strong></li>
+          <li><strong>Sports &amp; Entertainment</strong>: approx. <strong>€150 / month</strong></li>
+          <li><strong>Monthly Umrah</strong> with overnight stay: approx. <strong>€300 / month</strong></li>
+          <li><strong>Car</strong> (installment payment): approx. <strong>€400 / month</strong></li>
+        </ul>
+      </div>
+
+      <p class="mb-4">
+        Many families in Medina use their mobile data plans and smartphone as a hotspot solution for home use. For normal everyday use – streaming, social media, and occasional work – this is often sufficient.
+      </p>
+
+      <p class="mb-6">
+        However, if a separate WiFi router is desired for a more stable connection throughout the household, you should budget <strong>monthly costs of approx. €100</strong>. This ongoing additional item is not included in our previous fixed cost calculation.
+      </p>
+
+      <h2 class="mt-8 mb-4">School Fees – Highly Dependent on the System</h2>
+
+      <p class="mb-4">
+        Depending on the system, costs per child can range between <strong>€100 and €600 monthly</strong>:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li><strong>Home-Schooling</strong>: from approx. <strong>€100</strong></li>
+        <li><strong>International schools</strong> in Medina: <strong>€400–600</strong> or more</li>
+      </ul>
+
+      <p class="mb-4">
+        Of course, there is also the option to send children to a <strong>public school</strong>. These are free. However, instruction takes place exclusively in <strong>Arabic</strong>.
+      </p>
+
+      <p class="mb-6">
+        For children without sufficient language skills, this can represent a significant adjustment. Whether this model is suitable depends on individual background and long-term educational goals.
+      </p>
+
+      <p class="mb-6">
+        For <strong>two school-age children</strong>, this can mean an additional <strong>€200 to €1,200 monthly</strong>.
+      </p>
+
+      <h2 class="mt-8 mb-6">Total Calculation – Realistic Monthly and Annual Costs</h2>
+
+      <p class="mb-4">
+        Example calculation for a <strong>family of five</strong> with two children (medium school level approx. <strong>€150 per child</strong>).
+      </p>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          1
+        </span>
+        <span>Residence &amp; Administrative Costs</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Item</th>
+                <th class="pb-2 px-4 text-right">Monthly</th>
+                <th class="pb-2 pl-4 text-right">Annual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Residence Main Person</td>
+                <td class="py-2 px-4 text-right">€208</td>
+                <td class="py-2 pl-4 text-right">€2,500</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Visa Fee (one-time)</td>
+                <td class="py-2 px-4 text-right">–</td>
+                <td class="py-2 pl-4 text-right">€500</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Health Insurance Employee</td>
+                <td class="py-2 px-4 text-right">–</td>
+                <td class="py-2 pl-4 text-right">€50</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Health Insurance Family (Basic)</td>
+                <td class="py-2 px-4 text-right">€33</td>
+                <td class="py-2 pl-4 text-right">€400</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Family Residence Fees</td>
+                <td class="py-2 px-4 text-right">€400</td>
+                <td class="py-2 pl-4 text-right">€4,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Subtotal per month:</strong> €641</p>
+          <p><strong>Subtotal per year:</strong> €8,250</p>
+          <p class="text-xs md:text-sm text-slate-600 mt-2">
+            Note: €2,500, €50, and often also €500 are usually covered by the employer in practice.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          2
+        </span>
+        <span>Housing &amp; Daily Life</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Item</th>
+                <th class="pb-2 px-4 text-right">Monthly</th>
+                <th class="pb-2 pl-4 text-right">Annual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Rent</td>
+                <td class="py-2 px-4 text-right">€600</td>
+                <td class="py-2 pl-4 text-right">€7,200</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Food &amp; Clothing</td>
+                <td class="py-2 px-4 text-right">€700</td>
+                <td class="py-2 pl-4 text-right">€8,400</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Electricity</td>
+                <td class="py-2 px-4 text-right">€80</td>
+                <td class="py-2 pl-4 text-right">€960</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Phone (per person)</td>
+                <td class="py-2 px-4 text-right">€90</td>
+                <td class="py-2 pl-4 text-right">€1,080</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Gasoline (2x fill up)</td>
+                <td class="py-2 px-4 text-right">€70</td>
+                <td class="py-2 pl-4 text-right">€840</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Subtotal per month:</strong> €1,540</p>
+          <p><strong>Subtotal per year:</strong> €18,480</p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          3
+        </span>
+        <span>Lifestyle &amp; Mobility</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Item</th>
+                <th class="pb-2 px-4 text-right">Monthly</th>
+                <th class="pb-2 pl-4 text-right">Annual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Sports &amp; Entertainment</td>
+                <td class="py-2 px-4 text-right">€150</td>
+                <td class="py-2 pl-4 text-right">€1,800</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Monthly Umrah</td>
+                <td class="py-2 px-4 text-right">€300</td>
+                <td class="py-2 pl-4 text-right">€3,600</td>
+              </tr>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">Car (installment payment)</td>
+                <td class="py-2 px-4 text-right">€400</td>
+                <td class="py-2 pl-4 text-right">€4,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 text-sm md:text-base text-slate-900 space-y-1">
+          <p><strong>Subtotal per month:</strong> €850</p>
+          <p><strong>Subtotal per year:</strong> €10,200</p>
+        </div>
+      </div>
+
+      <h3 class="mt-8 mb-3 text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-white text-base md:text-lg font-bold leading-none">
+          4
+        </span>
+        <span>Education</span>
+      </h3>
+
+      <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs md:text-sm border-separate border-spacing-y-2">
+            <thead>
+              <tr class="text-slate-500 uppercase text-[11px] tracking-wide border-b border-slate-200">
+                <th class="pb-2 pr-4">Item</th>
+                <th class="pb-2 px-4 text-right">Monthly</th>
+                <th class="pb-2 pl-4 text-right">Annual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white rounded-xl">
+                <td class="py-2 pr-4 font-medium text-slate-900">School (2 children at €150 each)</td>
+                <td class="py-2 px-4 text-right">€300</td>
+                <td class="py-2 pl-4 text-right">€3,600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="mt-10 mb-3 text-2xl font-extrabold tracking-tight text-slate-900">
+        Total Overview
+      </h3>
+
+      <p class="mb-2">
+        <strong>Total costs per month:</strong> approx. <strong>€3,331</strong>
+      </p>
+      <p class="mb-6">
+        <strong>Total costs per year:</strong> approx. <strong>€40,530</strong>
+      </p>
+
+      <p class="mb-8 text-slate-700">
+        If your employer covers the <strong>€2,500 residence fee</strong>, the <strong>€50 health insurance</strong>, and the <strong>€500 visa fee</strong>, your actual burden is reduced accordingly.
+      </p>
+
+      <div class="mb-10 grid gap-4 md:grid-cols-3">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Fixed Costs / Month</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€3,331</div>
+          <div class="text-xs text-slate-500">without additional buffer</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Fixed Costs / Year</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€40,530</div>
+          <div class="text-xs text-slate-500">with realistic family standard</div>
+        </div>
+        <div class="bg-emerald-600 text-white rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-emerald-100 mb-1">Recommended Liquidity</div>
+          <div class="text-2xl font-bold mb-1">€4,000–4,500</div>
+          <div class="text-xs text-emerald-100">incl. safety reserve</div>
+        </div>
+      </div>
+
+      <h2 class="mt-12 mb-4">Minimum Costs – What Is Theoretically Possible?</h2>
+
+      <p class="mb-4">
+        If you consciously want to reduce to an absolute minimum, certain expenses can be consistently saved or significantly reduced. These are primarily costs that are not strictly necessary but depend on individual lifestyle.
+      </p>
+
+      <p class="mb-4">
+        Food and housing will naturally be correspondingly cheaper if you have a smaller family.
+      </p>
+
+      <div class="mb-6 bg-amber-50 border border-amber-200 rounded-2xl p-5">
+        <p class="text-amber-900 font-semibold mb-3">The following items can theoretically be saved:</p>
+        <ul class="space-y-2 list-disc pl-6 text-base text-amber-900">
+          <li><strong>Sports &amp; Entertainment</strong>: €150 / month</li>
+          <li><strong>Monthly Umrah</strong>: €300 / month</li>
+          <li><strong>Car (installment payment)</strong>: €400 / month (if you forgo your own vehicle)</li>
+          <li><strong>School (2 children at €150 each)</strong>: €300 / month (at public school in Arabic)</li>
+        </ul>
+      </div>
+
+      <p class="mb-6">
+        <strong>Total savings:</strong> approx. <strong>€1,150 per month</strong> or <strong>€13,800 per year</strong>
+      </p>
+
+      <div class="mb-10 grid gap-4 md:grid-cols-3">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Minimum Costs / Month</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€2,181</div>
+          <div class="text-xs text-slate-500">with consistent reduction</div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-1">Minimum Costs / Year</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">~€26,172</div>
+          <div class="text-xs text-slate-500">without lifestyle expenses</div>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+          <div class="text-xs uppercase tracking-wide text-amber-700 mb-1">Recommended Liquidity</div>
+          <div class="text-2xl font-bold text-amber-900 mb-1">€2,400–2,700</div>
+          <div class="text-xs text-amber-700">incl. safety reserve</div>
+        </div>
+      </div>
+
+      <div class="mb-8 bg-slate-100 border border-slate-300 rounded-2xl p-5">
+        <p class="text-slate-800 text-sm">
+          <strong>⚠️ Important:</strong> These minimum costs assume that you forgo sports &amp; entertainment, do not undertake monthly Umrah trips, pay for the car in cash (and accordingly come to Saudi Arabia with corresponding reserves), and send your children to a public Arabic school. Whether these restrictions are realistic for you and your family, you must assess individually.
+        </p>
+      </div>
+
+      <h2 class="mt-8 mb-4">Important Note: These Are Only Fixed Costs</h2>
+
+      <p class="mb-4">
+        Not included are:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>Home flights</li>
+        <li>Major medical procedures</li>
+        <li>Furniture and moving</li>
+        <li>Repairs</li>
+        <li>Major purchases</li>
+        <li>Reserve building</li>
+      </ul>
+
+      <div class="my-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-amber-900 text-lg">
+          Plan for at least an additional <strong>10–20% financial buffer</strong>. With approximately <strong>€3,600 in fixed costs</strong>, you should realistically budget for
+          <strong>€4,000–4,500 in available liquidity</strong> per month.
+        </p>
+      </div>
+
+      <h2 class="mt-12 mb-4">Conclusion – Medina Is Possible, But Only With Planning</h2>
+
+      <p class="mb-4">
+        Medina is absolutely livable – even for families. But only with:
+      </p>
+
+      <ul class="mb-4 space-y-2 list-disc pl-6 text-lg text-slate-700">
+        <li>stable income</li>
+        <li>clear residence structure</li>
+        <li>honest calculation</li>
+        <li>sufficient safety buffer</li>
+      </ul>
+
+      <p class="mb-6">
+        Emigrating doesn't work through emotion. It works through planning.
+      </p>
     `
   }
 ];
