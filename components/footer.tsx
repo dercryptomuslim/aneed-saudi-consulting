@@ -87,11 +87,11 @@ export function Footer({ locale = "de" }: { locale?: Locale }) {
                         <span className="sr-only">YouTube</span>
                       </a>
                       <a 
-                        href="https://tiktok.com/@aneedashraf" 
+                      href="https://www.tiktok.com/@aneed_ashraf" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-slate-400 hover:text-white transition-colors"
-                        onClick={() => trackExternalLinkClick({ url: "https://tiktok.com/@aneedashraf", linkText: "TikTok" })}
+                        onClick={() => trackExternalLinkClick({ url: "https://www.tiktok.com/@aneed_ashraf", linkText: "TikTok" })}
                       >
                         <TikTokIcon className="h-5 w-5" />
                         <span className="sr-only">TikTok</span>
