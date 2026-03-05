@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Script from "next/script";
+import { getViews } from "@/lib/blog-views";
+import { BlogViewCounter } from "@/components/blog-view-counter";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -40,8 +42,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const specificKeywords = keywordMap[slug] || [];
   const defaultKeywords = ["Saudi-Arabien", "Aneed Ashraf", "Beratung", "Medina"];
 
+  const views = await getViews(slug);
+  const titleSuffix = views > 0 ? ` (${views} Aufrufe)` : "";
+
   return {
-    title: `${post.title} | Aneed Ashraf`,
+    title: `${post.title} | Aneed Ashraf${titleSuffix}`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -112,6 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const jsonLd = generateArticleJsonLd(post);
+  const initialViews = await getViews(slug);
 
   return (
     <main className="min-h-screen bg-white flex flex-col">
@@ -140,6 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" /> {post.readTime}
               </span>
+              <BlogViewCounter slug={slug} initialViews={initialViews} label="Aufrufe" />
             </div>
           </header>
 

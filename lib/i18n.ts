@@ -31,6 +31,11 @@ const blogSlugEnToDe: Record<string, string> = Object.entries(blogSlugDeToEn).re
   return acc;
 }, {} as Record<string, string>);
 
+/** Returns the canonical (DE) slug for storage so DE and EN share one view count per article. */
+export function getCanonicalBlogSlug(slug: string): string {
+  return blogSlugEnToDe[slug] ?? slug;
+}
+
 const enToDePaths: Record<string, string> = Object.entries(deToEnPaths).reduce((acc, [de, en]) => {
   acc[en] = de;
   return acc;

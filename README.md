@@ -29,6 +29,15 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Blog View Counter
+
+Blog views are stored in [Upstash Redis](https://upstash.com/). For the counter to work in production, set these environment variables (e.g. in Vercel):
+
+- `UPSTASH_REDIS_REST_URL` – your Upstash Redis REST URL  
+- `UPSTASH_REDIS_REST_TOKEN` – your Upstash Redis REST token  
+
+You can create a free Redis database at [console.upstash.com](https://console.upstash.com/). If these variables are not set, view counts stay at 0 and the site still runs.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

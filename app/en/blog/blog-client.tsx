@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { ArrowRight, Calendar, Clock, Building2, FileCheck, Home } from "lucide-react";
 import { blogPostsEn, blogCategories, sortByDateDesc } from "@/lib/blog-data";
+import { getCanonicalBlogSlug } from "@/lib/i18n";
 
 const categoryIcons = {
   gruendung: Building2,
@@ -17,7 +18,15 @@ const categoryIcons = {
 
 export function BlogPageEnClient() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [viewsMap, setViewsMap] = useState<Record<string, number>>({});
   const categories = blogCategories.en;
+
+  useEffect(() => {
+    fetch("/api/blog/views")
+      .then((res) => res.json())
+      .then((data) => typeof data === "object" && setViewsMap(data))
+      .catch(() => {});
+  }, []);
   
   // Sort posts by date (newest first)
   const sortedPosts = sortByDateDesc(blogPostsEn);
@@ -104,13 +113,16 @@ export function BlogPageEnClient() {
                   
                   {/* Content */}
                   <div className="p-8 md:p-10 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 text-xs text-slate-500 font-medium uppercase tracking-wider mb-4">
+                    <div className="flex items-center gap-4 text-xs text-slate-500 font-medium uppercase tracking-wider mb-4 flex-wrap">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="h-3 w-3" /> {featuredPost.date}
                       </span>
                       <span className="flex items-center gap-1.5">
                         <Clock className="h-3 w-3" /> {featuredPost.readTime}
                       </span>
+                      {viewsMap[getCanonicalBlogSlug(featuredPost.slug)] != null && (
+                        <span>{viewsMap[getCanonicalBlogSlug(featuredPost.slug)]} views</span>
+                      )}
                       <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-600">
                         {categories[featuredPost.category as keyof typeof categories]?.label}
                       </span>
@@ -168,13 +180,16 @@ export function BlogPageEnClient() {
                   </div>
 
                   <CardHeader className="space-y-4 pb-4">
-                    <div className="flex items-center gap-4 text-xs text-slate-500 font-medium uppercase tracking-wider">
+                    <div className="flex items-center gap-4 text-xs text-slate-500 font-medium uppercase tracking-wider flex-wrap">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="h-3 w-3" /> {post.date}
                       </span>
                       <span className="flex items-center gap-1.5">
                         <Clock className="h-3 w-3" /> {post.readTime}
                       </span>
+                      {viewsMap[getCanonicalBlogSlug(post.slug)] != null && (
+                        <span>{viewsMap[getCanonicalBlogSlug(post.slug)]} views</span>
+                      )}
                     </div>
                     <h2 className="text-xl font-bold text-slate-900 line-clamp-2 group-hover:text-emerald-700 transition-colors">
                       {post.title}
