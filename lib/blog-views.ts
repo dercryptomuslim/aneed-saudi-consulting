@@ -4,9 +4,10 @@ import { getCanonicalBlogSlug } from "@/lib/i18n";
 const PREFIX = "blog:views:";
 
 function getRedis(): Redis | null {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
+  const url = process.env.UPSTASH_REDIS_REST_URL?.trim();
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim();
+  // REST API needs https URL; redis:// or redis-cli strings are invalid
+  if (!url || !token || !url.startsWith("https://")) return null;
   return new Redis({ url, token });
 }
 

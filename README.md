@@ -33,10 +33,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 Blog views are stored in [Upstash Redis](https://upstash.com/). For the counter to work in production, set these environment variables (e.g. in Vercel):
 
-- `UPSTASH_REDIS_REST_URL` – your Upstash Redis REST URL  
-- `UPSTASH_REDIS_REST_TOKEN` – your Upstash Redis REST token  
+- `UPSTASH_REDIS_REST_URL` – your Upstash **REST API** URL (starts with `https://`, e.g. `https://xxx.upstash.io`)  
+- `UPSTASH_REDIS_REST_TOKEN` – your Upstash **REST API** token  
 
-You can create a free Redis database at [console.upstash.com](https://console.upstash.com/). If these variables are not set, view counts stay at 0 and the site still runs.
+In the Upstash dashboard, use the **REST API** section (not "Redis connect" / `redis://`). The REST URL is an `https://...` link; the token is shown there as well. You can create a free Redis database at [console.upstash.com](https://console.upstash.com/). If these variables are not set or the URL is invalid, view counts stay at 0 and the site still runs.
 
 To set initial view counts once (e.g. after first deploy), add `BLOG_VIEWS_SEED_SECRET` in Vercel, then call:
 
