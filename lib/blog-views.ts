@@ -2,6 +2,8 @@ import { Redis } from "@upstash/redis";
 import { getCanonicalBlogSlug } from "@/lib/i18n";
 
 const PREFIX = "blog:views:";
+const LOCK_PREFIX = "blog:lock:";
+const LOCK_TTL_SEC = 86400; // 24 hours
 
 function getRedis(): Redis | null {
   const url = process.env.UPSTASH_REDIS_REST_URL?.trim();
@@ -32,6 +34,29 @@ export async function incrementViews(slug: string): Promise<number> {
     const key = PREFIX + getCanonicalBlogSlug(slug);
     const newVal = await redis.incr(key);
     return newVal;
+  } catch {
+    return 0;
+  }
+}
+
+/**
+ * Increment view count only once per visitor per 24 hours (by visitorId, e.g. IP).
+ * Returns the current view count after possibly incrementing.
+ */
+export async function incrementViewsIfAllowed(slug: string, visitorId: string): Promise<number> {
+  const redis = getRedis();
+  if (!redis) return 0;
+  const canonical = getCanonicalBlogSlug(slug);
+  const lockKey = LOCK_PREFIX + canonical + ":" + visitorId;
+  const viewsKey = PREFIX + canonical;
+  try {
+    // Set lock only if not exists, TTL 24h. Returns "OK" when set, null when key exists.
+    const lockSet = await redis.set(lockKey, "1", { nx: true, ex: LOCK_TTL_SEC });
+    if (lockSet === "OK") {
+      await redis.incr(viewsKey);
+    }
+    const val = await redis.get<number>(viewsKey);
+    return typeof val === "number" ? val : 0;
   } catch {
     return 0;
   }
