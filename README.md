@@ -38,6 +38,12 @@ Blog views are stored in [Upstash Redis](https://upstash.com/). For the counter 
 
 You can create a free Redis database at [console.upstash.com](https://console.upstash.com/). If these variables are not set, view counts stay at 0 and the site still runs.
 
+To set initial view counts once (e.g. after first deploy), add `BLOG_VIEWS_SEED_SECRET` in Vercel, then call:
+
+```bash
+curl -X POST "https://www.aneedashraf.de/api/blog/views/seed" -H "Content-Type: application/json" -d "{\"secret\":\"YOUR_SECRET\"}"
+```
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
