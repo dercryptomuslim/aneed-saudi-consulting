@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import { getViews } from "@/lib/blog-views";
 import { BlogViewCounter } from "@/components/blog-view-counter";
+import { getBlogPostAlternates } from "@/lib/i18n";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -68,9 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Aneed Ashraf${titleSuffix}`,
     description,
-    alternates: {
-      canonical: `/blog/${post.slug}`,
-    },
+    alternates: getBlogPostAlternates("de", post.slug),
     keywords: [...specificKeywords, ...defaultKeywords],
     openGraph: {
       title: post.title,

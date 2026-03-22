@@ -1,16 +1,11 @@
 import { Metadata } from "next";
 import { BlogPageClient } from "./blog-client";
+import { getBlogIndexAlternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Blog | Aneed Ashraf - Einblicke aus Saudi-Arabien",
   description: "Aktuelle Einblicke zu Firmengründung, Leben und Investment in Saudi-Arabien. Echte Erfahrung aus fast einem Jahrzehnt Unternehmertum in Medina.",
-  alternates: {
-    canonical: "/blog",
-    languages: {
-      "de": "/blog",
-      "en": "/en/blog",
-    },
-  },
+  alternates: getBlogIndexAlternates("de"),
   keywords: ["Blog Saudi-Arabien", "Firmengründung Saudi-Arabien", "Leben in Medina", "Investment Saudi-Arabien", "Premium Residency"],
   openGraph: {
     title: "Blog | Einblicke aus Saudi-Arabien - Aneed Ashraf",

@@ -23,13 +23,46 @@ const blogSlugDeToEn: Record<string, string> = {
   "saudi-premium-residency": "saudi-premium-residency",
   "familienzusammenfuehrung": "family-reunification",
   "investieren-in-medina": "investing-in-medina",
-  "was-kostet-dich-das-leben-in-medina": "what-does-living-in-medina-really-cost"
+  "was-kostet-dich-das-leben-in-medina": "what-does-living-in-medina-really-cost",
+  "saudi-staedte-vergleich": "saudi-arabia-cities-compared"
 };
 
 const blogSlugEnToDe: Record<string, string> = Object.entries(blogSlugDeToEn).reduce((acc, [de, en]) => {
   acc[en] = de;
   return acc;
 }, {} as Record<string, string>);
+
+const SITE_BASE = "https://www.aneedashraf.de";
+
+/** Hreflang + absolute canonical for individual blog posts (DE/EN pairs + x-default). */
+export function getBlogPostAlternates(locale: "de" | "en", slug: string): { canonical: string; languages: Record<string, string> } {
+  if (locale === "de") {
+    const enSlug = blogSlugDeToEn[slug];
+    const deUrl = `${SITE_BASE}/blog/${slug}`;
+    if (enSlug) {
+      const enUrl = `${SITE_BASE}/en/blog/${enSlug}`;
+      return { canonical: deUrl, languages: { de: deUrl, en: enUrl, "x-default": deUrl } };
+    }
+    return { canonical: deUrl, languages: { de: deUrl, "x-default": deUrl } };
+  }
+  const deSlug = blogSlugEnToDe[slug];
+  const enUrl = `${SITE_BASE}/en/blog/${slug}`;
+  if (deSlug) {
+    const deUrl = `${SITE_BASE}/blog/${deSlug}`;
+    return { canonical: enUrl, languages: { de: deUrl, en: enUrl, "x-default": deUrl } };
+  }
+  return { canonical: enUrl, languages: { en: enUrl, "x-default": enUrl } };
+}
+
+/** Hreflang for /blog and /en/blog index pages. */
+export function getBlogIndexAlternates(locale: "de" | "en"): { canonical: string; languages: Record<string, string> } {
+  const deUrl = `${SITE_BASE}/blog`;
+  const enUrl = `${SITE_BASE}/en/blog`;
+  if (locale === "de") {
+    return { canonical: deUrl, languages: { de: deUrl, en: enUrl, "x-default": deUrl } };
+  }
+  return { canonical: enUrl, languages: { de: deUrl, en: enUrl, "x-default": enUrl } };
+}
 
 /** Returns the canonical (DE) slug for storage so DE and EN share one view count per article. */
 export function getCanonicalBlogSlug(slug: string): string {

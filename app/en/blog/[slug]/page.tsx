@@ -1,12 +1,12 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { blogPostsEn } from "@/lib/blog-data";
+import { blogPostsEn, type BlogPost } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
-import { localizeHref } from "@/lib/i18n";
+import { localizeHref, getBlogPostAlternates } from "@/lib/i18n";
 import Script from "next/script";
 import { getViews } from "@/lib/blog-views";
 import { BlogViewCounter } from "@/components/blog-view-counter";
@@ -38,6 +38,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "how-to-start-a-business-in-saudi-arabia": ["Start Business Saudi Arabia", "Company Formation KSA", "LLC Saudi Arabia", "Open Business Medina", "Entrepreneur Visa Saudi"],
     "living-in-saudi-arabia-4-legal-ways-to-medina": ["Living in Saudi Arabia", "Move to Medina", "Work in Saudi Arabia", "Visa Saudi Arabia", "Residency KSA"],
     "what-does-living-in-medina-really-cost": ["Cost of Living Medina", "Living Costs Medina", "Medina Expenses", "Family Costs Medina", "Rent Medina", "School Medina", "Cost of Living Saudi Arabia", "Medina Monthly Costs", "Living in Medina Budget", "Medina Family Expenses"],
+    "saudi-arabia-cities-compared": [
+      "Medina vs Riyadh",
+      "Jeddah vs Dammam",
+      "Makkah Medina",
+      "Saudi Arabia cities",
+      "Move to Saudi Arabia which city",
+      "Riyadh career",
+      "Jeddah logistics",
+      "Dammam oil gas",
+      "Living in Medina",
+      "Eastern Province Saudi Arabia",
+      "Makkah economy",
+      "Living in Jeddah",
+      "Riyadh headquarters",
+    ],
   };
   
   const specificKeywords = keywordMap[slug] || [];
@@ -45,50 +60,56 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const views = await getViews(slug);
   const titleSuffix = views > 0 ? ` (${views} views)` : "";
+  const description = post.metaDescription ?? post.excerpt;
+  const baseUrl = "https://www.aneedashraf.de";
+  const ogImageUrl = post.image ? `${baseUrl}${post.image}` : undefined;
 
   return {
     title: `${post.title} | Aneed Ashraf${titleSuffix}`,
-    description: post.excerpt,
-    alternates: {
-      canonical: `/en/blog/${post.slug}`,
-    },
+    description,
+    alternates: getBlogPostAlternates("en", post.slug),
     keywords: [...specificKeywords, ...defaultKeywords],
     openGraph: {
       title: post.title,
-      description: post.excerpt,
-      url: `https://www.aneedashraf.de/en/blog/${post.slug}`,
+      description,
+      url: `${baseUrl}/en/blog/${post.slug}`,
       siteName: "Aneed Ashraf",
       locale: "en_US",
       type: "article",
-      publishedTime: post.date,
+      publishedTime: `${post.dateISO}T12:00:00+03:00`,
+      modifiedTime: `${post.dateISO}T12:00:00+03:00`,
       authors: ["Aneed Ashraf"],
-      images: post.image ? [
-        {
-          url: post.image,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ] : undefined,
+      images: ogImageUrl
+        ? [
+            {
+              url: ogImageUrl,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
-      images: post.image ? [post.image] : undefined,
+      description,
+      images: ogImageUrl ? [ogImageUrl] : undefined,
     },
   };
 }
 
-function generateArticleJsonLd(post: { slug: string; title: string; date: string; excerpt: string; image?: string; readTime: string }) {
+function generateArticleJsonLd(post: BlogPost) {
+  const desc = post.metaDescription ?? post.excerpt;
+  const iso = `${post.dateISO}T12:00:00+03:00`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
-    "description": post.excerpt,
+    "description": desc,
     "image": post.image ? `https://www.aneedashraf.de${post.image}` : undefined,
-    "datePublished": post.date,
-    "dateModified": post.date,
+    "datePublished": iso,
+    "dateModified": iso,
     "author": {
       "@type": "Person",
       "name": "Aneed Ashraf",

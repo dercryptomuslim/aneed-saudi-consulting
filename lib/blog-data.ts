@@ -1,3 +1,5 @@
+import { saudiArabiaCitiesComparedEnPost } from "./blog-saudi-cities-en-post";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -1384,6 +1386,7 @@ export const blogPostsDe: BlogPost[] = [
 ];
 
 export const blogPostsEn: BlogPost[] = [
+  saudiArabiaCitiesComparedEnPost,
   {
     slug: "investing-in-medina",
     title: "Investing in Medina – Legally Sound, Realistically Calculated",
