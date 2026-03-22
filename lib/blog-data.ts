@@ -244,6 +244,21 @@ export const blogPostsDe: BlogPost[] = [
       <p class="mb-6 text-slate-700">
         Wenn du unsicher bist, welche Stadt zu deinem Profil passt – Karriere, Familie, Investment oder Aufenthalt – lohnt sich eine klare Einordnung vor der Entscheidung. Dann wird aus „Saudi-Arabien“ ein konkreter Plan.
       </p>
+
+      <div class="my-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Diskutiere mit in unserer Community</h3>
+        <p class="mb-4 text-slate-700">
+          Wenn du Fragen oder Diskussionsbedarf zum Blogeintrag hast, kannst du das gerne in unserer Skool-Community posten.
+        </p>
+        <p class="mb-4 text-slate-700">
+          Dafür musst du angemeldet sein. Die Community richtet sich an alle, die nach Medina oder allgemein nach Saudi-Arabien auswandern möchten – wir supporten uns dort gegenseitig, tauschen Erfahrungen aus und helfen einander weiter.
+        </p>
+        <p class="mb-0">
+          <a href="https://www.skool.com/auswandern-nach-medina-1478/saudi-arabien-im-vergleich-medina-mekka-riyadh-jeddah-und-dammam?p=f6ca2957" target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 font-semibold underline decoration-2 underline-offset-4">
+            Hier geht's direkt zur Community →
+          </a>
+        </p>
+      </div>
     `,
   },
   {
