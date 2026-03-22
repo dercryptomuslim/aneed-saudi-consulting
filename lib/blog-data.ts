@@ -2,6 +2,8 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  /** Optional: längere Meta-Description für Google/Social (ca. 150–160 Zeichen). Sonst gilt excerpt. */
+  metaDescription?: string;
   date: string;
   dateISO: string; // For sorting: YYYY-MM-DD
   readTime: string;
@@ -31,6 +33,219 @@ export const blogCategories = {
 };
 
 export const blogPostsDe: BlogPost[] = [
+  {
+    slug: "saudi-staedte-vergleich",
+    title: "Saudi-Arabien im Vergleich: Medina, Mekka, Riyadh, Jeddah und Dammam",
+    date: "27.02.2026",
+    dateISO: "2026-02-27",
+    readTime: "15 Min.",
+    excerpt:
+      "Saudi-Arabien ist kein einheitlicher Markt. Wer auswandern, arbeiten oder investieren will, sollte die konkrete Stadt kennen – mit Zahlen, Profilen und einem klaren Fazit für jede Metropole.",
+    metaDescription:
+      "Medina, Mekka, Riyadh, Jeddah & Dammam im Vergleich: Einwohner, Wirtschaft, Familie, Lebensqualität. Welche saudische Stadt passt zu deinem Profil? Zahlen, Einordnung und Fazit von Aneed Ashraf.",
+    image: "/blog/startbild.png",
+    category: "leben",
+    content: `
+      <p class="lead text-xl text-slate-700 mb-6">
+        Saudi-Arabien ist kein einheitlicher Markt. Wer auswandern, arbeiten oder investieren will, sollte nicht nur auf „Saudi-Arabien“ schauen, sondern auf die konkrete Stadt.
+      </p>
+
+      <p class="mb-6">
+        Riyadh ist nicht Jeddah, Jeddah ist nicht Medina, und Dammam funktioniert wieder völlig anders. Genau deshalb ist die wichtigste Frage nicht nur: Will ich nach Saudi-Arabien? Sondern: <strong>Welche Stadt passt zu meinem Profil, meiner Familie und meinem Abschluss?</strong>
+      </p>
+
+      <figure class="my-10">
+        <img
+          src="/blog/startbild.png"
+          alt="Saudi-Arabien – Städte im Vergleich"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Fünf Metropolen, fünf Profile – der richtige Ort hängt von Zielen, Familie und Beruf ab.
+        </figcaption>
+      </figure>
+
+      <h2 class="mt-8 mb-4">Medina – ruhiger, spiritueller, familienfreundlicher</h2>
+
+      <figure class="my-10">
+        <img
+          src="/blog/masjid-nabawi.png"
+          alt="Medina – Prophetenmoschee und familiärer Alltag"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Medina: spirituell, übersichtlich – anders gewichtet als Riyadh oder Dammam.
+        </figcaption>
+      </figure>
+
+      <p class="mb-4">
+        Medina hat laut 2022 Census <strong>1.477.047 Einwohner</strong>. Klimatisch ist die Stadt heiß und trocken: Im Sommer liegen die Temperaturen typischerweise etwa zwischen 36 und 46 °C, im Winter eher zwischen 15 und 20 °C. Die beste offizielle Alters-Näherung liegt für die Provinz Al-Madinah bei rund <strong>28,2 Jahren</strong>, also etwas jünger als Riyadh oder Makkah.
+      </p>
+
+      <p class="mb-4">
+        Wirtschaftlich ist Medina stärker auf Tourismus, Logistik, Bau, Restaurants/Cafés, Handel und Dienstleistungen ausgerichtet als auf Heavy Industry. Invest Madinah nennt ausdrücklich Industrial, Agricultural, Logistics, Construction, Tourism, Restaurants &amp; Cafés sowie Wholesale &amp; Retail als Schwerpunktsektoren. Saudipedia ergänzt, dass in der Stadt der Industriesektor 33 % der wirtschaftlichen Aktivität ausmacht, gefolgt von Government Services mit 18 % und Trade mit 12 %; zugleich besuchen rund 7 Millionen Menschen pro Jahr die Stadt. Das zeigt: Medina ist wirtschaftlich nicht „klein“, aber anders gewichtet als Riyadh oder Dammam.
+      </p>
+
+      <p class="mb-4">
+        Für Familien ist Medina sehr attraktiv, wenn Ruhe, Übersichtlichkeit und religiöses Umfeld wichtiger sind als maximale Großstadt-Auswahl. Bildung ist vorhanden. Die Auswahl ist solide, aber bei internationalen Curricula und sehr spezialisierten Schulprofilen liegt Medina in der Praxis hinter Riyadh und Jeddah. Das ist weniger ein Qualitätsproblem als eine Frage der Marktgröße.
+      </p>
+
+      <p class="mb-8">
+        Beim Thema Lebensqualität punktet Medina vor allem mit geringerem Tempo, religiöser Nähe und einem im Vergleich zu Riyadh meist weniger hektischen Alltag. Für Sport und Freizeit ist das Angebot kleiner als in Riyadh oder Jeddah, aber für klassische Familienstrukturen ist Medina oft die emotional stärkste Stadt. Das ist kein Ort für jemanden, der maximale Corporate-Dynamik sucht, sondern für Menschen, die Stabilität und Alltag mit klarer Struktur wollen.
+      </p>
+
+      <h2 class="mt-8 mb-4">Mekka – religiös maximal bedeutend, wirtschaftlich stark auf Pilgerströme fokussiert</h2>
+
+      <figure class="my-10">
+        <img
+          src="/blog/mekka.png"
+          alt="Mekka – Pilgerwirtschaft und spirituelles Zentrum"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Mekka: Pilgerökosystem und Hospitality – nicht nur ein Nebensektor.
+        </figcaption>
+      </figure>
+
+      <p class="mb-4">
+        Makkah al-Mukarramah hat laut 2022 Census <strong>2.427.924 Einwohner</strong>. Klimatisch ist Mekka fast ganzjährig heiß; die Temperaturen variieren grob von 16 bis 42 °C, Weatherspark fasst es als lange, sehr heiße und trockene Sommer sowie kurze, angenehmere Winter zusammen. Für die Provinz Makkah liegt der bestverfügbare offizielle Alters-Näherungswert bei rund <strong>30,0 Jahren</strong>.
+      </p>
+
+      <p class="mb-4">
+        Wirtschaftlich ist Mekka extrem stark auf Pilgerwirtschaft, Hospitality, Retail, Transport und religiös getriebene Services ausgerichtet. Die Provinz empfing 2023 rund 13,5 Millionen Umrah-Besucher, und das Ministry of Tourism meldete 2024 in Makkah über 268.000 lizenzierte Zimmer sowie 1.030 lizenzierte Hospitality Facilities, womit Makkah landesweit führend war. Das ist kein Nebensektor, sondern das Rückgrat der lokalen Ökonomie.
+      </p>
+
+      <p class="mb-4">
+        Für Familien ist Mekka speziell. Spirituell ist die Stadt für viele unschlagbar, aber alltagspraktisch muss man ehrlich sein: Das Stadtleben wird in Hochphasen massiv von Pilgerströmen geprägt. Wer maximale Ruhe und einfache Alltagslogistik sucht, empfindet Medina oft angenehmer. Wer jedoch religiöse Nähe priorisiert und wirtschaftlich in Hospitality, Pilgerlogistik oder Einzelhandel arbeitet, kann in Mekka sehr gute Chancen haben. Höhere Bildung ist mit Umm Al-Qura University klar vorhanden. Bei Schulvielfalt ist Mekka funktional, aber nicht die Referenzstadt für das breiteste internationale Schulangebot.
+      </p>
+
+      <p class="mb-8">
+        Im Bereich Sport und Lebensqualität gilt: Mekka ist keine klassische Lifestyle-Stadt wie Jeddah und keine Corporate-City wie Riyadh. Die Freizeitqualität ist stärker religiös und familienintern geprägt. Es gibt Sportinfrastruktur – etwa King Abdulaziz Sports City – aber das Profil der Stadt wird eindeutig vom Pilgerökosystem bestimmt, nicht von Entertainment- oder Sports-Megaprojekten.
+      </p>
+
+      <h2 class="mt-8 mb-4">Riyadh – die stärkste Stadt für Karriere, Konzernjobs und internationale Abschlüsse</h2>
+
+      <figure class="my-10">
+        <img
+          src="/blog/Riyadh.png"
+          alt="Riyadh – Business und regionale Headquarters"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Riyadh: Regierung, Finanzen, RHQ – die breitesten White-Collar-Chancen.
+        </figcaption>
+      </figure>
+
+      <p class="mb-4">
+        Riyadh ist mit <strong>7.009.120 Einwohnern</strong> laut 2022 Census die größte Stadt des Landes. Das Klima ist extrem kontinental: heiße, trockene Sommer mit Spitzen bis etwa 48 °C, kühlere Winter und relativ wenig Niederschlag. Der offizielle Alters-Näherungswert für die Region liegt bei 29,5 Jahren. Gleichzeitig ist Riyadh die Stadt mit dem höchsten Binnenzuzug und einem sehr hohen Anteil nicht-saudischer Bewohner.
+      </p>
+
+      <p class="mb-4">
+        Wirtschaftlich ist Riyadh ganz klar die stärkste Karriere-Stadt in Saudi-Arabien. Die Stadt ist Regierungssitz, Verwaltungszentrum, Finanzstandort und Treiber des RHQ-Programms. Das RHQ-Programm wurde ausdrücklich geschaffen, um Riyadh als führenden Standort für regionale Headquarters im MENA-Raum zu positionieren. Reuters meldete zudem, dass immer mehr internationale Finanzhäuser und Konzerne in Riyadh regionale Strukturen aufbauen. Wenn du als Europäer in Saudi-Arabien die breitesten White-Collar-Chancen suchst, dann ist Riyadh fast immer die erste Adresse.
+      </p>
+
+      <p class="mb-4">
+        Für Familien ist Riyadh die Stadt mit der größten Bildungs- und Infrastrukturbreite. Zusätzlich hat die Royal Commission ein eigenes International Schools Attraction Program, um das internationale Bildungsangebot weiter auszubauen. Das ist ein sehr starkes Argument für Familien, die britische, amerikanische, IB- oder andere internationale Curricula priorisieren.
+      </p>
+
+      <p class="mb-8">
+        Auch bei Sport und Lebensqualität investiert Riyadh massiv. Der Sports Boulevard allein soll mit 50 Sporteinrichtungen, Reitwegen, Radwegen und großem Grünanteil die Lebensqualität erhöhen; dazu kommen Projekte wie Qiddiya, New Murabba und andere Quality-of-Life-Initiativen. Riyadh ist damit die Stadt mit dem größten Paket aus Karriere, Bildung, Megaprojekten und internationaler Sichtbarkeit – allerdings auch mit mehr Verkehr, mehr Druck und meist höheren Gesamtkosten.
+      </p>
+
+      <h2 class="mt-8 mb-4">Jeddah – die stärkste Mischung aus Business, Meer, Handel und Familienalltag</h2>
+
+      <figure class="my-10">
+        <img
+          src="/blog/jeddah.png"
+          alt="Jeddah – Küste, Logistik und internationales Stadtgefühl"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Jeddah: Hafen, Luftverkehr, Lifestyle – oft die erste Wahl für „Saudi mit Meer“.
+        </figcaption>
+      </figure>
+
+      <p class="mb-4">
+        Jeddah hatte laut 2022 Census <strong>3.751.722 Einwohner</strong>. Das Klima ist heißer und vor allem feuchter als in Riyadh oder Medina; typischerweise schwanken die Temperaturen grob zwischen 18 und 39 °C, mit deutlich spürbarer Luftfeuchtigkeit im Sommer. Für die Provinz Makkah, zu der Jeddah gehört, liegt der Alters-Näherungswert bei rund 30 Jahren.
+      </p>
+
+      <p class="mb-4">
+        Wirtschaftlich ist Jeddah eine der interessantesten Städte überhaupt, weil sie Logistik, Handel, Hafenwirtschaft, Luftverkehr, Tourismus und Lifestyle kombiniert. Saudipedia beschreibt Jeddah explizit als major logistical base, land-sea-air transport hub und wirtschaftlichen Wachstumstreiber. Jeddah Islamic Port ist laut Saudipedia der größte Hafen des Königreichs am Roten Meer; DP World nennt den Jeddah Logistics Park den größten integrierten Logistikpark des Landes. Das macht Jeddah für europäische Profile aus Supply Chain, Maritime, Trade, Procurement und Port Operations extrem relevant.
+      </p>
+
+      <p class="mb-4">
+        Für Familien ist Jeddah sehr stark. Offiziell gibt es dort 2.717 öffentliche und private Schulen; davon entfallen 974 auf private und internationale Schulen. Dazu kommen 3 öffentliche Universitäten, darunter King Abdulaziz University, KAUST und University of Jeddah. Genau deshalb ist Jeddah für viele Familien der beste Kompromiss aus Saudi-Arabien und „internationalem Alltag“: mehr Küste, mehr Offenheit, mehr Schuloptionen und meist ein leichteres Lebensgefühl als Riyadh.
+      </p>
+
+      <p class="mb-8">
+        Auch bei Sport und Freizeit ist Jeddah sehr stark aufgestellt. Jeddah Season 2022 allein hatte 2.800 Events, und die Waterfront ist eines der sichtbarsten Freizeitzentren der Stadt. Dazu kommt große Sportinfrastruktur rund um King Abdullah Sports City. Wenn jemand sagt, er wolle Saudi-Arabien, aber mit mehr Meer, mehr Events und mehr internationalem Stadtgefühl, dann meint er oft eigentlich Jeddah.
+      </p>
+
+      <h2 class="mt-8 mb-4">Dammam – beste Stadt für Energie, Industrie, Petrochemie und technische Abschlüsse</h2>
+
+      <figure class="my-10">
+        <img
+          src="/blog/dammam.png"
+          alt="Dammam – Industrie, Energie und Eastern Province"
+          class="w-full rounded-xl shadow-lg"
+          loading="lazy"
+        />
+        <figcaption class="text-sm text-slate-500 mt-3 text-center">
+          Dammam &amp; Eastern Province: Öl, Gas, Petrochemie und Hafen am Golf.
+        </figcaption>
+      </figure>
+
+      <p class="mb-4">
+        Dammam hatte laut offizieller GASTAT-/Saudipedia-Angabe im Jahr 2022 <strong>1.532.326 Einwohner</strong>. Klimatisch ist die Stadt heiß und zusätzlich feucht; die Temperaturen bewegen sich typischerweise etwa zwischen 11 und 43 °C, mit sehr belastenden Sommern. Für die Eastern Province liegt der Alters-Näherungswert bei rund 29,3 Jahren. Auffällig ist außerdem, dass laut Saudipedia 77,1 % der Bevölkerung im arbeitsfähigen Alter sind.
+      </p>
+
+      <p class="mb-4">
+        Wirtschaftlich ist Dammam ganz klar die Stadt für Energie, Öl &amp; Gas, Petrochemie, Schwerindustrie und Hafenlogistik. Die Sharqia Development Authority beschreibt die Eastern Province als Kernraum der saudischen Ölgeschichte, mit Raffinerien, Pipelines und Jubail als globalem Industriehub; Dammam Port war ein Wendepunkt für die Handels- und Ölexportwirtschaft der Region. Saudipedia nennt King Abdulaziz Port in Dammam den Hauptport des Königreichs am Arabischen Golf mit einer Kapazität von 105 Mio. Tonnen. Für technische Fachkräfte ist das extrem relevant.
+      </p>
+
+      <p class="mb-4">
+        Für Familien ist Dammam sachlicher und funktionaler als Jeddah. Es gibt ein gutes Schulsystem und viele technische Ausbildungswege. Das ist für Familien solide, aber das Stadtbild ist weniger „Event &amp; Lifestyle“ als in Jeddah und weniger „Megacity-Ökosystem“ als in Riyadh.
+      </p>
+
+      <p class="mb-8">
+        Im Sport- und Freizeitbereich hat Dammam eine stabile, familienfreundliche Basis mit Dammam Corniche (27 km), Stadien und Hallen. Das ist gut für Alltag, Spaziergänge, Kinder und Wochenenden, aber weniger spektakulär als die großen Quality-of-Life-Projekte in Riyadh oder die Eventlandschaft in Jeddah. Wer Industriejob plus Familienrhythmus sucht, kann Dammam trotzdem sehr sinnvoll finden.
+      </p>
+
+      <h2 class="mt-8 mb-4">Fazit</h2>
+
+      <div class="grid gap-4 md:grid-cols-2 my-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Medina</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">Ruhige, familienfreundliche Stadt mit stark religiösem Fokus und hoher Lebensqualität. Ideal für Menschen, die Stabilität, Spiritualität und ein entspanntes Umfeld suchen.</p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Mekka</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">Religiöses Zentrum mit stark auf Pilgerwirtschaft ausgerichteter Ökonomie. Dynamisch und intensiv im Alltag, besonders geeignet für Hospitality- und service-orientierte Profile.</p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Riyadh</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">Wirtschaftliches und politisches Zentrum Saudi-Arabiens mit den besten Karrierechancen für internationale Fachkräfte. Schnell, wachsend und voller Möglichkeiten – aber auch anspruchsvoll im Alltag.</p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Jeddah</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">Internationale Küstenstadt mit starkem Fokus auf Handel, Logistik und Lifestyle. Perfekte Mischung aus Business, Familie und Lebensqualität am Meer.</p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:col-span-2">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Dammam</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">Industrie- und Energiezentrum mit Schwerpunkt auf Öl, Gas und technischer Wirtschaft. Ideal für Ingenieure und Fachkräfte, die strukturierte Arbeitsumfelder bevorzugen.</p>
+        </div>
+      </div>
+
+      <p class="mb-6 text-slate-700">
+        Wenn du unsicher bist, welche Stadt zu deinem Profil passt – Karriere, Familie, Investment oder Aufenthalt – lohnt sich eine klare Einordnung vor der Entscheidung. Dann wird aus „Saudi-Arabien“ ein konkreter Plan.
+      </p>
+    `,
+  },
   {
     slug: "was-kostet-dich-das-leben-in-medina",
     title: "Was kostet dich das Leben in Medina wirklich?",

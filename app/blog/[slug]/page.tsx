@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { blogPostsDe } from "@/lib/blog-data";
+import { blogPostsDe, type BlogPost } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -37,6 +37,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "so-startest-du-ein-business-in-saudi-arabien": ["Firma gründen Saudi-Arabien", "Unternehmensgründung KSA", "Business Saudi-Arabien", "LLC Saudi-Arabien", "Geschäft eröffnen Medina"],
     "in-saudi-arabien-leben-4-wege-nach-medina": ["Leben in Saudi-Arabien", "Auswandern Medina", "Arbeiten Saudi-Arabien", "Visum Saudi-Arabien", "Aufenthalt KSA"],
     "was-kostet-dich-das-leben-in-medina": ["Lebenshaltungskosten Medina", "Kosten Leben Medina", "Auswandern Medina Kosten", "Familie Medina Kosten", "Miete Medina", "Schule Medina", "Lebenshaltungskosten Saudi-Arabien", "Cost of living Medina", "Living costs Medina", "Medina expenses"],
+    "saudi-staedte-vergleich": [
+      "Medina vs Riyadh",
+      "Jeddah vs Dammam",
+      "Mekka Medina",
+      "Städte Saudi-Arabien",
+      "Auswandern Saudi-Arabien welche Stadt",
+      "Riyadh Karriere",
+      "Jeddah Logistik",
+      "Dammam Öl Gas",
+      "Leben Medina",
+      "Saudi Städte Vergleich",
+      "Eastern Province Saudi-Arabien",
+      "Auswandern Mekka",
+      "Leben Jeddah",
+      "Riyadh Headquarters",
+      "Invest Madinah",
+    ],
   };
   
   const specificKeywords = keywordMap[slug] || [];
@@ -44,50 +61,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const views = await getViews(slug);
   const titleSuffix = views > 0 ? ` (${views} Aufrufe)` : "";
+  const description = post.metaDescription ?? post.excerpt;
+  const baseUrl = "https://www.aneedashraf.de";
+  const ogImageUrl = post.image ? `${baseUrl}${post.image}` : undefined;
 
   return {
     title: `${post.title} | Aneed Ashraf${titleSuffix}`,
-    description: post.excerpt,
+    description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
     keywords: [...specificKeywords, ...defaultKeywords],
     openGraph: {
       title: post.title,
-      description: post.excerpt,
-      url: `https://www.aneedashraf.de/blog/${post.slug}`,
+      description,
+      url: `${baseUrl}/blog/${post.slug}`,
       siteName: "Aneed Ashraf",
       locale: "de_DE",
       type: "article",
-      publishedTime: post.date,
+      publishedTime: `${post.dateISO}T12:00:00+03:00`,
+      modifiedTime: `${post.dateISO}T12:00:00+03:00`,
       authors: ["Aneed Ashraf"],
-      images: post.image ? [
-        {
-          url: post.image,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ] : undefined,
+      images: ogImageUrl
+        ? [
+            {
+              url: ogImageUrl,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
-      images: post.image ? [post.image] : undefined,
+      description,
+      images: ogImageUrl ? [ogImageUrl] : undefined,
     },
   };
 }
 
-function generateArticleJsonLd(post: { slug: string; title: string; date: string; excerpt: string; image?: string; readTime: string }) {
+function generateArticleJsonLd(post: BlogPost) {
+  const description = post.metaDescription ?? post.excerpt;
+  const iso = `${post.dateISO}T12:00:00+03:00`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
-    "description": post.excerpt,
+    "description": description,
     "image": post.image ? `https://www.aneedashraf.de${post.image}` : undefined,
-    "datePublished": post.date,
-    "dateModified": post.date,
+    "datePublished": iso,
+    "dateModified": iso,
     "author": {
       "@type": "Person",
       "name": "Aneed Ashraf",
