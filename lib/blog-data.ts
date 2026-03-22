@@ -43,7 +43,7 @@ export const blogPostsDe: BlogPost[] = [
       "Saudi-Arabien ist kein einheitlicher Markt. Wer auswandern, arbeiten oder investieren will, sollte die konkrete Stadt kennen – mit Zahlen, Profilen und einem klaren Fazit für jede Metropole.",
     metaDescription:
       "Medina, Mekka, Riyadh, Jeddah & Dammam im Vergleich: Einwohner, Wirtschaft, Familie, Lebensqualität. Welche saudische Stadt passt zu deinem Profil? Zahlen, Einordnung und Fazit von Aneed Ashraf.",
-    image: "/blog/startbild.png",
+    image: "/blog/startbild_final.png",
     category: "leben",
     content: `
       <p class="lead text-xl text-slate-700 mb-6">
@@ -56,7 +56,7 @@ export const blogPostsDe: BlogPost[] = [
 
       <figure class="my-10">
         <img
-          src="/blog/startbild.png"
+          src="/blog/startbild_final.png"
           alt="Saudi-Arabien – Städte im Vergleich"
           class="w-full rounded-xl shadow-lg"
           loading="lazy"
